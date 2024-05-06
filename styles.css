@@ -1,0 +1,105 @@
+/* Alap stílusok */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/originals/ae/41/07/ae4107956b28439588782359127047c2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #6e6969; /* Sötét színárnyalatú háttér */
+    color: #fff; /* Világos színű szöveg a kontraszt növelése érdekében */
+    h1 {
+        text-align: center;
+    }
+    
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game {
+    width: calc(30.33% - 10px); /* Korábbi érték: calc(33.33% - 10px) */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.game:nth-child(odd) {
+    background-color: #46444452; /* Halványabb háttérszín páratlan indexű játékokhoz */
+}
+.game:nth-child(even) {
+    background-color: #46444452; /* Halványabb háttérszín páratlan indexű játékokhoz */
+}
+.game:hover {
+    transform: scale(1.05);
+}
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.release-date {
+    color: #aaa; /* Megjelenési dátum színének beállítása */
+}
+.finish-date {
+    color: #aaa; /* Megjelenési dátum színének beállítása */
+}
+
+
+/* Modal stílusok */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 15s; /* Áttűnési effekt */
+    opacity: 0; /* Kezdetben átlátszó */
+}
+.modal-content {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0); /* 100%-os átlátszósággal */
+    padding: 20px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-show {
+    opacity: 1; /* Megjelenítés esetén teljesen látható */
+    
+}
+
+
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
