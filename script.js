@@ -30,6 +30,7 @@ const games = [
     { title: "Control Ultimate Edition", category: "Action, Adventure", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ewb.png", releaseDate: "2020.08.27", finishDate: "", videoId: "UISRDU_mzaw" },
     { title: "Crash Bandicoot 4: It's About Time", category: "Platform, Adventure", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2hp4.png", releaseDate: "2020.10.02", finishDate: "", videoId: "375dqL15O9E" },
     { title: "Detroit: Become Human", category: "Adventure, Puzzle", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.png", releaseDate: "2018.05.25", finishDate: "", videoId: "8a-EObAhYrg" },
+    { title: "Doom", category: "Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rav.webp", releaseDate: "1993.12.10", finishDate: "2024.05.11", videoId: "BkaC1-QoraY" },
 
 ];
 
