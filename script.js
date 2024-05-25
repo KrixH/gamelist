@@ -35,11 +35,12 @@ const games = [
 
 ];
 
+// Játékok rendezése betűrendbe
 games.sort((a, b) => a.title.localeCompare(b.title));
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameList = document.getElementById("gameList");
-
+// Játékok betöltése az oldalra
     games.forEach(game => {
         // Csak akkor hoz létre és jelenít meg egy játékot, ha van finishDate értéke
         if (game.finishDate) {
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 openVideoModal(game.videoId);
             });
             gameList.appendChild(gameDiv);
-
+            // Stílusok beállítása a kategóriákhoz
             const categorySpans = gameDiv.querySelectorAll('.categories span');
             categorySpans.forEach(span => {
                 span.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
@@ -66,34 +67,34 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
-
+    // Videó modal megnyitása
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");
         videoFrame.innerHTML = `<iframe width="1120" height="630" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen autoplay></iframe>`;
         modal.style.display = "block";
-        modal.classList.add("modal-show");
+        modal.classList.add("modal-show"); // Hozzáadunk egy animációt a modális ablak megjelenéséhez
 
         const closeModal = document.getElementsByClassName("close")[0];
         closeModal.onclick = function() {
             modal.style.display = "none";
             videoFrame.innerHTML = "";
-            modal.classList.remove("modal-show");
+            modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
         };
 
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show");
+                modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
             }
         };
-
+// Modal bezárása Esc billentyű lenyomására
         window.onkeydown = function(event) {
             if (event.key === "Escape") {
                 modal.style.display = "none";
                 videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show");
+                modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
             }
         };
     }
