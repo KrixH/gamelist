@@ -31,72 +31,69 @@ const games = [
     { title: "Crash Bandicoot 4: It's About Time", category: "Platform, Adventure", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2hp4.png", releaseDate: "2020.10.02", finishDate: "", videoId: "375dqL15O9E" },
     { title: "Detroit: Become Human", category: "Adventure, Puzzle", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.png", releaseDate: "2018.05.25", finishDate: "", videoId: "8a-EObAhYrg" },
     { title: "Doom", category: "Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rav.webp", releaseDate: "1993.12.10", finishDate: "2024.05.11", videoId: "BkaC1-QoraY" },
+    { title: "Dying Light", category: "Adventure, Role-playing (RPG), Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.webp", releaseDate: "2015. 01. 26", finishDate: "2024.05.25", videoId: "u4-FCsiF5x4" },
 
 ];
 
-// Játékok rendezése betűrendbe
 games.sort((a, b) => a.title.localeCompare(b.title));
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameList = document.getElementById("gameList");
-    // Játékok betöltése az oldalra
-    games.forEach(game => {
-        const gameDiv = document.createElement("div");
-        gameDiv.classList.add("game");
-        gameDiv.innerHTML = `
-            <img src="${game.cover}" alt="${game.title}">
-            <h3>${game.title}</h3>
-            <div class="categories">${game.category.split(",").map(category => `<p><span>${category.trim()}</span></p>`).join("")}</div>
-            <p class="release-date">Megjelenés: ${game.releaseDate}</p>
-            <p class="finish-date">Végigjátszva: ${game.finishDate || game.finishDate === "null" ? game.finishDate : "Nincs befejezve"}</p>
-            `;
-        const coverImage = gameDiv.querySelector('img');
-        coverImage.addEventListener("click", function() {
-            openVideoModal(game.videoId);
-        });
-        gameList.appendChild(gameDiv);
 
-        // Stílusok beállítása a kategóriákhoz
-        const categorySpans = gameDiv.querySelectorAll('.categories span');
-        categorySpans.forEach(span => {
-            span.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Sötétebb háttérszín a kategóriákhoz
-            span.style.padding = '5px'; // Opcionális: padding az elemhez
-            span.style.fontFamily = 'Calibri, sans-serif'; // Más font a kategóriákhoz
-        });
+    games.forEach(game => {
+        // Csak akkor hoz létre és jelenít meg egy játékot, ha van finishDate értéke
+        if (game.finishDate) {
+            const gameDiv = document.createElement("div");
+            gameDiv.classList.add("game");
+            gameDiv.innerHTML = `
+                <img src="${game.cover}" alt="${game.title}">
+                <h3>${game.title}</h3>
+                <div class="categories">${game.category.split(",").map(category => `<p><span>${category.trim()}</span></p>`).join("")}</div>
+                <p class="release-date">Megjelenés: ${game.releaseDate}</p>
+                <p class="finish-date">Végigjátszva: ${game.finishDate}</p>
+            `;
+            const coverImage = gameDiv.querySelector('img');
+            coverImage.addEventListener("click", function() {
+                openVideoModal(game.videoId);
+            });
+            gameList.appendChild(gameDiv);
+
+            const categorySpans = gameDiv.querySelectorAll('.categories span');
+            categorySpans.forEach(span => {
+                span.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+                span.style.padding = '5px';
+                span.style.fontFamily = 'Calibri, sans-serif';
+            });
+        }
     });
 
-    // Videó modal megnyitása
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");
         videoFrame.innerHTML = `<iframe width="1120" height="630" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen autoplay></iframe>`;
         modal.style.display = "block";
-
-        // Hozzáadunk egy animációt a modális ablak megjelenéséhez
         modal.classList.add("modal-show");
 
-        // Modal bezárása kattintásra
         const closeModal = document.getElementsByClassName("close")[0];
         closeModal.onclick = function() {
             modal.style.display = "none";
             videoFrame.innerHTML = "";
-            modal.classList.remove("modal-show"); // Animáció eltávolítása a bezárásnál
+            modal.classList.remove("modal-show");
         };
 
-        // Modal bezárása kattintásra a modális ablakon kívül
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show"); // Animáció eltávolítása a bezárásnál
+                modal.classList.remove("modal-show");
             }
         };
-        // Modal bezárása Esc billentyű lenyomására
+
         window.onkeydown = function(event) {
             if (event.key === "Escape") {
                 modal.style.display = "none";
                 videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show"); // Animáció eltávolítása a bezárásnál
+                modal.classList.remove("modal-show");
             }
         };
     }
