@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.pinimg.com/originals/ae/41/07/ae4107956b28439588782359127047c2.jpg');
+    background-image: url('https://i.imgur.com/LanjbAE.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -86,9 +86,6 @@ body {
     opacity: 1; /* Megjelenítés esetén teljesen látható */
     
 }
-
-
-
 
 .close {
     color: #aaa;
