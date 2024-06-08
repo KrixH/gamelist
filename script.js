@@ -32,6 +32,8 @@ const games = [
     { title: "Detroit: Become Human", category: "Adventure, Puzzle", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.png", releaseDate: "2018.05.25", finishDate: "", videoId: "8a-EObAhYrg" },
     { title: "Doom", category: "Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5rav.webp", releaseDate: "1993.12.10", finishDate: "2024.05.11", videoId: "BkaC1-QoraY" },
     { title: "Dying Light", category: "Adventure, Role-playing (RPG), Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.webp", releaseDate: "2015. 01. 26", finishDate: "2024.05.25", videoId: "u4-FCsiF5x4" },
+    { title: "High on Life", category: "Adventure, Shooter", cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co67qo.webp", releaseDate: "2022.12.13", finishDate: "2023.07.17", videoId: "7SUUeakHKTk" },
+
 
 ];
 
