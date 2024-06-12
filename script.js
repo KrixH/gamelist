@@ -131,6 +131,15 @@ const games = [
         playTime: "Ismeretlen",
         videoId: "vdlpWZpwOq0",
       },
+      {
+        title: "Red Dead Redemption 2",
+        category: "Adventure, Role-playing (RPG), Shooter",
+        cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1q1f.webp",
+        releaseDate: "2018.10.26",
+        finishDate: "2024.06.12",
+        playTime: "Ismeretlen",
+        videoId: "iqaipBpnVRE",
+      },
   ];
 
   document.addEventListener("DOMContentLoaded", function () {
