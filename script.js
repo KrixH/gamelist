@@ -28,7 +28,7 @@ const games = [
       category: "Adventure, Hack and slash/Beat 'em up, Role-playing (RPG)",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.png",
       releaseDate: "2024.02.08",
-      finishDate: "",
+      finishDate: "VA",
       playTime: "",
       videoId: "rClXqZD2Xrs",
     },
@@ -37,7 +37,7 @@ const games = [
       category: "Hack and slash/Beat 'em up, Role-playing (RPG)",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.png",
       releaseDate: "2017.02.23",
-      finishDate: "",
+      finishDate: "VA",
       playTime: "",
       videoId: "wJxNhJ8fjFk",
     },
@@ -55,7 +55,7 @@ const games = [
       category: "Adventure, Role-playing (RPG), Shooter",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.png",
       releaseDate: "2020.12.10",
-      finishDate: "",
+      finishDate: "VA",
       playTime: "",
       videoId: "8X2kIfS6fb8",
     },
@@ -64,7 +64,7 @@ const games = [
       category: "Action, Adventure",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2evj.png",
       releaseDate: "2019.08.27",
-      finishDate: "",
+      finishDate: "VA",
       playTime: "",
       videoId: "-oXCMFX9H8g",
     },
@@ -73,7 +73,7 @@ const games = [
       category: "Adventure, Puzzle",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mzf.png",
       releaseDate: "2018.05.25",
-      finishDate: "",
+      finishDate: "VA",
       playTime: "",
       videoId: "8a-EObAhYrg",
     },
@@ -110,7 +110,7 @@ const games = [
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co6mao.webp",
       releaseDate: "2023.10.03",
       finishDate: "2024.06.09",
-      playTime: "",
+      playTime: "Ismeretlen",
       videoId: "Wwkpa5OfSvk",
     },
     {
@@ -150,21 +150,27 @@ const games = [
 
     // Játékok betöltése az oldalra
     games.forEach((game) => {
-        // Csak akkor hoz létre és jelenít meg egy játékot, ha van finishDate értéke
+        // Csak akkor hoz létre és jelenít meg egy játékot, ha van finishDate értéke, vagy ha "VA" az érték
         if (game.finishDate) {
             const gameDiv = document.createElement("div");
             gameDiv.classList.add("game");
             gameDiv.innerHTML = `
-                <img src="${game.cover}" alt="${game.title}">
-                <h3>${game.title}</h3>
-                <div class="categories">${game.category
-                    .split(",")
-                    .map((category) => `<div class="category">${category.trim()}</div>`)
-                    .join(" ")}</div>
-                <p class="release-date">Megjelenés: ${game.releaseDate}</p>
-                <p class="finish-date">Végigjátszva: ${game.finishDate}</p>
-                ${game.playTime ? `<p class="play-time">Végigjátszási idő: ${game.playTime}</p>` : ""}
-            `;
+            <img src="${game.cover}" alt="${game.title}">
+            <h3>${game.title}</h3>
+            <div class="categories">${game.category
+                .split(",")
+                .map((category) => `<div class="category">${category.trim()}</div>`)
+                .join(" ")}</div>
+            <p class="release-date">Megjelenés: ${game.releaseDate}</p>
+            ${game.finishDate ? 
+                `<p class="finish-date">${game.finishDate.includes("VA") ? 
+                    `<span class="in-progress">BEFEJEZÉS ALATT</span>` : 
+                    `Végigjátszva: ${game.finishDate}`
+                }</p>` : 
+                `` // Üres string, ha nincs finishDate
+            }
+            ${game.playTime ? `<p class="play-time">Végigjátszási idő: ${game.playTime}</p>` : ""}
+        `;        
             const coverImage = gameDiv.querySelector("img");
             coverImage.addEventListener("click", function () {
                 openVideoModal(game.videoId);
