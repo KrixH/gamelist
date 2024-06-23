@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2] - 2024-06-23
+
+### Changed
+
+- Improved algorithm for html code.
+- Updated UI components.
+
 ## [1.2.1] - 2024-06-13
 
 ### New game finish
