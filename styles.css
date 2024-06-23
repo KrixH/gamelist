@@ -25,7 +25,7 @@ a {
   }
 
 .container {
-    max-width: 850px;
+    max-width: 1320px;
     margin: 20px auto;
     padding: 20px;
     background-color: rgba(43, 43, 43, 0.5); /* Átlátszó háttérszín */
@@ -47,19 +47,31 @@ a {
     gap: 20px; /* Térköz a game elemek között */
 }
 
-/* Új stílus a játékokhoz */
+/* Update the .game class to include the fade-in animation */
 .game {
-    position: relative; /* Relatív pozícionálás */
-    flex: 1 1 calc(33.33% - 20px); /* Flex-basis beállítása 33.33%-ra */
-    max-width: calc(33.33% - 20px); /* Max-width beállítása ugyanarra az értékre */
-    margin-bottom: 30px; /* Alsó margó a játékok között */
-    border-radius: 10px; /* Kerekített sarkok a játékdiv körül */
-    overflow: hidden; /* Átlátszatlanság a szövegnek és az árnyéknak */
-    box-shadow: 0px 0px 10px rgba(236, 235, 235, 0.1); /* Árnyék a játékdiv körül */
-    transition: box-shadow 0.3s ease; /* Sima átmenet, ha a kurzor fölé viszik */
-    padding: 10px; /* Belso padding a tartalomhoz */
+    position: relative;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(236, 235, 235, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
     box-shadow: 0px 0px 10px rgba(236, 235, 235, 0.301);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Átmenet az árnyék és a háttérszín változásához */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.9s forwards; /* Apply fade-in animation */
+}
+
+/* Update the .game img class to include the zoom-in effect */
+.game img {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition */
+    animation: zoomIn 2.1s forwards; /* Apply zoom-in animation */
 }
 
 .game:nth-child(odd) {
@@ -181,4 +193,54 @@ a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Styles for the loading spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #4CAF50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.waitLoadFully {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+/* Add keyframes for the zoom-in effect */
+@keyframes zoomIn {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Add keyframes for the fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1.5;
+        transform: translateY(0);
+    }
 }

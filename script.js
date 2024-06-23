@@ -224,3 +224,10 @@ const games = [
         };
     }
 });
+
+
+window.onload = function() {
+  const loadingScreen = document.querySelector('.waitLoadFully');
+  loadingScreen.style.display = 'none';
+
+};
