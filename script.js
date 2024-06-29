@@ -24,6 +24,42 @@ const games = [
       videoId: "cF_YGL3W6CE",
     },
     {
+      title: "Far Cry",
+      category: "Shooter",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpf.webp",
+      releaseDate: "2004.03.23",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "occqEcRd6Qg",
+    },
+    {
+      title: "Tomb Raider",
+      category: "Shooter, Platform, Puzzle, Adventure",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbu.webp",
+      releaseDate: "2013.03.04",
+      finishDate: "2022.01.07",
+      playTime: "~12:30:00",
+      videoId: "RN7_8Yholm4",
+    },
+    {
+      title: "Elden Ring",
+      category: "Role-playing (RPG), Adventure",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.webp",
+      releaseDate: "2022.02.25",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "l6pCyV7PnqI",
+    },
+    {
+      title: "Firewatch",
+      category: "Adventure, Indie",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1m35.webp",
+      releaseDate: "2016.02.09",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "HdUYYnfRdl8",
+    },
+    {
       title: "God of War",
       category: "Adventure, Hack and slash/Beat 'em up, Role-playing (RPG)",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.png",
@@ -129,7 +165,7 @@ const games = [
         releaseDate: "2004.10.26",
         finishDate: "Ismeretlen",
         playTime: "Ismeretlen",
-        videoId: "vdlpWZpwOq0",
+        videoId: "J6-UokQene8",
       },
       {
         title: "Red Dead Redemption 2",
@@ -164,7 +200,7 @@ const games = [
             <p class="release-date">Megjelenés: ${game.releaseDate}</p>
             ${game.finishDate ? 
                 `<p class="finish-date">${game.finishDate.includes("VA") ? 
-                    `<span class="in-progress">BEFEJEZÉS ALATT</span>` : 
+                    `<span class="in-progress">Végigjátszás alatt</span>` : 
                     `Végigjátszva: ${game.finishDate}`
                 }</p>` : 
                 `` // Üres string, ha nincs finishDate
