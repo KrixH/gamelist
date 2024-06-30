@@ -180,90 +180,74 @@ const games = [
 
   document.addEventListener("DOMContentLoaded", function () {
     const gameList = document.getElementById("gameList");
+    const loadingScreen = document.querySelector('.waitLoadFully');
+    loadingScreen.style.display = 'none';
 
-    // Játékok rendezése betűrendbe
     games.sort((a, b) => a.title.localeCompare(b.title));
 
-    // Játékok betöltése az oldalra
     games.forEach((game) => {
-        // Csak akkor hoz létre és jelenít meg egy játékot, ha van finishDate értéke, vagy ha "VA" az érték
-        if (game.finishDate) {
+        const hasFinishDate = game.finishDate || game.finishDate === "VA";
+
+        if (hasFinishDate) {
             const gameDiv = document.createElement("div");
             gameDiv.classList.add("game");
-            gameDiv.innerHTML = `
-            <img src="${game.cover}" alt="${game.title}">
-            <h3>${game.title}</h3>
-            <div class="categories">${game.category
-                .split(",")
-                .map((category) => `<div class="category">${category.trim()}</div>`)
-                .join(" ")}</div>
-            <p class="release-date">Megjelenés: ${game.releaseDate}</p>
-            ${game.finishDate ? 
-                `<p class="finish-date">${game.finishDate.includes("VA") ? 
-                    `<span class="in-progress">Végigjátszás alatt</span>` : 
-                    `Végigjátszva: ${game.finishDate}`
-                }</p>` : 
-                `` // Üres string, ha nincs finishDate
-            }
-            ${game.playTime ? `<p class="play-time">Végigjátszási idő: ${game.playTime}</p>` : ""}
-        `;        
-            const coverImage = gameDiv.querySelector("img");
-            coverImage.addEventListener("click", function () {
-                openVideoModal(game.videoId);
-            });
-            gameList.appendChild(gameDiv);
-        // Stílusok beállítása a kategóriákhoz
-        const categoryDivs = gameDiv.querySelectorAll(".categories .category");
-        categoryDivs.forEach((div, index) => {
-            div.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-            div.style.padding = "2px";
-            div.style.fontFamily = "Calibri, sans-serif";
-            div.style.display = "inline-block"; // Kategória div-ek egymás mellett
-            if (index < categoryDivs.length - 1) {
-                div.style.marginRight = "5px"; // Kis hely hagyása a kategóriák között
-            }
-        });
 
+            gameDiv.innerHTML = `
+                <img src="${game.cover}" alt="${game.title}">
+                <h3><span style="color: #f0f0f0;">${game.title}</h3></span>
+                <div class="categories">${game.category
+                    .split(",")
+                    .map((category) => `<div class="category">${category.trim()}</div>`)
+                    .join(" ")}</div>
+                <p class="release-date">Megjelenés: <span style="color: #fff;">${game.releaseDate}</span></p>
+                ${game.finishDate ? 
+                    `<p class="finish-date">${game.finishDate.includes("VA") ? 
+                        `<span class="in-progress">Végigjátszás alatt</span>` : 
+                        `Végigjátszva:<span style="color: #fff;"> ${game.finishDate}`
+                    }</p></span>` : 
+                    ``
+                }
+                ${game.playTime ? `<p class="play-time">Végigjátszási idő: <span style="color: #fff;">${game.playTime}</span></p>` : ""}
+            `;
+
+            const coverImage = gameDiv.querySelector("img");
+            coverImage.addEventListener("click", () => openVideoModal(game.videoId));
+
+            const categoryDivs = gameDiv.querySelectorAll(".categories .category");
+            categoryDivs.forEach((div, index) => {
+                Object.assign(div.style, {
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    padding: "2px",
+                    fontFamily: "Calibri, sans-serif",
+                    display: "inline-block",
+                    marginRight: index < categoryDivs.length - 1 ? "5px" : ""
+                });
+            });
+
+            gameList.appendChild(gameDiv);
         }
     });
 
-    // Videó modal megnyitása
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");
         videoFrame.innerHTML = `<iframe width="1120" height="630" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen autoplay></iframe>`;
         modal.style.display = "block";
-        modal.classList.add("modal-show"); // Hozzáadunk egy animációt a modális ablak megjelenéséhez
+        modal.classList.add("modal-show");
 
-        const closeModal = document.getElementsByClassName("close")[0];
-        closeModal.onclick = function () {
+        function closeModal() {
             modal.style.display = "none";
             videoFrame.innerHTML = "";
-            modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
-        };
+            modal.classList.remove("modal-show");
+        }
 
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
-            }
-        };
+        const closeButtons = document.querySelectorAll(".close, #videoModal");
+        closeButtons.forEach(button => button.onclick = closeModal);
 
-        // Modal bezárása Esc billentyű lenyomására
         window.onkeydown = function (event) {
             if (event.key === "Escape") {
-                modal.style.display = "none";
-                videoFrame.innerHTML = "";
-                modal.classList.remove("modal-show"); // Elvesszünk egy animációt a modális ablak megjelenéséhez
+                closeModal();
             }
         };
     }
 });
-
-
-window.onload = function() {
-  const loadingScreen = document.querySelector('.waitLoadFully');
-  loadingScreen.style.display = 'none';
-
-};

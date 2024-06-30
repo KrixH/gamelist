@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.3] - 2024-06-30
+
+### Changed
+
+- Improved algorithm for html code.
+- Updated UI components.
+- Added new elements.
+
 ## [1.2.2] - 2024-06-23
 
 ### Changed

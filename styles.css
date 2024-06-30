@@ -4,50 +4,64 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rowdies', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://i.imgur.com/LanjbAE.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #6e696977; /* Sötét színárnyalatú háttér */
-    color: #fff; /* Világos színű szöveg a kontraszt növelése érdekében */
+    background-color: #1a1a1a; /* Sötét szürke háttér */
+    color: #e0e0e0; /* Világos szürke szöveg */
+    
 }
 
 h1 {
     text-align: center;
+    color: #ffffff; /* Fehér cím */
+    margin-top: 50px; /* Felső margó a címhez */
+}
+
+footer {
+    background-color: #2b2b2b; /* Sötétebb szürke */
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #444;
+    margin-top: 50px; /* Felső margó */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 a {
-    color: inherit; /* Az alapértelmezett örökölt szín használata */
-    text-decoration: none; /* Alapértelmezett aláhúzás eltávolítása */
-  }
+    color: #e0e0e0;
+    text-decoration: none;
+}
 
 .container {
     max-width: 1320px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(43, 43, 43, 0.5); /* Átlátszó háttérszín */
+    margin: 50px auto; /* Felső és alsó margó */
+    padding: 25px;
+    background-color: #2b2b2b; /* Még sötétebb szürke háttér */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
-    
-    /* Reszponzív elrendezés */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* Mobilbarát navigáció */
 }
 
-.row {
+#gameList {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Térköz a game elemek között */
+    justify-content: flex-start; /* Balra igazítás */
+    gap: 20px;
 }
 
-/* Update the .game class to include the fade-in animation */
 .game {
     position: relative;
     flex: 1 1 calc(25% - 20px);
@@ -55,68 +69,59 @@ a {
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(236, 235, 235, 0.1);
+    background-color: #333; /* Sötétszürke háttér a játékoknak */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgba(236, 235, 235, 0.301);
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 0.9s forwards; /* Apply fade-in animation */
+    opacity: 0;
+    animation: fadeIn 0.9s forwards;
 }
 
-/* Update the .game img class to include the zoom-in effect */
 .game img {
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    width: 100%;
     border-radius: 5px;
-    transition: transform 0.3s ease; /* Smooth transition */
-    animation: zoomIn 2.1s forwards; /* Apply zoom-in animation */
+    transition: transform 0.3s ease;
+    animation: zoomIn 2.1s forwards;
 }
 
 .game:nth-child(odd) {
-    background-color: #46444452; /* Halványabb háttérszín páratlan indexű játékokhoz */
+    background-color: #3d3d3d; /* Kissé világosabb szürke */
 }
 
 .game:nth-child(even) {
-    background-color: #46444452; /* Halványabb háttérszín páratlan indexű játékokhoz */
+    background-color: #3d3d3d; /* Kissé világosabb szürke */
 }
 
 .game:hover {
-    background-color: rgba(0, 0, 0, 0.753);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Árnyék változása hover hatásra */
+    background-color: #4a4a4a; /* Még világosabb szürke */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
 }
 
-.game img {
-    width: 100%; /* Teljes méretű kép a játék borító képként */
-    border-bottom-left-radius: 0; /* A kerekített sarkok csak a felső sarkoknál */
-    border-bottom-right-radius: 0;
-    width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Sima átmenet */
-}
-
 .game-details {
-    position: absolute; /* Abszolút pozícionálás */
-    top: 100%; /* Felülre kerüljön */
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Átlátszó háttérszín */
+    background-color: rgba(0, 0, 0, 0.85); /* Fekete átlátszó háttér */
     padding: 10px;
-    transform: translateY(100%); /* Alapértelmezett elrejtés */
-    transition: transform 0.3s ease; /* Sima átmenet */
-    border-bottom-left-radius: 10px; /* Kerekített sarkok */
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .game:hover .game-details {
-    transform: translateY(0); /* Megjelenítés hover hatásra */
+    transform: translateY(0);
 }
 
 .game-details h3 {
-    margin-top: 1; /* Felső margó a játékcímhez */
-    color: #fff; /* Fehér szöveg */
+    margin-top: 0;
+    color: #ffffff; /* Fehér szöveg */
+    font-family: 'Rowdies', sans-serif;
+
 }
 
 .in-progress {
@@ -126,34 +131,33 @@ a {
     top: 40px;
     right: -15px;
     transform: rotate(45deg);
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
     padding: 8px;
     border-radius: 10px;
     z-index: 0;
 }
 
 .categories {
-    margin-top: 10px; /* Felső margó a kategóriákhoz */
+    margin-top: 10px;
 }
 
 .category {
-    margin-right: 5px; /* Jobb margó a kategóriák között */
-    border-radius: 3px; /* Kerekített sarkok a kategória div-ek körül */
-    background-color: rgba(0, 0, 0, 0.2); /* Átlátszó háttérszín a kategóriáknak */
-    color: #fff; /* Fehér szöveg */
-    padding: 5px 10px; /* Belső tér a kategóriákhoz */
-    display: inline-block; /* Kategória div-ek egymás mellett */
+    margin-right: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.1); /* Áttetsző fehér */
+    color: #e0e0e0;
+    padding: 5px 10px;
+    display: inline-block;
 }
 
 .release-date,
 .finish-date,
 .play-time {
-    margin-top: 10px; /* Felső margó a dátumokhoz */
-    font-size: 15px; /* Kis betűméret a dátumokhoz */
-    color: #cccbcb; /* Szürke szín a dátumokhoz */
+    margin-top: 10px;
+    font-size: 15px;
+    color: #bfbfbf; /* Világos szürke */
 }
 
-/* Modal stílusok */
 .modal {
     display: none;
     position: fixed;
@@ -163,13 +167,13 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.5s; /* Áttűnési effekt */
-    opacity: 0; /* Kezdetben átlátszó */
+    transition: opacity 0.5s;
+    opacity: 0;
 }
 
 .modal-content {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0); /* 100%-os átlátszósággal */
+    background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 5px;
     top: 50%;
@@ -178,7 +182,7 @@ a {
 }
 
 .modal-show {
-    opacity: 1; /* Megjelenítés esetén teljesen látható */
+    opacity: 1;
 }
 
 .close {
@@ -195,7 +199,6 @@ a {
     cursor: pointer;
 }
 
-/* Styles for the loading spinner */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -223,7 +226,6 @@ a {
     z-index: 9999;
 }
 
-/* Add keyframes for the zoom-in effect */
 @keyframes zoomIn {
     from {
         transform: scale(1.2);
@@ -233,7 +235,6 @@ a {
     }
 }
 
-/* Add keyframes for the fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
