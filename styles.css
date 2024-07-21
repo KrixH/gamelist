@@ -7,57 +7,133 @@ body {
     font-family: 'Rowdies', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Sötét szürke háttér */
+    background: #1a1a1a url('background-image-url') no-repeat fixed center/cover; /* Sötét szürke háttér és háttérkép beállítás */
     color: #e0e0e0; /* Világos szürke szöveg */
 }
 
 h1 {
     text-align: center;
     color: #fff; /* Fehér cím */
-    margin-top: 50px; /* Felső margó a címhez */
-}
-
-footer {
-    background-color: #2b2b2b; /* Sötétebb szürke */
-    color: #e0e0e0;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
-    border-top: 1px solid #444;
     margin-top: 50px; /* Felső margó */
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
+/* Lábléc stílusok */
+footer {
+    background: #121212; /* Sötét háttérszín */
+    color: #e0e0e0; /* Világos szöveg szín */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #333; /* Finom határvonal a tetején */
 }
 
-footer a:hover {
-    text-decoration: underline;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-a {
-    color: #e0e0e0;
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: #f0f0f0;
     text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-info p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#update-date {
+    color: #bfbfbf;
+}
+
+#current-year {
+    font-weight: bold;
+}
+
+/* Kreatív háttér animáció */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 30%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: pulse 12s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.1;
+        transform: scale(0.95);
+    }
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+    .footer-link {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
 }
 
 .container {
     max-width: 1320px;
     margin: 50px auto; /* Felső és alsó margó */
     padding: 25px;
-    background-color: #2b2b2b; /* Még sötétebb szürke háttér */
+    background: #2b2b2b; /* Még sötétebb szürke háttér */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 #gameList {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Balra igazítás */
     gap: 20px;
 }
 
@@ -67,9 +143,9 @@ a {
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #333; /* Sötétszürke háttér a játékoknak */
+    background: #333; /* Sötétszürke háttér */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
     padding: 10px;
     opacity: 0;
     animation: fadeIn 0.9s forwards;
@@ -82,13 +158,12 @@ a {
     animation: zoomIn 2.1s forwards;
 }
 
-.game:nth-child(odd),
-.game:nth-child(even) {
-    background-color: #3d3d3d; /* Kissé világosabb szürke */
+.game:nth-child(odd) {
+    background: #3d3d3d; /* Kissé világosabb szürke */
 }
 
 .game:hover {
-    background-color: #4a4a4a; /* Még világosabb szürke */
+    background: #4a4a4a; /* Még világosabb szürke */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
 }
@@ -98,7 +173,7 @@ a {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fekete átlátszó háttér */
+    background: rgba(0, 0, 0, 0.85); /* Fekete átlátszó háttér */
     padding: 10px;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -112,7 +187,6 @@ a {
 .game-details h3 {
     margin-top: 0;
     color: #fff; /* Fehér szöveg */
-    font-family: 'Rowdies', sans-serif;
 }
 
 .in-progress {
@@ -122,24 +196,20 @@ a {
     top: 40px;
     right: -15px;
     transform: rotate(45deg);
-    background-color: #000;
+    background: #000;
     padding: 8px;
     border-radius: 10px;
     z-index: 0;
 }
 
-.categories {
-    margin-top: 10px;
+.categories .category {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    font-family: Calibri, sans-serif;
+    display: inline-block;
+    margin-right: 5px;
 }
 
-.category {
-    margin-right: 5px;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.1); /* Áttetsző fehér */
-    color: #e0e0e0;
-    padding: 5px 10px;
-    display: inline-block;
-}
 
 .release-date,
 .finish-date,
@@ -157,14 +227,14 @@ a {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     transition: opacity 0.5s;
     opacity: 0;
 }
 
 .modal-content {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 5px;
     top: 50%;
@@ -213,7 +283,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 9999;
 }
 
@@ -223,12 +293,6 @@ a {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(5px);
-    }
-    to {
-        opacity: 1.5;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

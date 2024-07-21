@@ -178,55 +178,63 @@ const games = [
       },
   ];
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     const gameList = document.getElementById("gameList");
     const loadingScreen = document.querySelector('.waitLoadFully');
-    loadingScreen.style.display = 'none';
+    
+    // Betölti a játékokat a DOM-ba
+    function renderGames() {
+        gameList.innerHTML = '';  // Tisztítja a játéklistát
+        
+        games
+            .filter(game => game.finishDate || game.finishDate === "VA")
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .forEach(game => {
+                const gameDiv = document.createElement("div");
+                gameDiv.classList.add("game");
 
-    games.sort((a, b) => a.title.localeCompare(b.title));
+                gameDiv.innerHTML = `
+                    <img src="${game.cover}" alt="${game.title}">
+                    <h3>${game.title}</h3>
+                    <div class="categories">${game.category.split(",")
+                        .map(category => `<div class="category">${category.trim()}</div>`)
+                        .join(" ")}</div>
+                    <p class="release-date">Megjelenés: <span>${game.releaseDate}</span></p>
+                    ${game.finishDate ? 
+                        `<p class="finish-date">${game.finishDate.includes("VA") ? 
+                            `<span class="in-progress">Végigjátszás alatt</span>` : 
+                            `Végigjátszva: <span>${game.finishDate}</span>`
+                        }</p>` : 
+                        ``
+                    }
+                    ${game.playTime ? `<p class="play-time">Végigjátszási idő: <span>${game.playTime}</span></p>` : ""}
+                `;
 
-    games.forEach((game) => {
-        const hasFinishDate = game.finishDate || game.finishDate === "VA";
-
-        if (hasFinishDate) {
-            const gameDiv = document.createElement("div");
-            gameDiv.classList.add("game");
-
-            gameDiv.innerHTML = `
-                <img src="${game.cover}" alt="${game.title}">
-                <h3><span style="color: #f0f0f0;">${game.title}</h3></span>
-                <div class="categories">${game.category
-                    .split(",")
-                    .map((category) => `<div class="category">${category.trim()}</div>`)
-                    .join(" ")}</div>
-                <p class="release-date">Megjelenés: <span style="color: #fff;">${game.releaseDate}</span></p>
-                ${game.finishDate ? 
-                    `<p class="finish-date">${game.finishDate.includes("VA") ? 
-                        `<span class="in-progress">Végigjátszás alatt</span>` : 
-                        `Végigjátszva:<span style="color: #fff;"> ${game.finishDate}`
-                    }</p></span>` : 
-                    ``
-                }
-                ${game.playTime ? `<p class="play-time">Végigjátszási idő: <span style="color: #fff;">${game.playTime}</span></p>` : ""}
-            `;
-
-            const coverImage = gameDiv.querySelector("img");
-            coverImage.addEventListener("click", () => openVideoModal(game.videoId));
-
-            const categoryDivs = gameDiv.querySelectorAll(".categories .category");
-            categoryDivs.forEach((div, index) => {
-                Object.assign(div.style, {
-                    backgroundColor: "rgba(0, 0, 0, 0.5)",
-                    padding: "2px",
-                    fontFamily: "Calibri, sans-serif",
-                    display: "inline-block",
-                    marginRight: index < categoryDivs.length - 1 ? "5px" : ""
-                });
+                gameDiv.querySelector("img").addEventListener("click", () => openVideoModal(game.videoId));
+                gameList.appendChild(gameDiv);
             });
 
-            gameList.appendChild(gameDiv);
+        loadingScreen.style.display = 'none';  // Elrejti a töltőképernyőt
+    }
+
+    // Megnyitja a videó modális ablakot
+    function openVideoModal(videoId) {
+        const modal = document.getElementById("videoModal");
+        const videoFrame = document.getElementById("videoFrame");
+        videoFrame.innerHTML = `<iframe width="1120" height="630" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen autoplay></iframe>`;
+        modal.style.display = "block";
+
+        function closeModal() {
+            modal.style.display = "none";
+            videoFrame.innerHTML = "";
         }
-    });
+
+        document.querySelectorAll(".close, #videoModal").forEach(button => button.onclick = closeModal);
+        window.onkeydown = event => { if (event.key === "Escape") closeModal(); };
+    }
+
+    // Inicializálja a játékokat
+    renderGames();
 
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
