@@ -33,6 +33,42 @@ const games = [
       videoId: "occqEcRd6Qg",
     },
     {
+      title: "FlatOut",
+      category: "Racing, Simulator",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2i9c.webp",
+      releaseDate: "2004.11.05",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "FBKSGSCSUTs",
+    },
+    {
+      title: "FlatOut 2",
+      category: " Racing, Sport, Arcade",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x52.webp",
+      releaseDate: "2006.06.30",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "1Qxw33iFV8E",
+    },
+    {
+      title: "FlatOut 3: Chaos & Destruction",
+      category: "Racing",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2f6g.webp",
+      releaseDate: "2011.12.13",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "8y-r2Q8PBX8",
+    },
+    {
+      title: "FlatOut 4: Total Insanity",
+      category: "Racing",
+      cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1svu.webp",
+      releaseDate: "2017.03.17",
+      finishDate: "VA",
+      playTime: "",
+      videoId: "Mg5N3BHn8t8",
+    },
+    {
       title: "Tomb Raider",
       category: "Shooter, Platform, Puzzle, Adventure",
       cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbu.webp",
@@ -179,13 +215,15 @@ const games = [
   ];
 
   document.addEventListener("DOMContentLoaded", () => {
-    const gameList = document.getElementById("gameList");
+    const inProgressGames = document.getElementById("inProgressGames");
+    const completedGames = document.getElementById("completedGames");
     const loadingScreen = document.querySelector('.waitLoadFully');
     
     // Betölti a játékokat a DOM-ba
     function renderGames() {
-        gameList.innerHTML = '';  // Tisztítja a játéklistát
-        
+        inProgressGames.innerHTML = '';  // Tisztítja a "Végigjátszás alatt" kategóriát
+        completedGames.innerHTML = '';   // Tisztítja a "Befejezett játékok" kategóriát
+
         games
             .filter(game => game.finishDate || game.finishDate === "VA")
             .sort((a, b) => a.title.localeCompare(b.title))
@@ -211,31 +249,18 @@ const games = [
                 `;
 
                 gameDiv.querySelector("img").addEventListener("click", () => openVideoModal(game.videoId));
-                gameList.appendChild(gameDiv);
+
+                if (game.finishDate === "VA") {
+                    inProgressGames.appendChild(gameDiv);  // Hozzáadja a "Végigjátszás alatt" kategóriához
+                } else {
+                    completedGames.appendChild(gameDiv);  // Hozzáadja a "Befejezett játékok" kategóriához
+                }
             });
 
         loadingScreen.style.display = 'none';  // Elrejti a töltőképernyőt
     }
 
     // Megnyitja a videó modális ablakot
-    function openVideoModal(videoId) {
-        const modal = document.getElementById("videoModal");
-        const videoFrame = document.getElementById("videoFrame");
-        videoFrame.innerHTML = `<iframe width="1120" height="630" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen autoplay></iframe>`;
-        modal.style.display = "block";
-
-        function closeModal() {
-            modal.style.display = "none";
-            videoFrame.innerHTML = "";
-        }
-
-        document.querySelectorAll(".close, #videoModal").forEach(button => button.onclick = closeModal);
-        window.onkeydown = event => { if (event.key === "Escape") closeModal(); };
-    }
-
-    // Inicializálja a játékokat
-    renderGames();
-
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");
@@ -258,4 +283,7 @@ const games = [
             }
         };
     }
+
+    // Inicializálja a játékokat
+    renderGames();
 });

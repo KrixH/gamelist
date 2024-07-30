@@ -18,14 +18,40 @@
 </div>
 
 <div class="container">
-    <div id="gameList" class="row"></div>
+    <!-- Végigjátszás alatt kategória -->
+    <div class="category-header" id="inProgressHeader">
+        <h2>Jelenleg futó végigjátszások</h2>
+    </div>
+    <div class="category-section" id="inProgressSection">
+        <div class="category-games" id="inProgressGames">
+            <!-- Játékok listája itt jelenik meg -->
+        </div>
+    </div>
+    
+    <!-- Befejezett játékok kategória -->
+    <div class="category-header" id="completedHeader">
+        <h2>Befejezett végigjátszások</h2>
+    </div>
+    <div class="category-section" id="completedSection">
+        <div class="category-games" id="completedGames">
+            <!-- Játékok listája itt jelenik meg -->
+        </div>
+    </div>
 </div>
+
 <div id="videoModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <div id="videoFrame"></div>
     </div>
 </div>
+
+<div class="cookie-notice">
+    <p>Ez a weboldal sütiket használ az élményed fokozására. Az oldal további látogatásával elfogadod a sütik használatát. <a href="policy.html">Tudj meg többet</a></p>
+    <button id="acceptCookies">Elfogadom</button>
+</div>
+
+
 
 <footer>
     <div class="footer-content">
@@ -34,16 +60,16 @@
             <a href="https://github.com/KrixH" target="_parent" class="footer-link">KrixH99</a>
         </div>
         <div class="footer-info">
-            <p>Frissítve: <span id="update-date">2024.07.21. - 10:50</span></p>
+            <p>Frissítve: <span id="update-date">2024.07.30. - 4:44</span></p>
             <p>&copy; <span id="current-year"></span> ~ Game List ~. Minden jog fenntartva.</p>
         </div>
     </div>
 </footer>
 
-
 <script src="script.js"></script>
 <script src="bgscript.js"></script>
 <script src="footer.js"></script>
+<script src="cookie.js"></script>
 
 </body>
 </html>
