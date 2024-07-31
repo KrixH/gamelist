@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // AJAX kérés a játékok adatainak beolvasásához
-    fetch('/json/games.json')
+    fetch('./json/games.json')
         .then(response => response.json())
         .then(data => {
             renderGames(data);
