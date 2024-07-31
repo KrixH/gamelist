@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game List | @krixh99</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/1451/PNG/512/codefolder_99364.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div class="waitLoadFully">
@@ -46,10 +48,15 @@
     </div>
 </div>
 
-<div class="cookie-notice">
-    <p>Ez a weboldal sütiket használ az élményed fokozására. Az oldal további látogatásával elfogadod a sütik használatát. <a href="policy.html">Tudj meg többet</a></p>
-    <button id="acceptCookies">Elfogadom</button>
+<div id="cookieConsentBanner" class="cookie-notice">
+    <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="/policy/policy.html">Tudjon meg többet</a></p>
+    <div class="cookie-button-container">
+        <button id="acceptCookies" class="cookie-button">
+            <i class="fa fa-cookie-bite"></i> Elfogadom
+        </button>
+    </div>
 </div>
+
 
 
 
@@ -66,10 +73,10 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
-<script src="bgscript.js"></script>
-<script src="footer.js"></script>
-<script src="cookie.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/bgscript.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/cookie.js"></script>
 
 </body>
 </html>
