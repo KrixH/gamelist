@@ -2,6 +2,11 @@
 
 ## [1.2.6] - 2024-08-04
 
+### New games added
+- Neighbours from Hell
+- Neighbours from Hell 2: On Vacation
+- Neighbours back From Hell
+
 ### Changed
 - New back to top button
 - Improved algorithm for html code.
