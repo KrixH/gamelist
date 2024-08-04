@@ -387,6 +387,27 @@ footer::before {
     transform: scale(1.1); /* Növeli a gombot a hover effektus alatt */
 }
 
+/* Nyíl ikon */
+.back-to-top i {
+    font-size: 24px;
+}
+
+/* Megjeleníti a gombot, ha a felhasználó lefelé scrollozik */
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 200px; /* A terület, ahol a gombot láthatóvá teszi */
+    width: 100%;
+}
+
+body:not(:has(.back-to-top))::before {
+    display: none;
+}
+
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
