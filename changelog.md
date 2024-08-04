@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6] - 2024-08-04
+
+### Changed
+- New back to top button
+- Improved algorithm for html code.
+- Updated UI components.
+
 ## [1.2.5] - 2024-07-30
 
 ### Changed

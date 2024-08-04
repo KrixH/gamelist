@@ -354,6 +354,44 @@ footer::before {
     transform: scale(1.05); /* Gomb méretének növekedése hover állapotban */
 }
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7e5f; /* Szín a dizájnodhoz */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 1000; /* Biztosítja, hogy mindig a legfelső rétegen legyen */
+    text-decoration: none;
+    opacity: 0; /* Alapértelmezés szerint rejtett */
+    visibility: hidden; /* Alapértelmezés szerint rejtett */
+}
+
+.back-to-top.show {
+    opacity: 1; /* Látható állapotban */
+    visibility: visible; /* Látható állapotban */
+}
+
+.back-to-top:hover {
+    background-color: #feb47b; /* Hover szín */
+    transform: scale(1.1); /* Növeli a gombot a hover effektus alatt */
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Animációk */
 @keyframes fadeIn {
     from {
