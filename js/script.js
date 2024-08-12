@@ -143,12 +143,20 @@ document.addEventListener("DOMContentLoaded", () => {
             ${playTimeText}
         `;
     
+        // Kép kattintás esemény
         gameDiv.querySelector("img").addEventListener("click", () => openVideoModal(game.videoId));
+        
+        // Esemény hozzáadása a .game divhez a kattinthatóság biztosításához
+        gameDiv.addEventListener("click", (event) => {
+            // Az esemény kezdetén ellenőrizzük, hogy a kattintás az ikonra történt-e
+            if (event.target.tagName === "IMG" || event.target === gameDiv) {
+                openVideoModal(game.videoId);
+            }
+        });
+        
         return gameDiv;
     }
 
-
-    // Megnyitja a videó modális ablakot
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");

@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #121212 no-repeat fixed center/cover; /* Fekete háttér és háttérkép beállítás */; /* Mély sötét háttér */
+    background: #121212 no-repeat fixed center/cover; /* Fekete háttér és háttérkép beállítás */
     color: #c0c0c0; /* Világos szürke szöveg */
     line-height: 1.6;
     overflow-x: hidden;
@@ -41,7 +41,7 @@ footer {
     text-decoration: none;
     font-size: 1.125em;
     margin: 0 1em;
-    transition: color 0.5s ease, transform 0.5s ease; /* Lassabb, smoothabb animációk */
+    transition: color 0.5s ease, transform 0.5s ease; /* Lassabb animációk */
     position: relative;
 }
 
@@ -125,23 +125,23 @@ footer {
     overflow: hidden;
     background: #303030; /* Közepes szürke háttér */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 1s ease, transform 0.8s ease; /* Lassabb, smoothabb animációk */
+    transition: box-shadow 0.5s ease, transform 0.5s ease; /* Lassabb animációk */
     padding: 0.75em;
     opacity: 0;
-    animation: fadeIn 3s forwards; /* Lassabb fadeIn animáció */
+    animation: fadeIn 1s forwards; /* Lassabb fadeIn animáció */
     position: relative;
 }
 
 .game img {
-    width: 100%;
-    border-radius: 0.375em 0.375em 0 0;
-    transition: transform 1.5s ease, filter 1.5s ease; /* Még lassabb zoom */
-    filter: brightness(0.8); /* Még sötétebb képek */
+    display: block;
+    width: 100%; /* A kép szélessége */
+    height: auto; /* Magasság automatikusan beállítva */
+    transition: transform 0.5s ease, filter 0.2s ease; /* Smooth hover animáció */
 }
 
 .game:hover img {
     transform: scale(1.05);
-    filter: brightness(0.7); /* Tovább sötétítés hover állapotban */
+    filter: brightness(0.5); /* Tovább sötétítés hover állapotban */
 }
 
 .game:hover {
@@ -151,18 +151,24 @@ footer {
 
 /* Lejátszó ikon a kép közepén */
 .game::after {
-    content: '\25B6';
-    font-size: 3em;
-    color: rgba(128, 128, 128, 0); /* Sötétszürke */
+    content: '\25B6'; /* Lejátszás ikon Unicode karaktere */
+    font-size: 50px; /* Ikon mérete */
+    color: #fff; /* Ikon színe */
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: color 1s ease; /* Lassabb animáció */
+    top: 25%; /* Középre helyezés függőlegesen */
+    left: 50%; /* Középre helyezés vízszintesen */
+    transform: translate(-50%, -50%); /* Az ikon középre igazítása */
+    border-radius: 50%; /* Kerek háttér */
+    padding: 10px; /* Belső térköz az ikon körül */
+    cursor: pointer; /* Kattinthatóság jelzése */
+    z-index: 10; /* Az ikon a kép fölött jelenjen meg */
+    opacity: 0; /* Az ikon alapértelmezés szerint rejtve van */
+    transition: opacity 0.01s ease; /* Lassan változó láthatóság */
 }
 
 .game:hover::after {
-    color: rgba(255, 87, 34, 0.9); /* Narancssárga play ikon */
+    opacity: 1; /* Az ikon láthatóvá válik, ha az egér a képen van */
+    color: rgb(230, 228, 227); /* Fehér play ikon */
 }
 
 .game h3 {
@@ -249,7 +255,7 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
-    transition: opacity 1s ease; /* Lassabb fade-in */
+    transition: opacity 0.5s ease; /* Lassabb fade-in */
     overflow: hidden;
 }
 
@@ -375,7 +381,7 @@ footer {
     justify-content: center;
     font-size: 24px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.5s, visibility 0.5s, transform 0.5s; /* Lassabb animációk */
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease; /* Lassabb animációk */
     z-index: 1000;
     text-decoration: none;
     opacity: 0;
