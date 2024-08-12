@@ -3,19 +3,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background: #0d0d0d url('') no-repeat fixed center/cover; /* Fekete háttér és háttérkép beállítás */
-    color: #cfcfcf; /* Halvány szürke szöveg */
+    background: #121212 no-repeat fixed center/cover; /* Fekete háttér és háttérkép beállítás */; /* Mély sötét háttér */
+    color: #c0c0c0; /* Világos szürke szöveg */
     line-height: 1.6;
-    overflow-x: hidden; /* Rejtett vízszintes görgetés */
+    overflow-x: hidden;
 }
 
 h1 {
     text-align: center;
-    color: #eaeaea; /* Világos szürke cím */
+    color: #b0b0b0; /* Halvány szürke cím */
     margin: 2em 0;
     font-size: 2.5em;
     font-weight: 700;
@@ -24,139 +24,77 @@ h1 {
 
 /* Lábléc stílusok */
 footer {
-    background: #1a1a1a; /* Sötét szürke háttér */
-    color: #b0b0b0; /* Világosabb szöveg szín */
-    padding: 3em 1.5em;
+    background: #1e1e1e; /* Sötét szürke háttér */
+    color: #909090; /* Közepes szürke szöveg */
+    padding: 2em 1.5em;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-top: 0.1em solid #333;
+    border-top: 4px solid #282828; /* Még sötétebb szürke */
 }
 
 .footer-content {
     max-width: 75em;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.footer-links {
-    margin-bottom: 2em;
 }
 
 .footer-link {
-    color: #b0b0b0;
+    color: #909090;
     text-decoration: none;
     font-size: 1.125em;
     margin: 0 1em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.5s ease, transform 0.5s ease; /* Lassabb, smoothabb animációk */
     position: relative;
-    display: inline-block;
 }
 
-.footer-link::after {
-    content: '';
-    position: absolute;
-    bottom: -0.2em;
-    left: 0;
-    width: 0;
-    height: 0.125em;
-    background: #444; /* Sötétszürke vonal */
-    transition: width 0.3s ease;
-}
-
-.footer-link:hover::after {
-    width: 100%;
+.footer-link:hover {
+    color: #d35400; /* Élénk narancssárga */
+    transform: scale(1.1);
 }
 
 .footer-info p {
     margin: 0.75em 0;
     font-size: 1em;
-    color: #a0a0a0;
+    color: #7f8c8d; /* Halvány szürke */
 }
 
 #update-date {
-    color: #8a8a8a;
+    color: #616161; /* Sötétszürke */
 }
 
 #current-year {
     font-weight: bold;
 }
 
-/* Kreatív háttér animáció */
-footer::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 30%, transparent 70%);
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    animation: pulse 12s infinite;
-    opacity: 0.08;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0.05;
-        transform: scale(0.95);
-    }
-    50% {
-        opacity: 0.1;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 0.05;
-        transform: scale(0.95);
-    }
-}
-
-/* Reszponzív dizájn */
-@media (max-width: 48em) {
-    .footer-link {
-        font-size: 0.9em;
-        margin: 0 0.75em;
-    }
-
-    .footer-info p {
-        font-size: 0.8em;
-    }
-}
-
 /* Kategória szekciók */
 .container {
-    max-width: 85em;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5em;
 }
 
 /* Kategória címek */
 .category-header {
-    background: #2c2c2c; /* Sötétszürke háttér */
+    background: #2c2c2c; /* Sötét szürke háttér */
     border-radius: 0.75em;
     padding: 0.75em 1.5em;
     margin: 2.5em auto 1.5em auto;
     text-align: center;
-    max-width: fit-content;
+    color: #c0c0c0; /* Világos szürke szöveg */
+    letter-spacing: 0.05em;
 }
 
 .category-header h2 {
     font-size: 2em;
-    color: #d0d0d0; /* Lágy szürke szöveg */
     margin: 0;
-    letter-spacing: 0.05em;
 }
 
 /* Kategória szekciók */
 .category-section {
     margin: 0 auto 2.5em auto;
     padding: 1.5em;
-    background: #1f1f1f; /* Nagyon sötét szürke háttér */
+    background: #1a1a1a; /* Nagyon sötét szürke háttér */
     border-radius: 0.75em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-    max-width: fit-content;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
 /* Játékok stílusai */
@@ -173,9 +111,9 @@ footer::before {
     gap: 1.5em;
     border-radius: 0.75em;
     overflow: hidden;
-    background: #1f1f1f; /* Sötét szürke háttér */
+    background: #262626; /* Sötétszürke háttér */
     padding: 1.25em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Minden játék elem stílusa */
@@ -185,53 +123,51 @@ footer::before {
     margin-bottom: 2em;
     border-radius: 0.75em;
     overflow: hidden;
-    background: #2B2B2B; /* Sötétebb szürke háttér */
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
-    transition: box-shadow 0.5s ease, background-color 0.5s ease;
+    background: #303030; /* Közepes szürke háttér */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 1s ease, transform 0.8s ease; /* Lassabb, smoothabb animációk */
     padding: 0.75em;
-    opacity: 0; /* Alapértelmezés szerint láthatatlan */
-    animation: fadeIn 5s forwards;
+    opacity: 0;
+    animation: fadeIn 3s forwards; /* Lassabb fadeIn animáció */
     position: relative;
 }
 
 .game img {
     width: 100%;
     border-radius: 0.375em 0.375em 0 0;
-    transition: transform 0.9s ease, filter 0.9s ease; /* Lassabb nagyítás és áttűnés */
-    filter: brightness(1); /* Alapértelmezett fényerő */
+    transition: transform 1.5s ease, filter 1.5s ease; /* Még lassabb zoom */
+    filter: brightness(0.8); /* Még sötétebb képek */
 }
 
 .game:hover img {
-    transform: scale(1.1); /* Kép nagyobbítása hover állapotban */
-    filter: brightness(0.5); /* Enyhe sötétítés hover állapotban */
+    transform: scale(1.05);
+    filter: brightness(0.7); /* Tovább sötétítés hover állapotban */
 }
 
 .game:hover {
-    background: #333333; /* Még sötétebb szürke hover állapotban */
-    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.8); /* Erősebb árnyék hover állapotban */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Lejátszó ikon a kép közepén */
 .game::after {
-    content: '\25B6'; /* Unicode a play ikonhoz */
+    content: '\25B6';
     font-size: 3em;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(128, 128, 128, 0); /* Sötétszürke */
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: color 0.5s ease;
-    pointer-events: none; /* Az ikon ne akadályozza a hover-t */
+    transition: color 1s ease; /* Lassabb animáció */
 }
 
 .game:hover::after {
-    color: rgba(255, 255, 255, 0.9); /* Fehér lejátszó ikon megjelenése */
+    color: rgba(255, 87, 34, 0.9); /* Narancssárga play ikon */
 }
 
 .game h3 {
     margin: 0.75em 0;
-    color: #C0C0C0; /* Világos szürke szöveg */
-    transition: color 0.3s ease;
+    color: #c0c0c0; /* Világos szürke szöveg */
 }
 
 /* Kategória címkék általános stílusai */
@@ -242,22 +178,21 @@ footer::before {
 }
 
 .category {
-    background: #3a3a3a; /* Alap sötétszürke háttér */
-    color: #b0b0b0; /* Világos szürke szöveg */
+    background: #474747; /* Közepes szürke háttér */
+    color: #e0e0e0; /* Halvány szürke szöveg */
     padding: 0.375em 1em;
-    border-radius: 0.375em;
+    border-radius: 20px;
     font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Lassabb animációk */
 }
 
 .category:hover {
-    background: #9fd3c767; /* Még sötétebb háttér hover állapotban */
+    background: #5e5e5e; /* Világosabb szürke háttér */
 }
 
 /* Dátumok és időpontok stílusai */
 .release-date, .finish-date, .play-time {
     margin: 0.75em 0;
-    color: #9FD3C7; /* Enyhe pasztell zöld */
     font-weight: bold;
     font-size: 1em;
     display: block;
@@ -265,26 +200,43 @@ footer::before {
 
 /* Megjelenés dátum stílusa */
 .release-date {
-    color: #FFB6C1; /* Világos pasztell rózsaszín */
+    color: #e57373; /* Halvány piros szín */
 }
 
-/* Végigjátszva dátum stílusa */
+/* Early Access Release színe és margó */
+.early-access {
+    color: #ffb74d; /* Világos narancssárga */
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* finish-date stílusok különböző kategóriákhoz */
 .finish-date {
-    color: #ADD8E6; /* Halvány pasztell kék */
+    color: #81c784; /* Halvány zöld */
 }
 
-/* Végigjátszási idő stílusa */
-.play-time {
-    color: #FFA07A; /* Enyhe pasztell narancs */
+.finish-date.in-progress {
+    color: #ffb74d; /* Világos narancssárga - Végigjátszás alatt */
+}
+
+.finish-date.abandoned {
+    color: #e57373; /* Halvány piros - Szüneteltetett/félbenhagyott */
+}
+
+.finish-date.open-world {
+    color: #64b5f6; /* Világoskék - Open World Játék */
+}
+
+.finish-date.mmo {
+    color: #9575cd; /* Világoslila - MMO/Nem lehet befejezni */
 }
 
 /* Általános idő és dátum szöveg */
 .time-text {
-    color: #E0E0E0; /* Halvány szürke szöveg, hogy illeszkedjen a sötét témához */
+    color: #a0a0a0; /* Halványabb szürke szöveg */
     font-size: 0.9em;
     font-weight: normal;
 }
-
 
 /* Modal stílusai */
 .modal {
@@ -295,9 +247,9 @@ footer::before {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fekete háttér */
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease; /* Lassabb fade-in */
     overflow: hidden;
 }
 
@@ -307,7 +259,7 @@ footer::before {
 }
 
 .modal-content {
-    background: #2b2b2b;
+    background: #1e1e1e; /* Sötétszürke háttér */
     margin: 5% auto;
     padding: 1.5em;
     border-radius: 0.75em;
@@ -319,7 +271,7 @@ footer::before {
 #videoFrame {
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 arány */
+    padding-bottom: 56.25%;
     position: relative;
 }
 
@@ -333,7 +285,7 @@ footer::before {
 }
 
 .close {
-    color: #888888;
+    color: #d32f2f; /* Piros */
     float: right;
     font-size: 1.5em;
     font-weight: bold;
@@ -341,18 +293,18 @@ footer::before {
 
 .close:hover,
 .close:focus {
-    color: #c0c0c0;
+    color: #e57373;
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Cookie értesítő stílusok */
 .cookie-notice {
-    background: #2a2a2a; /* Nagyon sötét szürke háttér */
-    color: #b0b0b0; /* Világos szürke szöveg */
+    background: #1e1e1e;
+    color: #c0c0c0;
     padding: 1.25em 2.5em;
     border-radius: 0.75em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     max-width: 90%;
     margin: 2em auto;
     text-align: center;
@@ -369,13 +321,13 @@ footer::before {
 }
 
 .cookie-notice a {
-    color: #909090;
+    color: #64b5f6; /* Világoskék */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease; /* Lassabb animáció */
 }
 
 .cookie-notice a:hover {
-    color: #b0b0b0;
+    color: #42a5f5; /* Sötétebb kék */
 }
 
 .cookie-button-container {
@@ -385,8 +337,8 @@ footer::before {
 }
 
 .cookie-button {
-    background: #3a3a3a; /* Sötétszürke gomb */
-    color: #b0b0b0;
+    background: #64b5f6; /* Világoskék gomb */
+    color: #303030;
     border: none;
     padding: 0.75em 1.5em;
     border-radius: 0.375em;
@@ -395,6 +347,7 @@ footer::before {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Lassabb animációk */
 }
 
 .cookie-button i {
@@ -402,7 +355,7 @@ footer::before {
 }
 
 .cookie-button:hover {
-    background: #444444; /* Még sötétebb szürke */
+    background: #42a5f5; 
     transform: scale(1.05);
 }
 
@@ -411,8 +364,8 @@ footer::before {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333333; /* Sötétszürke */
-    color: #b0b0b0;
+    background-color: #64b5f6;
+    color: #303030;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -421,8 +374,8 @@ footer::before {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s, visibility 0.5s, transform 0.5s; /* Lassabb animációk */
     z-index: 1000;
     text-decoration: none;
     opacity: 0;
@@ -435,7 +388,7 @@ footer::before {
 }
 
 .back-to-top:hover {
-    background-color: #444444;
+    background-color: #42a5f5;
     transform: scale(1.1);
 }
 
@@ -474,5 +427,9 @@ html {
     .game {
         flex: 1 1 calc(50% - 1.25em);
         max-width: calc(50% - 1.25em);
+    }
+
+    .category-section {
+        padding: 1em;
     }
 }

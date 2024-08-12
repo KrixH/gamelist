@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.8] - 2024-08-12
+
+### Multiple games added
+
+### Changed
+- New Design
+- Improved algorithm for html code.
+- Updated UI components.
+- Performance Optimization
+- New category's
+
 ## [1.2.7] - 2024-08-09
 
 ### Changed
