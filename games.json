@@ -1,6 +1,6 @@
 [
     {
-      "_comment": "finishDate Kategóriák : Idő = befejezve, VA = Végigjátszás alatt, AH = Szüneteltetett/félbenhagyott, P = Várakozás az előző rész befejezésére, OW = Open World Játék, MMO = Massively Multiplayer Online/ nem lehet befejezni' ",
+      "_comment": "finishDate Kategóriák : Idő = befejezve, VA = Végigjátszás alatt, AH = Szüneteltetett/félbenhagyott, P = Várakozás az előző rész befejezésére, OW = Open World Játék, MMO = Massively Multiplayer Online/ nem lehet befejezni', SIM = Szimulator gameszkó ",
       "title": "Alan Wake Remastered",
       "category": "Adventure, Shooter",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65aa.png",
@@ -8,7 +8,8 @@
       "releaseDate": "2021.10.05",
       "finishDate": "2023.12.16",
       "playTime": "09:20:34",
-      "videoId": "cF_YGL3W6CE"
+      "videoId": "cF_YGL3W6CE",
+      "steamId": ""
     },
     {
       "title": "Far Cry",
@@ -18,7 +19,8 @@
       "releaseDate": "2004.03.23",
       "finishDate": "VA",
       "playTime": "",
-      "videoId": "occqEcRd6Qg"
+      "videoId": "occqEcRd6Qg",
+      "steamId": "13520"
     },
     {
       "title": "Far Cry 2",
@@ -28,7 +30,8 @@
       "releaseDate": "2008.10.24",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "_MUTHa7imQI"
+      "videoId": "_MUTHa7imQI",
+      "steamId": "19900"
     },
     {
       "title": "Far Cry 3 ",
@@ -38,7 +41,8 @@
       "releaseDate": "2012.11.28 ",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "J6gnOVJsCsM"
+      "videoId": "J6gnOVJsCsM",
+      "steamId": "220240"
     },
     {
       "title": "Far Cry 3: Blood Dragon",
@@ -48,7 +52,8 @@
       "releaseDate": "2013.05.01 ",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "InnWpcxWj-k"
+      "videoId": "InnWpcxWj-k",
+      "steamId": "233270"
     },
     {
       "title": "Far Cry 4",
@@ -58,17 +63,19 @@
       "releaseDate": "2014.11.18 ",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "MyMHxaQ1VOA"
+      "videoId": "MyMHxaQ1VOA",
+      "steamId": "298110"
     },
     {
-      "title": "Far Cry 5 ",
+      "title": "Far Cry 5",
       "category": "Shooter, Adventure",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21a6.webp",
       "earlyAccess": "",
       "releaseDate": "2018.03.27",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "Kan6Iz26R4E"
+      "videoId": "Kan6Iz26R4E",
+      "steamId": "552520"
     },
     {
       "title": "Far Cry 6",
@@ -78,7 +85,8 @@
       "releaseDate": "2021.10.07",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "cR8kEzG1T64"
+      "videoId": "cR8kEzG1T64",
+      "steamId": "2369390"
     },
     {
       "title": "Far Cry New Dawn",
@@ -88,7 +96,8 @@
       "releaseDate": "2019.02.15 ",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "6eLHk2Eug78"
+      "videoId": "6eLHk2Eug78",
+      "steamId": "939960"
     },
     {
       "title": "Far Cry: Primal",
@@ -98,7 +107,8 @@
       "releaseDate": "2016.02.29",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "occqEcRd6Qg"
+      "videoId": "occqEcRd6Qg",
+      "steamId": "371660"
     },
     {
       "title": "FlatOut",
@@ -108,7 +118,8 @@
       "releaseDate": "2004.11.05",
       "finishDate": "VA",
       "playTime": "",
-      "videoId": "FBKSGSCSUTs"
+      "videoId": "FBKSGSCSUTs",
+      "steamId": "6220"
     },
     {
       "title": "FlatOut 2",
@@ -118,7 +129,8 @@
       "releaseDate": "2006.06.30",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "1Qxw33iFV8E"
+      "videoId": "1Qxw33iFV8E",
+      "steamId": "2990"
     },
     {
       "title": "FlatOut 3: Chaos & Destruction",
@@ -128,7 +140,8 @@
       "releaseDate": "2011.12.13",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "8y-r2Q8PBX8"
+      "videoId": "8y-r2Q8PBX8",
+      "steamId": "201510"
     },
     {
       "title": "FlatOut 4: Total Insanity",
@@ -138,7 +151,8 @@
       "releaseDate": "2017.03.17",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "Mg5N3BHn8t8"
+      "videoId": "Mg5N3BHn8t8",
+      "steamId": "402130"
     },
     {
       "title": "Tomb Raider",
@@ -148,7 +162,8 @@
       "releaseDate": "2013.03.04",
       "finishDate": "2022.01.07",
       "playTime": "~12:30:00",
-      "videoId": "RN7_8Yholm4"
+      "videoId": "RN7_8Yholm4",
+      "steamId": "203160"
     },
     {
       "title": "Elden Ring",
@@ -158,7 +173,8 @@
       "releaseDate": "2022.02.25",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "l6pCyV7PnqI"
+      "videoId": "l6pCyV7PnqI",
+      "steamId": "1245620"
     },
     {
       "title": "Firewatch",
@@ -168,7 +184,8 @@
       "releaseDate": "2016.02.09",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "HdUYYnfRdl8"
+      "videoId": "HdUYYnfRdl8",
+      "steamId": "383870"
     },
     {
       "title": "God of War",
@@ -178,17 +195,19 @@
       "releaseDate": "2024.02.08",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "rClXqZD2Xrs"
+      "videoId": "rClXqZD2Xrs",
+      "steamId": "1593500"
     },
     {
-      "title": "NieR: Automata",
+      "title": "NieR:Automata™",
       "category": "Hack and slash/Beat 'em up, Role-playing (RPG)",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.png",
       "earlyAccess": "",
       "releaseDate": "2017.02.23",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "wJxNhJ8fjFk"
+      "videoId": "wJxNhJ8fjFk",
+      "steamId": "524220"
     },
     {
       "title": "Cyberpunk 2077",
@@ -198,7 +217,8 @@
       "releaseDate": "2020.12.10",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "8X2kIfS6fb8"
+      "videoId": "8X2kIfS6fb8",
+      "steamId": "1091500"
     },
     {
       "title": "Control",
@@ -208,7 +228,8 @@
       "releaseDate": "2019.08.27",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "-oXCMFX9H8g"
+      "videoId": "-oXCMFX9H8g",
+      "steamId": "870780"
     },
     {
       "title": "Detroit: Become Human",
@@ -218,7 +239,8 @@
       "releaseDate": "2018.05.25",
       "finishDate": "VA",
       "playTime": "",
-      "videoId": "8a-EObAhYrg"
+      "videoId": "8a-EObAhYrg",
+      "steamId": "1222140"
     },
     {
       "title": "Doom",
@@ -228,17 +250,19 @@
       "releaseDate": "1993.12.10",
       "finishDate": "2024.05.11",
       "playTime": "01:09:00",
-      "videoId": "BkaC1-QoraY"
+      "videoId": "BkaC1-QoraY",
+      "steamId": "2280"
     },
     {
       "title": "Dying Light",
       "category": "Adventure, Role-playing (RPG), Shooter",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.webp",
       "earlyAccess": "",
-      "releaseDate": "2015. 01. 26",
+      "releaseDate": "2015.01.26",
       "finishDate": "2024.05.25",
       "playTime": "18:10:45",
-      "videoId": "a_ZCopEkQJ0"
+      "videoId": "a_ZCopEkQJ0",
+      "steamId": "239140"
     },
     {
       "title": "High on Life",
@@ -248,7 +272,8 @@
       "releaseDate": "2022.12.13",
       "finishDate": "2023.07.17",
       "playTime": "07:50:25",
-      "videoId": "7SUUeakHKTk"
+      "videoId": "7SUUeakHKTk",
+      "steamId": "1583230"
     },
     {
       "title": "High on Life: High on Knife",
@@ -258,7 +283,8 @@
       "releaseDate": "2023.10.03",
       "finishDate": "2024.06.09",
       "playTime": "Ismeretlen",
-      "videoId": "Wwkpa5OfSvk"
+      "videoId": "Wwkpa5OfSvk",
+      "steamId": "2447000"
     },
     {
       "title": "Grand Theft Auto V",
@@ -268,7 +294,8 @@
       "releaseDate": "2013.09.17",
       "finishDate": "2017.12.13",
       "playTime": "Ismeretlen",
-      "videoId": "QkkoHAzjnUs"
+      "videoId": "QkkoHAzjnUs",
+      "steamId": "271590"
     },
     {
       "title": "Grand Theft Auto: San Andreas",
@@ -278,7 +305,8 @@
       "releaseDate": "2004.10.26",
       "finishDate": "Ismeretlen",
       "playTime": "Ismeretlen",
-      "videoId": "J6-UokQene8"
+      "videoId": "J6-UokQene8",
+      "steamId": "12120"
     },
     {
       "title": "Red Dead Redemption 2",
@@ -288,7 +316,8 @@
       "earlyAccess": "",
       "finishDate": "2024.06.12",
       "playTime": "Ismeretlen",
-      "videoId": "iqaipBpnVRE"
+      "videoId": "iqaipBpnVRE",
+      "steamId": "1174180"
     },
     {
       "title": "Neighbours from Hell",
@@ -298,7 +327,8 @@
       "releaseDate": "2003.06.20.",
       "finishDate": "VA",
       "playTime": "",
-      "videoId": "ia3a4ub-W_4"
+      "videoId": "ia3a4ub-W_4",
+      "steamId": "260750"
     },
     {
       "title": "Neighbours from Hell 2: On Vacation",
@@ -308,7 +338,8 @@
       "releaseDate": "2004.05.05.",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "vfHH1wnmdr4"
+      "videoId": "vfHH1wnmdr4",
+      "steamId": "260750"
     },
     {
       "title": "Neighbours back From Hell",
@@ -318,7 +349,8 @@
       "releaseDate": "2020.10.08.",
       "finishDate": "P",
       "playTime": "",
-      "videoId": "2rAh4SkvOWM"
+      "videoId": "2rAh4SkvOWM",
+      "steamId": "1283190"
     },
     {
       "title": "Sunkenland",
@@ -328,7 +360,8 @@
       "releaseDate": "",
       "finishDate": "OWG",
       "playTime": "02:36:00",
-      "videoId": "rKK3DzWIUYA"
+      "videoId": "rKK3DzWIUYA",
+      "steamId": "2080690"
     },
     {
       "title": "Rust",
@@ -338,7 +371,8 @@
       "releaseDate": "2023.08.26",
       "finishDate": "MMO",
       "playTime": "58:11:06:35",
-      "videoId": "LGcECozNXEw"
+      "videoId": "LGcECozNXEw",
+      "steamId": "252490"
     },
     {
       "title": "Once Human",
@@ -348,7 +382,8 @@
       "releaseDate": "2024.07.09",
       "finishDate": "MMO",
       "playTime": "01:18:12:40",
-      "videoId": "Ybw4G-WTXvY"
+      "videoId": "Ybw4G-WTXvY",
+      "steamId": "2139460"
     },
     {
       "title": "Outlast",
@@ -358,7 +393,8 @@
       "releaseDate": "2013.09.04",
       "finishDate": "2021.08.28",
       "playTime": "07:18:26",
-      "videoId": "2GPf3MdVOKI"
+      "videoId": "2GPf3MdVOKI",
+      "steamId": "238320"
     },
     {
       "title": "Hellblade: Senua's Sacrifice",
@@ -368,7 +404,8 @@
       "releaseDate": "2017.08.07",
       "finishDate": "AH",
       "playTime": "",
-      "videoId": "2GPf3MdVOKI"
+      "videoId": "2GPf3MdVOKI",
+      "steamId": "414340"
     },
     {
       "title": "Portal",
@@ -378,7 +415,8 @@
       "releaseDate": "2007.10.10",
       "finishDate": "2017.06.28",
       "playTime": "Ismeretlen",
-      "videoId": "nA9ChSA6wV4"
+      "videoId": "nA9ChSA6wV4",
+      "steamId": "400"
     },
     {
       "title": "Portal 2",
@@ -388,7 +426,8 @@
       "releaseDate": "2011.04.18",
       "finishDate": "2018.11.24",
       "playTime": "Ismeretlen",
-      "videoId": "uxSo1k2Y1Uk"
+      "videoId": "uxSo1k2Y1Uk",
+      "steamId": "620"
     },
     {
       "title": "The Forest",
@@ -398,7 +437,8 @@
       "releaseDate": "2018.04.30",
       "finishDate": "2017.11.03",
       "playTime": "Ismeretlen",
-      "videoId": "uxSo1k2Y1Uk"
+      "videoId": "uxSo1k2Y1Uk",
+      "steamId": "242760"
     },
     {
       "title": "Sons of the Forest",
@@ -408,7 +448,9 @@
       "releaseDate": "2024.02.22",
       "finishDate": "2023.04.09",
       "playTime": "Ismeretlen",
-      "videoId": "LpNDrrly3GI"
+      "videoId": "LpNDrrly3GI",
+      "steamId": "1326470"
+      
     },
     {
       "title": "Icarus",
@@ -418,16 +460,73 @@
       "releaseDate": "2021.12.04",
       "finishDate": "OW",
       "playTime": "20:06:36:19",
-      "videoId": "LpNDrrly3GI"
+      "videoId": "LpNDrrly3GI",
+      "steamId": "1149460"
     },
     {
       "title": "Raft",
-      "category": " Simulator, Adventure, Indie",
+      "category": "Simulator, Adventure, Indie",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xdc.webp",
       "earlyAccess": "2018.05.23",
       "releaseDate": "2022.06.20",
       "finishDate": "2022.01.30",
       "playTime": "Ismeretlen",
-      "videoId": "1BEvg35Ivuc"
+      "videoId": "1BEvg35Ivuc",
+      "steamId": "648800"
+    },
+    {
+      "title": "Firefighting Simulator: The Squad",
+      "category": "Simulator, Strategy",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5uzb.webp",
+      "earlyAccess": "",
+      "releaseDate": "2021.11.17",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "fFW4MZExqXo",
+      "steamId": "420560"
+    },
+    {
+      "title": "Construction Simulator",
+      "category": "Simulator, Strategy",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co513s.webp",
+      "earlyAccess": "",
+      "releaseDate": "2022.09.20",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "B-qFoictAc4",
+      "steamId": "1273400"
+    },
+    {
+      "title": "Gas Station Simulator",
+      "category": "Simulator, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3qix.webp",
+      "earlyAccess": "",
+      "releaseDate": "2021.09.15",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "fyWZTYsrzR0",
+      "steamId": "1149620"
+    },
+    {
+      "title": "Euro Truck Simulator 2",
+      "category": "Racing, Simulator",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7et5.webp",
+      "earlyAccess": "",
+      "releaseDate": "2012.10.18",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "xlTuC18xVII",
+      "steamId": "227300"
+    },
+    {
+      "title": "Black Myth: Wukong",
+      "category": "Role-playing (RPG), Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8h3y.webp",
+      "earlyAccess": "",
+      "releaseDate": "2024.08.20",
+      "finishDate": "VA",
+      "playTime": "",
+      "videoId": "IAtn4HDgxtQ",
+      "steamId": "2358720"
     }
   ]
