@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0] - 2024-08-26
+
+### Changed
+- New Design
+- Improved algorithm for html code and js.
+- Updated UI components.
+- Performance Optimization
+- Updated Phone UI components.
+- Added 6 more backgrounds.
+- Removed "waitLoadFully" spinner.
+
 ## [1.2.9] - 2024-08-24
 
 ### Multiple games added

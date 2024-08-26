@@ -129,6 +129,13 @@ footer {
     position: relative;
 }
 
+/* Megjelenés animáció */
+.game.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .game img {
     display: block;
     width: 100%; 
@@ -481,5 +488,64 @@ html {
 
     .category-section {
         padding: 1em;
+    }
+}
+
+/* WebKit-alapú böngészők (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* A görgetősáv szélessége */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* A görgetősáv háttere */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #64b5f6; /* A görgetősáv "fogantyújának" színe */
+    border-radius: 10px; /* Lekerekített sarkok */
+    border: 3px solid #1e1e1e; /* Határ a fogantyú körül */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #42a5f5; /* Hover szín a fogantyún */
+}
+
+/* Firefox esetén (kisebb támogatás) */
+html {
+    scrollbar-width: thin; /* Vékonyabb görgetősáv */
+    scrollbar-color: #64b5f6 #1e1e1e; /* Fogantyú és háttér szín */
+}
+
+/* Internet Explorer és Edge esetén (régebbi verziók) */
+body {
+    -ms-overflow-style: none; /* Nincs görgetősáv */
+}
+
+/* Rejtett görgetősáv (példa) */
+body::-webkit-scrollbar {
+    display: none; /* Görgetősáv elrejtése (nem ajánlott, ha az elérhetőség fontos) */
+}
+
+/* Mobil kijelzők stílusa - egy játék konténer jelenik meg egyszerre */
+@media (max-width: 768px) {
+    .game {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 10px;
+        right: 10px; /* Gombok jobb alsó sarokba helyezése */
+        display: flex;
+        flex-direction: column; /* Gombok egymás alatt */
+        gap: 10px;
+    }
+
+    .game-content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
