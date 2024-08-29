@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.1] - 2024-08-29
+
+### Changed
+- For open-world games, it no longer says 'Completion time' but rather 'Playtime'.
+- Temporarily, a search icon has been added to the top left corner, which helps to search among the games.
+- The styles.css has been updated with more modern solutions and the addition of the search feature.
+- Combined similar functionalities in event listeners to reduce repetition.
+- Extracted the logic for showing or hiding sections into the 'toggleSectionVisibility' function for clarity.
+- Ensured that the search input box remains visible if it has focus or contains text.
+
 ## [1.3.0] - 2024-08-26
 
 ### Changed

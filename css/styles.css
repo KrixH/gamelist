@@ -526,6 +526,76 @@ body::-webkit-scrollbar {
     display: none; /* Görgetősáv elrejtése (nem ajánlott, ha az elérhetőség fontos) */
 }
 
+/* Keresési mező és ikon stílusai */
+.search-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    overflow: hidden;
+}
+
+.search-container.expanded {
+    width: 250px;
+    border-radius: 15px;
+    background-color: #1e1e1e;
+}
+
+.search-container input[type="text"] {
+    width: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    background-color: transparent;
+    color: #fff;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.search-container.expanded input[type="text"] {
+    width: 200px;
+    opacity: 1;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #fff;
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.search-container input[type="text"]:focus::placeholder {
+    color: #fff;
+}
+
+.search-icon {
+    font-size: 30px;
+    color: #1e90ff; /* Cool Blue */
+    cursor: pointer;
+    transition: opacity 0.9s ease, background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container.expanded .search-icon {
+    opacity: 0; /* Nagyító ikon eltűnik, ha a mező kibővül */
+}
+
+
 /* Mobil kijelzők stílusa - egy játék konténer jelenik meg egyszerre */
 @media (max-width: 768px) {
     .game {

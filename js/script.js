@@ -1,28 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Ellenőrizze az ablak szélességét és alkalmazza a megfelelő stílusokat
-    if (window.innerWidth <= 768) {
-        const buttons = document.querySelectorAll('.button-container');
-        buttons.forEach(buttonContainer => {
-            buttonContainer.style.bottom = '10px';
-            buttonContainer.style.right = '10px';
-            buttonContainer.style.top = 'auto';
-            buttonContainer.style.left = 'auto';
-            buttonContainer.style.flexDirection = 'row'; // Gombok egymás mellett
-            buttonContainer.style.justifyContent = 'flex-end'; // Jobbra igazítás
-        });
-    }
-
-    const sections = [
-        "inProgress", "completed", "openWorld", "mmo", 
-        "abandoned", "pending", "simulator"
-    ];
-
+    const sections = ["inProgress", "completed", "openWorld", "mmo", "abandoned", "pending", "simulator"];
     let remainingGames = [];
     let remainingSections = new Set(sections);
 
+    const searchContainer = document.querySelector('.search-container');
+    const searchInput = document.getElementById('gameSearch');
+
     function renderGamesOnScroll() {
         const scrollPosition = window.scrollY + window.innerHeight;
-
         remainingSections.forEach(sectionKey => {
             const sectionElement = document.getElementById(`${sectionKey}Section`);
             if (sectionElement && sectionElement.offsetTop < scrollPosition) {
@@ -34,45 +19,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderGames(games) {
         remainingGames = games;
-        renderGamesOnScroll(); // Induláskor renderelés a látható szekciókra
+        renderGamesOnScroll();
     }
 
     function renderGamesForSection(sectionKey) {
         const sectionElement = document.getElementById(`${sectionKey}Games`);
-        sectionElement.innerHTML = ''; // Régi tartalom törlése
+        sectionElement.innerHTML = '';
 
-        const sectionGames = remainingGames
-            .filter(game => determineSectionKey(game.finishDate) === sectionKey)
-            .sort((a, b) => a.title.localeCompare(b.title));
+        const sectionGames = remainingGames.filter(game => determineSectionKey(game.finishDate) === sectionKey).sort((a, b) => a.title.localeCompare(b.title));
 
+        toggleSectionVisibility(sectionKey, sectionGames.length > 0);
         if (sectionGames.length > 0) {
-            document.getElementById(`${sectionKey}Header`).style.display = 'block';
-            document.getElementById(`${sectionKey}Section`).style.display = 'block';
-
             loadGamesOneByOne(sectionGames, sectionElement);
-        } else {
-            document.getElementById(`${sectionKey}Header`).style.display = 'none';
-            document.getElementById(`${sectionKey}Section`).style.display = 'none';
+            remainingGames = remainingGames.filter(game => !sectionGames.includes(game));
         }
+    }
 
-        remainingGames = remainingGames.filter(game => !sectionGames.includes(game));
+    function toggleSectionVisibility(sectionKey, isVisible) {
+        document.getElementById(`${sectionKey}Section`).style.display = isVisible ? 'block' : 'none';
+        document.getElementById(`${sectionKey}Header`).style.display = isVisible ? 'block' : 'none';
     }
 
     function loadGamesOneByOne(games, sectionElement) {
-        let index = 0;
-
-        function showNextGame() {
-            if (index < games.length) {
-                const gameDiv = createGameDiv(games[index]);
+        games.forEach((game, index) => {
+            setTimeout(() => {
+                const gameDiv = createGameDiv(game);
                 sectionElement.appendChild(gameDiv);
                 setTimeout(() => gameDiv.classList.add('show'), 100);
-
-                index++;
-                setTimeout(showNextGame, 300);
-            }
-        }
-
-        showNextGame();
+            }, index * 300);
+        });
     }
 
     function determineSectionKey(finishDate) {
@@ -87,22 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createGameDiv(game) {
         const finishDateClass = determineSectionKey(game.finishDate);
-        const finishDateText = formatFinishDateText(finishDateClass, game.finishDate);
-        const playTimeText = game.playTime ? formatPlayTimeText(game.playTime, finishDateClass) : '';
-        const earlyAccessText = game.earlyAccess ? createParagraph("early-access", `Korai hozzáférés: ${game.earlyAccess}`) : '';
-        const releaseDateText = game.releaseDate ? createParagraph("release-date", `Teljes megjelenés: ${game.releaseDate}`) : '';
-
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('game');
+        gameDiv.setAttribute('data-title', game.title.toLowerCase());
         gameDiv.innerHTML = `
             <div class="game-content">
                 <img src="${game.cover}" alt="${game.title}">
                 <h3>${game.title}</h3>
-                <div class="categories">${game.category.split(",").map(category => createCategoryElement(category)).join("")}</div>
-                ${earlyAccessText}
-                ${releaseDateText}
-                <p class="finish-date ${finishDateClass}">${finishDateText}</p>
-                ${playTimeText}
+                <div class="categories">${game.category.split(",").map(createCategoryElement).join("")}</div>
+                ${game.earlyAccess ? createParagraph("early-access", `Korai hozzáférés: ${game.earlyAccess}`) : ''}
+                ${game.releaseDate ? createParagraph("release-date", `Teljes megjelenés: ${game.releaseDate}`) : ''}
+                <p class="finish-date ${finishDateClass}">${formatFinishDateText(finishDateClass, game.finishDate)}</p>
+                ${game.playTime ? formatPlayTimeText(game.playTime, finishDateClass) : ''}
             </div>
         `;
 
@@ -156,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function formatPlayTimeText(playTime, finishDateClass) {
-        return finishDateClass === "open-world" || finishDateClass === "mmo"
+        return (finishDateClass === "openWorld" || finishDateClass === "mmo")
             ? createParagraph('play-time', `Játék idő: ${playTime}`)
             : createParagraph('play-time', `Végigjátszási idő: ${playTime}`);
     }
@@ -178,12 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.classList.remove("modal-show");
         }
         document.querySelectorAll(".close, #videoModal").forEach(button => button.onclick = closeModal);
-        window.onkeydown = function (event) {
+        window.onkeydown = event => {
             if (event.key === "Escape") closeModal();
         };
     }
 
-    // AJAX kérés a játékok adatainak beolvasásához
     fetch('games.json')
         .then(response => response.json())
         .then(data => {
@@ -194,4 +164,48 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Error fetching games:', error);
             document.querySelector('.waitLoadFully').style.display = 'none';
         });
+
+    searchContainer.addEventListener('mouseenter', () => searchContainer.classList.add('expanded'));
+    searchContainer.addEventListener('mouseleave', () => {
+        if (!searchInput.matches(':focus') && !searchInput.value.trim()) searchContainer.classList.remove('expanded');
+    });
+
+    searchInput.addEventListener('focus', () => searchContainer.classList.add('expanded'));
+    searchInput.addEventListener('blur', () => {
+        if (!searchInput.value.trim()) searchContainer.classList.remove('expanded');
+    });
+
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const games = document.querySelectorAll('.game');
+        let hasResults = false;
+
+        sections.forEach(sectionKey => {
+            let sectionHasResults = false;
+
+            games.forEach(game => {
+                const title = game.getAttribute('data-title');
+                const matchesSearch = title.includes(searchTerm);
+                game.style.display = matchesSearch ? '' : 'none';
+
+                if (matchesSearch && game.closest('.category-section').id.includes(sectionKey)) {
+                    sectionHasResults = true;
+                    hasResults = true;
+                }
+            });
+
+            toggleSectionVisibility(sectionKey, sectionHasResults);
+        });
+
+        if (!hasResults || !searchTerm) {
+            sections.forEach(sectionKey => toggleSectionVisibility(sectionKey, searchTerm ? false : true));
+            if (!searchTerm) games.forEach(game => game.style.display = '');
+        }
+    });
+
+    document.addEventListener('click', event => {
+        if (!searchContainer.contains(event.target) && !searchInput.matches(':focus') && !searchInput.value.trim()) {
+            searchContainer.classList.remove('expanded');
+        }
+    });
 });
