@@ -1,6 +1,6 @@
 [
     {
-      "_comment": "finishDate Kategóriák : Idő = befejezve, VA = Végigjátszás alatt, AH = Szüneteltetett/félbenhagyott, P = Várakozás az előző rész befejezésére, OW = Open World Játék, MMO = Massively Multiplayer Online/ nem lehet befejezni', SIM = Szimulator gameszkó ",
+      "_comment": "finishDate Kategóriák : Idő = befejezve, VA = Végigjátszás alatt, AH = Szüneteltetett/félbenhagyott, P = Várakozás az előző rész befejezésére, OW = Open World Játék, MMO = Massively Multiplayer Online/ nem lehet befejezni', SIM = Szimulator gameszkó, NS = Tervezett végigjátszások ",
       "title": "Alan Wake Remastered",
       "category": "Adventure, Shooter",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65aa.png",
@@ -265,6 +265,17 @@
       "steamId": "239140"
     },
     {
+      "title": "Dying Light 2: Stay Human",
+      "category": "Role-playing (RPG), Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yk.webp",
+      "earlyAccess": "",
+      "releaseDate": "2022.02.03",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "N1_7wjuzqwI",
+      "steamId": "534380"
+    },
+    {
       "title": "High on Life",
       "category": "Adventure, Shooter",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67qo.webp",
@@ -397,6 +408,17 @@
       "steamId": "238320"
     },
     {
+      "title": "Outlast II",
+      "category": "Adventure, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20x8.webp",
+      "earlyAccess": "",
+      "releaseDate": "2017.04.25",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "FRdqSsD9g38",
+      "steamId": "414700"
+    },
+    {
       "title": "Hellblade: Senua's Sacrifice",
       "category": "Hack and slash/Beat 'em up, Adventure, Indie",
       "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7l.webp",
@@ -514,7 +536,7 @@
       "earlyAccess": "",
       "releaseDate": "2012.10.18",
       "finishDate": "SIM",
-      "playTime": "",
+      "playTime": "1 515,7 óra",
       "videoId": "xlTuC18xVII",
       "steamId": "227300"
     },
@@ -528,5 +550,93 @@
       "playTime": "",
       "videoId": "IAtn4HDgxtQ",
       "steamId": "2358720"
+    },
+    {
+      "title": "Crime Scene Cleaner",
+      "category": "Simulator, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xr1.webp",
+      "earlyAccess": "",
+      "releaseDate": "2024.08.14",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "TG2jf0UxER0",
+      "steamId": "1040200"
+    },
+    {
+      "title": "Contraband Police",
+      "category": "Shooter, Simulator, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co696g.webp",
+      "earlyAccess": "",
+      "releaseDate": "2023.03.08",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "LGCBcGA2D-Y",
+      "steamId": "756800"
+    },
+    {
+      "title": "Tavern Manager Simulator",
+      "category": "Simulator, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co84fq.webp",
+      "earlyAccess": "",
+      "releaseDate": "2024.08.13",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "oZOM7iwX2Ag",
+      "steamId": "2756770"
+    },
+    {
+      "title": "Life is Strange",
+      "category": "Puzzle, Role-playing (RPG), Adventure, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r8e.webp",
+      "earlyAccess": "",
+      "releaseDate": "2015.01.30",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "AURVxvIZrmU",
+      "steamId": "319630"
+    },
+    {
+      "title": "Coral Island",
+      "category": "Role-playing (RPG), Simulator, Strategy, Adventure, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ftd.webp",
+      "earlyAccess": "2022.10.11",
+      "releaseDate": "2023.11.14",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "iyRUBNF7-k4",
+      "steamId": "1158160"
+    },
+    {
+      "title": "Marvel's Guardians of the Galaxy",
+      "category": "Shooter, Role-playing (RPG), Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co39pu.webp",
+      "earlyAccess": "",
+      "releaseDate": "2021.10.26",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "2xoTY5Mu4-g",
+      "steamId": "1088850"
+    },
+    {
+      "title": "Resident Evil",
+      "category": "Shooter, Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1taw.webp",
+      "earlyAccess": "",
+      "releaseDate": "2015.01.19",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "IjxFtFwY6jk",
+      "steamId": "304240"
+    },
+    {
+      "title": "Days Gone",
+      "category": "Shooter, Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1izz.webp",
+      "earlyAccess": "",
+      "releaseDate": "2019.04.26",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "bGej8K1r8KI",
+      "steamId": "1259420"
     }
   ]

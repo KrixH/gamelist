@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = ["inProgress", "completed", "openWorld", "mmo", "abandoned", "pending", "simulator"];
+    const sections = ["inProgress", "completed", "openWorld", "mmo", "abandoned", "pending", "simulator", "notStarted"];
     let remainingGames = [];
     let remainingSections = new Set(sections);
 
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (finishDate.includes("OW")) return "openWorld";
         if (finishDate.includes("MMO")) return "mmo";
         if (finishDate.includes("SIM")) return "simulator";
+        if (finishDate.includes("NS")) return "notStarted";
         return "completed";
     }
 
@@ -121,17 +122,18 @@ document.addEventListener("DOMContentLoaded", () => {
             openWorld: "Open World Game",
             mmo: "MMO - Nem befejezhető",
             simulator: "Szimulátor",
+            notStarted: "Tervezett végigjátszás",
             completed: `Végigjátszva: ${finishDate}`
         };
         return labels[finishDateClass] || labels.completed;
-    }
+    }  
 
     function formatPlayTimeText(playTime, finishDateClass) {
-        return (finishDateClass === "openWorld" || finishDateClass === "mmo")
+        return (finishDateClass === "openWorld" || finishDateClass === "mmo" || finishDateClass === "simulator")
             ? createParagraph('play-time', `Játék idő: ${playTime}`)
             : createParagraph('play-time', `Végigjátszási idő: ${playTime}`);
     }
-
+    
     function createParagraph(className, text) {
         return `<p class="${className}">${text}</p>`;
     }

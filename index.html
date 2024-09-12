@@ -27,93 +27,110 @@
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="gameSearch" placeholder="Keresés egy játékra...">
     </div>
-<div class="container">
-    <!-- Jelenleg futó végigjátszások kategória -->
-    <div class="category-header" id="inProgressHeader">
-        <h2>Jelenleg futó végigjátszások</h2>
-    </div>
-    <div class="category-section" id="inProgressSection">
-        <div class="category-games" id="inProgressGames"></div>
-    </div>
-    <!-- Befejezett játékok kategória -->
-    <div class="category-header" id="completedHeader">
-        <h2>Befejezett végigjátszások</h2>
-    </div>
-    <div class="category-section" id="completedSection">
-        <div class="category-games" id="completedGames"></div>
-    </div>
-    <!-- Következő rész függőben kategória -->
-    <div class="category-header" id="pendingHeader">
-        <h2>Következő rész függőben</h2>
-    </div>
-    <div class="category-section" id="pendingSection">
-        <div class="category-games" id="pendingGames"></div>
-    </div>
-    <!-- Szüneteltetett játékok kategória -->
-    <div class="category-header" id="abandonedHeader">
-        <h2>Szüneteltetett végigjátszások</h2>
-    </div>
-    <div class="category-section" id="abandonedSection">
-        <div class="category-games" id="abandonedGames"></div>
-    </div>
-    <!-- Open World kategória -->
-    <div class="category-header" id="openWorldHeader">
-        <h2>Open World Játékok</h2>
-    </div>
-    <div class="category-section" id="openWorldSection">
-        <div class="category-games" id="openWorldGames"></div>
-    </div>
-    <!-- Simulátor kategória -->
-    <div class="category-header" id="simulatorHeader">
-        <h2>Szimulátor Játékok</h2>
-    </div>
-    <div class="category-section" id="simulatorSection">
-        <div class="category-games" id="simulatorGames"></div>
-    </div>
-    <!-- MMO Játékok kategória -->
-    <div class="category-header" id="mmoHeader">
-        <h2>Massively Multiplayer Online Játékok</h2>
-    </div>
-    <div class="category-section" id="mmoSection">
-        <div class="category-games" id="mmoGames"></div>
-    </div>
-</div>
-
-<div id="videoModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="videoFrame"></div>
-    </div>
-</div>
-
-<div id="cookieConsentBanner" class="cookie-notice">
-    <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a></p>
-    <div class="cookie-button-container">
-        <button id="acceptCookies" class="cookie-button">
-            <i class="fa fa-cookie-bite"></i> Elfogadom
-        </button>
-    </div>
-</div>
-
-<!-- Back to Top Button -->
-<a href="#top" class="back-to-top" aria-label="Back to Top">
-    <i class="fa-solid fa-arrow-up"></i>
-</a>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
-            <a href="https://github.com/KrixH" target="_parent" class="footer-link">KrixH99</a>
+    
+    <div class="container">
+        <!-- Jelenleg futó végigjátszások kategória -->
+        <div class="category-header" id="inProgressHeader">
+            <h2>Jelenleg futó végigjátszások</h2>
         </div>
-        <div class="footer-info">
-            <p>Frissítve: <span id="update-date">2024.08.29. - 17:55</span></p>
-            <p>&copy; <span id="current-year"></span> ~ Game List ~. Minden jog fenntartva.</p>
+        <div class="category-section" id="inProgressSection">
+            <div class="category-games" id="inProgressGames"></div>
+        </div>
+
+        <!-- Befejezett játékok kategória -->
+        <div class="category-header" id="completedHeader">
+            <h2>Befejezett végigjátszások</h2>
+        </div>
+        <div class="category-section" id="completedSection">
+            <div class="category-games" id="completedGames"></div>
+        </div>
+
+        <!-- Tervezett játékok kategória (új) -->
+        <div class="category-header" id="notStartedHeader">
+            <h2>Tervezett végigjátszások</h2>
+        </div>
+        <div class="category-section" id="notStartedSection">
+            <div class="category-games" id="notStartedGames"></div>
+        </div>
+
+        <!-- Következő rész függőben kategória -->
+        <div class="category-header" id="pendingHeader">
+            <h2>Következő rész függőben</h2>
+        </div>
+        <div class="category-section" id="pendingSection">
+            <div class="category-games" id="pendingGames"></div>
+        </div>
+
+        <!-- Szüneteltetett játékok kategória -->
+        <div class="category-header" id="abandonedHeader">
+            <h2>Szüneteltetett végigjátszások</h2>
+        </div>
+        <div class="category-section" id="abandonedSection">
+            <div class="category-games" id="abandonedGames"></div>
+        </div>
+
+        <!-- Open World kategória -->
+        <div class="category-header" id="openWorldHeader">
+            <h2>Open World Játékok</h2>
+        </div>
+        <div class="category-section" id="openWorldSection">
+            <div class="category-games" id="openWorldGames"></div>
+        </div>
+
+        <!-- Szimulátor kategória -->
+        <div class="category-header" id="simulatorHeader">
+            <h2>Szimulátor Játékok</h2>
+        </div>
+        <div class="category-section" id="simulatorSection">
+            <div class="category-games" id="simulatorGames"></div>
+        </div>
+
+        <!-- MMO Játékok kategória -->
+        <div class="category-header" id="mmoHeader">
+            <h2>Massively Multiplayer Online Játékok</h2>
+        </div>
+        <div class="category-section" id="mmoSection">
+            <div class="category-games" id="mmoGames"></div>
         </div>
     </div>
-</footer>
 
-<script src="./js/script.js"></script>
-<script src="./js/footer.js"></script>
+    <!-- Videó megtekintő Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="videoFrame"></div>
+        </div>
+    </div>
+
+    <!-- Cookie banner -->
+    <div id="cookieConsentBanner" class="cookie-notice">
+        <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a></p>
+        <div class="cookie-button-container">
+            <button id="acceptCookies" class="cookie-button">
+                <i class="fa fa-cookie-bite"></i> Elfogadom
+            </button>
+        </div>
+    </div>
+
+    <!-- Vissza a tetejére gomb -->
+    <a href="#top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
+                <a href="https://github.com/KrixH" target="_parent" class="footer-link">KrixH99</a>
+            </div>
+            <div class="footer-info">
+                <p>Frissítve: <span id="update-date">2024.09.12. - 12:55</span></p>
+                <p>&copy; <span id="current-year"></span> ~ Game List ~. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/footer.js"></script>
 </body>
 </html>

@@ -288,6 +288,10 @@ footer {
     color: #ffd700;
 }
 
+.finish-date.not-started {
+    color: #ff9800;
+}
+
 .time-text {
     color: #a0a0a0;
     font-size: 0.9em;

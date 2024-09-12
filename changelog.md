@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.2] - 2024-09-12
+
+### Multiple games added
+
+### Changed
+- New category
+- Improved security
+- Added cookies
+- New policy website
+- Improved algorithm for html code.
+- Updated UI components.
+
 ## [1.3.1] - 2024-08-29
 
 ### Changed
