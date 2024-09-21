@@ -79,9 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('game');
         gameDiv.setAttribute('data-title', game.title.toLowerCase());
-
+    
+        const isNew = checkIfNew(game.dateAdded);
+    
         gameDiv.innerHTML = `
             <div class="game-content">
+                ${isNew ? '<span class="new-badge">ÚJ</span>' : ''}
                 <img src="${game.cover}" alt="${game.title}">
                 <h3>${game.title}</h3>
                 <div class="categories">${game.category.split(",").map(createCategoryElement).join("")}</div>
@@ -91,12 +94,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${game.playTime ? formatPlayTimeText(game.playTime, finishDateClass) : ''}
             </div>
         `;
-
+    
         const buttonContainer = createButtonContainer(game);
         if (buttonContainer) gameDiv.appendChild(buttonContainer);
-
+    
         return gameDiv;
     }
+    
+    function checkIfNew(dateAdded) {
+        const now = new Date();
+        const addedDate = new Date(dateAdded);
+        const differenceInDays = Math.floor((now - addedDate) / (1000 * 60 * 60 * 24)); // Konvertálja az időkülönbséget napokra
+        return differenceInDays <= 7; // Igaz értéket ad vissza, ha a játékot az elmúlt 7 napban adtuk hozzá
+    }
+    
 
     function createCategoryElement(category) {
         return `<div class="category">${category.trim()}</div>`;

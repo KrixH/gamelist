@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.4] - 2024-09-22
+
+### Changed
+- New Game Highlight: Added a function to check if a game is new (added within the last 7 days) and display a "ÚJ" (NEW) badge.
+- New Badge Animation: Added wobble animation to the "ÚJ" (NEW) badge.
+- Scroll-based Rendering: Games are now rendered on scroll to improve performance, loading sections dynamically as the user scrolls.
+- Footer Modernization: Updated the footer with new styles, hover animations, and brand-specific colors for enhanced appearance.
+- Game Entry Animations: Implemented smooth transitions and animations for game entries when they load or are hovered over.
+- Category Section Updates: Added new game sections like "Tervezett" (Planned) and optimized the visibility toggling based on game presence.
+
 
 ## [1.3.3] - 2024-09-21
 
