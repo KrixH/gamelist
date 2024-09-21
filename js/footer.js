@@ -13,14 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.style.display = 'none';
     });
 
-    // Az aktuális év beállítása a láblécben
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
     // "Vissza a tetejére" gomb funkció
     const backToTopButton = document.querySelector('.back-to-top');
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) { // Az érték módosítható a görgetési pozícióhoz
+        if (window.scrollY > 100) { 
             backToTopButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');

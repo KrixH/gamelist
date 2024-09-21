@@ -26,18 +26,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const sectionElement = document.getElementById(`${sectionKey}Games`);
         sectionElement.innerHTML = '';
 
-        const sectionGames = remainingGames.filter(game => determineSectionKey(game.finishDate) === sectionKey).sort((a, b) => a.title.localeCompare(b.title));
+        const sectionGames = remainingGames.filter(game => determineSectionKey(game.finishDate) === sectionKey)
+                                           .sort((a, b) => a.title.localeCompare(b.title));
 
-        toggleSectionVisibility(sectionKey, sectionGames.length > 0);
         if (sectionGames.length > 0) {
+            toggleSectionVisibility(sectionKey, true);
             loadGamesOneByOne(sectionGames, sectionElement);
             remainingGames = remainingGames.filter(game => !sectionGames.includes(game));
+        } else {
+            toggleSectionVisibility(sectionKey, false);
         }
     }
 
     function toggleSectionVisibility(sectionKey, isVisible) {
-        document.getElementById(`${sectionKey}Section`).style.display = isVisible ? 'block' : 'none';
-        document.getElementById(`${sectionKey}Header`).style.display = isVisible ? 'block' : 'none';
+        const section = document.getElementById(`${sectionKey}Section`);
+        const header = document.getElementById(`${sectionKey}Header`);
+        const displayValue = isVisible ? 'block' : 'none';
+
+        section.style.display = displayValue;
+        header.style.display = displayValue;
     }
 
     function loadGamesOneByOne(games, sectionElement) {
@@ -45,19 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 const gameDiv = createGameDiv(game);
                 sectionElement.appendChild(gameDiv);
-                setTimeout(() => gameDiv.classList.add('show'), 100);
+                setTimeout(() => gameDiv.classList.add('show'), 80);
             }, index * 300);
         });
     }
 
     function determineSectionKey(finishDate) {
-        if (finishDate.includes("VA")) return "inProgress";
-        if (finishDate.includes("AH")) return "abandoned";
-        if (finishDate.includes("P")) return "pending";
-        if (finishDate.includes("OW")) return "openWorld";
-        if (finishDate.includes("MMO")) return "mmo";
-        if (finishDate.includes("SIM")) return "simulator";
-        if (finishDate.includes("NS")) return "notStarted";
+        const sectionMap = {
+            "VA": "inProgress",
+            "AH": "abandoned",
+            "P": "pending",
+            "OW": "openWorld",
+            "MMO": "mmo",
+            "SIM": "simulator",
+            "NS": "notStarted"
+        };
+
+        for (const key in sectionMap) {
+            if (finishDate.includes(key)) return sectionMap[key];
+        }
         return "completed";
     }
 
@@ -66,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('game');
         gameDiv.setAttribute('data-title', game.title.toLowerCase());
+
         gameDiv.innerHTML = `
             <div class="game-content">
                 <img src="${game.cover}" alt="${game.title}">
@@ -126,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
             completed: `Végigjátszva: ${finishDate}`
         };
         return labels[finishDateClass] || labels.completed;
-    }  
+    }
 
     function formatPlayTimeText(playTime, finishDateClass) {
         return (finishDateClass === "openWorld" || finishDateClass === "mmo" || finishDateClass === "simulator")
@@ -200,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (!hasResults || !searchTerm) {
-            sections.forEach(sectionKey => toggleSectionVisibility(sectionKey, searchTerm ? false : true));
+            sections.forEach(sectionKey => toggleSectionVisibility(sectionKey, !searchTerm));
             if (!searchTerm) games.forEach(game => game.style.display = '');
         }
     });

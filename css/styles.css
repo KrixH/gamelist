@@ -26,42 +26,92 @@ h1 {
 footer {
     background: #1e1e1e;
     color: #909090;
-    padding: 2em 1.5em;
+    padding: 2em;
     text-align: center;
     border-top: 4px solid #282828;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer-content {
     max-width: 75em;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 1.5em;
 }
 
 .footer-link {
-    color: #909090;
+    color: #64b5f6;
     text-decoration: none;
     font-size: 1.125em;
     margin: 0 1em;
-    transition: color 0.5s ease, transform 0.5s ease;
     position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #42a5f5;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .footer-link:hover {
-    color: #d35400;
-    transform: scale(1.1);
+    color: #42a5f5;
+    transform: scale(1.05);
 }
 
-.footer-info p {
-    margin: 0.75em 0;
-    font-size: 1em;
+
+.footer-info {
+    margin-top: 0.1em;
+    color: #a0a0a0;
+}
+
+.footer-info .last-updated {
+    font-size: 1.0em;
     color: #7f8c8d;
+    margin-bottom: 2em;
 }
 
-#update-date {
-    color: #616161;
-}
-
-#current-year {
+.footer-info .brand {
+    color: #ffa726; /* Narancssárga szín a GAME HUB-nak */
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-info .creator {
+    color: #64b5f6; /* Kék szín a KrixH99-hez */
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-bottom: 1em;
+    }
 }
 
 /* Kategória szekciók */

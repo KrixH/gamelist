@@ -638,5 +638,27 @@
       "playTime": "",
       "videoId": "bGej8K1r8KI",
       "steamId": "1259420"
+    },
+    {
+      "title": "Horizon Zero Dawn: Complete Edition",
+      "category": "Shooter, Role-playing (RPG), Adventure",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2tem.webp",
+      "earlyAccess": "",
+      "releaseDate": "2017.12.06",
+      "finishDate": "NS",
+      "playTime": "",
+      "videoId": "u4-FCsiF5x4",
+      "steamId": "1151640"
+    },
+    {
+      "title": "Satisfactory",
+      "category": "Simulator, Strategy, Adventure, Indie",
+      "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8tfy.webp",
+      "earlyAccess": "2019.03.19",
+      "releaseDate": "2024.09.10",
+      "finishDate": "SIM",
+      "playTime": "",
+      "videoId": "Jt4XOPiPJHs",
+      "steamId": "526870"
     }
   ]

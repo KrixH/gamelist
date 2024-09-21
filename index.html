@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game List | @krixh99</title>
+    <title>GameHUB | @krixh99</title>
     <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Open Graph metacímkék -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Game List | @krixh99">
     <meta property="og:description" content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!">
     <meta property="og:image" content="https://i.imgur.com/jhOhOF6.jpeg">
@@ -20,9 +18,9 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Game List">
     <meta property="og:locale" content="hu_HU">
-
 </head>
-<body>
+<body id="top">
+    <!-- Search Container -->
     <div class="search-container">
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="gameSearch" placeholder="Keresés egy játékra...">
@@ -30,68 +28,68 @@
     
     <div class="container">
         <!-- Jelenleg futó végigjátszások kategória -->
-        <div class="category-header" id="inProgressHeader">
+        <section class="category-header" id="inProgressHeader">
             <h2>Jelenleg futó végigjátszások</h2>
-        </div>
-        <div class="category-section" id="inProgressSection">
+        </section>
+        <section class="category-section" id="inProgressSection">
             <div class="category-games" id="inProgressGames"></div>
-        </div>
+        </section>
 
         <!-- Befejezett játékok kategória -->
-        <div class="category-header" id="completedHeader">
+        <section class="category-header" id="completedHeader">
             <h2>Befejezett végigjátszások</h2>
-        </div>
-        <div class="category-section" id="completedSection">
+        </section>
+        <section class="category-section" id="completedSection">
             <div class="category-games" id="completedGames"></div>
-        </div>
+        </section>
 
-        <!-- Tervezett játékok kategória (új) -->
-        <div class="category-header" id="notStartedHeader">
+        <!-- Tervezett játékok kategória -->
+        <section class="category-header" id="notStartedHeader">
             <h2>Tervezett végigjátszások</h2>
-        </div>
-        <div class="category-section" id="notStartedSection">
+        </section>
+        <section class="category-section" id="notStartedSection">
             <div class="category-games" id="notStartedGames"></div>
-        </div>
+        </section>
 
         <!-- Következő rész függőben kategória -->
-        <div class="category-header" id="pendingHeader">
+        <section class="category-header" id="pendingHeader">
             <h2>Következő rész függőben</h2>
-        </div>
-        <div class="category-section" id="pendingSection">
+        </section>
+        <section class="category-section" id="pendingSection">
             <div class="category-games" id="pendingGames"></div>
-        </div>
+        </section>
 
         <!-- Szüneteltetett játékok kategória -->
-        <div class="category-header" id="abandonedHeader">
+        <section class="category-header" id="abandonedHeader">
             <h2>Szüneteltetett végigjátszások</h2>
-        </div>
-        <div class="category-section" id="abandonedSection">
+        </section>
+        <section class="category-section" id="abandonedSection">
             <div class="category-games" id="abandonedGames"></div>
-        </div>
+        </section>
 
         <!-- Open World kategória -->
-        <div class="category-header" id="openWorldHeader">
+        <section class="category-header" id="openWorldHeader">
             <h2>Open World Játékok</h2>
-        </div>
-        <div class="category-section" id="openWorldSection">
+        </section>
+        <section class="category-section" id="openWorldSection">
             <div class="category-games" id="openWorldGames"></div>
-        </div>
+        </section>
 
         <!-- Szimulátor kategória -->
-        <div class="category-header" id="simulatorHeader">
+        <section class="category-header" id="simulatorHeader">
             <h2>Szimulátor Játékok</h2>
-        </div>
-        <div class="category-section" id="simulatorSection">
+        </section>
+        <section class="category-section" id="simulatorSection">
             <div class="category-games" id="simulatorGames"></div>
-        </div>
+        </section>
 
         <!-- MMO Játékok kategória -->
-        <div class="category-header" id="mmoHeader">
+        <section class="category-header" id="mmoHeader">
             <h2>Massively Multiplayer Online Játékok</h2>
-        </div>
-        <div class="category-section" id="mmoSection">
+        </section>
+        <section class="category-section" id="mmoSection">
             <div class="category-games" id="mmoGames"></div>
-        </div>
+        </section>
     </div>
 
     <!-- Videó megtekintő Modal -->
@@ -121,16 +119,24 @@
         <div class="footer-content">
             <div class="footer-links">
                 <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
-                <a href="https://github.com/KrixH" target="_parent" class="footer-link">KrixH99</a>
+                <a href="https://github.com/KrixH" target="_parent" class="footer-link">Github</a>
             </div>
             <div class="footer-info">
-                <p>Frissítve: <span id="update-date">2024.09.12. - 12:55</span></p>
-                <p>&copy; <span id="current-year"></span> ~ Game List ~. Minden jog fenntartva.</p>
+                <p class="last-updated">Frissítve: 2024.09.21. - 21:24</p>
+                <p>&copy; 2024 <span class="brand"><span style="color: orange;">Game</span><span style="color: #42a5f5;">HUB</span></span>. Minden jog fenntartva. 
+                   <span class="creator">Készítette:<a href="https://krixh.github.io" target="_blank" class="footer-link">KrixH99</a></span>
+                </p>
             </div>
         </div>
     </footer>
-
+    
+    
     <script src="./js/script.js"></script>
     <script src="./js/footer.js"></script>
+
+    <!-- Az aktuális év automatikus frissítése -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

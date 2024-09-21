@@ -1,5 +1,31 @@
 # Changelog
 
+
+## [1.3.3] - 2024-09-21
+
+### Changed
+- Transitions: Combined multiple transitions (transform, opacity) into single lines.
+- Removed Redundancies: Eliminated unnecessary px for zero values.
+- Footer: Streamlined layout; added underline hover animation for links.
+- Media Queries: Consolidated mobile styles, optimized scaling of game containers.
+- Game Cards: Centralized fadeIn animation for consistency.
+- Scrollbar: Improved WebKit and Firefox scrollbar styling and hover effects.
+- Search Bar: Smooth expand/collapse animation with opacity transitions.
+- Buttons: Enhanced tooltip visibility and hover effects for Steam/YouTube buttons.
+- Cookie Notice: Added hover scaling effect for cookie buttons.
+- Modals: Smoother open/close animations for video modals.
+- Categories: Simplified hover color transitions on category tags.
+- Code Cleanup: Merged duplicate styles, reduced selector repetition, and improved efficiency.
+
+
+## [1.3.2] - 2024-09-15
+
+### Changed
+- Optimized toggleSectionVisibility: Combined DOM manipulations for setting the display property of both the section and its header to avoid repetitive code.
+- Simplified determineSectionKey: Introduced a sectionMap object to map the finish date codes (e.g., "VA", "AH") to section keys, reducing the number of conditional checks.
+- Streamlined loadGamesOneByOne: Replaced the forEach loop for simpler, more readable iteration over the games while maintaining the delay between appending each game.
+- Improved readability and structure: The code now follows a clearer and more consistent format, enhancing readability and maintainability.
+
 ## [1.3.2] - 2024-09-12
 
 ### Multiple games added
