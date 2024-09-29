@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.3.5] - 2024-09-29
+
+### New Features
+- **Radial Progress Bar:**
+  - Implemented a new radial progress bar that dynamically updates based on the percentage of game completion.
+  - Added color transitions for different percentage ranges (e.g., pink for 0-20%, green for 80-100%).
+  - Smooth hover animations on game cards to reveal the radial progress bar.
+  
+- **Hover Effects:**
+  - **Game Card Interactions:** Game cards now have smooth scaling effects, with images darkening when hovered.
+  
+- **New Badge:**
+  - Introduced a wobble animation for newly added games. The “ÚJ”(NEW) badge now shakes when visible but hides when the mouse hovers over the game card.
+
+### Bug Fixes
+- **Year Display Fix:**
+  - Fixed a bug where the current year was not being dynamically inserted into the footer. Added an event listener to ensure it works correctly after the DOM is fully loaded.
+  
+- **Tooltip Visibility:**
+  - Removed tooltips from radial progress bars as they caused display issues on hover.
+  
+- **UI Responsiveness:**
+  - Improved responsiveness for smaller screens, particularly for game cards and button positioning.
+
+### Enhancements
+- **Styling and UI Overhaul:**
+  - Updated the radial progress bar to feature an outer ring instead of filling the internal area.
+  - Enhanced game card shadows and scaling for better visual depth when hovering.
+  - Added hover transitions for category tags and buttons.
+  
+- **Performance Optimization:**
+  - Deferred JavaScript loading for better page speed and load time.
+  - Optimized animations to reduce performance overhead.
+
+
 ## [1.3.4] - 2024-09-22
 
 ### Changed

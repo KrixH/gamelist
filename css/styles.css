@@ -173,6 +173,142 @@ footer p {
         75% { transform: rotate(3deg); }
     }
 
+/* Radial progress bar */
+
+.radial-progress-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 6px #3b3b3b inset;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.radial-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 62px;
+    height: 62px;
+    background: conic-gradient(
+        var(--progress-color) 0deg,
+        var(--progress-color) calc(var(--progress) * 3.6deg),
+        #3b3b3b calc(var(--progress) * 3.6deg),
+        #3b3b3b 360deg
+    );
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.radial-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.radial-progress-bar span {
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.game:hover .radial-progress-bar {
+    display: flex;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.radial-progress-bar:hover {
+    box-shadow: 0 4px 15px rgba(50, 205, 50, 0.7);
+    transform: scale(1.2);
+}
+
+.radial-progress-bar.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.radial-progress-bar.low {
+    --progress-color: #ff1493;
+}
+
+.radial-progress-bar.medium {
+    --progress-color: #ffa500;
+}
+
+.radial-progress-bar.good {
+    --progress-color: #00ced1;
+}
+
+.radial-progress-bar.high {
+    --progress-color: #32cd32;
+}
+
+.radial-progress-bar.complete::after {
+    background: linear-gradient(45deg,
+        #ff0000, #ff8000, #ffff00,
+        #80ff00, #00ff80, #00ffff,
+        #0080ff, #8000ff
+    );
+    background-size: 400% 400%;
+    animation: rainbowGlow 3s ease-in-out infinite, spin 2s linear infinite;
+}
+
+.radial-progress-bar.complete span {
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+@keyframes rainbowGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Nagy container stílusai */
 #gameList {
     display: flex;

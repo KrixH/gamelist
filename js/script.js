@@ -1,25 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = ["inProgress", "completed", "openWorld", "mmo", "abandoned", "pending", "simulator", "notStarted"];
     let remainingGames = [];
-    let remainingSections = new Set(sections);
 
     const searchContainer = document.querySelector('.search-container');
     const searchInput = document.getElementById('gameSearch');
 
-    function renderGamesOnScroll() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        remainingSections.forEach(sectionKey => {
-            const sectionElement = document.getElementById(`${sectionKey}Section`);
-            if (sectionElement && sectionElement.offsetTop < scrollPosition) {
-                renderGamesForSection(sectionKey);
-                remainingSections.delete(sectionKey);
-            }
-        });
-    }
-
     function renderGames(games) {
         remainingGames = games;
-        renderGamesOnScroll();
+        sections.forEach(sectionKey => {
+            renderGamesForSection(sectionKey);
+        });
     }
 
     function renderGamesForSection(sectionKey) {
@@ -27,12 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
         sectionElement.innerHTML = '';
 
         const sectionGames = remainingGames.filter(game => determineSectionKey(game.finishDate) === sectionKey)
-                                           .sort((a, b) => a.title.localeCompare(b.title));
+            .sort((a, b) => a.title.localeCompare(b.title));
 
         if (sectionGames.length > 0) {
             toggleSectionVisibility(sectionKey, true);
-            loadGamesOneByOne(sectionGames, sectionElement);
-            remainingGames = remainingGames.filter(game => !sectionGames.includes(game));
+            sectionGames.forEach(game => {
+                const gameDiv = createGameDiv(game);
+                sectionElement.appendChild(gameDiv);
+                gameDiv.classList.add('show');
+            });
         } else {
             toggleSectionVisibility(sectionKey, false);
         }
@@ -45,16 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         section.style.display = displayValue;
         header.style.display = displayValue;
-    }
-
-    function loadGamesOneByOne(games, sectionElement) {
-        games.forEach((game, index) => {
-            setTimeout(() => {
-                const gameDiv = createGameDiv(game);
-                sectionElement.appendChild(gameDiv);
-                setTimeout(() => gameDiv.classList.add('show'), 80);
-            }, index * 300);
-        });
     }
 
     function determineSectionKey(finishDate) {
@@ -74,17 +57,43 @@ document.addEventListener("DOMContentLoaded", () => {
         return "completed";
     }
 
+    function createRadialProgressBar(progress) {
+        let progressClass = '';
+
+        if (progress < 20) {
+            progressClass = 'low';
+        } else if (progress < 40) {
+            progressClass = 'medium';
+        } else if (progress < 80) {
+            progressClass = 'good';
+        } else if (progress < 100) {
+            progressClass = 'high';
+        } else {
+            progressClass = 'complete spin';
+        }
+
+        return `
+            <div class="radial-progress-bar ${progressClass}" style="--progress: ${progress}">
+                <span>${progress}%</span>
+            </div>
+        `;
+    }
+
     function createGameDiv(game) {
         const finishDateClass = determineSectionKey(game.finishDate);
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('game');
         gameDiv.setAttribute('data-title', game.title.toLowerCase());
-    
+
         const isNew = checkIfNew(game.dateAdded);
-    
+        let newBadgeHTML = '';
+        if (isNew) {
+            newBadgeHTML = '<span class="new-badge">ÚJ</span>';
+        }
+
         gameDiv.innerHTML = `
             <div class="game-content">
-                ${isNew ? '<span class="new-badge">ÚJ</span>' : ''}
+                ${newBadgeHTML}
                 <img src="${game.cover}" alt="${game.title}">
                 <h3>${game.title}</h3>
                 <div class="categories">${game.category.split(",").map(createCategoryElement).join("")}</div>
@@ -92,22 +101,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${game.releaseDate ? createParagraph("release-date", `Teljes megjelenés: ${game.releaseDate}`) : ''}
                 <p class="finish-date ${finishDateClass}">${formatFinishDateText(finishDateClass, game.finishDate)}</p>
                 ${game.playTime ? formatPlayTimeText(game.playTime, finishDateClass) : ''}
+                ${((finishDateClass === 'inProgress' || finishDateClass === 'completed') && game.progress) ? createRadialProgressBar(game.progress) : ''}
             </div>
         `;
-    
+
         const buttonContainer = createButtonContainer(game);
         if (buttonContainer) gameDiv.appendChild(buttonContainer);
-    
+
+        gameDiv.addEventListener('mouseenter', () => {
+            const radialBar = gameDiv.querySelector('.radial-progress-bar');
+            const newBadge = gameDiv.querySelector('.new-badge');
+            if (radialBar) {
+                radialBar.style.display = 'flex';
+            }
+            if (newBadge) {
+                newBadge.style.display = 'none';
+            }
+        });
+
+        gameDiv.addEventListener('mouseleave', () => {
+            const radialBar = gameDiv.querySelector('.radial-progress-bar');
+            const newBadge = gameDiv.querySelector('.new-badge');
+            if (radialBar) {
+                radialBar.style.display = 'none';
+            }
+            if (newBadge) {
+                newBadge.style.display = 'inline';
+            }
+        });
+
         return gameDiv;
     }
-    
+
     function checkIfNew(dateAdded) {
         const now = new Date();
         const addedDate = new Date(dateAdded);
-        const differenceInDays = Math.floor((now - addedDate) / (1000 * 60 * 60 * 24)); // Konvertálja az időkülönbséget napokra
-        return differenceInDays <= 7; // Igaz értéket ad vissza, ha a játékot az elmúlt 7 napban adtuk hozzá
+        const differenceInDays = Math.floor((now - addedDate) / (1000 * 60 * 60 * 24));
+        return differenceInDays <= 7; 
     }
-    
 
     function createCategoryElement(category) {
         return `<div class="category">${category.trim()}</div>`;
@@ -158,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ? createParagraph('play-time', `Játék idő: ${playTime}`)
             : createParagraph('play-time', `Végigjátszási idő: ${playTime}`);
     }
-    
+
     function createParagraph(className, text) {
         return `<p class="${className}">${text}</p>`;
     }
@@ -181,11 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
+    // Fetch games data from JSON file
     fetch('games.json')
         .then(response => response.json())
         .then(data => {
             renderGames(data);
-            window.addEventListener('scroll', renderGamesOnScroll);
         })
         .catch(error => {
             console.error('Error fetching games:', error);
@@ -227,12 +258,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!hasResults || !searchTerm) {
             sections.forEach(sectionKey => toggleSectionVisibility(sectionKey, !searchTerm));
             if (!searchTerm) games.forEach(game => game.style.display = '');
-        }
-    });
-
-    document.addEventListener('click', event => {
-        if (!searchContainer.contains(event.target) && !searchInput.matches(':focus') && !searchInput.value.trim()) {
-            searchContainer.classList.remove('expanded');
         }
     });
 });
