@@ -122,18 +122,36 @@ footer p {
 }
 
 .category-header {
-    background: #2c2c2c;
-    border-radius: 0.75em;
-    padding: 0.75em 1.5em;
-    margin: 2.5em auto 1.5em;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border-radius: 8px;
+    padding: 1em 1.5em;
+    margin: 1.5em auto;
     text-align: center;
-    color: #c0c0c0;
-    letter-spacing: 0.05em;
+    color: #a0a0a0;
+    letter-spacing: 0.05em; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.category-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #333333, #1c1c1c);
 }
 
 .category-header h2 {
-    font-size: 2em;
+    font-size: 1.6em;
     margin: 0;
+    font-weight: 500;
+    color: #d0d0d0;
+    text-transform: uppercase;
+    opacity: 0.85;
+    letter-spacing: 0.08em;
+    transition: opacity 0.3s ease;
+}
+
+.category-header h2:hover {
+    opacity: 1;
 }
 
 .category-section {
@@ -151,27 +169,28 @@ footer p {
     gap: 1.5em;
 }
 
-/* New Games badge*/
-
+/* New Badge Styling */
 .new-badge {
     position: absolute;
     top: 10px;
-    left: 10px;
-    background-color: #42a5f5;
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    border-radius: 5px;
-    z-index: 10;
+    right: 10px;
+    background-color: #ff4081;
+    color: #ffffff;
+    padding: 8px 14px;
+    font-size: 0.75rem;
     font-weight: bold;
-    animation: wobbleBadge 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) infinite forwards;}
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: badgeWobble 1.5s ease-in-out infinite;
+}
 
-    @keyframes wobbleBadge {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(3deg); }
-        50% { transform: rotate(-3deg); }
-        75% { transform: rotate(3deg); }
-    }
+@keyframes badgeWobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
 
 /* Radial progress bar */
 
@@ -442,69 +461,92 @@ footer p {
 }
 
 .category {
-    background: #474747;
-    color: #e0e0e0;
-    padding: 0.375em 1em;
-    border-radius: 20px;
-    font-size: 0.9em;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    background: linear-gradient(135deg, #3b3b3b, #474747);
+    color: #ffffff;
+    padding: 0.375em 1.25em;
+    border-radius: 25px;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .category:hover {
-    background: #5e5e5e;
+    background: linear-gradient(135deg, #ff6a00, #ff8c00);
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
 }
+
 
 /* Dátumok és időpontok stílusai */
 .release-date, .finish-date, .play-time {
     margin: 0.75em 0;
-    font-weight: bold;
-    font-size: 1em;
+    font-weight: 600;
+    font-size: 1.1em;
     display: block;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .release-date {
-    color: #e57373;
+    color: #ef5350;  /* Friss piros árnyalat */
 }
 
 .early-access {
-    color: #ffb74d;
+    color: #ffca28;  /* Élénk sárga */
     font-weight: bold;
     margin-top: 1em;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .finish-date {
-    color: #81c784;
+    color: #66bb6a;  /* Egységes zöld */
 }
 
 .finish-date.in-progress {
-    color: #ffb74d;
+    color: #ffa726;  /* Világos narancssárga */
 }
 
 .finish-date.abandoned {
-    color: #4682B4;
+    color: #42a5f5;  /* Élénk kék */
 }
 
 .finish-date.open-world {
-    color: #64b5f6;
+    color: #29b6f6;  /* Világosabb kék */
 }
 
 .finish-date.mmo {
-    color: #9575cd;
+    color: #7e57c2;  /* Friss lila árnyalat */
 }
 
 .finish-date.simulator {
-    color: #ffd700;
+    color: #ffeb3b;  /* Világos sárga */
 }
 
 .finish-date.not-started {
-    color: #ff9800;
+    color: #ff9800;  /* Élénk narancssárga */
 }
 
 .time-text {
-    color: #a0a0a0;
-    font-size: 0.9em;
+    color: #bdbdbd;
+    font-size: 0.95em;
     font-weight: normal;
+    letter-spacing: 0.02em;
 }
+
+/* Hover hatások */
+.release-date:hover, .early-access:hover, .finish-date:hover {
+    transform: scale(1.05);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 
 /* Modal stílusai */
 .modal {
@@ -528,18 +570,18 @@ footer p {
 
 .modal-content {
     background: #1e1e1e;
-    margin: 2% auto; /* Csökkentett margó */
+    margin: 2% auto;
     padding: 1.5em;
     border-radius: 0.75em;
-    width: 90%; /* Szélesebb, mint korábban */
-    max-width: 1200px; /* Megnövelt max szélesség */
+    width: 90%;
+    max-width: 1200px;
     position: relative;
 }
 
 #videoFrame {
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* Ez a 16:9 képarányt tartja meg */
+    padding-bottom: 56.25%;
     position: relative;
 }
 
@@ -547,8 +589,8 @@ footer p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* A videoFrame-hez igazított szélesség */
-    height: 100%; /* A videoFrame-hez igazított magasság */
+    width: 100%;
+    height: 100%;
     border: none;
 }
 
@@ -567,66 +609,91 @@ footer p {
     cursor: pointer;
 }
 
-/* Cookie értesítő stílusok */
+/* Kisebb cookie értesítő stílusok */
 .cookie-notice {
-    background: #1e1e1e;
-    color: #c0c0c0;
-    padding: 1.25em 2.5em;
-    border-radius: 0.75em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    max-width: 90%;
-    margin: 2em auto;
+    background: #2b2b2b;
+    color: #f0f0f0;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 75%;
+    margin: 1.5em auto;
     text-align: center;
     position: fixed;
-    bottom: 1.25em;
+    bottom: 1.5em;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
+    transition: all 0.4s ease;
 }
 
 .cookie-notice p {
     margin: 0;
-    font-size: 1em;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #e0e0e0;
 }
 
 .cookie-notice a {
-    color: #64b5f6;
+    color: #82b1ff;
     text-decoration: none;
-    transition: color 0.5s ease;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .cookie-notice a:hover {
-    color: #42a5f5;
+    color: #1e90ff;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
 }
 
 .cookie-button-container {
     display: flex;
     justify-content: center;
-    margin-top: 1.25em;
+    margin-top: 1em;
 }
 
 .cookie-button {
-    background: #64b5f6;
-    color: #303030;
+    background: #d2691e;
+    color: #000000;
     border: none;
-    padding: 0.75em 1.5em;
-    border-radius: 0.375em;
-    font-size: 1em;
+    padding: 0.65em 1.5em;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.5em;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-}
-
-.cookie-button i {
-    font-size: 1.25em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cookie-button:hover {
-    background: #42a5f5;
-    transform: scale(1.05);
+    background: #c68642;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(210, 105, 30, 0.5);
 }
+
+
+.cookie-button i {
+    font-size: 1.1em;
+}
+
+/* Reszponzív kialakítás kisebb képernyőkre */
+@media (max-width: 768px) {
+    .cookie-notice {
+        padding: 0.75em 1.5em;
+        bottom: 1em;
+        max-width: 90%;
+    }
+
+    .cookie-button {
+        padding: 0.5em 1.25em;
+        font-size: 0.8em;
+    }
+}
+
+
 
 /* Back to Top Button */
 .back-to-top {
@@ -705,37 +772,37 @@ html {
 
 /* WebKit-alapú böngészők (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 12px; /* A görgetősáv szélessége */
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1e1e1e; /* A görgetősáv háttere */
+    background: #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #64b5f6; /* A görgetősáv "fogantyújának" színe */
-    border-radius: 10px; /* Lekerekített sarkok */
-    border: 3px solid #1e1e1e; /* Határ a fogantyú körül */
+    background-color: #64b5f6;
+    border-radius: 10px; 
+    border: 3px solid #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #42a5f5; /* Hover szín a fogantyún */
+    background-color: #42a5f5;
 }
 
 /* Firefox esetén (kisebb támogatás) */
 html {
-    scrollbar-width: thin; /* Vékonyabb görgetősáv */
-    scrollbar-color: #64b5f6 #1e1e1e; /* Fogantyú és háttér szín */
+    scrollbar-width: thin;
+    scrollbar-color: #64b5f6 #1e1e1e;
 }
 
 /* Internet Explorer és Edge esetén (régebbi verziók) */
 body {
-    -ms-overflow-style: none; /* Nincs görgetősáv */
+    -ms-overflow-style: none;
 }
 
 /* Rejtett görgetősáv (példa) */
 body::-webkit-scrollbar {
-    display: none; /* Görgetősáv elrejtése (nem ajánlott, ha az elérhetőség fontos) */
+    display: none;
 }
 
 /* Keresési mező és ikon stílusai */
@@ -804,7 +871,7 @@ body::-webkit-scrollbar {
 }
 
 .search-container.expanded .search-icon {
-    opacity: 0; /* Nagyító ikon eltűnik, ha a mező kibővül */
+    opacity: 0;
 }
 
 
@@ -819,9 +886,9 @@ body::-webkit-scrollbar {
     .button-container {
         position: absolute;
         bottom: 10px;
-        right: 10px; /* Gombok jobb alsó sarokba helyezése */
+        right: 10px;
         display: flex;
-        flex-direction: column; /* Gombok egymás alatt */
+        flex-direction: column;
         gap: 10px;
     }
 
