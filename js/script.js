@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchContainer = document.querySelector('.search-container');
     const searchInput = document.getElementById('gameSearch');
 
+    // Alap render funkció, amely minden szekciót frissít
     function renderGames(games) {
         remainingGames = games;
-        sections.forEach(sectionKey => {
-            renderGamesForSection(sectionKey);
-        });
+        sections.forEach(sectionKey => renderGamesForSection(sectionKey));
     }
 
+    // Szekciókhoz játékok renderelése
     function renderGamesForSection(sectionKey) {
         const sectionElement = document.getElementById(`${sectionKey}Games`);
         sectionElement.innerHTML = '';
@@ -31,15 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Láthatóság kezelése szekciók esetén
+    function toggleElementDisplay(element, isVisible) {
+        element.style.display = isVisible ? 'block' : 'none';
+    }
+
     function toggleSectionVisibility(sectionKey, isVisible) {
         const section = document.getElementById(`${sectionKey}Section`);
         const header = document.getElementById(`${sectionKey}Header`);
-        const displayValue = isVisible ? 'block' : 'none';
-
-        section.style.display = displayValue;
-        header.style.display = displayValue;
+        toggleElementDisplay(section, isVisible);
+        toggleElementDisplay(header, isVisible);
     }
 
+    // A szekciók kulcsának meghatározása a finishDate alapján
     function determineSectionKey(finishDate) {
         const sectionMap = {
             "VA": "inProgress",
@@ -57,20 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return "completed";
     }
 
+    // Radial progress bar létrehozása a haladási százalék alapján
     function createRadialProgressBar(progress) {
-        let progressClass = '';
-
-        if (progress < 20) {
-            progressClass = 'low';
-        } else if (progress < 40) {
-            progressClass = 'medium';
-        } else if (progress < 80) {
-            progressClass = 'good';
-        } else if (progress < 100) {
-            progressClass = 'high';
-        } else {
-            progressClass = 'complete spin';
-        }
+        const progressClass = progress < 20 ? 'low' :
+                              progress < 40 ? 'medium' :
+                              progress < 80 ? 'good' :
+                              progress < 100 ? 'high' : 'complete spin';
 
         return `
             <div class="radial-progress-bar ${progressClass}" style="--progress: ${progress}">
@@ -79,17 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
+    // Játékdiv létrehozása
     function createGameDiv(game) {
         const finishDateClass = determineSectionKey(game.finishDate);
         const gameDiv = document.createElement('div');
         gameDiv.classList.add('game');
         gameDiv.setAttribute('data-title', game.title.toLowerCase());
 
-        const isNew = checkIfNew(game.dateAdded);
-        let newBadgeHTML = '';
-        if (isNew) {
-            newBadgeHTML = '<span class="new-badge">ÚJ</span>';
-        }
+        const newBadgeHTML = checkIfNew(game.dateAdded) ? '<span class="new-badge">ÚJ</span>' : '';
 
         gameDiv.innerHTML = `
         <div class="game-card">
@@ -104,51 +97,49 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${game.releaseDate ? createParagraph("release-date", `Megjelenés: ${game.releaseDate}`) : ''}
                 <p class="finish-date ${finishDateClass}">${formatFinishDateText(finishDateClass, game.finishDate)}</p>
                 ${game.playTime ? formatPlayTimeText(game.playTime, finishDateClass) : ''}
-                ${((finishDateClass === 'inProgress' || finishDateClass === 'completed') && game.progress) ? createRadialProgressBar(game.progress) : ''}
+                ${game.progress ? createRadialProgressBar(game.progress) : ''}
             </div>
         </div>
     `;
+
+    const buttonContainer = createButtonContainer(game);
+    if (buttonContainer) gameDiv.appendChild(buttonContainer);
     
-
-        const buttonContainer = createButtonContainer(game);
-        if (buttonContainer) gameDiv.appendChild(buttonContainer);
-
-        gameDiv.addEventListener('mouseenter', () => {
-            const radialBar = gameDiv.querySelector('.radial-progress-bar');
-            const newBadge = gameDiv.querySelector('.new-badge');
-            if (radialBar) {
-                radialBar.style.display = 'flex';
-            }
-            if (newBadge) {
-                newBadge.style.display = 'none';
-            }
-        });
-
-        gameDiv.addEventListener('mouseleave', () => {
-            const radialBar = gameDiv.querySelector('.radial-progress-bar');
-            const newBadge = gameDiv.querySelector('.new-badge');
-            if (radialBar) {
-                radialBar.style.display = 'none';
-            }
-            if (newBadge) {
-                newBadge.style.display = 'inline';
-            }
-        });
-
-        return gameDiv;
+    // Közös funkció a stílus módosításához
+    function toggleDisplay(show) {
+        const radialBar = gameDiv.querySelector('.radial-progress-bar');
+        const newBadge = gameDiv.querySelector('.new-badge');
+        
+        if (radialBar) {
+            radialBar.style.display = show ? 'flex' : 'none';
+        }
+        
+        if (newBadge) {
+            newBadge.style.display = show ? 'none' : 'inline';
+        }
+    }
+    
+    // Eseménykezelők
+    gameDiv.addEventListener('mouseenter', () => toggleDisplay(true));
+    gameDiv.addEventListener('mouseleave', () => toggleDisplay(false));
+    
+    return gameDiv;
     }
 
+    // Ellenőrizd, hogy egy játék új-e
     function checkIfNew(dateAdded) {
         const now = new Date();
         const addedDate = new Date(dateAdded);
         const differenceInDays = Math.floor((now - addedDate) / (1000 * 60 * 60 * 24));
-        return differenceInDays <= 7; 
+        return differenceInDays <= 7;
     }
 
+    // Kategória elemek létrehozása
     function createCategoryElement(category) {
         return `<div class="category">${category.trim()}</div>`;
     }
 
+    // Gomb konténer létrehozása Steam és YouTube gombokhoz
     function createButtonContainer(game) {
         const container = document.createElement('div');
         container.classList.add('button-container');
@@ -166,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return container.children.length > 0 ? container : null;
     }
 
+    // Gomb létrehozása a Steam és YouTube linkekhez
     function createButton(tag, buttonClass, href, iconClass, tooltipText) {
         const button = document.createElement(tag);
         button.classList.add(buttonClass);
@@ -175,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return button;
     }
 
+    // Finish date szöveg formázása
     function formatFinishDateText(finishDateClass, finishDate) {
         const labels = {
             inProgress: "Végigjátszás alatt",
@@ -189,16 +182,19 @@ document.addEventListener("DOMContentLoaded", () => {
         return labels[finishDateClass] || labels.completed;
     }
 
+    // PlayTime szöveg formázása
     function formatPlayTimeText(playTime, finishDateClass) {
         return (finishDateClass === "openWorld" || finishDateClass === "mmo" || finishDateClass === "simulator")
             ? createParagraph('play-time', `Játék idő: ${playTime}`)
             : createParagraph('play-time', `Végigjátszási idő: ${playTime}`);
     }
 
+    // Paragrafus elemek létrehozása
     function createParagraph(className, text) {
         return `<p class="${className}">${text}</p>`;
     }
 
+    // Video modal megnyitása
     function openVideoModal(videoId) {
         const modal = document.getElementById("videoModal");
         const videoFrame = document.getElementById("videoFrame");
@@ -217,17 +213,22 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    // Fetch games data from JSON file
     fetch('games.json')
-        .then(response => response.json())
-        .then(data => {
-            renderGames(data);
-        })
-        .catch(error => {
-            console.error('Error fetching games:', error);
-            document.querySelector('.waitLoadFully').style.display = 'none';
-        });
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Hálózati hiba történt');
+      }
+      return response.json();
+    })
+    .then(data => {
+      renderGames(data);
+    })
+    .catch(error => {
+      console.error('Hiba történt a JSON betöltésekor:', error);
+    });
+  
 
+    // Keresés input kezelése
     searchContainer.addEventListener('mouseenter', () => searchContainer.classList.add('expanded'));
     searchContainer.addEventListener('mouseleave', () => {
         if (!searchInput.matches(':focus') && !searchInput.value.trim()) searchContainer.classList.remove('expanded');
@@ -238,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!searchInput.value.trim()) searchContainer.classList.remove('expanded');
     });
 
+    // Keresés logika
     searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.trim().toLowerCase();
         const games = document.querySelectorAll('.game');
@@ -249,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             games.forEach(game => {
                 const title = game.getAttribute('data-title');
                 const matchesSearch = title.includes(searchTerm);
-                game.style.display = matchesSearch ? '' : 'none';
+                toggleElementDisplay(game, matchesSearch);
 
                 if (matchesSearch && game.closest('.category-section').id.includes(sectionKey)) {
                     sectionHasResults = true;
@@ -260,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleSectionVisibility(sectionKey, sectionHasResults);
         });
 
-        if (!hasResults || !searchTerm) {
+        if (!searchTerm || !hasResults) {
             sections.forEach(sectionKey => toggleSectionVisibility(sectionKey, !searchTerm));
             if (!searchTerm) games.forEach(game => game.style.display = '');
         }

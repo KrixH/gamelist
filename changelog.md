@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.3.6] - 2024-09-29
+
+### New Features
+- Redesigned **Cookie Consent Banner** with smooth animations, distinct button styles, and modal for cookie preferences.
+- Added **Dynamic Background Images** that change randomly upon page load for a fresh user experience.
+- Introduced **Radial Progress Bar** with interactive hover effects and color-coded progress levels (low, medium, good, high, complete).
+- **Back to Top Button** now features a spinning animation while scrolling back and hover enlargement for better visibility.
+  
+### Changes
+- Removed **Analytics and Marketing Cookies** from the cookie policy to focus on essential cookie management.
+- Simplified the **Cookie Preferences Modal** to include only necessary cookies, with a clearer design and user flow.
+- Enhanced **Game List Filtering** for better user experience, displaying and organizing games by categories such as in-progress, pending, completed, etc.
+- Updated **Game Cards** to show more detailed information, including release dates, playtime, and progress with visually appealing designs.
+  
+### UI/UX Improvements
+- Improved hover effects on **Game Cards** to enhance interactivity, including showing and hiding elements like progress bars and new badges.
+- Unified the **Button Styles** across the site to maintain a consistent look, with hover animations and better touch targets.
+- Made **Modal Windows** more intuitive by improving their appearance, positioning, and overlay for a modern user experience.
+- General **UI Cleanup** for consistent spacing, hover effects, and animations across buttons, cards, and other interactive elements.
+  
+### Mobile & Performance
+- Optimized the website for **Mobile Responsiveness**, ensuring better layouts, touch targets, and smaller font sizes on smaller screens.
+- Adjusted **Cookie Banner** and **Modal Layouts** for smaller screens, maintaining usability without sacrificing design.
+- Added **Error Handling** for failed game data fetches, displaying user-friendly messages when content cannot be loaded.
+  
+### Bug Fixes
+- Fixed an issue with **Game Data Fetching** that prevented JSON files from loading properly.
+- Resolved a bug where certain **Progress Bars** and **Badges** did not display correctly on hover.
+- Corrected the positioning of **Cookie Consent Banner** on different screen sizes to prevent it from overlapping with content.
+
 ## [1.3.5] - 2024-09-29
 
 ### New Features

@@ -102,15 +102,32 @@
         </div>
     </div>
 
-    <!-- Cookie banner -->
-    <div id="cookieConsentBanner" class="cookie-notice">
-        <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a></p>
+<!-- Cookie banner -->
+<div id="cookieConsentBanner" class="cookie-notice">
+    <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a></p>
+    <div class="cookie-button-container">
+        <button id="acceptCookies" class="cookie-button">
+            <i class="fa fa-cookie-bite"></i> Elfogadom
+        </button>
+        <button id="manageCookies" class="cookie-button">
+            <i class="fa fa-cog"></i> Beállítások kezelése
+        </button>
+    </div>
+</div>
+
+<!-- Cookie Preferences Modal -->
+<div id="cookiePreferencesModal" class="cookie-preferences" style="display:none;">
+    <h2>Süti beállítások</h2>
+    <form id="cookieForm">
+        <label><input type="checkbox" id="necessaryCookies" checked disabled> Szükséges sütik (kötelező)</label><br>
+        <!-- Elemzési és marketing sütik eltávolítva -->
         <div class="cookie-button-container">
-            <button id="acceptCookies" class="cookie-button">
-                <i class="fa fa-cookie-bite"></i> Elfogadom
+            <button type="button" id="savePreferences" class="cookie-button">
+                <i class="fa fa-save"></i> Beállítások mentése
             </button>
         </div>
-    </div>
+    </form>
+</div>
 
     <!-- Vissza a tetejére gomb -->
     <a href="#top" class="back-to-top" aria-label="Back to Top">
@@ -124,7 +141,7 @@
                 <a href="https://github.com/KrixH" target="_parent" class="footer-link">Github</a>
             </div>
             <div class="footer-info">
-                <p class="last-updated">Frissítve: 2024.10.12. - 21:32</p>
+                <p class="last-updated">Frissítve: 2024.10.20. - 21:32</p>
                 <p>&copy;<span id="current-year"></span> <span class="brand"><span style="color: orange;">Game</span><span style="color: #42a5f5;">HUB</span></span>. Minden jog fenntartva.
                     <span class="creator">Készítette:<a href="https://krixh.github.io" target="_blank" class="footer-link">KrixH99</a></span>
                 </p>
