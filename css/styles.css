@@ -1006,7 +1006,6 @@ body::-webkit-scrollbar {
     opacity: 0;
 }
 
-
 /* Mobil kijelzők stílusa - egy játék konténer jelenik meg egyszerre */
 @media (max-width: 768px) {
     .game {
