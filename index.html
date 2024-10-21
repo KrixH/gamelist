@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameHUB | @krixh99</title>
@@ -19,139 +18,126 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Game List">
     <meta property="og:locale" content="hu_HU">
-</head>
-
-<body id="top">
+  </head>
+  <body id="top">
     <!-- Search Container -->
     <div class="search-container">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" id="gameSearch" placeholder="Keresés egy játékra...">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="gameSearch" placeholder="Keresés egy játékra...">
     </div>
-
     <div class="container">
-        <!-- Jelenleg futó végigjátszások kategória -->
-        <section class="category-header" id="inProgressHeader">
-            <h2>Jelenleg futó végigjátszások</h2>
-        </section>
-        <section class="category-section" id="inProgressSection">
-            <div class="category-games" id="inProgressGames"></div>
-        </section>
-
-        <!-- Befejezett játékok kategória -->
-        <section class="category-header" id="completedHeader">
-            <h2>Befejezett végigjátszások</h2>
-        </section>
-        <section class="category-section" id="completedSection">
-            <div class="category-games" id="completedGames"></div>
-        </section>
-
-        <!-- Tervezett játékok kategória -->
-        <section class="category-header" id="notStartedHeader">
-            <h2>Tervezett végigjátszások</h2>
-        </section>
-        <section class="category-section" id="notStartedSection">
-            <div class="category-games" id="notStartedGames"></div>
-        </section>
-
-        <!-- Következő rész függőben kategória -->
-        <section class="category-header" id="pendingHeader">
-            <h2>Következő rész függőben</h2>
-        </section>
-        <section class="category-section" id="pendingSection">
-            <div class="category-games" id="pendingGames"></div>
-        </section>
-
-        <!-- Szüneteltetett játékok kategória -->
-        <section class="category-header" id="abandonedHeader">
-            <h2>Szüneteltetett végigjátszások</h2>
-        </section>
-        <section class="category-section" id="abandonedSection">
-            <div class="category-games" id="abandonedGames"></div>
-        </section>
-
-        <!-- Open World kategória -->
-        <section class="category-header" id="openWorldHeader">
-            <h2>Open World Játékok</h2>
-        </section>
-        <section class="category-section" id="openWorldSection">
-            <div class="category-games" id="openWorldGames"></div>
-        </section>
-
-        <!-- Szimulátor kategória -->
-        <section class="category-header" id="simulatorHeader">
-            <h2>Szimulátor Játékok</h2>
-        </section>
-        <section class="category-section" id="simulatorSection">
-            <div class="category-games" id="simulatorGames"></div>
-        </section>
-
-        <!-- MMO Játékok kategória -->
-        <section class="category-header" id="mmoHeader">
-            <h2>Massively Multiplayer Online Játékok</h2>
-        </section>
-        <section class="category-section" id="mmoSection">
-            <div class="category-games" id="mmoGames"></div>
-        </section>
+      <!-- Jelenleg futó végigjátszások kategória -->
+      <section class="category-header" id="inProgressHeader">
+        <h2>Jelenleg futó végigjátszások</h2>
+      </section>
+      <section class="category-section" id="inProgressSection">
+        <div class="category-games" id="inProgressGames"></div>
+      </section>
+      <!-- Befejezett játékok kategória -->
+      <section class="category-header" id="completedHeader">
+        <h2>Befejezett végigjátszások</h2>
+      </section>
+      <section class="category-section" id="completedSection">
+        <div class="category-games" id="completedGames"></div>
+      </section>
+      <!-- Tervezett játékok kategória -->
+      <section class="category-header" id="notStartedHeader">
+        <h2>Tervezett végigjátszások</h2>
+      </section>
+      <section class="category-section" id="notStartedSection">
+        <div class="category-games" id="notStartedGames"></div>
+      </section>
+      <!-- Következő rész függőben kategória -->
+      <section class="category-header" id="pendingHeader">
+        <h2>Következő rész függőben</h2>
+      </section>
+      <section class="category-section" id="pendingSection">
+        <div class="category-games" id="pendingGames"></div>
+      </section>
+      <!-- Szüneteltetett játékok kategória -->
+      <section class="category-header" id="abandonedHeader">
+        <h2>Szüneteltetett végigjátszások</h2>
+      </section>
+      <section class="category-section" id="abandonedSection">
+        <div class="category-games" id="abandonedGames"></div>
+      </section>
+      <!-- Open World kategória -->
+      <section class="category-header" id="openWorldHeader">
+        <h2>Open World Játékok</h2>
+      </section>
+      <section class="category-section" id="openWorldSection">
+        <div class="category-games" id="openWorldGames"></div>
+      </section>
+      <!-- Szimulátor kategória -->
+      <section class="category-header" id="simulatorHeader">
+        <h2>Szimulátor Játékok</h2>
+      </section>
+      <section class="category-section" id="simulatorSection">
+        <div class="category-games" id="simulatorGames"></div>
+      </section>
+      <!-- MMO Játékok kategória -->
+      <section class="category-header" id="mmoHeader">
+        <h2>Massively Multiplayer Online Játékok</h2>
+      </section>
+      <section class="category-section" id="mmoSection">
+        <div class="category-games" id="mmoGames"></div>
+      </section>
     </div>
-
     <!-- Videó megtekintő Modal -->
     <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="videoFrame"></div>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="videoFrame"></div>
+      </div>
     </div>
-
-<!-- Cookie banner -->
-<div id="cookieConsentBanner" class="cookie-notice">
-    <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a></p>
-    <div class="cookie-button-container">
+    <!-- Cookie banner -->
+    <div id="cookieConsentBanner" class="cookie-notice">
+      <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a>
+      </p>
+      <div class="cookie-button-container">
         <button id="acceptCookies" class="cookie-button">
-            <i class="fa fa-cookie-bite"></i> Elfogadom
-        </button>
+          <i class="fa fa-cookie-bite"></i> Elfogadom </button>
         <button id="manageCookies" class="cookie-button">
-            <i class="fa fa-cog"></i> Beállítások kezelése
-        </button>
+          <i class="fa fa-cog"></i> Beállítások kezelése </button>
+      </div>
     </div>
-</div>
-
-<!-- Cookie Preferences Modal -->
-<div id="cookiePreferencesModal" class="cookie-preferences" style="display:none;">
-    <h2>Süti beállítások</h2>
-    <form id="cookieForm">
-        <label><input type="checkbox" id="necessaryCookies" checked disabled> Szükséges sütik (kötelező)</label><br>
+    <!-- Cookie Preferences Modal -->
+    <div id="cookiePreferencesModal" class="cookie-preferences" style="display:none;">
+      <h2>Süti beállítások</h2>
+      <form id="cookieForm">
+        <label>
+          <input type="checkbox" id="necessaryCookies" checked disabled> Szükséges sütik (kötelező) </label>
+        <br>
         <!-- Elemzési és marketing sütik eltávolítva -->
         <div class="cookie-button-container">
-            <button type="button" id="savePreferences" class="cookie-button">
-                <i class="fa fa-save"></i> Beállítások mentése
-            </button>
+          <button type="button" id="savePreferences" class="cookie-button">
+            <i class="fa fa-save"></i> Beállítások mentése </button>
         </div>
-    </form>
-</div>
-
+      </form>
+    </div>
     <!-- Vissza a tetejére gomb -->
     <a href="#top" class="back-to-top" aria-label="Back to Top">
-        <i class="fa-solid fa-arrow-up"></i>
+      <i class="fa-solid fa-arrow-up"></i>
     </a>
-
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
-                <a href="https://github.com/KrixH" target="_parent" class="footer-link">Github</a>
-            </div>
-            <div class="footer-info">
-                <p class="last-updated">Frissítve: 2024.10.20. - 21:32</p>
-                <p>&copy;<span id="current-year"></span> <span class="brand"><span style="color: orange;">Game</span><span style="color: #42a5f5;">HUB</span></span>. Minden jog fenntartva.
-                    <span class="creator">Készítette:<a href="https://krixh.github.io" target="_blank" class="footer-link">KrixH99</a></span>
-                </p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
+          <a href="https://github.com/KrixH" target="_parent" class="footer-link">Github</a>
         </div>
+        <div class="footer-info">
+          <p class="last-updated">Frissítve: 2024.10.20. - 21:32</p>
+          <p>&copy; <span id="current-year"></span>
+            <span class="brand">
+              <span style="color: orange;">Game</span>
+              <span style="color: #42a5f5;">HUB</span>
+            </span>. Minden jog fenntartva. <span class="creator">Készítette: <a href="https://krixh.github.io" target="_blank" class="footer-link">KrixH99</a>
+            </span>
+          </p>
+        </div>
+      </div>
     </footer>
-
-
     <script src="./js/script.js"></script>
     <script src="./js/footer.js"></script>
-</body>
-
+  </body>
 </html>

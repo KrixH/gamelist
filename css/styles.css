@@ -1,1031 +1,1069 @@
 /* Alap stílusok */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background: #121212 no-repeat fixed center/cover;
-    color: #c0c0c0;
-    line-height: 1.6;
-    overflow-x: hidden;
+  background: #121212 no-repeat fixed center/cover;
+  color: #c0c0c0;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1 {
-    text-align: center;
-    color: #b0b0b0;
-    margin: 2em 0;
-    font-size: 2.5em;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+  text-align: center;
+  color: #b0b0b0;
+  margin: 2em 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 /* Lábléc stílusok */
 footer {
-    background: #121212;
-    color: #b0b0b0;
-    padding: 1.5em 0;
-    text-align: center;
-    border-top: 2px solid #383838;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
+  background: #121212;
+  color: #b0b0b0;
+  padding: 1.5em 0;
+  text-align: center;
+  border-top: 2px solid #383838;
+  font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
 }
 
 .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5em;
-    margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 1em;
 }
 
 .footer-link {
-    color: #64b5f6;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
+  color: #64b5f6;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 .footer-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 50%;
-    background-color: #42a5f5;
-    transition: width 0.3s ease, left 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: #42a5f5;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 .footer-link:hover::after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 .footer-link:hover {
-    color: #42a5f5;
-    transform: scale(1.05);
+  color: #42a5f5;
+  transform: scale(1.05);
 }
 
 .footer-info {
-    color: #a0a0a0;
-    font-size: 0.9em;
+  color: #a0a0a0;
+  font-size: 0.9em;
 }
 
 .footer-info .brand {
-    color: #ff9800;
-    font-weight: bold;
-    text-transform: uppercase;
+  color: #ff9800;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .footer-info .creator {
-    color: #64b5f6;
-    font-weight: bold;
+  color: #64b5f6;
+  font-weight: bold;
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.85em;
+  margin: 0;
+  font-size: 0.85em;
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        padding: 0 1em;
-        gap: 1em;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 1em;
-    }
+  .footer-content {
+    padding: 0 1em;
+    gap: 1em;
+  }
 
-    .footer-link {
-        font-size: 0.9em;
-    }
+  .footer-links {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .footer-link {
+    font-size: 0.9em;
+  }
 }
-
 
 /* Kategória szekciók */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5em;
 }
 
 .category-header {
-    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-    border-radius: 8px;
-    padding: 1em 1.5em;
-    margin: 1.5em auto;
-    text-align: center;
-    color: #a0a0a0;
-    letter-spacing: 0.05em; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  margin: 1.5em auto;
+  text-align: center;
+  color: #a0a0a0;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .category-header:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(135deg, #333333, #1c1c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #333333, #1c1c1c);
 }
 
 .category-header h2 {
-    font-size: 1.6em;
-    margin: 0;
-    font-weight: 500;
-    color: #d0d0d0;
-    text-transform: uppercase;
-    opacity: 0.85;
-    letter-spacing: 0.08em;
-    transition: opacity 0.3s ease;
+  font-size: 1.6em;
+  margin: 0;
+  font-weight: 500;
+  color: #d0d0d0;
+  text-transform: uppercase;
+  opacity: 0.85;
+  letter-spacing: 0.08em;
+  transition: opacity 0.3s ease;
 }
 
 .category-header h2:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .category-section {
-    margin: 0 auto 2.5em auto;
-    padding: 1.5em;
-    background: #1a1a1a;
-    border-radius: 0.75em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    width: 100%;
+  margin: 0 auto 2.5em auto;
+  padding: 1.5em;
+  background: #1a1a1a;
+  border-radius: 0.75em;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
 .category-games {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }
 
 /* New Badge Styling */
 .new-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff4081;
-    color: #ffffff;
-    padding: 8px 14px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    border-radius: 10px;
-    z-index: 2;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: badgeWobble 1.5s ease-in-out infinite;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4081;
+  color: #ffffff;
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: badgeWobble 1.5s ease-in-out infinite;
 }
 
 @keyframes badgeWobble {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(3deg); }
-    50% { transform: rotate(-3deg); }
-    75% { transform: rotate(3deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(3deg);
+  }
 }
 
 /* Radial progress bar - új, minimalista stílus */
 .radial-progress-bar {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 48px;
-    height: 48px;
-    background: none;
-    border-radius: 50%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid rgba(200, 200, 200, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgba(200, 200, 200, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .radial-progress-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: conic-gradient(
-        var(--progress-color) 0deg,
-        var(--progress-color) calc(var(--progress) * 3.6deg),
-        rgba(100, 100, 100, 0.1) calc(var(--progress) * 3.6deg),
-        rgba(100, 100, 100, 0.1) 360deg
-    );
-    border-radius: 50%;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    var(--progress-color) 0deg,
+    var(--progress-color) calc(var(--progress) * 3.6deg),
+    rgba(100, 100, 100, 0.1) calc(var(--progress) * 3.6deg),
+    rgba(100, 100, 100, 0.1) 360deg
+  );
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .radial-progress-bar span {
-    position: absolute;
-    font-size: 0.9em;
-    color: #c0c0c0;
-    font-weight: 700;
-    z-index: 2;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    transition: color 0.3s ease;
+  position: absolute;
+  font-size: 0.9em;
+  color: #c0c0c0;
+  font-weight: 700;
+  z-index: 2;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
 }
 
 .game:hover .radial-progress-bar {
-    display: flex;
-    animation: fadeIn 0.4s ease forwards;
-    transform: scale(1.1);
+  display: flex;
+  animation: fadeIn 0.4s ease forwards;
+  transform: scale(1.1);
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
 
 .radial-progress-bar:hover {
-    box-shadow: 0 0 15px rgba(100, 200, 255, 0.7);
-    transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(100, 200, 255, 0.7);
+  transform: scale(1.2);
 }
 
 /* Spin effect for radial progress bar */
 .radial-progress-bar.spin {
-    animation: spin 1.8s linear infinite;
+  animation: spin 1.8s linear infinite;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Progress szín */
 .radial-progress-bar.low {
-    --progress-color: #f44336;
+  --progress-color: #f44336;
 }
 
 .radial-progress-bar.medium {
-    --progress-color: #ff9800;
+  --progress-color: #ff9800;
 }
 
 .radial-progress-bar.good {
-    --progress-color: #4caf50;
+  --progress-color: #4caf50;
 }
 
 .radial-progress-bar.high {
-    --progress-color: #03a9f4;
+  --progress-color: #03a9f4;
 }
 
 .radial-progress-bar.complete::after {
-    background: linear-gradient(45deg,
-        #ff5252, #ff4081,
-        #7c4dff, #448aff,
-        #00bcd4, #00e676);
-    background-size: 300% 300%;
-    animation: rainbowGlow 3s ease-in-out infinite, spin 1.8s linear infinite;
+  background: linear-gradient(
+    45deg,
+    #ff5252,
+    #ff4081,
+    #7c4dff,
+    #448aff,
+    #00bcd4,
+    #00e676
+  );
+  background-size: 300% 300%;
+  animation: rainbowGlow 3s ease-in-out infinite, spin 1.8s linear infinite;
 }
 
 .radial-progress-bar.complete span {
-    color: #ffffff;
-    font-size: 1em;
-    text-shadow: none;
+  color: #ffffff;
+  font-size: 1em;
+  text-shadow: none;
 }
 
 /* Rainbow glow effect */
 @keyframes rainbowGlow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+  0% {
+    background-position: 0% 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 /* Nagy container stílusai */
 #gameList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    border-radius: 0.75em;
-    overflow: hidden;
-    background: #262626;
-    padding: 1.25em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  border-radius: 0.75em;
+  overflow: hidden;
+  background: #262626;
+  padding: 1.25em;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Minden játék elem stílusa */
 .game {
-    flex: 1 1 calc(25% - 1.5em);
-    max-width: calc(25% - 1.5em);
-    margin-bottom: 2em;
-    border-radius: 0.75em;
-    overflow: hidden;
-    background: #303030;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.5s ease, transform 0.5s ease;
-    padding: 0.75em;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    position: relative;
+  flex: 1 1 calc(25% - 1.5em);
+  max-width: calc(25% - 1.5em);
+  margin-bottom: 2em;
+  border-radius: 0.75em;
+  overflow: hidden;
+  background: #303030;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+  padding: 0.75em;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  position: relative;
 }
 
 /* Megjelenés animáció */
 .game.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-
 .game img {
-    display: block;
-    width: 100%; 
-    height: auto; 
-    transition: transform 0.5s ease, filter 0.2s ease;
-    margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.2s ease;
+  margin-bottom: 10px;
 }
 
 .game h3 {
-    margin: 15px 0;
-    color: #fff;
-    font-size: 1.2em;
-    white-space: normal;
-    word-wrap: break-word;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 1.2em;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .game:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.5);
+  transform: scale(1.05);
+  filter: brightness(0.5);
 }
 
 .game:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Gombok és tooltipek stílusai */
-.steam-button, .youtube-button {
-    font-size: 25px;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-    position: relative;
+.steam-button,
+.youtube-button {
+  font-size: 25px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  position: relative;
 }
 
 .steam-button {
-    background-color: #1b2838;
+  background-color: #1b2838;
 }
 
 .youtube-button {
-    background-color: #FF0000;
+  background-color: #ff0000;
 }
 
-.steam-button .tooltip, .youtube-button .tooltip {
-    position: absolute;
-    top: 50%;
-    right: calc(100% + 5px);
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.8em;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
-    pointer-events: none;
+.steam-button .tooltip,
+.youtube-button .tooltip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
 }
 
-.steam-button:hover .tooltip, .youtube-button:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
+.steam-button:hover .tooltip,
+.youtube-button:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .button-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .game:hover .button-container {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Kategória címkék általános stílusai */
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
 }
 
 .category {
-    background: linear-gradient(135deg, #3b3b3b, #474747);
-    color: #ffffff;
-    padding: 0.375em 1.25em;
-    border-radius: 25px;
-    font-size: 0.85em;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3b3b3b, #474747);
+  color: #ffffff;
+  padding: 0.375em 1.25em;
+  border-radius: 25px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .category:hover {
-    background: linear-gradient(135deg, #ff6a00, #ff8c00);
-    color: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff6a00, #ff8c00);
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
 }
 
-
 /* Dátumok és időpontok stílusai */
-.release-date, .finish-date, .play-time {
-    margin: 0.75em 0;
-    font-weight: 600;
-    font-size: 1.1em;
-    display: block;
-    color: #ffffff;
-    transition: color 0.3s ease, transform 0.3s ease;
+.release-date,
+.finish-date,
+.play-time {
+  margin: 0.75em 0;
+  font-weight: 600;
+  font-size: 1.1em;
+  display: block;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .release-date {
-    color: #ef5350;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #ef5350;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.release-date:hover, .early-access:hover, .finish-date:hover {
-    transform: scale(1.05);
-    color: #ff4081;  /* Hover szín kiemelés */
+.release-date:hover,
+.early-access:hover,
+.finish-date:hover {
+  transform: scale(1.05);
+  color: #ff4081;
+  /* Hover szín kiemelés */
 }
 
 .early-access {
-    color: #ffca28;
-    font-weight: bold;
-    margin-top: 1em;
-    letter-spacing: 0.03em;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #ffca28;
+  font-weight: bold;
+  margin-top: 1em;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .finish-date {
-    color: #66bb6a;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #66bb6a;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .finish-date.in-progress {
-    color: #ffa726;  /* Világos narancssárga */
+  color: #ffa726;
+  /* Világos narancssárga */
 }
 
 .finish-date.abandoned {
-    color: #42a5f5;  /* Élénk kék */
+  color: #42a5f5;
+  /* Élénk kék */
 }
 
 .finish-date.open-world {
-    color: #29b6f6;  /* Világosabb kék */
+  color: #29b6f6;
+  /* Világosabb kék */
 }
 
 .finish-date.mmo {
-    color: #7e57c2;  /* Friss lila árnyalat */
+  color: #7e57c2;
+  /* Friss lila árnyalat */
 }
 
 .finish-date.simulator {
-    color: #ffeb3b;  /* Világos sárga */
+  color: #ffeb3b;
+  /* Világos sárga */
 }
 
 .finish-date.not-started {
-    color: #ff9800;  /* Élénk narancssárga */
+  color: #ff9800;
+  /* Élénk narancssárga */
 }
 
 .time-text {
-    color: #bdbdbd;
-    font-size: 0.95em;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    transition: color 0.3s ease;
+  color: #bdbdbd;
+  font-size: 0.95em;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
 }
 
 .time-text:hover {
-    color: #ffffff;
-    transform: scale(1.03);
+  color: #ffffff;
+  transform: scale(1.03);
 }
 
 /* Hover hatások */
-.release-date:hover, .early-access:hover, .finish-date:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.3em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.release-date:hover,
+.early-access:hover,
+.finish-date:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.3em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 
 /* Modal stílusai */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    overflow: hidden;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
 }
 
 .modal-show {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .modal-content {
-    background: #1e1e1e;
-    margin: 2% auto;
-    padding: 1.5em;
-    border-radius: 0.75em;
-    width: 90%;
-    max-width: 1200px;
-    position: relative;
+  background: #1e1e1e;
+  margin: 2% auto;
+  padding: 1.5em;
+  border-radius: 0.75em;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
 }
 
 #videoFrame {
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 
 #videoFrame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-
 .close {
-    color: #d32f2f;
-    float: right;
-    font-size: 1.5em;
-    font-weight: bold;
+  color: #d32f2f;
+  float: right;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #e57373;
-    text-decoration: none;
-    cursor: pointer;
+  color: #e57373;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Modernizált, minimalista cookie stílus */
 .cookie-notice {
-    background: #1f1f1f;
-    color: #ffffff;
-    padding: 1em 2em;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    max-width: 70%;
-    margin: 1em auto;
-    text-align: center;
-    position: fixed;
-    bottom: 1.5em;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    transition: all 0.3s ease;
+  background: #1f1f1f;
+  color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 70%;
+  margin: 1em auto;
+  text-align: center;
+  position: fixed;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .cookie-notice p {
-    margin: 0;
-    font-size: 0.95em;
-    line-height: 1.6;
-    color: #e0e0e0;
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .cookie-notice a {
-    color: #42a5f5;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #42a5f5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .cookie-notice a:hover {
-    color: #1e90ff;
-    text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+  color: #1e90ff;
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
 }
 
 /* Süti Gomb stílusok */
 .cookie-button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1em;
 }
 
 .cookie-button {
-    background: #ff7043;
-    color: #ffffff;
-    border: none;
-    padding: 0.75em 1.75em;
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ff7043;
+  color: #ffffff;
+  border: none;
+  padding: 0.75em 1.75em;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .cookie-button:hover {
-    background: #ff8a65;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 112, 67, 0.5);
+  background: #ff8a65;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 112, 67, 0.5);
 }
 
 .cookie-button i {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 /* Különbség és animáció a "Beállítások kezelése" gombnál */
 #manageCookies {
-    background: #ff7043;
-    color: #fff; 
-    border: 2px solid #ff7043; /* Narancs színű keret */
-    transition: background-color 0.4s ease, color 0.4s ease;
+  background: #ff7043;
+  color: #fff;
+  border: 2px solid #ff7043;
+  /* Narancs színű keret */
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 #manageCookies:hover {
-    background: #ff7043;
-    color: #ffffff;
-    transform: translateY(-3px);
+  background: #ff7043;
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
 /* Cookie Preferences Modal */
 .cookie-preferences {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #2b2b2b;
-    color: #f0f0f0;
-    padding: 2em;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-    z-index: 1100;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2b2b2b;
+  color: #f0f0f0;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .cookie-preferences h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    color: #42a5f5;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #42a5f5;
 }
 
 .cookie-preferences label {
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 0.75em;
-    cursor: pointer;
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 0.75em;
+  cursor: pointer;
 }
 
 .cookie-preferences input[type="checkbox"] {
-    margin-right: 0.75em;
-    transform: scale(1.2);
+  margin-right: 0.75em;
+  transform: scale(1.2);
 }
 
 .cookie-preferences .cookie-button {
-    background: #ff7043;
-    color: #ffffff;
-    border: none;
-    padding: 0.75em 1.5em;
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ff7043;
+  color: #ffffff;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .cookie-preferences .cookie-button:hover {
-    background: #ff8a65;
-    transform: translateY(-3px);
+  background: #ff8a65;
+  transform: translateY(-3px);
 }
 
 /* Overlay for modal */
 .cookie-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .cookie-preferences {
-        width: 95%;
-        padding: 1.5em;
-    }
-    
-    .cookie-preferences h2 {
-        font-size: 1.3em;
-    }
-    
-    .cookie-preferences label {
-        font-size: 1em;
-    }
-    
-    .cookie-preferences .cookie-button {
-        padding: 0.65em 1.25em;
-        font-size: 0.9em;
-    }
+  .cookie-preferences {
+    width: 95%;
+    padding: 1.5em;
+  }
+
+  .cookie-preferences h2 {
+    font-size: 1.3em;
+  }
+
+  .cookie-preferences label {
+    font-size: 1em;
+  }
+
+  .cookie-preferences .cookie-button {
+    padding: 0.65em 1.25em;
+    font-size: 0.9em;
+  }
 }
 
 /* Mobilbarát cookie értesítő */
 @media (max-width: 768px) {
-    .cookie-notice {
-        padding: 0.75em 1.5em;
-        bottom: 1em;
-        max-width: 90%;
-    }
+  .cookie-notice {
+    padding: 0.75em 1.5em;
+    bottom: 1em;
+    max-width: 90%;
+  }
 
-    .cookie-button {
-        padding: 0.5em 1.25em;
-        font-size: 0.85em;
-    }
+  .cookie-button {
+    padding: 0.5em 1.25em;
+    font-size: 0.85em;
+  }
 }
 
 /* Back to Top Button - Letisztult, modern stílus, pörgés animációval */
 .back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #64b5f6;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-    text-decoration: none;
-    opacity: 0;
-    visibility: hidden;
-    cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #64b5f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease,
+    background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
 }
 
 .back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-5px);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-5px);
 }
 
 .back-to-top:hover {
-    background-color: #42a5f5;
-    transform: scale(1.15);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background-color: #42a5f5;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .back-to-top i {
-    font-size: 28px;
-    transition: color 0.3s ease;
+  font-size: 28px;
+  transition: color 0.3s ease;
 }
 
 .back-to-top:hover i {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* Animáció: pörgés amikor felfelé görget */
 .back-to-top.scroll-animate i {
-    animation: spin 1s ease-in-out;
+  animation: spin 1s ease-in-out;
 }
 
 /* Pörgés effektus */
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Smooth scroll */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 /* Animációk */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn {
-    from {
-        transform: scale(1.05);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Reszponzív dizájn */
 @media (max-width: 48em) {
-    .game {
-        flex: 1 1 calc(50% - 1.25em);
-        max-width: calc(50% - 1.25em);
-    }
+  .game {
+    flex: 1 1 calc(50% - 1.25em);
+    max-width: calc(50% - 1.25em);
+  }
 
-    .category-section {
-        padding: 1em;
-    }
+  .category-section {
+    padding: 1em;
+  }
 }
 
 /* WebKit-alapú böngészők (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1e1e1e;
+  background: #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #64b5f6;
-    border-radius: 10px; 
-    border: 3px solid #1e1e1e;
+  background-color: #64b5f6;
+  border-radius: 10px;
+  border: 3px solid #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #42a5f5;
+  background-color: #42a5f5;
 }
 
 /* Firefox esetén (kisebb támogatás) */
 html {
-    scrollbar-width: thin;
-    scrollbar-color: #64b5f6 #1e1e1e;
+  scrollbar-width: thin;
+  scrollbar-color: #64b5f6 #1e1e1e;
 }
 
 /* Internet Explorer és Edge esetén (régebbi verziók) */
 body {
-    -ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 /* Rejtett görgetősáv (példa) */
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Keresési mező és ikon stílusai */
 .search-container {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: width 0.5s ease, background-color 0.5s ease;
-    overflow: hidden;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s ease, background-color 0.5s ease;
+  overflow: hidden;
 }
 
 .search-container.expanded {
-    width: 250px;
-    border-radius: 15px;
-    background-color: #1e1e1e;
+  width: 250px;
+  border-radius: 15px;
+  background-color: #1e1e1e;
 }
 
 .search-container input[type="text"] {
-    width: 0;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1em;
-    background-color: transparent;
-    color: #fff;
-    transition: width 0.5s ease, opacity 0.5s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    opacity: 0;
+  width: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  background-color: transparent;
+  color: #fff;
+  transition: width 0.5s ease, opacity 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
 }
 
 .search-container.expanded input[type="text"] {
-    width: 200px;
-    opacity: 1;
+  width: 200px;
+  opacity: 1;
 }
 
 .search-container input[type="text"]::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .search-container input[type="text"]:focus {
-    outline: none;
-    background-color: transparent;
+  outline: none;
+  background-color: transparent;
 }
 
 .search-container input[type="text"]:focus::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .search-icon {
-    font-size: 30px;
-    color: #1e90ff; /* Cool Blue */
-    cursor: pointer;
-    transition: opacity 0.9s ease, background-color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 30px;
+  color: #1e90ff;
+  /* Cool Blue */
+  cursor: pointer;
+  transition: opacity 0.9s ease, background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-container.expanded .search-icon {
-    opacity: 0;
+  opacity: 0;
 }
 
 /* Mobil kijelzők stílusa - egy játék konténer jelenik meg egyszerre */
 @media (max-width: 768px) {
-    .game {
-        flex: 1 1 100%;
-        max-width: 100%;
-        margin-bottom: 2em;
-    }
+  .game {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
 
-    .button-container {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+  .button-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .game-content img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+  .game-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
