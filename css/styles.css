@@ -837,46 +837,48 @@ footer p {
   }
 }
 
-/* Back to Top Button - Letisztult, modern stílus, pörgés animációval */
+/* Alap stílus a "Back to Top" gombhoz */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   background-color: #64b5f6;
-  color: #ffffff;
+  color: #303030;
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease,
-    background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
   z-index: 1000;
   text-decoration: none;
   opacity: 0;
   visibility: hidden;
-  cursor: pointer;
 }
 
+/* Megjelenítés görgetéskor */
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(-5px);
 }
 
+/* Hover hatás alapértelmezett állapotban */
 .back-to-top:hover {
   background-color: #42a5f5;
   transform: scale(1.15);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Felfelé mutató nyíl alapértelmezett stílusban */
 .back-to-top i {
   font-size: 28px;
   transition: color 0.3s ease;
+  display: block;
 }
 
 .back-to-top:hover i {
@@ -897,6 +899,106 @@ footer p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Halloween téma a back-to-top gombhoz */
+.halloween-theme {
+  background-image: url("https://tr.rbxcdn.com/d22c6548079fe13cd80eebdcf760f23f/420/420/Hat/Webp");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  width: 64px;
+  height: 64px;
+  animation: halloweenBounce 2s infinite alternate;
+}
+
+/* Halloween animáció */
+@keyframes halloweenBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Karácsonyi stílus */
+.christmas-theme {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/347/347052.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  animation: christmasGlow 2s infinite alternate;
+  border: none;
+  width: 64px;
+  height: 64px;
+}
+
+/* Karácsonyi animáció */
+@keyframes christmasGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Újévi téma a back-to-top gombhoz */
+.new-year-theme {
+  background-image: url("https://minecraft.wiki/images/Firework_Rocket_JE2_BE2.png?fa5d7"); /* Tűzijáték ikon */
+  background-size: cover;
+  background-position: center;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+/* Újévi rakéta felszálló animáció */
+.back-to-top.new-year-theme.scroll-animate {
+  animation: rocketLaunch 2s ease-in-out, confettiExplosion 3s ease-in-out 2s;
+}
+
+/* Rakéta felszálló animáció */
+@keyframes rocketLaunch {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-500px);
+  } /* Rakéta felmegy az oldal tetejére */
+}
+
+/* Konfetti robbanás a rakéta felszállás végén */
+@keyframes confettiExplosion {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Rejtse el a felfelé mutató nyilat ünnepi témáknál */
+.halloween-theme i,
+.christmas-theme i,
+.new-year-theme i {
+  display: none; /* Mindig elrejti az ikonokat ünnepi témáknál */
+}
+
+/* Megmarad a pörgés animáció ünnepi témáknál is */
+.back-to-top.scroll-animate.halloween-theme {
+  animation: halloweenBounce 2s infinite alternate, spin 1s ease-in-out;
+}
+
+.back-to-top.scroll-animate.christmas-theme {
+  animation: christmasGlow 2s infinite alternate, spin 1s ease-in-out;
 }
 
 /* Smooth scroll */

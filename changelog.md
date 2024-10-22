@@ -1,5 +1,81 @@
 # Changelog
 
+# Changelog
+
+## [1.3.6.c] - 2024-10-22
+
+### **New Features**
+- **Holiday Themed Back-to-Top Button:**
+  - Added dynamic themes for the "Back to Top" button to celebrate special holidays:
+    - 🎃 **Halloween Theme** (October 31):
+      - A bouncing pumpkin icon replaces the standard button, featuring a spooky design.
+      - The button animates with a gentle bounce effect to create a festive atmosphere.
+      - **CSS Changes**: Introduced new keyframes for the bouncing animation.
+    - 🎄 **Christmas Theme** (December 24-26):
+      - The button now has a glowing Christmas tree icon.
+      - The button glows with a soft pulsating white light, enhancing the festive spirit.
+    - 🎆 **New Year Theme** (December 31 & January 1):
+      - A firework rocket icon that launches upward.
+      - After reaching the top of the page, it triggers a **confetti explosion** animation.
+      - **Confetti Explosion**: Includes confetti pieces falling from the top of the page in various random colors.
+      - **Year Display**: Some confetti pieces display the new year's digits (e.g., "2024") in a larger, clearer font.
+
+<details>
+<summary>🎆 **New Year's Confetti Explosion Details**</summary>
+
+  - **Smooth Fall Animation**: Confetti pieces gently fall from the top of the page, simulating gravity.
+  - **Random Colors**: Confetti pieces are assigned random colors from a pre-defined palette.
+  - **Year Numbers**: Some confetti pieces show the new year's digits. These pieces fall without rotating, unlike the regular confetti.
+  - **Duration**: Confetti remains visible for an extended period, ensuring users experience the effect fully. The effect is designed to last longer for visual impact.
+
+</details>
+
+- **Holiday-Specific Animations**:
+  - Each holiday now has a unique button animation tied to the theme:
+    - **Halloween**: A bouncing effect on the pumpkin icon.
+    - **Christmas**: A glowing pulsating effect on the Santa icon.
+    - **New Year**: A firework animation that triggers the confetti explosion when the button reaches the top.
+
+### **Bug Fixes**
+- **Button Icon Persistence During Special Events**:
+  - Fixed an issue where the default "Back to Top" arrow icon would occasionally appear during holiday themes. Now, the themed icons fully replace the arrow, and the arrow does not reappear.
+- **Confetti Reset on Scroll**:
+  - Addressed an issue where confetti would persist even after scrolling to the top and back down again. The confetti now properly resets after the event.
+
+### **UI/UX Improvements**
+- **Improved Button Interactions**:
+  - Updated hover animations across all themes:
+    - **Hover Effect**: The button now scales up smoothly when hovered, with an enhanced box shadow for better visibility.
+  - **General Button Enhancements**:
+    - Enlarged the button to 64x64px for better visibility on both desktop and mobile screens.
+    - All icons are now retina-friendly, ensuring they appear crisp on high-resolution displays.
+  
+<details>
+<summary>👻 **Minor UI Tweaks**</summary>
+
+  - **Back-to-Top Button Size Consistency**: Ensured that the button size remains consistent (64px) across all holiday themes.
+  - **Smooth Scroll Enhancements**: Improved the smooth scrolling effect when the button is clicked, adding more subtle easing for a polished experience.
+  - **Confetti Design Improvements**: Adjusted confetti size and fall speed to provide a more visually engaging and playful effect, particularly for New Year's.
+
+</details>
+
+### **Code Enhancements**
+- **Modular Holiday Detection**:
+  - Refactored the date-checking logic to be more modular, allowing for easy addition of future holiday themes.
+  - Consolidated all holiday themes into a single function to avoid repetition.
+- **Optimized Confetti Animation**:
+  - The confetti effect is now managed through a dedicated function that can be reused for future events without re-creating the logic.
+  - **CSS Optimization**: Reduced the amount of CSS required for confetti by utilizing keyframe animations more efficiently.
+
+<details>
+<summary>📄 **Additional Code Enhancements**</summary>
+
+  - **Event Detection**: The code now efficiently checks for holiday events like Halloween, Christmas, and New Year without affecting page performance.
+  - **Refined Confetti Mechanism**: Simplified the confetti creation logic to improve performance on slower devices, particularly mobile.
+  - **Easing Functions**: Added more easing options to animations for smoother transitions and interactions.
+
+</details>
+
 ## [1.3.6] - 2024-09-29 / [1.3.6.b] - 2024-10-21
 
 ### New Features

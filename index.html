@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameHUB | @krixh99</title>
-    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Game List | @krixh99">
-    <meta property="og:description" content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!">
-    <meta property="og:image" content="https://i.imgur.com/jhOhOF6.jpeg">
-    <meta property="og:url" content="https://krixh.github.io/gamelist/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Game List">
-    <meta property="og:locale" content="hu_HU">
+    <meta property="og:title" content="Game List | @krixh99" />
+    <meta
+      property="og:description"
+      content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/jhOhOF6.jpeg" />
+    <meta property="og:url" content="https://krixh.github.io/gamelist/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Game List" />
+    <meta property="og:locale" content="hu_HU" />
   </head>
   <body id="top">
     <!-- Search Container -->
     <div class="search-container">
       <i class="fas fa-search search-icon"></i>
-      <input type="text" id="gameSearch" placeholder="Keresés egy játékra...">
+      <input type="text" id="gameSearch" placeholder="Keresés egy játékra..." />
     </div>
     <div class="container">
       <!-- Jelenleg futó végigjátszások kategória -->
@@ -92,46 +105,78 @@
     </div>
     <!-- Cookie banner -->
     <div id="cookieConsentBanner" class="cookie-notice">
-      <p>Ez a weboldal cookie-kat használ a felhasználói élmény fokozása érdekében. Az oldal használatával elfogadja a cookie-k használatát. <a href="https://krixh.github.io/policy/">Tudjon meg többet</a>
+      <p>
+        Ez a weboldal cookie-kat használ a felhasználói élmény fokozása
+        érdekében. Az oldal használatával elfogadja a cookie-k használatát.
+        <a href="https://krixh.github.io/policy/">Tudjon meg többet</a>
       </p>
       <div class="cookie-button-container">
         <button id="acceptCookies" class="cookie-button">
-          <i class="fa fa-cookie-bite"></i> Elfogadom </button>
+          <i class="fa fa-cookie-bite"></i> Elfogadom
+        </button>
         <button id="manageCookies" class="cookie-button">
-          <i class="fa fa-cog"></i> Beállítások kezelése </button>
+          <i class="fa fa-cog"></i> Beállítások kezelése
+        </button>
       </div>
     </div>
     <!-- Cookie Preferences Modal -->
-    <div id="cookiePreferencesModal" class="cookie-preferences" style="display:none;">
+    <div
+      id="cookiePreferencesModal"
+      class="cookie-preferences"
+      style="display: none"
+    >
       <h2>Süti beállítások</h2>
       <form id="cookieForm">
         <label>
-          <input type="checkbox" id="necessaryCookies" checked disabled> Szükséges sütik (kötelező) </label>
-        <br>
+          <input type="checkbox" id="necessaryCookies" checked disabled />
+          Szükséges sütik (kötelező)
+        </label>
+        <br />
         <!-- Elemzési és marketing sütik eltávolítva -->
         <div class="cookie-button-container">
           <button type="button" id="savePreferences" class="cookie-button">
-            <i class="fa fa-save"></i> Beállítások mentése </button>
+            <i class="fa fa-save"></i> Beállítások mentése
+          </button>
         </div>
       </form>
     </div>
     <!-- Vissza a tetejére gomb -->
-    <a href="#top" class="back-to-top" aria-label="Back to Top">
-      <i class="fa-solid fa-arrow-up"></i>
+    <a href="#" class="back-to-top" id="backToTop">
+      <i class="fa fa-arrow-up"></i>
     </a>
+
     <footer>
       <div class="footer-content">
         <div class="footer-links">
-          <a href="https://krixh.github.io/" target="_parent" class="footer-link">HQ – Home</a>
-          <a href="https://github.com/KrixH" target="_parent" class="footer-link">Github</a>
+          <a
+            href="https://krixh.github.io/"
+            target="_parent"
+            class="footer-link"
+            >HQ – Home</a
+          >
+          <a
+            href="https://github.com/KrixH"
+            target="_parent"
+            class="footer-link"
+            >Github</a
+          >
         </div>
         <div class="footer-info">
           <p class="last-updated">Frissítve: 2024.10.20. - 21:32</p>
-          <p>&copy; <span id="current-year"></span>
+          <p>
+            &copy; <span id="current-year"></span>
             <span class="brand">
-              <span style="color: orange;">Game</span>
-              <span style="color: #42a5f5;">HUB</span>
-            </span>. Minden jog fenntartva. <span class="creator">Készítette: <a href="https://krixh.github.io" target="_blank" class="footer-link">KrixH99</a>
+              <span style="color: orange">Game</span>
+              <span style="color: #42a5f5">HUB</span> </span
+            >. Minden jog fenntartva.
+            <span class="creator"
+              >Készítette:
+              <a
+                href="https://krixh.github.io"
+                target="_blank"
+                class="footer-link"
+                >KrixH99</a
+              >
             </span>
           </p>
         </div>
