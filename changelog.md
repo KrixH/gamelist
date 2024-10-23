@@ -1,6 +1,52 @@
 # Changelog
 
-# Changelog
+## [1.3.7] - 2024-10-23
+
+<details>
+  <summary>✨ New Features</summary>
+
+- **Custom Font Integration:**  
+  🎨 Integrated **Freckle Face** font for `.footer-info .brand` section.  
+  💻 Added Google Fonts import via `@import` tag for proper font loading.
+
+</details>
+
+<details>
+  <summary>🐛 Bug Fixes</summary>
+
+- **Close Button Fix for Modal:**  
+  ✔️ Ensured the close button is visible and properly positioned in the top-right corner of the modal container.  
+  🔧 Adjusted CSS to prevent the close button from being obscured by video content.
+
+</details>
+
+<details>
+  <summary>🚀 Improvements</summary>
+
+- **Category Header Hover Effect:**  
+  🎯 Improved the hover effect for `.category-header`, including smoother background transitions and box-shadow enhancements.  
+  
+- **Random Background Image Feature:**  
+  🖼️ Refactored the random background image function, ensuring smooth transitions and better performance.
+
+</details>
+
+<details>
+  <summary>🔄 Refactors</summary>
+
+- **Unit Conversion to `rem`:**  
+  📐 Converted all applicable pixel-based values (`px`) to `rem` units for better scalability and responsiveness.
+
+</details>
+
+<details>
+  <summary>🎉 Other Updates</summary>
+
+- **Confetti Feature Update:**  
+  🎆 Improved the `launchConfetti` function by enhancing the animation duration and smoothness of the confetti explosion.  
+  🎊 Added new confetti effect where confetti can display the current year.
+
+</details>
 
 ## [1.3.6.c] - 2024-10-22
 

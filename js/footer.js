@@ -44,13 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let isSpecialEvent = false;
 
     // Halloween (Október 31)
-    if (month === 10 && day === 31) {
+    if ((month === 10 && day === 31)) {
       backToTopButton.classList.add("halloween-theme");
       isSpecialEvent = true;
     }
 
     // Karácsony (December 24-26)
-    if (month === 12 && day >= 24 && day <= 26) {
+    if ((month === 12 && day >= 24 && day <= 26)) {
       backToTopButton.classList.add("christmas-theme");
       isSpecialEvent = true;
     }
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     confettiContainer.style.pointerEvents = "none";
     document.body.appendChild(confettiContainer);
 
-    const confettiCount = 150; // Növelt konfetti mennyiség a látványosabb hatásért
+    const confettiCount = 250;
     const year = new Date().getFullYear().toString();
 
     // Normál konfetti
@@ -186,12 +186,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://i.imgur.com/vccw0IO.jpeg",
     ];
 
-    const randomImage =
-      backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
-    document.body.style.backgroundImage = `url('${randomImage}')`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
+    const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+    const img = new Image();
+    img.src = randomImage;
+    img.referrerPolicy = "noreferrer";
+
+    img.onload = function () {
+      document.body.style.backgroundImage = `url('${randomImage}')`;
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+    };
   }
 
   // Az aktuális év beállítása
