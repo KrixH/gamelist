@@ -103,48 +103,48 @@ document.addEventListener("DOMContentLoaded", () => {
       : "";
 
     gameDiv.innerHTML = `
-          <div class="game-card">
-              ${newBadgeHTML}
-              <div class="game-image-container">
-                  <img src="${game.cover}" alt="${
+      <div class="game-card">
+          ${newBadgeHTML}
+          <div class="game-image-container">
+              <img src="${game.cover}" alt="${
       game.title
-    }" class="game-cover">
-              </div>
-              <div class="game-info">
-                  <h3 class="game-title">${game.title}</h3>
-                  <div class="categories">${game.category
-                    .split(",")
-                    .map(createCategoryElement)
-                    .join("")}</div>
-                  ${
-                    game.earlyAccess
-                      ? createParagraph(
-                          "early-access",
-                          `Korai hozzáférés: ${game.earlyAccess}`
-                        )
-                      : ""
-                  }
-                  ${
-                    game.releaseDate
-                      ? createParagraph(
-                          "release-date",
-                          `Megjelenés: ${game.releaseDate}`
-                        )
-                      : ""
-                  }
-                  <p class="finish-date ${finishDateClass}">${formatFinishDateText(
+    }" class="game-cover" referrerpolicy="no-referrer">
+          </div>
+          <div class="game-info">
+              <h3 class="game-title">${game.title}</h3>
+              <div class="categories">${game.category
+                .split(",")
+                .map(createCategoryElement)
+                .join("")}</div>
+              ${
+                game.earlyAccess
+                  ? createParagraph(
+                      "early-access",
+                      `Korai hozzáférés: ${game.earlyAccess}`
+                    )
+                  : ""
+              }
+              ${
+                game.releaseDate
+                  ? createParagraph(
+                      "release-date",
+                      `Megjelenés: ${game.releaseDate}`
+                    )
+                  : ""
+              }
+              <p class="finish-date ${finishDateClass}">${formatFinishDateText(
       finishDateClass,
       game.finishDate
     )}</p>
-                  ${
-                    game.playTime
-                      ? formatPlayTimeText(game.playTime, finishDateClass)
-                      : ""
-                  }
-                  ${game.progress ? createRadialProgressBar(game.progress) : ""}
-              </div>
+              ${
+                game.playTime
+                  ? formatPlayTimeText(game.playTime, finishDateClass)
+                  : ""
+              }
+              ${game.progress ? createRadialProgressBar(game.progress) : ""}
           </div>
-      `;
+      </div>
+    `;
 
     const buttonContainer = createButtonContainer(game);
     if (buttonContainer) gameDiv.appendChild(buttonContainer);

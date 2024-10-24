@@ -205,25 +205,6 @@ footer p {
   animation: badgeWobble 1.5s ease-in-out infinite;
 }
 
-@keyframes badgeWobble {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(3deg);
-  }
-
-  50% {
-    transform: rotate(-3deg);
-  }
-
-  75% {
-    transform: rotate(3deg);
-  }
-}
-
 /* Radial progress bar - új, minimalista stílus */
 .radial-progress-bar {
   position: absolute;
@@ -276,18 +257,6 @@ footer p {
   transform: scale(1.1);
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
 .radial-progress-bar:hover {
   box-shadow: 0 0 0.938rem rgba(100, 200, 255, 0.7);
   transform: scale(1.2);
@@ -296,16 +265,6 @@ footer p {
 /* Spin effect for radial progress bar */
 .radial-progress-bar.spin {
   animation: spin 1.8s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* Progress szín */
@@ -343,21 +302,6 @@ footer p {
   color: #ffffff;
   font-size: 1em;
   text-shadow: none;
-}
-
-/* Rainbow glow effect */
-@keyframes rainbowGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* Nagy container stílusai */
@@ -911,20 +855,9 @@ footer p {
   animation: spin 1s ease-in-out;
 }
 
-/* Pörgés effektus */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* Halloween téma a back-to-top gombhoz */
 .halloween-theme {
-  background-image: url("https://tr.rbxcdn.com/d22c6548079fe13cd80eebdcf760f23f/420/420/Hat/Webp");
+  background-image: url("/img/pumpkin.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -933,22 +866,9 @@ footer p {
   animation: halloweenBounce 2s infinite alternate;
 }
 
-/* Halloween animáció */
-@keyframes halloweenBounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-0.313rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 /* Karácsonyi stílus */
 .christmas-theme {
-  background-image: url("https://cdn-icons-png.flaticon.com/512/347/347052.png");
+  background-image: url("/img/chrtree.png");
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 0.938rem rgba(255, 255, 255, 0.7);
@@ -958,19 +878,9 @@ footer p {
   height: 4rem;
 }
 
-/* Karácsonyi animáció */
-@keyframes christmasGlow {
-  0% {
-    box-shadow: 0 0 0.938rem rgba(255, 255, 255, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 1.563rem rgba(255, 255, 255, 1);
-  }
-}
-
 /* Újévi téma a back-to-top gombhoz */
 .new-year-theme {
-  background-image: url("https://minecraft.wiki/images/Firework_Rocket_JE2_BE2.png?fa5d7"); /* Tűzijáték ikon */
+  background-image: url("/img/frocket.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -981,29 +891,6 @@ footer p {
 /* Újévi rakéta felszálló animáció */
 .back-to-top.new-year-theme.scroll-animate {
   animation: rocketLaunch 2s ease-in-out, confettiExplosion 3s ease-in-out 2s;
-}
-
-/* Rakéta felszálló animáció */
-@keyframes rocketLaunch {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-31.25rem);
-  } /* Rakéta felmegy az oldal tetejére */
-}
-
-/* Konfetti robbanás a rakéta felszállás végén */
-@keyframes confettiExplosion {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 /* Rejtse el a felfelé mutató nyilat ünnepi témáknál */
@@ -1025,29 +912,6 @@ footer p {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
-}
-
-/* Animációk */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(1.05);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 /* Reszponzív dizájn */
@@ -1188,5 +1052,133 @@ body::-webkit-scrollbar {
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+}
+
+
+/*Összes animáció kezelő cucclika*/
+
+@keyframes badgeWobble {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Rainbow glow effect */
+@keyframes rainbowGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Halloween animáció */
+@keyframes halloweenBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.313rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Karácsonyi animáció */
+@keyframes christmasGlow {
+  0% {
+    box-shadow: 0 0 0.938rem rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 1.563rem rgba(255, 255, 255, 1);
+  }
+}
+
+/* Rakéta felszálló animáció */
+@keyframes rocketLaunch {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-31.25rem);
+  } /* Rakéta felmegy az oldal tetejére */
+}
+
+/* Konfetti robbanás a rakéta felszállás végén */
+@keyframes confettiExplosion {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Animációk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animációk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
