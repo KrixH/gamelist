@@ -1055,7 +1055,6 @@ body::-webkit-scrollbar {
   }
 }
 
-
 /*Összes animáció kezelő cucclika*/
 
 @keyframes badgeWobble {
@@ -1137,7 +1136,6 @@ body::-webkit-scrollbar {
     opacity: 0;
   }
 }
-
 
 /* Animációk */
 @keyframes fadeIn {

@@ -44,13 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let isSpecialEvent = false;
 
     // Halloween (Október 31)
-    if ((month === 10 && day === 31)) {
+    if ((month === 10 && day === 31) || (month === 11 && day === 1)) {
       backToTopButton.classList.add("halloween-theme");
       isSpecialEvent = true;
     }
 
     // Karácsony (December 24-26)
-    if ((month === 12 && day >= 24 && day <= 26)) {
+    if (month === 12 && day >= 24 && day <= 26) {
       backToTopButton.classList.add("christmas-theme");
       isSpecialEvent = true;
     }
@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // Kattintási esemény a visszagörgetéshez
     backToTopButton.addEventListener("click", (e) => {
       e.preventDefault();
       backToTopButton.classList.add("scroll-animate");
@@ -80,28 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
       });
 
+      // Ünnepi eseményhez kapcsolódó funkciók
       setTimeout(() => {
         backToTopButton.classList.remove("scroll-animate");
-        if (backToTopButton.classList.contains("new-year-theme")) {
-          launchConfetti();
+        if (
+          isSpecialEvent &&
+          backToTopButton.classList.contains("new-year-theme")
+        ) {
+          launchConfetti(); // Konfetti robbanás csak újévkor
         }
-      }, 1000);
+      }, 1500); // Lassabb animációs időzítés a vizuális hatás fokozásához
     });
-
-    // Ha nincs különleges esemény, csak a normál pörgés legyen
-    if (!isSpecialEvent) {
-      backToTopButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        backToTopButton.classList.add("scroll-animate");
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        setTimeout(() => {
-          backToTopButton.classList.remove("scroll-animate");
-        }, 1000);
-      });
-    }
   }
 
   // Konfetti robbanás
@@ -186,7 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://i.imgur.com/vccw0IO.jpeg",
     ];
 
-    const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+    const randomImage =
+      backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
     const img = new Image();
     img.src = randomImage;
     img.referrerPolicy = "noreferrer";
