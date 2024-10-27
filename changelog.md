@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.3.8] - 2024-10-27
+
+## Enhancements to the "Random Game" Feature 🎲
+
+<details>
+  <summary>🔍 <strong>New Positioning and Styling for the Random Game Button</strong></summary>
+
+  - The **Random Game button** has been moved to the **left side** of the screen, ensuring it doesn't obstruct the main content.
+  - Added a hover effect: the button enlarges when hovered over, making it visually stand out.
+  - The button now has a custom color gradient and shadow to enhance its appearance.
+
+</details>
+
+<details>
+  <summary>🎰 <strong>Updated Animation: Zoom-In-Out Effect</strong></summary>
+
+  - Replaced the slot machine animation with a more dynamic **zoom-in-out animation**.
+  - The animation effect:
+    - Quickly alternates game cover images with a brief zoom effect (increases scale slightly).
+    - Gradually slows down, adding suspense, then stops at the final game cover.
+  - This new effect gives a **lottery-like feel** to the random game selection.
+
+</details>
+
+<details>
+  <summary>💄 <strong>CSS Additions and Adjustments</strong></summary>
+
+  - Added a new CSS animation, `zoomEffect`, to control the zoom-in-out behavior:
+    - Starts with a normal scale (`scale(1)`), zooms in (`scale(1.1)`), then returns to normal size.
+  - Optimized the `.random-game-container` styling for improved alignment and visual appeal:
+    - Increased the shadow and border-radius for a smoother look.
+    - Positioned close button (`X`) in the top-right corner with a hover effect for user clarity.
+
+</details>
+
 ## [1.3.7] - 2024-10-23
 
 <details>

@@ -96,6 +96,24 @@
         <div class="category-games" id="mmoGames"></div>
       </section>
     </div>
+    <!-- Véletlenszerű játék kiválasztó konténer a jobb oldalon -->
+    <div id="randomGameButtonContainer" class="random-game-button-container">
+      <button id="randomGameTrigger" class="dice-button">
+        <i class="fas fa-dice"></i>
+      </button>
+      <div id="randomGameContainer" class="random-game-container hidden">
+        <button id="closeRandomGame" class="close-button">✕</button>
+        <div id="randomGameDisplay" class="game-display">
+          <img
+            id="randomGameCover"
+            src=""
+            alt="Véletlen játék borító"
+            class="game-cover"
+          />
+          <p id="randomGameTitle">Válassz véletlen játékot!</p>
+        </div>
+      </div>
+    </div>
     <!-- Videó megtekintő Modal -->
     <div id="videoModal" class="modal">
       <div class="modal-content">
@@ -132,7 +150,6 @@
           Szükséges sütik (kötelező)
         </label>
         <br />
-        <!-- Elemzési és marketing sütik eltávolítva -->
         <div class="cookie-button-container">
           <button type="button" id="savePreferences" class="cookie-button">
             <i class="fa fa-save"></i> Beállítások mentése
@@ -163,7 +180,7 @@
         </div>
         <div class="footer-info">
           <p class="last-updated">
-            Frissítve: 2024.10.25. - 11:50 - Ver. 1.3.7.b
+            Frissítve: 2024.10.27. - 17:10 - Ver. 1.3.8
           </p>
           <p>
             &copy; <span id="current-year"></span>
@@ -186,5 +203,6 @@
     </footer>
     <script src="./js/script.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/randomgame.js"></script>
   </body>
 </html>
