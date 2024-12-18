@@ -234,6 +234,19 @@
     "steamId": "1593500"
   },
   {
+    "title": "God of War Ragnarök [PC]",
+    "category": "Adventure, Hack and slash/Beat 'em up, Role-playing (RPG)",
+    "cover": "https://i.imgur.com/EJiSAYm.png",
+    "earlyAccess": null,
+    "releaseDate": "2024.09.19 (PC)",
+    "finishDate": "VA",
+    "dateAdded": "2024.12.18",
+    "playTime": "",
+    "progress": "1",
+    "videoId": "g1wr0DfV73E",
+    "steamId": "2322010"
+  },
+  {
     "title": "NieR:Automata™",
     "category": "Hack and slash/Beat 'em up, Role-playing (RPG)",
     "cover": "https://i.imgur.com/7BBDwTz.jpeg",
@@ -436,7 +449,7 @@
     "releaseDate": null,
     "finishDate": "OW",
     "dateAdded": null,
-    "playTime": "02:36:00",
+    "playTime": null,
     "progress": null,
     "videoId": "rKK3DzWIUYA",
     "steamId": "2080690"
@@ -566,10 +579,23 @@
     "releaseDate": "2021.12.04",
     "finishDate": "OW",
     "dateAdded": null,
-    "playTime": "487 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "LpNDrrly3GI",
     "steamId": "1149460"
+  },
+  {
+    "title": "No Man's Sky",
+    "category": "Role-playing (RPG), Simulator, Adventure, Indie",
+    "cover": "https://i.imgur.com/u3Pd3TU.png",
+    "earlyAccess": null,
+    "releaseDate": "2016.08.12 (PC)",
+    "finishDate": "OW",
+    "dateAdded": "2024.12.18",
+    "playTime": null,
+    "progress": null,
+    "videoId": "d689VjSmfWc",
+    "steamId": "275850"
   },
   {
     "title": "Raft",
@@ -635,6 +661,32 @@
     "playTime": null,
     "videoId": "xlTuC18xVII",
     "steamId": "227300"
+  },
+  {
+    "title": "Farming Simulator 25",
+    "category": "Simulator",
+    "cover": "https://i.imgur.com/dc3525F.png",
+    "earlyAccess": null,
+    "releaseDate": "2024.11.12",
+    "finishDate": "SIM",
+    "dateAdded": "2024.12.18",
+    "progress": null,
+    "playTime": null,
+    "videoId": "0kCHne_jrFk",
+    "steamId": "2300320"
+  },
+  {
+    "title": "Liar's Bar",
+    "category": "Simulator, Strategy, Turn-based strategy (TBS), Indie, Card & Board Game",
+    "cover": "https://i.imgur.com/xMvXVbh.png",
+    "earlyAccess": "2024.10.02",
+    "releaseDate": null,
+    "finishDate": "SIM",
+    "dateAdded": "2024.12.18",
+    "progress": null,
+    "playTime": null,
+    "videoId": "B4KkbB1hlrw",
+    "steamId": "3097560"
   },
   {
     "title": "Black Myth: Wukong",
@@ -904,7 +956,7 @@
     "releaseDate": null,
     "finishDate": "OW",
     "dateAdded": "2024.10.06",
-    "playTime": "178 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "Ipy3ZazeEVg",
     "steamId": "1623730"
@@ -1021,7 +1073,7 @@
     "releaseDate": "2011.11.18.",
     "finishDate": "OW",
     "dateAdded": "2024.10.06",
-    "playTime": "Ismeretlen",
+    "playTime": null,
     "progress": null,
     "videoId": "MmB9b5njVbA",
     "steamId": ""
