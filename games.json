@@ -462,7 +462,7 @@
     "releaseDate": "2023.08.26",
     "finishDate": "MMO",
     "dateAdded": null,
-    "playTime": "1 405 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "LGcECozNXEw",
     "steamId": "252490"
@@ -475,7 +475,7 @@
     "releaseDate": "2024.07.09",
     "finishDate": "MMO",
     "dateAdded": null,
-    "playTime": "42 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "Ybw4G-WTXvY",
     "steamId": "2139460"
@@ -917,7 +917,7 @@
     "releaseDate": "2018.03.20",
     "finishDate": "MMO",
     "dateAdded": "2024.10.06",
-    "playTime": "135 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "cOhLUE-Vi3E",
     "steamId": "1172620"
@@ -1021,7 +1021,7 @@
     "releaseDate": "2024.02.08",
     "finishDate": "MMO",
     "dateAdded": "2024.05.04",
-    "playTime": "70 óra",
+    "playTime": null,
     "progress": null,
     "videoId": "WsYK0Y6mjFE",
     "steamId": "553850"
@@ -1103,5 +1103,18 @@
     "progress": null,
     "videoId": "qqEpSOFDXGA",
     "steamId": "323190"
+  },
+  {
+    "title": "Hogwarts Legacy",
+    "category": "Role-playing (RPG), Adventure",
+    "cover": "https://i.imgur.com/Sbtol5S.png",
+    "earlyAccess": "2023.02.07",
+    "releaseDate": "2023.02.10 ",
+    "finishDate": "VA",
+    "dateAdded": "2024.12.21",
+    "playTime": null,
+    "progress": "5",
+    "videoId": "NthGfn_ddRQ",
+    "steamId": "990080"
   }
 ]
