@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isSpecialEvent = true;
       }
 
-      if (month === 12 && day >= 24 && day <= 26) {
+      if (month === 12 && day >= 24 && day <= 27) {
         backToTopButton.classList.add("christmas-theme");
         isSpecialEvent = true;
       }
