@@ -857,7 +857,7 @@ footer p {
 
 /* Halloween téma a back-to-top gombhoz */
 .halloween-theme {
-  background-image: url("/img/pumpkin.png");
+  background-image: url("https://i.imgur.com/tnj13TH.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -868,7 +868,7 @@ footer p {
 
 /* Karácsonyi stílus */
 .christmas-theme {
-  background-image: url("/img/chrtree.png");
+  background-image: url("https://i.imgur.com/tF2aSYO.png");
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 0.938rem rgba(255, 255, 255, 0.7);
@@ -880,7 +880,7 @@ footer p {
 
 /* Újévi téma a back-to-top gombhoz */
 .new-year-theme {
-  background-image: url("/img/frocket.png");
+  background-image: url("https://i.imgur.com/PFpo87c.png");
   background-size: cover;
   background-position: center;
   border: none;
