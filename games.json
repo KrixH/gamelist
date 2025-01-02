@@ -242,7 +242,7 @@
     "finishDate": "VA",
     "dateAdded": "2024.12.18",
     "playTime": "",
-    "progress": "1",
+    "progress": "23",
     "videoId": "g1wr0DfV73E",
     "steamId": "2322010"
   },
@@ -401,6 +401,19 @@
     "progress": "100",
     "videoId": "mtyOXKB0M5o",
     "steamId": "1547000"
+  },
+  {
+    "title": "Grand Theft Auto III: The Definitive Edition",
+    "category": "Shooter, Racing, Adventure",
+    "cover": "https://i.imgur.com/Qg2N6Lx.png",
+    "earlyAccess": null,
+    "releaseDate": "2021.11.11",
+    "finishDate": "2025.01.02",
+    "dateAdded": "2024.12.23",
+    "playTime": "~3:50:00",
+    "progress": "100",
+    "videoId": "mtyOXKB0M5o",
+    "steamId": "1546970"
   },
   {
     "title": "Red Dead Redemption 2",
