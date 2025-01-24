@@ -117,11 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Státusz szöveg
     const statusText =
-      game.fixedCategory && game.finishDate
-        ? `Befejezve: ${game.finishDate}`
-        : game.fixedCategory === "indie" && !game.finishDate
-        ? "Felfedezés alatt"
-        : formatFinishDateText(finishDateClass, game.finishDate);
+    game.fixedCategory && game.finishDate
+    ? `Befejezve: ${game.finishDate}`
+    : game.fixedCategory === "indie" && game.subCategory === "horror"
+    ? "Indie Horror"
+    : game.fixedCategory === "indie"
+    ? "Indie"
+    : formatFinishDateText(finishDateClass, game.finishDate);
+
   
     gameDiv.innerHTML = `
       <div class="game-card">
