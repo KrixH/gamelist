@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function determineSectionKey(finishDate) {
+    if (!finishDate) return null;
+    
     const sectionMap = {
       VA: "inProgress",
       AH: "abandoned",
@@ -78,11 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
       MMO: "mmo",
       SIM: "simulator",
       NS: "notStarted",
+      IND: "indie",
     };
-
+  
     for (const key in sectionMap) {
       if (finishDate.includes(key)) return sectionMap[key];
     }
+  
     return "completed";
   }
+  
 });

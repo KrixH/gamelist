@@ -494,6 +494,19 @@
     "steamId": "252490"
   },
   {
+    "title": "Marvel Rivals",
+    "category": "Shooter",
+    "cover": "https://i.imgur.com/jTQQYvi.png",
+    "earlyAccess": null,
+    "releaseDate": "2024.12.06",
+    "finishDate": "MMO",
+    "dateAdded": "2025.01.24",
+    "playTime": null,
+    "progress": null,
+    "videoId": "6QtF-z25nIA",
+    "steamId": "2767030"
+  },
+  {
     "title": "Once Human",
     "category": "Shooter, Role-playing (RPG), Strategy, Adventure",
     "cover": "https://i.imgur.com/8rjntZ0.jpeg",
@@ -1142,5 +1155,22 @@
     "progress": "5",
     "videoId": "NthGfn_ddRQ",
     "steamId": "990080"
+  },
+  {
+    "title": "MiSide",
+    "category": "Role-playing (RPG), Simulator, Adventure, Indie",
+    "fixedCategory": "indie",
+    "cover": "https://i.imgur.com/xCW9IEl.png",
+    "earlyAccess": null,
+    "releaseDate": "2024.12.10",
+    "finishDate": null,
+    "dateAdded": "2025.01.24",
+    "playTime": null,
+    "progress": null,
+    "videoId": "wVEvh7dA7bU",
+    "steamId": "2527500"
   }
+  
+  
+  
 ]

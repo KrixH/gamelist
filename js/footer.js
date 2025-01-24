@@ -170,6 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://i.imgur.com/EOieKhP.jpeg",
         "https://i.imgur.com/Mf5KGcY.jpeg",
         "https://i.imgur.com/vccw0IO.jpeg",
+        "https://i.imgur.com/sZbJvxM.jpeg",
+        "https://i.imgur.com/mXDMeAx.jpeg",
+        "https://i.imgur.com/CIGZe1L.jpeg",
       ];
 
       const randomImage =

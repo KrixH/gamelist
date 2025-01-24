@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "pending",
     "simulator",
     "notStarted",
+    "indie",
   ];
   window.remainingGames = [];
 
@@ -27,20 +28,30 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderGamesForSection(sectionKey) {
     const sectionElement = document.getElementById(`${sectionKey}Games`);
     if (!sectionElement) return;
-
+  
     sectionElement.innerHTML = "";
-
-    const sectionGames = remainingGames
-      .filter((game) => determineSectionKey(game.finishDate) === sectionKey)
-      .sort((a, b) => a.title.localeCompare(b.title));
-
+  
+    // Játékok szűrése
+    const sectionGames = remainingGames.filter((game) => {
+      if (game.fixedCategory) {
+        return game.fixedCategory.toLowerCase() === sectionKey.toLowerCase();
+      }
+      if (game.finishDate) {
+        return determineSectionKey(game.finishDate) === sectionKey;
+      }
+      return false;
+    });
+  
     if (sectionGames.length > 0) {
       toggleSectionVisibility(sectionKey, true);
-      sectionGames.forEach((game) => {
-        const gameDiv = createGameDiv(game);
-        sectionElement.appendChild(gameDiv);
-        gameDiv.classList.add("show");
-      });
+  
+      sectionGames
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .forEach((game) => {
+          const gameDiv = createGameDiv(game);
+          sectionElement.appendChild(gameDiv);
+          gameDiv.classList.add("show");
+        });
     } else {
       toggleSectionVisibility(sectionKey, false);
     }
@@ -66,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       MMO: "mmo",
       SIM: "simulator",
       NS: "notStarted",
+      IND: "indie",
     };
 
     for (const key in sectionMap) {
@@ -94,22 +106,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function createGameDiv(game) {
-    const finishDateClass = determineSectionKey(game.finishDate);
+    const finishDateClass = determineSectionKey(game.finishDate || "");
     const gameDiv = document.createElement("div");
     gameDiv.classList.add("game");
     gameDiv.setAttribute("data-title", game.title.toLowerCase());
-
+  
     const newBadgeHTML = checkIfNew(game.dateAdded)
       ? '<span class="new-badge">ÚJ</span>'
       : "";
-
+  
+    // Státusz szöveg
+    const statusText =
+      game.fixedCategory && game.finishDate
+        ? `Befejezve: ${game.finishDate}`
+        : game.fixedCategory === "indie" && !game.finishDate
+        ? "Felfedezés alatt"
+        : formatFinishDateText(finishDateClass, game.finishDate);
+  
     gameDiv.innerHTML = `
       <div class="game-card">
           ${newBadgeHTML}
           <div class="game-image-container">
-              <img src="${game.cover}" alt="${
-      game.title
-    }" class="game-cover" referrerpolicy="no-referrer">
+              <img src="${game.cover}" alt="${game.title}" class="game-cover" referrerpolicy="no-referrer">
           </div>
           <div class="game-info">
               <h3 class="game-title">${game.title}</h3>
@@ -133,10 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                   : ""
               }
-              <p class="finish-date ${finishDateClass}">${formatFinishDateText(
-      finishDateClass,
-      game.finishDate
-    )}</p>
+              <p class="finish-date ${finishDateClass}">${statusText}</p>
               ${
                 game.playTime
                   ? formatPlayTimeText(game.playTime, finishDateClass)
@@ -151,18 +166,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (buttonContainer) gameDiv.appendChild(buttonContainer);
 
     function toggleDisplay(show) {
-      const radialBar = gameDiv.querySelector(".radial-progress-bar");
-      const newBadge = gameDiv.querySelector(".new-badge");
+        const radialBar = gameDiv.querySelector(".radial-progress-bar");
+        const newBadge = gameDiv.querySelector(".new-badge");
 
-      if (radialBar) radialBar.style.display = show ? "flex" : "none";
-      if (newBadge) newBadge.style.display = show ? "none" : "inline";
+        if (radialBar) radialBar.style.display = show ? "flex" : "none";
+        if (newBadge) newBadge.style.display = show ? "none" : "inline";
     }
 
     gameDiv.addEventListener("mouseenter", () => toggleDisplay(true));
     gameDiv.addEventListener("mouseleave", () => toggleDisplay(false));
 
     return gameDiv;
-  }
+}
+
 
   function checkIfNew(dateAdded) {
     const now = new Date();
