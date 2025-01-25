@@ -1,217 +1,76 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameHUB | @krixh99</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Game List | @krixh99" />
     <meta
       property="og:description"
-      content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"
-    />
+      content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"/>
     <meta property="og:image" content="https://i.imgur.com/jhOhOF6.jpeg" />
     <meta property="og:url" content="https://krixh.github.io/gamelist/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Game List" />
     <meta property="og:locale" content="hu_HU" />
-  </head>
-  <body id="top">
-    <!-- Search Container -->
-    <div class="search-container">
-      <i class="fas fa-search search-icon"></i>
-      <input type="text" id="gameSearch" placeholder="Keresés egy játékra..." />
-    </div>
-    <div class="container">
-      <!-- Jelenlegi végigjátszások kategória -->
-      <section class="category-header" id="inProgressHeader">
-        <h2>Jelenlegi végigjátszások</h2>
-      </section>
-      <section class="category-section" id="inProgressSection">
-        <div class="category-games" id="inProgressGames"></div>
-      </section>
-      <!-- Befejezett játékok kategória -->
-      <section class="category-header" id="completedHeader">
-        <h2>Befejezett végigjátszások</h2>
-      </section>
-      <section class="category-section" id="completedSection">
-        <div class="category-games" id="completedGames"></div>
-      </section>
-      <!-- Tervezett játékok kategória -->
-      <section class="category-header" id="notStartedHeader">
-        <h2>Tervezett végigjátszások</h2>
-      </section>
-      <section class="category-section" id="notStartedSection">
-        <div class="category-games" id="notStartedGames"></div>
-      </section>
-      <!-- Következő rész függőben kategória -->
-      <section class="category-header" id="pendingHeader">
-        <h2>Következő rész függőben</h2>
-      </section>
-      <section class="category-section" id="pendingSection">
-        <div class="category-games" id="pendingGames"></div>
-      </section>
-      <!-- Szüneteltetett játékok kategória -->
-      <section class="category-header" id="abandonedHeader">
-        <h2>Szüneteltetett végigjátszások</h2>
-      </section>
-      <section class="category-section" id="abandonedSection">
-        <div class="category-games" id="abandonedGames"></div>
-      </section>
-      <!-- Open World kategória -->
-      <section class="category-header" id="openWorldHeader">
-        <h2>Open World Játékok</h2>
-      </section>
-      <section class="category-section" id="openWorldSection">
-        <div class="category-games" id="openWorldGames"></div>
-      </section>
-      <!-- Szimulátor kategória -->
-      <section class="category-header" id="simulatorHeader">
-        <h2>Szimulátor Játékok</h2>
-      </section>
-      <section class="category-section" id="simulatorSection">
-        <div class="category-games" id="simulatorGames"></div>
-      </section>
-      <!--  Indie/horror játékok kategória -->
-       <section class="category-header" id="indieHeader">
-        <h2>Indie / Horror Játékok</h2>
-      </section>
-      <section class="category-section" id="indieSection">
-      <div class="category-games" id="indieGames"></div>
-      </section>
-      <!-- MMO Játékok kategória -->
-      <section class="category-header" id="mmoHeader">
-        <h2>Massively Multiplayer Online Játékok</h2>
-      </section>
-      <section class="category-section" id="mmoSection">
-        <div class="category-games" id="mmoGames"></div>
-      </section>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">🎮 gameHUB 🎮</h1>
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Keresés...">
+                <select id="categorySelect" class="category-select">
+                    <option value="all">Összes kategória</option>
+                </select>
+                <select id="developerSelect" class="developer-select">
+                    <option value="all">Összes fejlesztő</option>
+                </select>
+            </div>
+        </div>
+    </header>
 
-    
-  </div>
-    <!-- Véletlenszerű játék kiválasztó konténer a jobb oldalon -->
-    <div id="randomGameButtonContainer" class="random-game-button-container">
-      <button id="randomGameTrigger" class="dice-button">
-        <i class="fas fa-dice"></i>
-      </button>
-      <div id="randomGameContainer" class="random-game-container hidden">
-        <button id="closeRandomGame" class="close-button">✕</button>
-        <div id="randomGameDisplay" class="game-display">
-          <img
-            id="randomGameCover"
-            src=""
-            alt="Véletlen játék borító"
-            class="game-cover"
-          />
-          <p id="randomGameTitle">Válassz véletlen játékot!</p>
-        </div>
-      </div>
-    </div>
-    <!-- Videó megtekintő Modal -->
-    <div id="videoModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="videoFrame"></div>
-      </div>
-    </div>
-    <!-- Cookie banner -->
-    <div id="cookieConsentBanner" class="cookie-notice">
-      <p>
-        Ez a weboldal cookie-kat használ a felhasználói élmény fokozása
-        érdekében. Az oldal használatával elfogadja a cookie-k használatát.
-        <a href="https://krixh.github.io/policy/">Tudjon meg többet</a>
-      </p>
-      <div class="cookie-button-container">
-        <button id="acceptCookies" class="cookie-button">
-          <i class="fa fa-cookie-bite"></i> Elfogadom
-        </button>
-        <button id="manageCookies" class="cookie-button">
-          <i class="fa fa-cog"></i> Beállítások kezelése
-        </button>
-      </div>
-    </div>
-    <!-- Cookie Preferences Modal -->
-    <div
-      id="cookiePreferencesModal"
-      class="cookie-preferences"
-      style="display: none"
-    >
-      <h2>Süti beállítások</h2>
-      <form id="cookieForm">
-        <label>
-          <input type="checkbox" id="necessaryCookies" checked disabled />
-          Szükséges sütik (kötelező)
-        </label>
-        <br />
-        <div class="cookie-button-container">
-          <button type="button" id="savePreferences" class="cookie-button">
-            <i class="fa fa-save"></i> Beállítások mentése
-          </button>
-        </div>
-      </form>
-    </div>
-    <!-- Vissza a tetejére gomb -->
-    <a href="#" class="back-to-top" id="backToTop">
-      <i class="fa fa-arrow-up"></i>
-    </a>
+    <main class="main-content" id="gamesContainer"></main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-links">
-          <a
-            href="https://krixh.github.io/"
-            target="_parent"
-            class="footer-link"
-            >HQ – Home</a
-          >
-          <a
-            href="https://github.com/KrixH"
-            target="_parent"
-            class="footer-link"
-            >Github</a
-          >
+    <div class="modal" id="trailerModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="trailerFrame" allowfullscreen></iframe>
         </div>
-        <div class="footer-info">
-          <p class="last-updated">
-            Frissítve: 2025.01.24. - 11:26 - Ver. 1.3.9
-          </p>
-          <p>
-            &copy; <span id="current-year"></span>
-            <span class="brand">
-              <span style="color: orange">Game</span>
-              <span style="color: #42a5f5">HUB</span> </span
-            >. Minden jog fenntartva.
-            <span class="creator"
-              >Készítette:
-              <a
-                href="https://krixh.github.io"
-                target="_blank"
-                class="footer-link"
-                >KrixH99</a
-              >
-            </span>
-          </p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>&copy; <span id="currentYear"></span> gameHUB. Minden jog fenntartva.</p>
+                <div class="footer-links">
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <div class="social-icons">
+                    <a href="https://github.com/KrixH" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://steamcommunity.com/id/KrixH99/" class="social-icon">
+                        <i class="fab fa-steam"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@KrixH99" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+        
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
     </footer>
-    <script src="./js/script.js"></script>
-    <script src="./js/footer.js"></script>
-    <script src="./js/randomgame.js"></script>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
