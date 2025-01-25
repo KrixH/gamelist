@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHUB | @krixh99</title>
+    <title>gameHUB | @krixh99</title>
     <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Game List | @krixh99" />
+    <meta property="og:title" content="gameHUB | @krixh99" />
     <meta
       property="og:description"
       content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"/>
-    <meta property="og:image" content="https://i.imgur.com/jhOhOF6.jpeg" />
+    <meta property="og:image" content="https://i.imgur.com/jhOhOF6.png" />
     <meta property="og:url" content="https://krixh.github.io/gamelist/" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Game List" />
+    <meta property="og:site_name" content="gameHUB" />
     <meta property="og:locale" content="hu_HU" />
 </head>
 <body>
@@ -38,8 +38,8 @@
 
     <div class="modal" id="trailerModal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <iframe id="trailerFrame" allowfullscreen></iframe>
+            <span class="close" tabindex="0">&times;</span>
+            <iframe id="trailerFrame" allowfullscreen title="Játék Trailer"></iframe>
         </div>
     </div>
 
@@ -53,20 +53,20 @@
             
             <div class="footer-section">
                 <div class="social-icons">
-                    <a href="https://github.com/KrixH" target="_blank" class="social-icon">
+                    <a href="https://github.com/KrixH" target="_blank" class="social-icon" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://steamcommunity.com/id/KrixH99/" class="social-icon">
+                    <a href="https://steamcommunity.com/id/KrixH99/" target="_blank" class="social-icon" aria-label="Steam">
                         <i class="fab fa-steam"></i>
                     </a>
-                    <a href="https://www.youtube.com/@KrixH99" class="social-icon">
+                    <a href="https://www.youtube.com/@KrixH99" target="_blank" class="social-icon" aria-label="YouTube">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="back-to-top" id="backToTop">
+        <div class="back-to-top" id="backToTop" aria-label="Vissza a tetejére" tabindex="0">
             <i class="fas fa-arrow-up"></i>
         </div>
     </footer>
