@@ -1146,6 +1146,40 @@
         "googlePlayStoreId": "com.ustwo.monumentvalley",
         "dateAdded": "2025-01-25",
         "playTime": null
+      },
+      {
+        "title": "Turmoil",
+        "category": ["Simulator", "Strategy", "Indie"],
+        "cover": "",
+        "platforms": ["PC", "Android"],
+        "developer": ["Gamious"],
+        "releaseDate": "2016.02.6.",
+        "finishDate": null,
+        "progress": null,
+        "videoId": "7Ydlft1ryLY",
+        "steamId": "361280",
+        "playstationStoreId": null,
+        "xboxStoreId": null,
+        "googlePlayStoreId": "com.ltgames.android.oil",
+        "dateAdded": "2025-01-25",
+        "playTime": null
+      },
+      {
+        "title": "Dead Island Definitive Edition",
+        "category": ["Shooter", "Hack and slash/Beat 'em up"],
+        "cover": "",
+        "platforms": ["PC"],
+        "developer": ["Techland"],
+        "releaseDate": "2016-5-31",
+        "finishDate": null,
+        "progress": 12,
+        "videoId": "65mbaZqaHlM",
+        "steamId": "383150",
+        "playstationStoreId": null,
+        "xboxStoreId": null,
+        "googlePlayStoreId": null,
+        "dateAdded": "2025-01-26",
+        "playTime": null
       }
     ]
   }
