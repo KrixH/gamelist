@@ -231,7 +231,7 @@
         "developer": "Santa Monica Studio",
         "releaseDate": "2024-09-19",
         "finishDate": null,
-        "progress": 23,
+        "progress": 51,
         "videoId": "g1wr0DfV73E",
         "steamId": "2322010",
         "dateAdded": "2024-12-18"
@@ -1179,6 +1179,23 @@
         "xboxStoreId": null,
         "googlePlayStoreId": null,
         "dateAdded": "2025-01-26",
+        "playTime": null
+      },
+      {
+        "title": "A Game About Digging A Hole",
+        "category": ["Adventure", "Indie"],
+        "cover": "",
+        "platforms": ["PC"],
+        "developer": ["Cyberwave"],
+        "releaseDate": "2025-02-07",
+        "finishDate": null,
+        "progress": null,
+        "videoId": "4pCvvyzFlXA",
+        "steamId": "3244220",
+        "playstationStoreId": null,
+        "xboxStoreId": null,
+        "googlePlayStoreId": null,
+        "dateAdded": "2025-02-12",
         "playTime": null
       }
     ]
