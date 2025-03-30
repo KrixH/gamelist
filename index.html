@@ -21,16 +21,20 @@
 <body>
     <header class="header">
         <h1 class="title">🎮 gameHUB 🎮</h1>
-        <div class="controls">
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Keresés...">
-                <select id="categorySelect" class="category-select">
-                    <option value="all">Összes kategória</option>
-                </select>
-                <select id="developerSelect" class="developer-select">
-                    <option value="all">Összes fejlesztő</option>
-                </select>
-            </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Keresés...">
+            <select id="categorySelect" class="category-select">
+                <option value="all">Összes kategória</option>
+            </select>
+            <select id="developerSelect" class="developer-select">
+                <option value="all">Összes fejlesztő</option>
+            </select>
+            <select id="statusSelect" class="status-select">
+                <option value="all">Összes állapot</option>
+                <option value="completed">Befejezett</option>
+                <option value="inprogress">Folyamatban</option>
+                <option value="noncompletable">Nem befejezhető</option>
+            </select>
         </div>
     </header>
 
@@ -43,11 +47,15 @@
         </div>
     </div>
 
+    <button id="backToTop" class="back-to-top" title="Vissza a tetejére">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <p>&copy; <span id="currentYear"></span> gameHUB. Minden jog fenntartva.</p>
-                <p>Frissítve: 2025.02.14. - 19:00 - Ver. 2.0.0</p>
+                <p>Frissítve: 2025.03.30. - 19:35 - Ver. 2.0.1</p>
                 <div class="footer-links">
                 </div>
             </div>
