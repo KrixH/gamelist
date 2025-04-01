@@ -48,14 +48,23 @@ function init() {
         gamesData.forEach(game => {
             const img = new Image();
             img.src = getCoverUrl(game);
-            img.onerror = () => img.src = CONFIG.fallbackImage;
+            img.onerror = () => {
+                console.warn(`Failed to load cover for ${game.title}, using fallback`);
+                img.src = CONFIG.fallbackImage;
+            };
         });
     }
 
     function getCoverUrl(game) {
-        return game.steamId 
-            ? `https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`
-            : game.cover || CONFIG.fallbackImage;
+        if (game.cover) {
+            return game.cover;
+        }
+        else if (game.steamId) {
+            return `https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`;
+        }
+        else {
+            return CONFIG.fallbackImage;
+        }
     }
 
     function generateFilters({ categories, developers }) {
