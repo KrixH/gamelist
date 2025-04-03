@@ -2196,6 +2196,27 @@
         "hasDLC": null,
         "multiplayer": null,
         "nonCompletable": true
+      },
+      {
+        "title": "Schedule I",
+        "category": ["Simulator", "Strategy", "Indie"],
+        "cover": "https://i.imgur.com/nMgP4xg.png",
+        "platforms": ["PC"],
+        "developer": ["TVGS"],
+        "releaseDates": [{"type": "Early Access", "date": "2025-03-24"}],
+        "finishDate": null,
+        "progress": null,
+        "videoId": "dUxiQ1qN0rg",
+        "steamId": "3164500",
+        "playstationStoreId": null,
+        "xboxStoreId": null,
+        "googlePlayStoreId": null,
+        "dateAdded": "2025-04-03",
+        "playTime": null,
+        "developmentStatus": "early-access",
+        "hasDLC": null,
+        "multiplayer": ["online", "local"],
+        "nonCompletable": true
       }
     ]
   }
