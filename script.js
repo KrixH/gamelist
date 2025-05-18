@@ -13,6 +13,7 @@ function init() {
     const statusSelect = document.getElementById('statusSelect');
     const trailerModal = document.getElementById('trailerModal');
     const trailerFrame = document.getElementById('trailerFrame');
+    const modalClose = document.querySelector('.close');
     let gamesData = [];
     let preprocessedData = {};
 
@@ -80,8 +81,8 @@ function init() {
 
         statusSelect.innerHTML = `
             <option value="all">Összes állapot</option>
-            <option value="completed">Befejezett</option>
-            <option value="inprogress">Folyamatban</option>
+            <option value="inprogress">Jelenleg futó végigjátszások</option>
+            <option value="completed">Befejezett végigjátszások</option>
             <option value="noncompletable">Nem befejezhető</option>
         `;
     }
@@ -141,8 +142,8 @@ function init() {
         );
 
         gamesContainer.innerHTML = `
-            ${createSection('Befejezett játékok', completed, 'completed')}
-            ${createSection('Folyamatban lévő játékok', inprogress, 'inprogress')}
+            ${createSection('Jelenleg futó végigjátszások', inprogress, 'inprogress')}
+            ${createSection('Befejezett végigjátszások', completed, 'completed')}
             ${createSection('Nem befejezhető játékok', nonCompletable, 'noncompletable')}
         `;
 
@@ -199,7 +200,7 @@ function init() {
     function createActionButtons(game) {
         return `
             ${game.steamId ? `<button class="action-btn steam-btn" onclick="window.open('https://store.steampowered.com/app/${game.steamId}', '_blank')"><i class="fab fa-steam"></i></button>` : ''}
-            ${game.playstationStoreId ? `<button class="action-btn ps-btn" onclick="window.open('https://store.playstation.com/en-us/product/${game.playstationStoreId}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
+            ${game.playstationStoreId ? `<button class="action-btn ps-btn" onclick="window.open('https://store.playstation.com/en-us/concept/${game.playstationStoreId}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
             ${game.xboxStoreId ? `<button class="action-btn xbox-btn" onclick="window.open('https://www.xbox.com/en-us/games/store/${game.xboxStoreId}', '_blank')"><i class="fab fa-xbox"></i></button>` : ''}
             ${game.googlePlayStoreId ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')"><i class="fab fa-google-play"></i></button>` : ''}
             ${game.videoId ? `<button class="action-btn youtube-btn" onclick="showTrailer('${game.videoId}')"><i class="fab fa-youtube"></i></button>` : ''}
@@ -277,7 +278,7 @@ function init() {
                 ${game.progress === 100 && game.finishDate ? `
                     <div class="game-detail-row">
                         <div class="finished-date">
-                            <i class="fas fa-check"></i> Végigjátszva: ${formatDate(game.finishDate)}
+                             Végigjátszva: ${formatDate(game.finishDate)}
                         </div>
                     </div>
                 ` : ''}
@@ -377,9 +378,23 @@ function init() {
         trailerModal.style.display = 'block';
     };
 
-    document.querySelector('.close').addEventListener('click', () => {
+    function closeModal() {
         trailerModal.style.display = 'none';
         trailerFrame.src = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (event) => {
+        if (event.target === trailerModal) {
+            closeModal();
+        }
+    });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
     });
 
     loadGames();
