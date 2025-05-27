@@ -1,6 +1,5 @@
-
 /* -------------------------------------------------------------------------- */
-/*                               Globális Stílusok                            */
+/* Globális Stílusok                            */
 /* -------------------------------------------------------------------------- */
 
 :root {
@@ -141,7 +140,7 @@ input:focus,
 select:focus {
     outline: none;
     border-color: var(--color-accent-blue);
-    box-shadow: 0 0 0 3px rgba(var(--color-accent-blue), 0.3);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3); /* Frissítve a var() használatához */
 }
 
 input::placeholder {
@@ -160,7 +159,7 @@ input::placeholder {
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-blue); }
 
 /* -------------------------------------------------------------------------- */
-/*                                 Fejléc                                     */
+/* Fejléc                                     */
 /* -------------------------------------------------------------------------- */
 .header {
     text-align: center;
@@ -198,7 +197,7 @@ input::placeholder {
     gap: var(--spacing-md);
     max-width: 1000px;
     margin: 0 auto;
-    background-color: rgba(var(--color-background-medium), 0.5);
+    background-color: var(--color-background-medium); /* Használja a változót */
     backdrop-filter: blur(10px);
     padding: var(--spacing-md);
     border-radius: var(--border-radius-lg);
@@ -223,7 +222,7 @@ input::placeholder {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                             Fő Tartalom - Játékok                          */
+/* Fő Tartalom - Játékok                          */
 /* -------------------------------------------------------------------------- */
 .main-content {
     max-width: 1800px;
@@ -465,7 +464,7 @@ input::placeholder {
 }
 
 .developer-tag:hover {
-    background-color: var(--color-yellow-alpha-05);
+    background-color: rgba(210, 153, 34, 0.05); /* Kék háttér hoverre */
     color: var(--color-text-primary);
     border-color: var(--color-accent-yellow);
     transform: translateY(-2px);
@@ -517,16 +516,41 @@ input::placeholder {
 .multiplayer-tag.local { color: var(--color-accent-green); border-color: var(--color-accent-green); }
 .multiplayer-tag.online { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
 
+/* DLC Tag */
 .dlc-tag {
-    background-color: var(--color-accent-purple) !important;
-    color: var(--color-background-dark) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-accent-purple); /* Változtatás: egységesebb szín */
+    color: var(--color-background-dark); /* Sötétebb szöveg a jobb olvashatóságért */
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
     font-weight: 600;
-    border: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-left: var(--spacing-sm); /* Kis térköz a platform tagoktól */
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
 }
-.dlc-tag .dlc-icon i { color: var(--color-background-dark) !important; }
+
+.dlc-tag:hover {
+    background-color: var(--color-accent-blue); /* Hover hatás az interakcióhoz */
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.dlc-tag .dlc-icon {
+    font-size: 0.85rem; /* Kisebb ikon méret */
+    color: var(--color-background-dark); /* Szín a texthez igazítva */
+}
+
+.dlc-tag .dlc-text {
+    /* Szöveg stílusa, ha szükséges további finomítás */
+}
 
 /* -------------------------------------------------------------------------- */
-/*                               Modális Ablak                                */
+/* Modális Ablak                                */
 /* -------------------------------------------------------------------------- */
 .modal {
     display: none;
@@ -582,7 +606,7 @@ input::placeholder {
 
 
 /* -------------------------------------------------------------------------- */
-/*                                   Lábléc                                   */
+/* Lábléc                                   */
 /* -------------------------------------------------------------------------- */
 .footer {
     margin-top: var(--spacing-xxl);
@@ -685,7 +709,7 @@ input::placeholder {
 
 
 /* -------------------------------------------------------------------------- */
-/*                          "Vissza a tetejére" Gomb                          */
+/* "Vissza a tetejére" Gomb                          */
 /* -------------------------------------------------------------------------- */
 .back-to-top {
     position: fixed;
@@ -722,7 +746,7 @@ input::placeholder {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                Reszponzivitás                              */
+/* Reszponzivitás                              */
 /* -------------------------------------------------------------------------- */
 
 /* Kisebb asztali gépek, nagyobb tabletek */

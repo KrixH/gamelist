@@ -169,13 +169,14 @@ function init() {
 
     function createGameCard(game) {
         const isNew = checkIfNew(game.dateAdded);
-        const coverUrl = getCoverUrl(game);
         const hasProgress = typeof game.progress === 'number';
     
         return `
             <div class="game-card" data-status="${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
                 <div class="game-cover">
-                    <img src="${coverUrl}" alt="${game.title}" onerror="this.src='${CONFIG.fallbackImage}'">
+                    <img src="${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}" 
+                    alt="${game.title}" 
+                    onerror="if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
                     ${isNew ? '<div class="new-badge">ÚJ</div>' : ''}
                     <div class="game-actions">
                         ${createActionButtons(game)}
@@ -207,104 +208,121 @@ function init() {
         `;
     }
 
-    function createGameDetails(game) {
-        let releaseDatesHtml = '';
-        if (game.releaseDates && Array.isArray(game.releaseDates)) {
-            game.releaseDates.forEach(release => {
-                releaseDatesHtml += `
-                    <div class="release-date ${release.type.toLowerCase().replace(' ', '-')}"> 
-                        ${formatDate(release.date)}
-                    </div>
-                `;
-            });
-        } else if (game.releaseDate) {
-            releaseDatesHtml = `
-                <div class="release-date">
-                    Megjelenés: ${formatDate(game.releaseDate)}
+function createGameDetails(game) {
+    let releaseDatesHtml = '';
+    if (game.releaseDates && Array.isArray(game.releaseDates)) {
+        game.releaseDates.forEach(release => {
+            const platformLabel = {
+                pc: 'PC',
+                ps: 'PlayStation',
+                xbox: 'Xbox',
+                switch: 'Nintendo Switch',
+                mobile: 'Mobil'
+            }[release.platform] || 'Ismeretlen platform';
+
+            const typeLabel = {
+                'full-release': 'Teljes kiadás',
+                'early-access': 'Korai hozzáférés',
+                'remastered': 'Remastered',
+                'server-closed': 'Leállított szerverek',
+                'in-development': 'Fejlesztés alatt'
+            }[release.type] || release.type;
+
+            releaseDatesHtml += `
+                <div class="release-date ${release.type.toLowerCase().replace(' ', '-',":")}-${release.platform}">
+                    <strong>${platformLabel} – ${typeLabel} – </strong> ${formatDate(release.date)}
                 </div>
             `;
-        }
-    
-        let developmentStatusHtml = '';
-        if (game.developmentStatus && Array.isArray(game.developmentStatus)) {
-            developmentStatusHtml = `
-                <div class="game-detail-row">
-                    <div class="development-status-container">
-                        ${game.developmentStatus.map(status => `
-                            <div class="development-status ${status}">
-                                <i class="fas ${getStatusIcon(status)}"></i>
-                                ${getStatusText(status)}
-                            </div>
-                        `).join('')}
-                    </div>
+        });
+    } else if (game.releaseDate) {
+        releaseDatesHtml = `
+            <div class="release-date">
+                Megjelenés: ${formatDate(game.releaseDate)}
+            </div>
+        `;
+    }
+
+    let developmentStatusHtml = '';
+    if (game.developmentStatus && Array.isArray(game.developmentStatus)) {
+        developmentStatusHtml = `
+            <div class="game-detail-row">
+                <div class="development-status-container">
+                    ${game.developmentStatus.map(status => `
+                        <div class="development-status ${status}">
+                            <i class="fas ${getStatusIcon(status)}"></i>
+                            ${getStatusText(status)}
+                        </div>
+                    `).join('')}
                 </div>
-            `;
-        } else if (game.developmentStatus) {
-            developmentStatusHtml = `
-                <div class="game-detail-row">
-                    <div class="development-status-container">
-                        <div class="development-status ${game.developmentStatus}">
-                            <i class="fas ${getStatusIcon(game.developmentStatus)}"></i>
-                            ${getStatusText(game.developmentStatus)}
-                        </div>
+            </div>
+        `;
+    } else if (game.developmentStatus) {
+        developmentStatusHtml = `
+            <div class="game-detail-row">
+                <div class="development-status-container">
+                    <div class="development-status ${game.developmentStatus}">
+                        <i class="fas ${getStatusIcon(game.developmentStatus)}"></i>
+                        ${getStatusText(game.developmentStatus)}
                     </div>
-                </div>
-            `;
-        }
-    
-        return `
-            <div class="game-details">
-                ${game.platforms && game.platforms.length > 0 ? `
-                    <div class="game-detail-row">
-                        <div class="platform-tags">
-                            ${createPlatformTag(game)} 
-                        </div>
-                    </div>
-                ` : ''}
-                ${game.multiplayer && Array.isArray(game.multiplayer) && game.multiplayer.length > 0 ? `
-                    <div class="game-detail-row">
-                        <div class="multiplayer-tags">
-                            ${game.multiplayer.map(mode => `
-                                <div class="multiplayer-tag ${mode}">
-                                    <i class="fas ${mode === 'local' ? 'fa-users' : 'fa-globe'}"></i>
-                                    ${mode === 'local' ? 'Helyi többjátékos' : 'Online többjátékos'}
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                ` : ''}
-                ${developmentStatusHtml}
-                ${releaseDatesHtml}
-                ${game.progress === 100 && game.finishDate ? `
-                    <div class="game-detail-row">
-                        <div class="finished-date">
-                             Végigjátszva: ${formatDate(game.finishDate)}
-                        </div>
-                    </div>
-                ` : ''}
-                ${game.playTime ? `
-                    <div class="game-detail-row">
-                        <div class="playtime">
-                            <i class="fas fa-clock"></i> Játékidő: ${game.playTime}
-                        </div>
-                    </div>
-                ` : ''}
-                ${game.developer ? `
-                    <div class="game-detail-row">
-                        <div class="developer-tags">
-                            ${(Array.isArray(game.developer) ? game.developer : [game.developer])
-                                .filter(dev => dev)
-                                .map(dev => `<span class="developer-tag">${dev}</span>`)
-                                .join('')}
-                        </div>
-                    </div>
-                ` : ''}
-                <div class="game-detail-row">
-                    <div class="category-tags">${game.category.map(cat => `<span class="category-tag">${cat}</span>`).join('')}</div>
                 </div>
             </div>
         `;
     }
+
+    return `
+        <div class="game-details">
+            ${game.platforms && game.platforms.length > 0 ? `
+                <div class="game-detail-row">
+                    <div class="platform-tags">
+                        ${createPlatformTag(game)} 
+                    </div>
+                </div>
+            ` : ''}
+            ${game.multiplayer && Array.isArray(game.multiplayer) && game.multiplayer.length > 0 ? `
+                <div class="game-detail-row">
+                    <div class="multiplayer-tags">
+                        ${game.multiplayer.map(mode => `
+                            <div class="multiplayer-tag ${mode}">
+                                <i class="fas ${mode === 'local' ? 'fa-users' : 'fa-globe'}"></i>
+                                ${mode === 'local' ? 'Helyi többjátékos' : 'Online többjátékos'}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            ${developmentStatusHtml}
+            ${releaseDatesHtml}
+            ${game.progress === 100 && game.finishDate ? `
+                <div class="game-detail-row">
+                    <div class="finished-date">
+                         Végigjátszva: ${formatDate(game.finishDate)}
+                    </div>
+                </div>
+            ` : ''}
+            ${game.playTime ? `
+                <div class="game-detail-row">
+                    <div class="playtime">
+                        <i class="fas fa-clock"></i> Játékidő: ${game.playTime}
+                    </div>
+                </div>
+            ` : ''}
+            ${game.developer ? `
+                <div class="game-detail-row">
+                    <div class="developer-tags">
+                        ${(Array.isArray(game.developer) ? game.developer : [game.developer])
+                            .filter(dev => dev)
+                            .map(dev => `<span class="developer-tag">${dev}</span>`)
+                            .join('')}
+                    </div>
+                </div>
+            ` : ''}
+            <div class="game-detail-row">
+                <div class="category-tags">${game.category.map(cat => `<span class="category-tag">${cat}</span>`).join('')}</div>
+            </div>
+        </div>
+    `;
+}
+
 
     function createPlatformTag(game) {
         let platformTags = '';
