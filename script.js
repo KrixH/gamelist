@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', init);
 
 const CONFIG = {
-    fallbackImage: 'https://i.imgur.com/RH2EguE.png',
+    fallbackImage  : 'https://i.imgur.com/RH2EguE.png',
     youtubeEmbedUrl: 'https://www.youtube.com/embed/',
 };
 
 function init() {
-    const gamesContainer = document.getElementById('gamesContainer');
-    const searchInput = document.getElementById('searchInput');
-    const categorySelect = document.getElementById('categorySelect');
-    const developerSelect = document.getElementById('developerSelect');
-    const statusSelect = document.getElementById('statusSelect');
-    const trailerModal = document.getElementById('trailerModal');
-    const trailerFrame = document.getElementById('trailerFrame');
-    const modalClose = document.querySelector('.close');
-    let gamesData = [];
-    let preprocessedData = {};
+    const gamesContainer   = document.getElementById('gamesContainer');
+    const searchInput      = document.getElementById('searchInput');
+    const categorySelect   = document.getElementById('categorySelect');
+    const developerSelect  = document.getElementById('developerSelect');
+    const statusSelect     = document.getElementById('statusSelect');
+    const trailerModal     = document.getElementById('trailerModal');
+    const trailerFrame     = document.getElementById('trailerFrame');
+    const modalClose       = document.querySelector('.close');
+    let   gamesData        = [];
+    let   preprocessedData = {};
 
     async function loadGames() {
         try {
-            const response = await fetch('games.json');
-            const data = await response.json();
-            gamesData = data.games.map(game => ({
+            const response  = await fetch('games.json');
+            const data      = await response.json();
+                  gamesData = data.games.map(game => ({
                 nonCompletable: false,
-                progress: null,
+                progress      : null,
                 ...game
             }));
             preprocessedData = preprocessData(gamesData);
@@ -40,16 +40,16 @@ function init() {
         return {
             categories: [...new Set(data.flatMap(game => game.category))],
             developers: [...new Set(data.flatMap(game => 
-                Array.isArray(game.developer) ? game.developer : [game.developer]
+                Array.isArray(game.developer) ? game.developer: [game.developer]
             ).filter(Boolean))],
         };
     }
 
     function preloadImages() {
         gamesData.forEach(game => {
-            const img = new Image();
-            img.src = getCoverUrl(game);
-            img.onerror = () => {
+            const img         = new Image();
+                  img.src     = getCoverUrl(game);
+                  img.onerror = () => {
                 console.warn(`Failed to load cover for ${game.title}, using fallback`);
                 img.src = CONFIG.fallbackImage;
             };
@@ -70,28 +70,28 @@ function init() {
 
     function generateFilters({ categories, developers }) {
         categorySelect.innerHTML = `
-            <option value="all">Összes kategória</option>
+            <option value = "all">Összes kategória</option>
             ${categories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
         `;
 
         developerSelect.innerHTML = `
-            <option value="all">Összes fejlesztő</option>
+            <option value = "all">Összes fejlesztő</option>
             ${developers.map(dev => `<option value="${dev}">${dev}</option>`).join('')}
         `;
 
         statusSelect.innerHTML = `
-            <option value="all">Összes állapot</option>
-            <option value="inprogress">Jelenleg futó végigjátszások</option>
-            <option value="completed">Befejezett végigjátszások</option>
-            <option value="noncompletable">Nem befejezhető</option>
+            <option value = "all">Összes állapot</option>
+            <option value = "inprogress">Jelenleg futó végigjátszások</option>
+            <option value = "completed">Befejezett végigjátszások</option>
+            <option value = "noncompletable">Nem befejezhető</option>
         `;
     }
 
     function updateFilters() {
-        const term = searchInput.value.toLowerCase();
-        const category = categorySelect.value;
+        const term      = searchInput.value.toLowerCase();
+        const category  = categorySelect.value;
         const developer = developerSelect.value;
-        const status = statusSelect.value;
+        const status    = statusSelect.value;
 
         let filtered = gamesData;
 
@@ -115,9 +115,9 @@ function init() {
 
         if (status !== 'all') {
             filtered = filtered.filter(game => {
-                if (status === 'noncompletable') return game.nonCompletable === true;
-                if (status === 'completed') return game.progress === 100;
-                return !game.nonCompletable && game.progress !== 100;
+                if     (status === 'noncompletable') return game.nonCompletable === true;
+                if     (status === 'completed') return game.progress            === 100;
+                return !game.nonCompletable && game.progress                    !== 100;
             });
         }
 
@@ -128,7 +128,7 @@ function init() {
         const sorted = [...games].sort((a, b) => a.title.localeCompare(b.title, 'hu'));
         
         const completed = sorted.filter(game => 
-            game.progress === 100 && 
+            game.progress       === 100 &&
             game.nonCompletable !== true
         );
         
@@ -149,8 +149,8 @@ function init() {
 
         setTimeout(() => {
             document.querySelectorAll('.progress-fill').forEach(bar => {
-                const progress = bar.parentElement.getAttribute('data-progress');
-                bar.style.width = progress ? `${progress}%` : '0%';
+                const progress        = bar.parentElement.getAttribute('data-progress');
+                      bar.style.width = progress ? `${progress}%` : '0%';
             });
         }, 100);
     }
@@ -158,9 +158,9 @@ function init() {
     function createSection(title, games, type) {
         if (games.length === 0) return '';
         return `
-            <div class="games-section ${type}-section">
-                <h2 class="section-title">${title}</h2>
-                <div class="games-grid">
+            <div class = "games-section ${type}-section">
+            <h2  class = "section-title">${title}</h2>
+            <div class = "games-grid">
                     ${games.map(game => createGameCard(game)).join('')}
                 </div>
             </div>
@@ -168,29 +168,29 @@ function init() {
     }
 
     function createGameCard(game) {
-        const isNew = checkIfNew(game.dateAdded);
+        const isNew       = checkIfNew(game.dateAdded);
         const hasProgress = typeof game.progress === 'number';
     
         return `
-            <div class="game-card" data-status="${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
-                <div class="game-cover">
-                    <img src="${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}" 
-                    alt="${game.title}" 
-                    onerror="if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
+            <div class   = "game-card" data-status = "${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
+            <div class   = "game-cover">
+            <img src     = "${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}"
+                 alt     = "${game.title}"
+                 onerror = "if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
                     ${isNew ? '<div class="new-badge">ÚJ</div>' : ''}
-                    <div class="game-actions">
+                    <div class = "game-actions">
                         ${createActionButtons(game)}
                     </div>
                 </div>
-                <div class="game-info">
-                    <div class="game-header">
-                        <h3 class="game-title">${game.title}</h3>
+                <div class = "game-info">
+                <div class = "game-header">
+                <h3  class = "game-title">${game.title}</h3>
                         ${hasProgress ? `<div class="game-progress">${game.progress}%</div>` : ''}
                     </div>
                     ${createGameDetails(game)}
                     ${hasProgress ? `
-                        <div class="progress-bar" data-progress="${game.progress}">
-                            <div class="progress-fill"></div>
+                        <div class = "progress-bar" data-progress = "${game.progress}">
+                        <div class = "progress-fill"></div>
                         </div>
                     ` : ''}
                 </div>
@@ -213,30 +213,36 @@ function createGameDetails(game) {
     if (game.releaseDates && Array.isArray(game.releaseDates)) {
         game.releaseDates.forEach(release => {
             const platformLabel = {
-                pc: 'PC',
-                ps: 'PlayStation',
-                xbox: 'Xbox',
+                pc    : 'PC',
+                ps    : 'PlayStation',
+                xbox  : 'Xbox',
                 switch: 'Nintendo Switch',
                 mobile: 'Mobil'
             }[release.platform] || 'Ismeretlen platform';
 
             const typeLabel = {
-                'full-release': 'Teljes kiadás',
-                'early-access': 'Korai hozzáférés',
-                'remastered': 'Remastered',
-                'server-closed': 'Leállított szerverek',
+                'full-release'  : 'Teljes kiadás',
+                'early-access'  : 'Korai hozzáférés',
+                'remastered'    : 'Remastered',
+                'server-closed' : 'Leállított szerverek',
                 'in-development': 'Fejlesztés alatt'
             }[release.type] || release.type;
 
             releaseDatesHtml += `
-                <div class="release-date ${release.type.toLowerCase().replace(' ', '-',":")}-${release.platform}">
-                    <strong>${platformLabel} – ${typeLabel} – </strong> ${formatDate(release.date)}
+                <div class="release-date ${release.type?.toLowerCase().replace(' ', '-')}${release.platform ? ' platformed' : ''}">
+                    ${
+                        release.platform
+                            ? `<span class="platform-label platform-${release.platform}">${platformLabel}</span> – ${typeLabel}: ${formatDate(release.date)}`
+                            : `${typeLabel}: ${formatDate(release.date)}`
+                    }
                 </div>
             `;
+
+
         });
     } else if (game.releaseDate) {
         releaseDatesHtml = `
-            <div class="release-date">
+            <div class = "release-date">
                 Megjelenés: ${formatDate(game.releaseDate)}
             </div>
         `;
@@ -245,11 +251,11 @@ function createGameDetails(game) {
     let developmentStatusHtml = '';
     if (game.developmentStatus && Array.isArray(game.developmentStatus)) {
         developmentStatusHtml = `
-            <div class="game-detail-row">
-                <div class="development-status-container">
+            <div class = "game-detail-row">
+            <div class = "development-status-container">
                     ${game.developmentStatus.map(status => `
-                        <div class="development-status ${status}">
-                            <i class="fas ${getStatusIcon(status)}"></i>
+                        <div class = "development-status ${status}">
+                        <i   class = "fas ${getStatusIcon(status)}"></i>
                             ${getStatusText(status)}
                         </div>
                     `).join('')}
@@ -258,10 +264,10 @@ function createGameDetails(game) {
         `;
     } else if (game.developmentStatus) {
         developmentStatusHtml = `
-            <div class="game-detail-row">
-                <div class="development-status-container">
-                    <div class="development-status ${game.developmentStatus}">
-                        <i class="fas ${getStatusIcon(game.developmentStatus)}"></i>
+            <div class = "game-detail-row">
+            <div class = "development-status-container">
+            <div class = "development-status ${game.developmentStatus}">
+            <i   class = "fas ${getStatusIcon(game.developmentStatus)}"></i>
                         ${getStatusText(game.developmentStatus)}
                     </div>
                 </div>
@@ -270,20 +276,20 @@ function createGameDetails(game) {
     }
 
     return `
-        <div class="game-details">
+        <div class = "game-details">
             ${game.platforms && game.platforms.length > 0 ? `
-                <div class="game-detail-row">
-                    <div class="platform-tags">
+                <div class = "game-detail-row">
+                <div class = "platform-tags">
                         ${createPlatformTag(game)} 
                     </div>
                 </div>
             ` : ''}
             ${game.multiplayer && Array.isArray(game.multiplayer) && game.multiplayer.length > 0 ? `
-                <div class="game-detail-row">
-                    <div class="multiplayer-tags">
+                <div class = "game-detail-row">
+                <div class = "multiplayer-tags">
                         ${game.multiplayer.map(mode => `
-                            <div class="multiplayer-tag ${mode}">
-                                <i class="fas ${mode === 'local' ? 'fa-users' : 'fa-globe'}"></i>
+                            <div class = "multiplayer-tag ${mode}">
+                            <i   class = "fas ${mode === 'local' ? 'fa-users' : 'fa-globe'}"></i>
                                 ${mode === 'local' ? 'Helyi többjátékos' : 'Online többjátékos'}
                             </div>
                         `).join('')}
@@ -293,22 +299,22 @@ function createGameDetails(game) {
             ${developmentStatusHtml}
             ${releaseDatesHtml}
             ${game.progress === 100 && game.finishDate ? `
-                <div class="game-detail-row">
-                    <div class="finished-date">
+                <div class = "game-detail-row">
+                <div class = "finished-date">
                          Végigjátszva: ${formatDate(game.finishDate)}
                     </div>
                 </div>
             ` : ''}
             ${game.playTime ? `
-                <div class="game-detail-row">
-                    <div class="playtime">
-                        <i class="fas fa-clock"></i> Játékidő: ${game.playTime}
+                <div class = "game-detail-row">
+                <div class = "playtime">
+                <i   class = "fas fa-clock"></i> Játékidő: ${game.playTime}
                     </div>
                 </div>
             ` : ''}
             ${game.developer ? `
-                <div class="game-detail-row">
-                    <div class="developer-tags">
+                <div class = "game-detail-row">
+                <div class = "developer-tags">
                         ${(Array.isArray(game.developer) ? game.developer : [game.developer])
                             .filter(dev => dev)
                             .map(dev => `<span class="developer-tag">${dev}</span>`)
@@ -316,8 +322,8 @@ function createGameDetails(game) {
                     </div>
                 </div>
             ` : ''}
-            <div class="game-detail-row">
-                <div class="category-tags">${game.category.map(cat => `<span class="category-tag">${cat}</span>`).join('')}</div>
+            <div class = "game-detail-row">
+            <div class = "category-tags">${game.category.map(cat => `<span class="category-tag">${cat}</span>`).join('')}</div>
             </div>
         </div>
     `;
@@ -329,19 +335,19 @@ function createGameDetails(game) {
     
         if (game.platforms) {
             game.platforms.forEach(platform => {
-                const platformLower = platform.toLowerCase();
-                if (platformLower.includes('pc')) platformTags += '<span class="platform-tag" title="PC"><i class="fab fa-windows"></i></span>';
-                if (platformLower.includes('playstation') || platformLower.includes('ps')) platformTags += '<span class="platform-tag" title="PlayStation"><i class="fab fa-playstation"></i></span>';
-                if (platformLower.includes('xbox')) platformTags += '<span class="platform-tag" title="Xbox"><i class="fab fa-xbox"></i></span>';
-                if (platformLower.includes('android') || platformLower.includes('mobile')) platformTags += '<span class="platform-tag" title="Mobile/Android"><i class="fab fa-android"></i></span>';
+                const platformLower                                                                         = platform.toLowerCase();
+                if    (platformLower.includes('pc')) platformTags                                          += '<span class="platform-tag" title="PC"><i class="fab fa-windows"></i></span>';
+                if    (platformLower.includes('playstation') || platformLower.includes('ps')) platformTags += '<span class="platform-tag" title="PlayStation"><i class="fab fa-playstation"></i></span>';
+                if    (platformLower.includes('xbox')) platformTags                                        += '<span class="platform-tag" title="Xbox"><i class="fab fa-xbox"></i></span>';
+                if    (platformLower.includes('android') || platformLower.includes('mobile')) platformTags += '<span class="platform-tag" title="Mobile/Android"><i class="fab fa-android"></i></span>';
             });
         }
     
         if (game.hasDLC) {
             platformTags += `
-                <span class="dlc-tag">
-                    <span class="dlc-icon"><i class="fas fa-puzzle-piece"></i></span>
-                    <span class="dlc-text">DLC</span>
+                <span class = "dlc-tag">
+                <span class = "dlc-icon"><i class = "fas fa-puzzle-piece"></i></span>
+                <span class = "dlc-text">DLC</span>
                 </span>
             `;
         }
@@ -352,9 +358,9 @@ function createGameDetails(game) {
     function getStatusIcon(status) {
         const icons = {
             'in-development': 'fa-tools',
-            'early-access': 'fa-exclamation-triangle',
-            'server-closed': 'fa-server',
-            'remastered': 'fa-redo-alt'
+            'early-access'  : 'fa-exclamation-triangle',
+            'server-closed' : 'fa-server',
+            'remastered'    : 'fa-redo-alt'
         };
         return icons[status] || 'fa-info-circle';
     }
@@ -362,11 +368,11 @@ function createGameDetails(game) {
     function getStatusText(status) {
         const texts = {
             'in-development': 'Fejlesztés alatt',
-            'early-access': 'Korai hozzáférés',
-            'server-closed': 'Leállított szerverek',
-            'remastered': 'Remastered változat',
-            'released': 'Megjelent',
-            'full-release': 'Teljes kiadás'
+            'early-access'  : 'Korai hozzáférés',
+            'server-closed' : 'Leállított szerverek',
+            'remastered'    : 'Remastered változat',
+            'released'      : 'Megjelent',
+            'full-release'  : 'Teljes kiadás'
         };
         return texts[status] || 'Ismeretlen állapot';
     }
@@ -374,9 +380,9 @@ function createGameDetails(game) {
     function checkIfNew(date) {
         if (!date) return false;
         const addedDate = new Date(date);
-        const today = new Date();
-        const diffTime = today - addedDate;
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+        const today     = new Date();
+        const diffTime  = today - addedDate;
+        const diffDays  = Math.floor(diffTime / (1000 * 60 * 60 * 24));
         return diffDays < 7;
     }
 
@@ -392,13 +398,13 @@ function createGameDetails(game) {
     statusSelect.addEventListener('change', updateFilters);
 
     window.showTrailer = (videoId) => {
-        trailerFrame.src = `${CONFIG.youtubeEmbedUrl}${videoId}?autoplay=1`;
+        trailerFrame.src           = `${CONFIG.youtubeEmbedUrl}${videoId}?autoplay=1`;
         trailerModal.style.display = 'block';
     };
 
     function closeModal() {
         trailerModal.style.display = 'none';
-        trailerFrame.src = '';
+        trailerFrame.src           = '';
     }
 
     modalClose.addEventListener('click', closeModal);
@@ -430,12 +436,12 @@ window.addEventListener('scroll', () => {
 
 backToTop.addEventListener('click', () => {
     window.scrollTo({
-        top: 0,
+        top     : 0,
         behavior: 'smooth'
     });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('currentYear');
-    yearSpan.textContent = new Date().getFullYear();
+    const yearSpan             = document.getElementById('currentYear');
+          yearSpan.textContent = new Date().getFullYear();
 });
