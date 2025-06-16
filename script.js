@@ -167,46 +167,54 @@ function init() {
         `;
     }
 
-    function createGameCard(game) {
-        const isNew       = checkIfNew(game.dateAdded);
-        const hasProgress = typeof game.progress === 'number';
+function createGameCard(game) {
+    const isNew = checkIfNew(game.dateAdded);
+    const isPrePurchase = game.developmentStatus === 'pre-purchase';
+    const hasProgress = typeof game.progress === 'number';
     
-        return `
-            <div class   = "game-card" data-status = "${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
-            <div class   = "game-cover">
-            <img src     = "${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}"
-                 alt     = "${game.title}"
-                 onerror = "if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
-                    ${isNew ? '<div class="new-badge">ÚJ</div>' : ''}
-                    <div class = "game-actions">
-                        ${createActionButtons(game)}
-                    </div>
-                </div>
-                <div class = "game-info">
-                <div class = "game-header">
-                <h3  class = "game-title">${game.title}</h3>
-                        ${hasProgress ? `<div class="game-progress">${game.progress}%</div>` : ''}
-                    </div>
-                    ${createGameDetails(game)}
-                    ${hasProgress ? `
-                        <div class = "progress-bar" data-progress = "${game.progress}">
-                        <div class = "progress-fill"></div>
-                        </div>
-                    ` : ''}
+    return `
+        <div class="game-card" data-status="${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
+            <div class="game-cover">
+                <img src="${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}"
+                     alt="${game.title}"
+                     onerror="if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
+                ${isNew ? '<div class="new-badge">ÚJ</div>' : ''}
+                ${isPrePurchase ? '<div class="pre-purchase-badge">ELŐRENDELHETŐ</div>' : ''}
+                <div class="game-actions">
+                    ${createActionButtons(game)}
                 </div>
             </div>
-        `;
-    }
+            <div class="game-info">
+                <div class="game-header">
+                    <h3 class="game-title">${game.title}</h3>
+                    ${hasProgress ? `<div class="game-progress">${game.progress}%</div>` : ''}
+                </div>
+                ${createGameDetails(game)}
+                ${hasProgress ? `
+                    <div class="progress-bar" data-progress="${game.progress}">
+                        <div class="progress-fill"></div>
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+    `;
+}
 
-    function createActionButtons(game) {
-        return `
-            ${game.steamId ? `<button class="action-btn steam-btn" onclick="window.open('https://store.steampowered.com/app/${game.steamId}', '_blank')"><i class="fab fa-steam"></i></button>` : ''}
-            ${game.playstationStoreId ? `<button class="action-btn ps-btn" onclick="window.open('https://store.playstation.com/en-us/concept/${game.playstationStoreId}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
-            ${game.xboxStoreId ? `<button class="action-btn xbox-btn" onclick="window.open('https://www.xbox.com/en-us/games/store/${game.xboxStoreId}', '_blank')"><i class="fab fa-xbox"></i></button>` : ''}
-            ${game.googlePlayStoreId ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')"><i class="fab fa-google-play"></i></button>` : ''}
-            ${game.videoId ? `<button class="action-btn youtube-btn" onclick="showTrailer('${game.videoId}')"><i class="fab fa-youtube"></i></button>` : ''}
-        `;
-    }
+function createActionButtons(game) {
+    const playstationUrl = game.playstationStoreId ? 
+        (game.playstationStoreType === 'product' ? 
+            `https://store.playstation.com/en-us/product/${game.playstationStoreId}` :
+            `https://store.playstation.com/en-us/concept/${game.playstationStoreId}`) : 
+        null;
+
+    return `
+        ${game.steamId ? `<button class="action-btn steam-btn" onclick="window.open('https://store.steampowered.com/app/${game.steamId}', '_blank')"><i class="fab fa-steam"></i></button>` : ''}
+        ${playstationUrl ? `<button class="action-btn ps-btn" onclick="window.open('${playstationUrl}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
+        ${game.xboxStoreId ? `<button class="action-btn xbox-btn" onclick="window.open('https://www.xbox.com/en-us/games/store/${game.xboxStoreId}', '_blank')"><i class="fab fa-xbox"></i></button>` : ''}
+        ${game.googlePlayStoreId ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')"><i class="fab fa-google-play"></i></button>` : ''}
+        ${game.videoId ? `<button class="action-btn youtube-btn" onclick="showTrailer('${game.videoId}')"><i class="fab fa-youtube"></i></button>` : ''}
+    `;
+}
 
 function createGameDetails(game) {
     let releaseDatesHtml = '';
@@ -360,7 +368,8 @@ function createGameDetails(game) {
             'in-development': 'fa-tools',
             'early-access'  : 'fa-exclamation-triangle',
             'server-closed' : 'fa-server',
-            'remastered'    : 'fa-redo-alt'
+            'remastered'    : 'fa-redo-alt',
+            'pre-purchase'  : 'fa-shopping-cart'
         };
         return icons[status] || 'fa-info-circle';
     }
@@ -372,7 +381,8 @@ function createGameDetails(game) {
             'server-closed' : 'Leállított szerverek',
             'remastered'    : 'Remastered változat',
             'released'      : 'Megjelent',
-            'full-release'  : 'Teljes kiadás'
+            'full-release'  : 'Teljes kiadás',
+            'pre-purchase'  : 'Előrendelhető'
         };
         return texts[status] || 'Ismeretlen állapot';
     }

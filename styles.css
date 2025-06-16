@@ -328,6 +328,26 @@ input::placeholder {
     50% { transform: scale(1.05); opacity: 0.8; }
 }
 
+.pre-purchase-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    background-color: var(--color-accent-pink);
+    color: var(--color-background-dark);
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    z-index: 10;
+    animation: pulse-badge 2s infinite ease-in-out;
+}
+
+@keyframes pulse-pink {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; box-shadow: 0 0 10px rgba(247, 120, 186, 0.5); }
+}
+
 .game-actions {
     position: absolute;
     bottom: var(--spacing-md);
@@ -511,6 +531,8 @@ input::placeholder {
 .development-status.in-development { color: var(--color-accent-yellow); border-color: var(--color-accent-yellow); }
 .development-status.full-release { color: var(--color-accent-green); border-color: var(--color-accent-green); }
 .development-status.server-closed { color: var(--color-accent-red); border-color: var(--color-accent-red); }
+.development-status.pre-purchase { color: var(--color-accent-pink); border-color: var(--color-accent-pink);
+}
 
 
 .multiplayer-tag.local { color: var(--color-accent-green); border-color: var(--color-accent-green); }

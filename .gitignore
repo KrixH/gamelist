@@ -9,7 +9,8 @@ lerna-debug.log*
 
 #Leírások 
 "multiplayer": lehet: "local", "online", null
-"developmentStatus": lehet: "in-development", "early-access", "server-closed", "released" vagy "full-release"
+"developmentStatus": lehet: "in-development", "early-access", "server-closed", "released" vagy "full-release" "pre-purchase"
+playstationStoreType: lehet: "product" vagy "concept"
 
 #TODO: MAJD VEDD KI :D
 *.scss
