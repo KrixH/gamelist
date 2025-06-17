@@ -2352,6 +2352,7 @@
         "releaseDates"      : [{"type": "full-release", "platform": "ps", "date": "2025-06-24"},{"type": "full-release", "platform": "pc", "date": "2025-06-24"},{"type": "full-release", "platform": "xbox", "date": "2025-06-24"}],
         "finishDate"        : null,
         "progress"          : null,
+        "planned"           : true,
         "videoId"           : "YQeITHRhUSQ",
         "steamId"           : "2277560",
         "playstationStoreId": "UP4040-PPSA09518_00-WUCHANGPS5000000",

@@ -1,70 +1,66 @@
 /* -------------------------------------------------------------------------- */
-/* Globális Stílusok                            */
+/* Global Styles - Black & Dark Composite Theme                      */
 /* -------------------------------------------------------------------------- */
 
 :root {
-    /* Színpaletta */
-    --color-background-dark: #0D1117; /* Nagyon sötét, GitHub-szerű háttér */
-    --color-background-medium: #161B22; /* Elemek háttere, kártyák */
-    --color-background-light: #21262D; /* Hover, aktív elemek */
-    --color-border: #30363D; /* Finom keretek */
-    --color-text-primary: #C9D1D9; /* Fő szövegszín */
-    --color-text-secondary: #8B949E; /* Másodlagos szövegek, metaadatok */
-    --color-accent-blue: #58A6FF; /* Elsődleges akcentus (linkek, aktív elemek) */
-    --color-accent-pink: #F778BA; /* Másodlagos akcentus (figyelemfelkeltés) */
-    --color-accent-green: #3FB950; /* Pozitív visszajelzés, befejezett */
-    --color-accent-yellow: #D29922; /* Figyelmeztetés, folyamatban */
-    --color-accent-orange: #F07427; /* Korai hozzáférés */
-    --color-accent-purple: #A371F7; /* Remastered, speciális */
-    --color-accent-red: #F85149; /* Hiba, nem befejezhető */
-    --color-accent-gray: #8B949E; /* Semleges, információs */
-    --color-accent-light-gray: #C9D1D9; /* Világos szürke, háttérszín */
-    --color-accent-dark-gray: #21262D; /* Sötét szürke, háttérszín */
-    --color-accent-light-blue: #1F6FEB; /* Világos kék, háttérszín */
-    --color-accent-light-green: #3FB950; /* Világos zöld, háttérszín */
-    --color-accent-light-yellow: #D29922; /* Világos sárga, háttérszín */
-    --color-accent-light-red: #F85149; /* Világos piros, háttérszín */
-    --color-accent-light-purple: #A371F7; /* Világos lila, háttérszín */
-    --color-accent-light-orange: #F07427; /* Világos narancs, háttérszín */
-    --color-accent-light-gray: #8B949E; /* Világos szürke, háttérszín */
-    --color-accent-light-black: #0D1117; /* Világos fekete, háttérszín */
-    --color-accent-light-white: #C9D1D9; /* Világos fehér, háttérszín */
-    --color-black-alpha-15: rgba(0, 0, 0, 0.15);
-    --color-white-alpha-10: rgba(255, 255, 255, 0.1);
+    /* Color Palette - Black & Dark Composite Theme */
+    --color-background-primary: #121212; /* Very deep dark grey/almost black primary background */
+    --color-background-secondary: #1E1E1E; /* Card and section backgrounds */
+    --color-background-tertiary: #2A2A2A; /* Hover states, subtle interactive elements */
+    --color-border-subtle: #3A3A3A; /* Soft borders for structure */
+    --color-text-light: #F0F0F0; /* Primary text for readability */
+    --color-text-medium: #B0B0B0; /* Secondary text, descriptions */
+    --color-text-dark: #707070; /* Subtle text, placeholders */
+
+    /* Accent Colors - Vibrant & Clear against dark background */
+    --color-accent-blue: #00BFFF; /* Electric Blue for links, actions */
+    --color-accent-green: #39FF14; /* Neon Green for success, completed status */
+    --color-accent-yellow: #FFFF00; /* Pure Yellow for warning, in-progress, early access */
+    --color-accent-red: #FF3131; /* Bright Red for error, critical, server closed */
+    --color-accent-purple: #BF00FF; /* Vibrant Purple for special category, remastered */
+    --color-accent-orange: #FF7F00; /* Bright Orange for call to action, unique state */
+
+    /* Alpha Colors */
+    --color-black-alpha-10: rgba(0, 0, 0, 0.1);
+    --color-white-alpha-00: rgba(255, 255, 255, 0.0); /* Fully transparent */
     --color-white-alpha-05: rgba(255, 255, 255, 0.05);
+    --color-white-alpha-10: rgba(255, 255, 255, 0.1);
     --color-white-alpha-15: rgba(255, 255, 255, 0.15);
     --color-white-alpha-20: rgba(255, 255, 255, 0.2);
-    --color-white-alpha-30: rgba(255, 255, 255, 0.3);
 
-    /* Tipográfia */
-    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Typography */
+    --font-family-body: 'Segoe UI', 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --font-family-heading: 'Poppins', sans-serif; /* A more distinct font for titles */
     --font-size-base: 16px;
     --line-height-base: 1.6;
 
-    /* Méretezés és Térközök */
+    /* Spacing & Sizing */
     --spacing-xs: 0.25rem;  /* 4px */
     --spacing-sm: 0.5rem;   /* 8px */
     --spacing-md: 1rem;     /* 16px */
     --spacing-lg: 1.5rem;   /* 24px */
-    --spacing-xl: 2rem;     /* 32px */
-    --spacing-xxl: 3rem;    /* 48px */
+    --spacing-xl: 2.5rem;   /* 40px */
+    --spacing-xxl: 4rem;    /* 64px */
 
-    /* Határok és Lekerekítések */
+    /* Borders & Radii */
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
-    --border-radius-lg: 12px;
-    --border-width: 1px;
+    --border-radius-lg: 16px;
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
 
-    /* Árnyékok */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-inset: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+    /* Shadows - Subtle & Layered */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 10px 20px rgba(0, 0, 0, 0.4);
 
-    /* Átmenetek */
-    --transition-duration: 0.2s;
-    --transition-timing-function: ease-in-out;
-    --transition-base: all var(--transition-duration) var(--transition-timing-function);
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-ease: ease-in-out;
+    --transition-transform: transform var(--transition-speed) var(--transition-ease);
+    --transition-color: color var(--transition-speed) var(--transition-ease),
+                        background-color var(--transition-speed) var(--transition-ease),
+                        border-color var(--transition-speed) var(--transition-ease);
 
     /* Z-index */
     --z-index-modal: 1000;
@@ -88,10 +84,10 @@ html {
 }
 
 body {
-    font-family: var(--font-family-sans);
+    font-family: var(--font-family-body);
     line-height: var(--line-height-base);
-    background-color: var(--color-background-dark);
-    color: var(--color-text-primary);
+    background-color: var(--color-background-primary);
+    color: var(--color-text-light);
     padding: var(--spacing-lg);
     min-height: 100vh;
     overflow-x: hidden;
@@ -107,12 +103,12 @@ iframe {
 a {
     color: var(--color-accent-blue);
     text-decoration: none;
-    transition: var(--transition-base);
+    transition: var(--transition-color);
 }
 
 a:hover {
     text-decoration: underline;
-    color: var(--color-accent-pink);
+    color: var(--color-accent-green);
 }
 
 button {
@@ -121,100 +117,101 @@ button {
     border: none;
     background: none;
     color: inherit;
-    transition: var(--transition-base);
+    transition: var(--transition-color);
 }
 
 input,
 select {
     font-family: inherit;
     font-size: 0.95rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: var(--border-width) solid var(--color-border);
+    padding: var(--spacing-md);
+    border: var(--border-width-thin) solid var(--color-border-subtle);
     border-radius: var(--border-radius-md);
-    background-color: var(--color-background-medium);
-    color: var(--color-text-primary);
-    transition: var(--transition-base);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-light);
+    transition: var(--transition-color);
 }
 
 input:focus,
 select:focus {
     outline: none;
     border-color: var(--color-accent-blue);
-    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3); /* Frissítve a var() használatához */
+    box-shadow: 0 0 0 var(--border-radius-sm) rgba(0, 191, 255, 0.25); /* Adjusted for new blue */
 }
 
 input::placeholder {
-    color: var(--color-text-secondary);
-    opacity: 0.7;
+    color: var(--color-text-dark);
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--color-background-dark); }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--color-background-primary); }
 ::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: var(--border-radius-lg);
-    border: 2px solid var(--color-background-dark);
+    background: var(--color-border-subtle);
+    border-radius: var(--border-radius-md);
+    border: 3px solid var(--color-background-primary);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent-blue); }
 
 /* -------------------------------------------------------------------------- */
-/* Fejléc                                     */
+/* Header                                     */
 /* -------------------------------------------------------------------------- */
 .header {
     text-align: center;
     margin-bottom: var(--spacing-xxl);
     position: relative;
     z-index: var(--z-index-header);
+    padding-top: var(--spacing-xl);
 }
 
 .title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    background: linear-gradient(45deg, var(--color-accent-blue), var(--color-accent-pink));
+    font-family: var(--font-family-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green), var(--color-accent-yellow));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: var(--spacing-xs);
-    margin-bottom: var(--spacing-lg);
     display: inline-block;
-    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.2); /* Adjusted for new blue */
 }
 
 .title::after {
     content: '';
     display: block;
-    width: 70%;
-    height: 3px;
-    background: linear-gradient(45deg, var(--color-accent-blue), var(--color-accent-pink));
+    width: 60%;
+    height: var(--border-width-medium);
+    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green));
     border-radius: var(--border-radius-sm);
     margin: var(--spacing-sm) auto 0;
-    opacity: 0.8;
+    box-shadow: var(--shadow-light);
 }
 
 .search-container {
     display: flex;
-    flex-wrap: wrap;
     gap: var(--spacing-md);
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: var(--color-background-medium); /* Használja a változót */
-    backdrop-filter: blur(10px);
-    padding: var(--spacing-md);
+    max-width: 1400px; /* Increased max-width for search container */
+    margin: var(--spacing-xl) auto 0;
+    padding: var(--spacing-lg);
+    background-color: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-medium);
+    flex-wrap: wrap;
+    border: var(--border-width-thin) solid var(--color-border-subtle);
+    align-items: center;
 }
 
 .search-input {
-    flex: 2 1 300px;
+    flex: 2 1 350px;
 }
 
 .category-select,
 .developer-select,
 .status-select {
-    flex: 1 1 180px;
+    flex: 1 1 150px;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B949E'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B0B0B0'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E"); /* Adjusted for new text medium color */
     background-repeat: no-repeat;
     background-position: right var(--spacing-md) center;
     background-size: 1.2em;
@@ -222,131 +219,136 @@ input::placeholder {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Fő Tartalom - Játékok                          */
+/* Main Content - Games                          */
 /* -------------------------------------------------------------------------- */
 .main-content {
-    max-width: 1800px;
+    max-width: 2400px; /* Wider overall layout */
     margin: 0 auto;
+    padding-top: var(--spacing-xxl);
 }
 
 .games-section {
     margin-bottom: var(--spacing-xxl);
+    background-color: var(--color-background-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-medium);
+    border: var(--border-width-thin) solid var(--color-border-subtle);
 }
 
 .section-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
+    font-family: var(--font-family-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
     text-align: center;
     margin-bottom: var(--spacing-xl);
     padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--color-border);
+    border-bottom: var(--border-width-medium) solid var(--color-border-subtle);
     display: inline-block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    color: var(--color-text-light);
 }
 
-.inprogress-section .section-title { color: var(--color-accent-yellow); border-bottom-color: var(--color-accent-yellow); }
-.completed-section .section-title { color: var(--color-accent-green); border-bottom-color: var(--color-accent-green); }
-.noncompletable-section .section-title { color: var(--color-accent-red); border-bottom-color: var(--color-accent-red); }
-
+.inprogress-section .section-title {
+    color: var(--color-accent-yellow);
+    border-bottom-color: var(--color-accent-yellow);
+}
+.completed-section .section-title {
+    color: var(--color-accent-green);
+    border-bottom-color: var(--color-accent-green);
+}
+.noncompletable-section .section-title {
+    color: var(--color-accent-red);
+    border-bottom-color: var(--color-accent-red);
+}
+.planned-section .section-title {
+    color: var(--color-accent-purple);
+    border-bottom-color: var(--color-accent-purple);
+}
 
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    /* Wider cards, allowing for more columns on larger screens */
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: var(--spacing-lg);
 }
 
-/* Játékkártya */
+/* Game Card - Vertical Layout with Prominent Cover */
 .game-card {
-    background-color: var(--color-background-medium);
+    background-color: var(--color-background-secondary); /* Changed to secondary for base */
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-duration) var(--transition-timing-function),
-                box-shadow var(--transition-duration) var(--transition-timing-function);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-transform), var(--transition-color);
     display: flex;
     flex-direction: column;
     position: relative;
-    border: var(--border-width) solid var(--color-border);
+    border: var(--border-width-thin) solid var(--color-border-subtle);
 }
 
 .game-card:hover {
     transform: translateY(-5px) scale(1.01);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-medium);
     border-color: var(--color-accent-blue);
 }
 
 .game-cover {
+    width: 100%;
     aspect-ratio: 16 / 9;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-primary);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 
 .game-cover img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: transform 0.4s ease-out;
+    object-fit: fill;
+    transition: transform 0.5s ease-out;
 }
 
 .game-card:hover .game-cover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-.game-cover::after {
-    content: '';
+/* Removed the fog effect from the covers */
+/* .game-cover::after { ... } */
+
+.new-badge, .pre-purchase-badge {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    pointer-events: none;
+    top: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: var(--shadow-light);
+    animation: fade-in-up 0.5s var(--transition-ease);
 }
 
 .new-badge {
-    position: absolute;
-    top: var(--spacing-md);
     right: var(--spacing-md);
-    background-color: var(--color-accent-blue);
-    color: var(--color-background-dark);
-    font-weight: 600;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius-sm);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    z-index: 10;
-    animation: pulse-badge 2s infinite ease-in-out;
-}
-
-@keyframes pulse-badge {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.8; }
+    background-color: var(--color-accent-green);
+    color: var(--color-background-primary);
 }
 
 .pre-purchase-badge {
-    position: absolute;
-    top: var(--spacing-md);
     left: var(--spacing-md);
-    background-color: var(--color-accent-pink);
-    color: var(--color-background-dark);
-    font-weight: 600;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius-sm);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    z-index: 10;
-    animation: pulse-badge 2s infinite ease-in-out;
+    background-color: var(--color-accent-orange);
+    color: var(--color-background-primary);
 }
 
-@keyframes pulse-pink {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.8; box-shadow: 0 0 10px rgba(247, 120, 186, 0.5); }
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
 
 .game-actions {
     position: absolute;
@@ -356,9 +358,9 @@ input::placeholder {
     gap: var(--spacing-sm);
     z-index: 10;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity var(--transition-duration) var(--transition-timing-function),
-                transform var(--transition-duration) var(--transition-timing-function);
+    transform: translateY(15px);
+    transition: opacity var(--transition-speed) var(--transition-ease),
+                transform var(--transition-speed) var(--transition-ease);
 }
 
 .game-card:hover .game-actions {
@@ -366,96 +368,97 @@ input::placeholder {
     transform: translateY(0);
 }
 
+/* Redesigned action buttons: immediate platform color, no glassy effect */
 .action-btn {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: var(--color-white-alpha-10);
-    backdrop-filter: blur(5px);
-    color: var(--color-text-primary);
+    /* Removed backdrop-filter */
+    /* background-color and border are set by specific platform classes below */
+    color: var(--color-text-light); /* Light text for icons */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-sm);
+    font-size: 1.1rem;
+    /* Removed initial box-shadow for a less 'glassy' feel */
+    transition: var(--transition-transform), var(--transition-color), background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
 }
 
 .action-btn:hover {
-    background-color: var(--color-accent-blue);
-    color: var(--color-background-dark);
-    transform: scale(1.1);
+    transform: scale(1.2);
+    box-shadow: var(--shadow-medium); /* Apply box-shadow only on hover */
+    /* Color remains, just scales and shadows */
 }
-.action-btn.steam-btn:hover { background-color: #1b2838; color: #fff;}
-.action-btn.ps-btn:hover { background-color: #0072ce; color: #fff;}
-.action-btn.xbox-btn:hover { background-color: #107c10; color: #fff;}
-.action-btn.google-btn:hover { background-color: #db4437; color: #fff;}
-.action-btn.youtube-btn:hover { background-color: #ff0000; color: #fff;}
+
+/* Specific platform styles (now defining default state as well) */
+.action-btn.steam-btn { background-color: #1b2838; color: #fff; border: var(--border-width-thin) solid #1b2838;}
+.action-btn.ps-btn { background-color: #0072ce; color: #fff; border: var(--border-width-thin) solid #0072ce;}
+.action-btn.xbox-btn { background-color: #107c10; color: #fff; border: var(--border-width-thin) solid #107c10;}
+.action-btn.google-btn { background-color: #db4437; color: #fff; border: var(--border-width-thin) solid #db4437;}
+.action-btn.youtube-btn { background-color: #ff0000; color: #fff; border: var(--border-width-thin) solid #ff0000;}
 
 
 .game-info {
-    padding: var(--spacing-md);
-    flex-grow: 1; 
+    padding: var(--spacing-lg);
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .game-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .game-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.3;
-    color: var(--color-text-primary);
+    font-family: var(--font-family-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-light);
     margin-right: var(--spacing-sm);
 }
 
 .game-progress {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--color-accent-blue);
-    background-color: var(--color-white-alpha-05);
+    background-color: var(--color-white-alpha-10);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
     white-space: nowrap;
-    border: 1px solid var(--color-accent-blue);
+    border: var(--border-width-thin) solid var(--color-accent-blue);
+    box-shadow: var(--shadow-light);
 }
 
 .progress-bar {
     width: 100%;
-    height: 8px;
-    background-color: var(--color-border);
-    border-radius: var(--border-radius-sm);
+    height: 12px;
+    background-color: var(--color-border-subtle);
+    border-radius: var(--border-radius-md);
     overflow: hidden;
-    margin-top: var(--spacing-sm);
-    animation: progress-animation 2s linear infinite alternate;
+    margin-top: var(--spacing-md);
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-pink));
-    border-radius: var(--border-radius-sm);
-    transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green), var(--color-accent-yellow));
+    border-radius: var(--border-radius-md);
+    transition: width 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); /* Adjusted for new blue */
 }
 
- @keyframes progress-animation {
-     0% {
-         opacity: 1;
-     }
-     100% {
-         opacity: 0.6;
-     }
- }
-
 .game-details {
-    margin-top: auto;
-    padding-top: var(--spacing-md); 
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+    border-top: var(--border-width-thin) dashed var(--color-border-subtle);
 }
 
 .game-detail-row {
@@ -468,62 +471,93 @@ input::placeholder {
 .game-detail-row:last-child { margin-bottom: 0; }
 
 
-/* Címkék (platform, kategória, fejlesztő, multiplayer) */
+/* Tags (platform, category, developer, multiplayer) */
 .platform-tags, .category-tags, .developer-tags, .multiplayer-tags, .development-status-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xs);
-    
 }
 
-.developer-tag {
-    background-color: transparent;
-    color: var(--color-accent-yellow);
-    border: 2px solid var(--color-accent-yellow);
-    font-weight: 500;
-}
-
-.developer-tag:hover {
-    background-color: rgba(210, 153, 34, 0.05); /* Kék háttér hoverre */
-    color: var(--color-text-primary);
-    border-color: var(--color-accent-yellow);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
-}
-
-.platform-tag, .category-tag, .developer-tag, .multiplayer-tag, .development-status {
+.platform-tag, .category-tag, .multiplayer-tag, .development-status {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     background-color: var(--color-white-alpha-05);
-    border: var(--border-width) solid var(--color-border);
+    border: var(--border-width-thin) solid var(--color-border-subtle);
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
+    transition: var(--transition-color);
+    color: var(--color-text-medium); /* Ensure tags are visible */
 }
-.platform-tag i, .multiplayer-tag i, .development-status i { font-size: 1.5em; }
 
+.platform-tag i, .multiplayer-tag i, .development-status i { font-size: 1.2em; color: var(--color-text-dark); }
 
-/* Státuszok, dátumok specifikusabb stílusai */
-.release-date, .finished-date, .playtime {
-    font-size: 0.8rem;
+/* Redesigned Developer Tag */
+.developer-tag {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
-    background-color: var(--color-background-dark);
-    border: 1px solid var(--color-border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--color-background-secondary); /* Dark background */
+    color: var(--color-accent-orange); /* Vibrant orange text */
+    border: var(--border-width-thin) solid var(--color-accent-orange); /* Vibrant orange border */
+    transition: var(--transition-transform), var(--transition-color), background-color;
+    box-shadow: var(--shadow-light);
+}
+
+.developer-tag:hover {
+    background-color: var(--color-accent-orange); /* Filled orange on hover */
+    color: var(--color-background-primary); /* Dark text on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Statuses, dates specific styles */
+.release-date, .finished-date, .playtime {
+    font-size: 0.85rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-background-secondary); /* Consistent dark background */
+    border: var(--border-width-thin) solid var(--color-border-subtle);
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
     margin-top: var(--spacing-sm);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    color: var(--color-text-medium);
 }
-.release-date i, .finished-date i, .playtime i { margin-right: var(--spacing-xs); color: var(--color-text-secondary); }
+.release-date i, .finished-date i, .playtime i { margin-right: var(--spacing-xs); color: var(--color-text-dark); }
 
-.finished-date { color: var(--color-accent-green); border-left: 3px solid var(--color-accent-green); }
-.playtime { color: var(--color-accent-pink); }
-.release-date { color: var(--color-accent-blue); }
-.release-date.early-access { color: var(--color-accent-orange); }
-.release-date.full-release { color: var(--color-accent-green); }
+.finished-date {
+    color: var(--color-accent-green);
+    border-left: var(--border-width-medium) solid var(--color-accent-green);
+    background-color: rgba(57, 255, 20, 0.1); /* Adjusted for new green */
+}
+/* Redesigned Playtime */
+.playtime {
+    color: var(--color-text-light); /* Light text for readability */
+    border-left: var(--border-width-medium) solid var(--color-border-subtle); /* Subtle border for clean look */
+    background-color: var(--color-background-primary); /* Darkest background */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.release-date {
+    color: var(--color-accent-blue);
+    border-left: var(--border-width-medium) solid var(--color-accent-blue);
+    background-color: rgba(0, 191, 255, 0.1); /* Adjusted for new blue */
+}
+.release-date.early-access {
+    color: var(--color-accent-orange);
+    border-left-color: var(--color-accent-orange);
+    background-color: rgba(255, 127, 0, 0.1); /* Adjusted for new orange */
+}
+.release-date.full-release {
+    color: var(--color-accent-green);
+    border-left-color: var(--color-accent-green);
+    background-color: rgba(57, 255, 20, 0.1); /* Adjusted for new green */
+}
 
 .development-status { margin-bottom: var(--spacing-sm); }
 .development-status.remastered { color: var(--color-accent-purple); border-color: var(--color-accent-purple); }
@@ -531,9 +565,8 @@ input::placeholder {
 .development-status.in-development { color: var(--color-accent-yellow); border-color: var(--color-accent-yellow); }
 .development-status.full-release { color: var(--color-accent-green); border-color: var(--color-accent-green); }
 .development-status.server-closed { color: var(--color-accent-red); border-color: var(--color-accent-red); }
-.development-status.pre-purchase { color: var(--color-accent-pink); border-color: var(--color-accent-pink);
+.development-status.pre-purchase { color: var(--color-accent-blue); border-color: var(--color-accent-blue);
 }
-
 
 .multiplayer-tag.local { color: var(--color-accent-green); border-color: var(--color-accent-green); }
 .multiplayer-tag.online { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
@@ -544,75 +577,72 @@ input::placeholder {
     align-items: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
-    background-color: var(--color-accent-purple); /* Változtatás: egységesebb szín */
-    color: var(--color-background-dark); /* Sötétebb szöveg a jobb olvashatóságért */
+    background-color: var(--color-accent-purple);
+    color: var(--color-background-primary);
     border-radius: var(--border-radius-sm);
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-left: var(--spacing-sm); /* Kis térköz a platform tagoktól */
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-base);
+    margin-left: var(--spacing-sm);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-transform);
 }
 
 .dlc-tag:hover {
-    background-color: var(--color-accent-blue); /* Hover hatás az interakcióhoz */
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    background-color: var(--color-accent-blue);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-medium);
 }
 
 .dlc-tag .dlc-icon {
-    font-size: 0.85rem; /* Kisebb ikon méret */
-    color: var(--color-background-dark); /* Szín a texthez igazítva */
-}
-
-.dlc-tag .dlc-text {
-    /* Szöveg stílusa, ha szükséges további finomítás */
+    font-size: 0.9rem;
+    color: var(--color-background-primary);
 }
 
 /* -------------------------------------------------------------------------- */
-/* Modális Ablak                                */
+/* Modal Window                                */
 /* -------------------------------------------------------------------------- */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(13, 17, 23, 0.85);
-    backdrop-filter: blur(8px);
+    background-color: rgba(18, 18, 18, 0.95); /* Adjusted for new primary background */
+    backdrop-filter: blur(12px);
     z-index: var(--z-index-modal);
     padding: var(--spacing-lg);
     overflow-y: auto;
-    animation: fadeIn var(--transition-duration) var(--transition-timing-function);
+    animation: fadeIn 0.4s var(--transition-ease) forwards;
 }
 
 .modal-content {
-    background-color: var(--color-background-medium);
+    background-color: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-strong);
     max-width: 900px;
     margin: var(--spacing-xl) auto;
     position: relative;
-    padding: var(--spacing-lg);
-    animation: slideInUp var(--transition-duration) var(--transition-timing-function);
-    border: 1px solid var(--color-border);
+    padding: var(--spacing-xxl);
+    animation: slideInUp 0.4s var(--transition-ease) forwards;
+    border: var(--border-width-thin) solid var(--color-border-subtle);
 }
 
 .close {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    font-size: 1.8rem;
-    color: var(--color-text-secondary);
+    font-size: 2.2rem;
+    color: var(--color-text-dark);
     background: none;
     border: none;
     padding: var(--spacing-xs);
     line-height: 1;
+    transition: var(--transition-transform), var(--transition-color);
 }
 
 .close:hover {
-    color: var(--color-accent-pink);
-    transform: rotate(90deg);
+    color: var(--color-accent-red);
+    transform: rotate(90deg) scale(1.15);
 }
 
 #trailerFrame {
@@ -620,24 +650,27 @@ input::placeholder {
     aspect-ratio: 16 / 9;
     border-radius: var(--border-radius-md);
     border: none;
+    box-shadow: var(--shadow-medium);
 }
 
-/* Animációk a modális ablakhoz */
+/* Animations for modal */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideInUp { from { opacity: 0; transform: translateY(80px); } to { opacity: 1; transform: translateY(0); } }
 
 
 /* -------------------------------------------------------------------------- */
-/* Lábléc                                   */
+/* Footer                                   */
 /* -------------------------------------------------------------------------- */
 .footer {
     margin-top: var(--spacing-xxl);
     padding: var(--spacing-xl) var(--spacing-lg);
-    background-color: var(--color-background-medium);
-    border-top: var(--border-width) solid var(--color-border);
+    background-color: var(--color-background-secondary);
+    border-top: var(--border-width-thin) solid var(--color-border-subtle);
     text-align: center;
-    color: var(--color-text-secondary);
+    color: var(--color-text-medium);
     font-size: 0.9rem;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
 }
 
 .footer-content {
@@ -647,7 +680,7 @@ input::placeholder {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
 }
 
 .footer-section p {
@@ -656,104 +689,79 @@ input::placeholder {
 
 .social-icons {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
     justify-content: center;
 }
 
 .social-icon {
-    font-size: 1.5rem;
-    color: var(--color-text-secondary);
+    font-size: 2rem;
+    color: var(--color-text-medium);
+    transition: var(--transition-transform), var(--transition-color);
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
+    color: var(--color-accent-blue);
 }
 .social-icon .fa-github:hover { color: #fff; }
 .social-icon .fa-steam:hover { color: #1b2838; }
 .social-icon .fa-youtube:hover { color: #ff0000; }
 .social-icon .fa-x:hover { color: #313131; }
 
-/* Stílus a Ko-fi gombhoz a footerben */
+/* Redesigned Ko-fi button style in footer */
 .ko-fi-widget {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #72a4f2;
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-background-secondary); /* Dark background */
+    color: var(--color-accent-green); /* Green accent text */
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-sm);
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: var(--transition-base);
-    box-shadow: var(--shadow-sm);
-    margin-top: var(--spacing-sm);
+    transition: var(--transition-transform), var(--transition-color), background-color;
+    box-shadow: var(--shadow-light);
+    margin-top: var(--spacing-md);
+    border: var(--border-width-thin) solid var(--color-accent-green); /* Green border */
 }
 
 .ko-fi-widget img {
-   
-    height: 20px;     
-    margin-right: var(--spacing-xs);
+   height: 22px;
+    margin-right: var(--spacing-sm);
 }
 
 .ko-fi-widget:hover {
-      background-color: #5e91db; 
-    transform: scale(1.05);
-    box-shadow: var(--shadow-md);
+    background-color: var(--color-accent-green); /* Filled green on hover */
+    color: var(--color-background-primary); /* Dark text on hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-medium);
 }
-
-.ko-fi-widget span {
-    vertical-align: middle; }
-
-.ko-fi-widget.outline {
-    background-color: transparent;
-    border: 2px solid #72a4f2;
-    color: #72a4f2;
-    box-shadow: none;
-}
-
-.ko-fi-widget.outline:hover {
-    background-color: rgba(114, 164, 242, 0.1); 
-    color: #5e91db;
-}
-
-.ko-fi-widget.dark {
-    background-color: var(--color-background-medium);
-    color: var(--color-accent-pink);
-    border: 1px solid var(--color-border);
-}
-
-.ko-fi-widget.dark:hover {
-    background-color: var(--color-background-light);
-    color: var(--color-accent-pink);
-    transform: translateY(-2px); 
-}
-
 
 /* -------------------------------------------------------------------------- */
-/* "Vissza a tetejére" Gomb                          */
+/* "Back to Top" Button                                  */
 /* -------------------------------------------------------------------------- */
+/* Redesigned Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: var(--spacing-lg);
-    right: var(--spacing-lg);
-    width: 48px;
-    height: 48px;
-    background-color: var(--color-accent-blue);
-    color: var(--color-background-dark);
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    width: 55px;
+    height: 55px;
+    background-color: var(--color-background-secondary); /* Subtle dark background */
+    color: var(--color-accent-blue); /* Accent color for icon */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: var(--shadow-lg);
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-medium);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity var(--transition-duration) var(--transition-timing-function),
-                visibility var(--transition-duration) var(--transition-timing-function),
-                transform var(--transition-duration) var(--transition-timing-function);
+    transform: translateY(40px);
+    transition: opacity 0.4s var(--transition-ease), visibility 0.4s var(--transition-ease), transform 0.4s var(--transition-ease), background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
     z-index: var(--z-index-back-to-top);
+    border: var(--border-width-thin) solid var(--color-border-subtle); /* Subtle border */
 }
 
 .back-to-top.visible {
@@ -763,26 +771,36 @@ input::placeholder {
 }
 
 .back-to-top:hover {
-    background-color: var(--color-accent-pink);
-    transform: scale(1.05);
+    background-color: var(--color-accent-blue); /* Accent color on hover */
+    color: var(--color-background-primary); /* Dark text on hover */
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.6); /* Adjusted for new blue */
+    border-color: var(--color-accent-blue);
 }
 
 /* -------------------------------------------------------------------------- */
-/* Reszponzivitás                              */
+/* Responsiveness                               */
 /* -------------------------------------------------------------------------- */
 
-/* Kisebb asztali gépek, nagyobb tabletek */
-@media (max-width: 1200px) {
+/* Smaller desktops, larger tablets */
+@media (max-width: 1600px) { /* Adjusted breakpoint for new wider layout */
     .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Adjusted for 4-5 columns */
+    }
+}
+
+@media (max-width: 1200px) { /* Adjusted breakpoint */
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Further adjustment */
     }
     .search-container {
-        max-width: 90%;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+        max-width: 95%;
     }
 }
 
-/* Tabletek */
+/* Tablets */
 @media (max-width: 768px) {
     body {
         padding: var(--spacing-md);
@@ -791,10 +809,11 @@ input::placeholder {
         margin-bottom: var(--spacing-xl);
     }
     .title {
-        font-size: clamp(2rem, 6vw, 2.8rem);
+        font-size: clamp(2.5rem, 7vw, 4rem);
     }
     .search-container {
         flex-direction: column;
+        padding: var(--spacing-md);
     }
     .search-input,
     .category-select,
@@ -802,38 +821,72 @@ input::placeholder {
     .status-select {
         flex-basis: auto;
         width: 100%;
+        padding: var(--spacing-sm);
     }
     .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: 1fr; /* Single column on smaller tablets and mobile */
+        gap: var(--spacing-md);
+    }
+    .game-card {
+        border-radius: var(--border-radius-md);
+    }
+    .game-cover {
+        border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    }
+    .game-info {
+        padding: var(--spacing-md);
+    }
+    .game-actions {
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+        justify-content: center;
+        margin-top: var(--spacing-md);
     }
     .footer-content {
         flex-direction: column;
         gap: var(--spacing-md);
     }
     .back-to-top {
-        width: 44px;
-        height: 44px;
-        font-size: 1rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
     }
 }
 
-/* Mobilok */
+/* Mobiles */
 @media (max-width: 480px) {
-    .games-grid {
-        grid-template-columns: 1fr;
-    }
-    .game-title {
-        font-size: 1.1rem;
+    .title {
+        font-size: clamp(2rem, 8vw, 3rem);
     }
     .modal-content {
         margin: var(--spacing-md) auto;
         padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+    }
+    .close {
+        font-size: 1.8rem;
     }
     #trailerFrame {
         aspect-ratio: 16 / 10;
     }
     .back-to-top {
-        bottom: var(--spacing-md);
-        right: var(--spacing-md);
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+    .new-badge, .pre-purchase-badge {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs);
+    }
+    .game-title {
+        font-size: 1.2rem;
+    }
+    .game-progress {
+        font-size: 0.85rem;
     }
 }
