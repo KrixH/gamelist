@@ -2349,7 +2349,7 @@
         "cover"             : "https://i.imgur.com/PpsCPmy.png",
         "platforms"         : ["PC","PS","Xbox"],
         "developer"         : ["Leenzee Games"],
-        "releaseDates"      : [{"type": "full-release", "platform": "ps", "date": "2025-06-24"},{"type": "full-release", "platform": "pc", "date": "2025-06-24"},{"type": "full-release", "platform": "xbox", "date": "2025-06-24"}],
+        "releaseDates"      : [{"type": "full-release", "platform": "ps", "date": "2025-07-24"},{"type": "full-release", "platform": "pc", "date": "2025-07-24"},{"type": "full-release", "platform": "xbox", "date": "2025-07-24"}],
         "finishDate"        : null,
         "progress"          : null,
         "planned"           : true,
