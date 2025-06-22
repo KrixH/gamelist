@@ -4,25 +4,25 @@
 
 :root {
     /* Color Palette - Black & Dark Composite Theme */
-    --color-background-primary: #121212; /* Very deep dark grey/almost black primary background */
-    --color-background-secondary: #1E1E1E; /* Card and section backgrounds */
-    --color-background-tertiary: #2A2A2A; /* Hover states, subtle interactive elements */
-    --color-border-subtle: #3A3A3A; /* Soft borders for structure */
-    --color-text-light: #F0F0F0; /* Primary text for readability */
-    --color-text-medium: #B0B0B0; /* Secondary text, descriptions */
-    --color-text-dark: #707070; /* Subtle text, placeholders */
+    --color-background-primary: #121212;
+    --color-background-secondary: #1E1E1E;
+    --color-background-tertiary: #2A2A2A;
+    --color-border-subtle: #3A3A3A;
+    --color-text-light: #F0F0F0;
+    --color-text-medium: #B0B0B0;
+    --color-text-dark: #707070;
 
-    /* Accent Colors - Vibrant & Clear against dark background */
-    --color-accent-blue: #00BFFF; /* Electric Blue for links, actions */
-    --color-accent-green: #39FF14; /* Neon Green for success, completed status */
-    --color-accent-yellow: #FFFF00; /* Pure Yellow for warning, in-progress, early access */
-    --color-accent-red: #FF3131; /* Bright Red for error, critical, server closed */
-    --color-accent-purple: #BF00FF; /* Vibrant Purple for special category, remastered */
-    --color-accent-orange: #FF7F00; /* Bright Orange for call to action, unique state */
+    /* Accent Colors */
+    --color-accent-blue: #00BFFF;
+    --color-accent-green: #39FF14;
+    --color-accent-yellow: #FFFF00;
+    --color-accent-red: #FF3131;
+    --color-accent-purple: #BF00FF;
+    --color-accent-orange: #FF7F00;
 
     /* Alpha Colors */
     --color-black-alpha-10: rgba(0, 0, 0, 0.1);
-    --color-white-alpha-00: rgba(255, 255, 255, 0.0); /* Fully transparent */
+    --color-white-alpha-00: rgba(255, 255, 255, 0);
     --color-white-alpha-05: rgba(255, 255, 255, 0.05);
     --color-white-alpha-10: rgba(255, 255, 255, 0.1);
     --color-white-alpha-15: rgba(255, 255, 255, 0.15);
@@ -30,17 +30,17 @@
 
     /* Typography */
     --font-family-body: 'Segoe UI', 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    --font-family-heading: 'Poppins', sans-serif; /* A more distinct font for titles */
+    --font-family-heading: 'Poppins', sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.6;
 
     /* Spacing & Sizing */
-    --spacing-xs: 0.25rem;  /* 4px */
-    --spacing-sm: 0.5rem;   /* 8px */
-    --spacing-md: 1rem;     /* 16px */
-    --spacing-lg: 1.5rem;   /* 24px */
-    --spacing-xl: 2.5rem;   /* 40px */
-    --spacing-xxl: 4rem;    /* 64px */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+    --spacing-xxl: 4rem;
 
     /* Borders & Radii */
     --border-radius-sm: 4px;
@@ -49,7 +49,7 @@
     --border-width-thin: 1px;
     --border-width-medium: 2px;
 
-    /* Shadows - Subtle & Layered */
+    /* Shadows */
     --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.2);
     --shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.3);
     --shadow-strong: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -59,8 +59,8 @@
     --transition-ease: ease-in-out;
     --transition-transform: transform var(--transition-speed) var(--transition-ease);
     --transition-color: color var(--transition-speed) var(--transition-ease),
-                        background-color var(--transition-speed) var(--transition-ease),
-                        border-color var(--transition-speed) var(--transition-ease);
+                       background-color var(--transition-speed) var(--transition-ease),
+                       border-color var(--transition-speed) var(--transition-ease);
 
     /* Z-index */
     --z-index-modal: 1000;
@@ -279,7 +279,7 @@ input::placeholder {
     gap: var(--spacing-lg);
 }
 
-/* Game Card - Vertical Layout with Prominent Cover */
+/* Game Card */
 .game-card {
     background-color: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
@@ -315,9 +315,10 @@ input::placeholder {
 }
 
 .game-card:hover .game-cover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+/* Badges */
 .new-badge, .pre-purchase-badge {
     position: absolute;
     top: var(--spacing-md);
@@ -343,11 +344,31 @@ input::placeholder {
     color: var(--color-background-primary);
 }
 
-@keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Countdown Timer */
+.countdown-container {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-accent-orange);
 }
 
+.countdown-timer {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-accent-orange);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(255, 127, 0, 0.6);
+}
+
+.countdown-timer.released {
+    color: var(--color-accent-green);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+    animation: pulse 1.5s infinite;
+}
+
+/* Game Actions */
 .game-actions {
     position: absolute;
     bottom: var(--spacing-md);
@@ -375,7 +396,9 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    transition: var(--transition-transform), var(--transition-color), background-color var(--transition-speed) var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
+    transition: var(--transition-transform), var(--transition-color), 
+                background-color var(--transition-speed) var(--transition-ease), 
+                border-color var(--transition-speed) var(--transition-ease);
 }
 
 .action-btn:hover {
@@ -383,13 +406,14 @@ input::placeholder {
     box-shadow: var(--shadow-medium);
 }
 
-/* Specific platform styles */
+/* Platform specific buttons */
 .action-btn.steam-btn { background-color: #1b2838; color: #fff; border: var(--border-width-thin) solid #1b2838;}
 .action-btn.ps-btn { background-color: #0072ce; color: #fff; border: var(--border-width-thin) solid #0072ce;}
 .action-btn.xbox-btn { background-color: #107c10; color: #fff; border: var(--border-width-thin) solid #107c10;}
 .action-btn.google-btn { background-color: #db4437; color: #fff; border: var(--border-width-thin) solid #db4437;}
 .action-btn.youtube-btn { background-color: #ff0000; color: #fff; border: var(--border-width-thin) solid #ff0000;}
 
+/* Game Info */
 .game-info {
     padding: var(--spacing-lg);
     flex-grow: 1;
@@ -462,8 +486,9 @@ input::placeholder {
 }
 .game-detail-row:last-child { margin-bottom: 0; }
 
-/* Tags (platform, category, developer, multiplayer) */
-.platform-tags, .category-tags, .developer-tags, .multiplayer-tags, .development-status-container {
+/* Tags */
+.platform-tags, .category-tags, .developer-tags, 
+.multiplayer-tags, .development-status-container {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xs);
@@ -483,7 +508,12 @@ input::placeholder {
     color: var(--color-text-medium);
 }
 
-.platform-tag i, .multiplayer-tag i, .development-status i { font-size: 1.2em; color: var(--color-text-dark); }
+.platform-tag i, 
+.multiplayer-tag i, 
+.development-status i { 
+    font-size: 1.2em; 
+    color: var(--color-text-dark); 
+}
 
 .developer-tag {
     padding: var(--spacing-xs) var(--spacing-sm);
@@ -504,7 +534,7 @@ input::placeholder {
     box-shadow: var(--shadow-medium);
 }
 
-/* Statuses, dates specific styles */
+/* Status and Date Styles */
 .release-date, .finished-date, .playtime {
     font-size: 0.85rem;
     padding: var(--spacing-xs) var(--spacing-sm);
@@ -518,7 +548,13 @@ input::placeholder {
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     color: var(--color-text-medium);
 }
-.release-date i, .finished-date i, .playtime i { margin-right: var(--spacing-xs); color: var(--color-text-dark); }
+
+.release-date i, 
+.finished-date i, 
+.playtime i { 
+    margin-right: var(--spacing-xs); 
+    color: var(--color-text-dark); 
+}
 
 .finished-date {
     color: var(--color-accent-green);
@@ -530,7 +566,6 @@ input::placeholder {
     color: var(--color-text-light);
     border-left: var(--border-width-medium) solid var(--color-border-subtle);
     background-color: var(--color-background-primary);
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .release-date {
@@ -549,6 +584,7 @@ input::placeholder {
     background-color: rgba(57, 255, 20, 0.1);
 }
 
+/* Development Status */
 .development-status { margin-bottom: var(--spacing-sm); }
 .development-status.remastered { color: var(--color-accent-purple); border-color: var(--color-accent-purple); }
 .development-status.early-access { color: var(--color-accent-orange); border-color: var(--color-accent-orange); }
@@ -557,6 +593,7 @@ input::placeholder {
 .development-status.server-closed { color: var(--color-accent-red); border-color: var(--color-accent-red); }
 .development-status.pre-purchase { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
 
+/* Multiplayer Tags */
 .multiplayer-tag.local { color: var(--color-accent-green); border-color: var(--color-accent-green); }
 .multiplayer-tag.online { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
 
@@ -589,31 +626,96 @@ input::placeholder {
     color: var(--color-background-primary);
 }
 
+/* Animations */
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 /* -------------------------------------------------------------------------- */
 /* Modal Window                                                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Enhanced Modal Styling                                                    */
 /* -------------------------------------------------------------------------- */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(18, 18, 18, 0.95);
-    backdrop-filter: blur(12px);
     z-index: var(--z-index-modal);
-    padding: var(--spacing-lg);
     overflow-y: auto;
     animation: fadeIn 0.4s var(--transition-ease) forwards;
+    background: none;
+    padding: var(--spacing-xl);
+}
+
+.modal::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.modal-cover-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(20px) brightness(0.6);
+    opacity: 1;
 }
 
 .modal-content {
-    background-color: var(--color-background-secondary);
+    background-color: rgba(30, 30, 30, 0.95);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-strong);
-    max-width: 900px;
-    margin: var(--spacing-xl) auto;
+    width: 90%;
+    max-width: 3200px;
+    min-height: 70vh;
+    margin: auto;
     position: relative;
     padding: var(--spacing-xxl);
     animation: slideInUp 0.4s var(--transition-ease) forwards;
     border: var(--border-width-thin) solid var(--color-border-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#trailerFrame {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    border: none;
+    border-radius: var(--border-radius-md);
+}
+
+.close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 2.5rem;
+    color: var(--color-text-medium);
+    background: none;
+    border: none;
+    padding: var(--spacing-sm);
+    line-height: 1;
+    transition: var(--transition-color);
+    z-index: 10;
+}
+
+.close:hover {
+    color: var(--color-accent-red);
+    transform: scale(1.1);
 }
 
 .close {
@@ -642,9 +744,15 @@ input::placeholder {
     box-shadow: var(--shadow-medium);
 }
 
-/* Animations for modal */
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideInUp { from { opacity: 0; transform: translateY(80px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
+
+@keyframes slideInUp { 
+    from { opacity: 0; transform: translateY(80px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
 
 /* -------------------------------------------------------------------------- */
 /* Footer                                                                     */
@@ -745,7 +853,11 @@ input::placeholder {
     opacity: 0;
     visibility: hidden;
     transform: translateY(40px);
-    transition: opacity 0.4s var(--transition-ease), visibility 0.4s var(--transition-ease), transform 0.4s var(--transition-ease), background-color var(--transition-speed) var(--transition-ease), color var(--transition-speed) var(--transition-ease);
+    transition: opacity 0.4s var(--transition-ease), 
+                visibility 0.4s var(--transition-ease), 
+                transform 0.4s var(--transition-ease), 
+                background-color var(--transition-speed) var(--transition-ease), 
+                color var(--transition-speed) var(--transition-ease);
     z-index: var(--z-index-back-to-top);
     border: var(--border-width-thin) solid var(--color-border-subtle);
 }
@@ -840,9 +952,6 @@ input::placeholder {
         bottom: var(--spacing-md);
         right: var(--spacing-md);
     }
-    #gameDetailModal .game-detail-modal-content {
-        padding: var(--spacing-lg);
-    }
 }
 
 /* Mobiles */
@@ -877,8 +986,5 @@ input::placeholder {
     }
     .game-progress {
         font-size: 0.85rem;
-    }
-    .screenshot-grid {
-        grid-template-columns: 1fr;
     }
 }
