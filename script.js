@@ -142,37 +142,33 @@ function init() {
     function displayGames(games) {
         const sorted = [...games].sort((a, b) => a.title.localeCompare(b.title, 'hu'));
         
-        // 1. Befejezett játékok
         const completed = sorted.filter(game => 
             game.progress === 100 && 
             !game.nonCompletable
         );
         
-        // 2. Nem befejezhető játékok
         const nonCompletable = sorted.filter(game => 
             game.nonCompletable === true
         );
         
-        // 3. Aktívan futó játékok
+        const planned = sorted.filter(game => 
+            game.planned === true ||
+            (
+                !nonCompletable.includes(game) && 
+                !completed.includes(game) &&
+                (game.progress === 0 || 
+                 game.progress === null || 
+                 game.progress === undefined)
+            )
+        );
+        
         const inprogress = sorted.filter(game => 
             !nonCompletable.includes(game) && 
             !completed.includes(game) &&
+            !planned.includes(game) &&
             typeof game.progress === 'number' && 
             game.progress > 0 &&
             game.progress < 100
-        );
-        
-        // 4. Tervezett játékok
-        const planned = sorted.filter(game => 
-            !nonCompletable.includes(game) && 
-            !completed.includes(game) &&
-            !inprogress.includes(game) &&
-            (
-                game.planned === true || 
-                game.progress === 0 || 
-                game.progress === null || 
-                game.progress === undefined
-            )
         );
 
         gamesContainer.innerHTML = `
@@ -187,6 +183,7 @@ function init() {
                 const progress = bar.parentElement.getAttribute('data-progress');
                 bar.style.width = progress ? `${progress}%` : '0%';
             });
+            initCountdowns();
         }, 100);
     }
 
@@ -204,13 +201,31 @@ function init() {
 
     function createGameCard(game) {
         const isNew = checkIfNew(game.dateAdded);
-        const isPrePurchase = game.developmentStatus === 'pre-purchase';
+        const isPrePurchase = Array.isArray(game.developmentStatus) 
+            ? game.developmentStatus.includes('pre-purchase')
+            : game.developmentStatus === 'pre-purchase';
         const hasProgress = typeof game.progress === 'number';
         
+        let countdownHTML = '';
+        if (isPrePurchase && game.releaseDates) {
+            const fullRelease = game.releaseDates.find(rd => rd.type === 'full-release');
+            if (fullRelease) {
+                const gameTitleId = game.title.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+                countdownHTML = `
+                    <div class="countdown-container">
+                        <div id="countdown-${gameTitleId}" 
+                             class="countdown-timer" 
+                             data-release-date="${fullRelease.date}">
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
         return `
             <div class="game-card" data-status="${game.nonCompletable ? 'noncompletable' : game.progress === 100 ? 'completed' : 'inprogress'}">
                 <div class="game-cover">
-                    <img src="${`https://cdn.akamai.steamstatic.com/steam/apps/${game.steamId}/header.jpg`}"
+                    <img src="${getCoverUrl(game)}"
                          alt="${game.title}"
                          onerror="if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src='${game.cover || CONFIG.fallbackImage}'; }">
                     ${isNew ? '<div class="new-badge">ÚJ</div>' : ''}
@@ -220,6 +235,7 @@ function init() {
                     </div>
                 </div>
                 <div class="game-info">
+                    ${countdownHTML}
                     <div class="game-header">
                         <h3 class="game-title">${game.title}</h3>
                         ${hasProgress ? `<div class="game-progress">${game.progress}%</div>` : ''}
@@ -235,21 +251,61 @@ function init() {
         `;
     }
 
-    function createActionButtons(game) {
-        const playstationUrl = game.playstationStoreId ? 
-            (game.playstationStoreType === 'product' ? 
-                `https://store.playstation.com/en-us/product/${game.playstationStoreId}` :
-                `https://store.playstation.com/en-us/concept/${game.playstationStoreId}`) : 
-            null;
-
-        return `
-            ${game.steamId ? `<button class="action-btn steam-btn" onclick="window.open('https://store.steampowered.com/app/${game.steamId}', '_blank')"><i class="fab fa-steam"></i></button>` : ''}
-            ${playstationUrl ? `<button class="action-btn ps-btn" onclick="window.open('${playstationUrl}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
-            ${game.xboxStoreId ? `<button class="action-btn xbox-btn" onclick="window.open('https://www.xbox.com/en-us/games/store/${game.xboxStoreId}', '_blank')"><i class="fab fa-xbox"></i></button>` : ''}
-            ${game.googlePlayStoreId ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')"><i class="fab fa-google-play"></i></button>` : ''}
-            ${game.videoId ? `<button class="action-btn youtube-btn" onclick="showTrailer('${game.videoId}')"><i class="fab fa-youtube"></i></button>` : ''}
-        `;
+    function initCountdowns() {
+        document.querySelectorAll('.countdown-timer').forEach(timer => {
+            const releaseDate = new Date(timer.dataset.releaseDate);
+            const now = new Date();
+            
+            // Clear any existing interval
+            if (timer.dataset.intervalId) {
+                clearInterval(parseInt(timer.dataset.intervalId));
+            }
+            
+            const updateCountdown = () => {
+                const diff = releaseDate - new Date();
+                
+                if (diff <= 0) {
+                    timer.textContent = 'MEGJELENT!';
+                    timer.classList.add('released');
+                    if (timer.dataset.intervalId) {
+                        clearInterval(parseInt(timer.dataset.intervalId));
+                    }
+                    return;
+                }
+                
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                timer.textContent = `${days} nap ${hours} óra ${minutes} perc ${seconds} másodperc`;
+            };
+            
+            updateCountdown();
+            const intervalId = setInterval(updateCountdown, 1000);
+            
+            // Store intervalId on element for cleanup
+            timer.dataset.intervalId = intervalId;
+        });
     }
+
+function createActionButtons(game) {
+    const playstationUrl = game.playstationStoreId ? 
+        (game.playstationStoreType === 'product' ? 
+            `https://store.playstation.com/en-us/product/${game.playstationStoreId}` :
+            `https://store.playstation.com/en-us/concept/${game.playstationStoreId}`) : 
+        null;
+
+    const coverUrl = getCoverUrl(game);
+
+    return `
+        ${game.steamId ? `<button class="action-btn steam-btn" onclick="window.open('https://store.steampowered.com/app/${game.steamId}', '_blank')"><i class="fab fa-steam"></i></button>` : ''}
+        ${playstationUrl ? `<button class="action-btn ps-btn" onclick="window.open('${playstationUrl}', '_blank')"><i class="fab fa-playstation"></i></button>` : ''}
+        ${game.xboxStoreId ? `<button class="action-btn xbox-btn" onclick="window.open('https://www.xbox.com/en-us/games/store/${game.xboxStoreId}', '_blank')"><i class="fab fa-xbox"></i></button>` : ''}
+        ${game.googlePlayStoreId ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')"><i class="fab fa-google-play"></i></button>` : ''}
+        ${game.videoId ? `<button class="action-btn youtube-btn" onclick="showTrailer('${game.videoId}', '${coverUrl}')"><i class="fab fa-youtube"></i></button>` : ''}
+    `;
+}
 
     function createGameDetails(game) {
         let releaseDatesHtml = '';
@@ -401,7 +457,8 @@ function init() {
             'early-access'  : 'fa-exclamation-triangle',
             'server-closed' : 'fa-server',
             'remastered'    : 'fa-redo-alt',
-            'pre-purchase'  : 'fa-shopping-cart'
+            'pre-purchase'  : 'fa-shopping-cart',
+            'full-release'  : 'fa-check-circle'
         };
         return icons[status] || 'fa-info-circle';
     }
@@ -439,15 +496,36 @@ function init() {
     developerSelect.addEventListener('change', updateFilters);
     statusSelect.addEventListener('change', updateFilters);
 
-    window.showTrailer = (videoId) => {
-        trailerFrame.src           = `${CONFIG.youtubeEmbedUrl}${videoId}?autoplay=1`;
-        trailerModal.style.display = 'block';
-    };
-
-    function closeModal() {
-        trailerModal.style.display = 'none';
-        trailerFrame.src           = '';
+window.showTrailer = (videoId, coverUrl) => {
+    const modal = document.getElementById('trailerModal');
+    const trailerFrame = document.getElementById('trailerFrame');
+    
+    // Háttérkép beállítása
+    let coverBackground = modal.querySelector('.modal-cover-background');
+    if (!coverBackground) {
+        coverBackground = document.createElement('div');
+        coverBackground.className = 'modal-cover-background';
+        modal.insertBefore(coverBackground, modal.firstChild);
     }
+    coverBackground.style.backgroundImage = `url(${coverUrl || CONFIG.fallbackImage})`;
+    
+    // Modal stílus beállítása
+    modal.classList.add('with-cover');
+    trailerFrame.src = `${CONFIG.youtubeEmbedUrl}${videoId}?autoplay=1`;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+};
+
+function closeModal() {
+    const modal = document.getElementById('trailerModal');
+    const trailerFrame = document.getElementById('trailerFrame');
+    
+    modal.style.display = 'none';
+    trailerFrame.src = '';
+    document.body.style.overflow = '';
+    modal.classList.remove('with-cover');
+}
+
 
     modalClose.addEventListener('click', closeModal);
 
