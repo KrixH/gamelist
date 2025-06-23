@@ -139,56 +139,56 @@ function init() {
         displayGames(filtered);
     }
 
-function displayGames(games) {
-    const sorted = [...games].sort((a, b) => a.title.localeCompare(b.title, 'hu'));
-    
-    // 1. Befejezett játékok
-    const completed = sorted.filter(game => 
-        game.progress === 100 && 
-        !game.nonCompletable
-    );
-    
-    // 2. Nem befejezhető játékok
-    const nonCompletable = sorted.filter(game => 
-        game.nonCompletable === true
-    );
-    
-    // 3. Tervezett játékok (most már elsődleges szempont a planned: true)
-    const planned = sorted.filter(game => 
-        game.planned === true ||
-        (
+    function displayGames(games) {
+        const sorted = [...games].sort((a, b) => a.title.localeCompare(b.title, 'hu'));
+        
+        // 1. Befejezett játékok
+        const completed = sorted.filter(game => 
+            game.progress === 100 && 
+            !game.nonCompletable
+        );
+        
+        // 2. Nem befejezhető játékok
+        const nonCompletable = sorted.filter(game => 
+            game.nonCompletable === true
+        );
+        
+        // 3. Aktívan futó játékok
+        const inprogress = sorted.filter(game => 
             !nonCompletable.includes(game) && 
             !completed.includes(game) &&
-            (game.progress === 0 || 
-             game.progress === null || 
-             game.progress === undefined)
-        )
-    );
-    
-    // 4. Aktívan futó játékok (csak azok, amelyek nem tervezettek és nincsenek a másik két kategóriában)
-    const inprogress = sorted.filter(game => 
-        !nonCompletable.includes(game) && 
-        !completed.includes(game) &&
-        !planned.includes(game) &&
-        typeof game.progress === 'number' && 
-        game.progress > 0 &&
-        game.progress < 100
-    );
+            typeof game.progress === 'number' && 
+            game.progress > 0 &&
+            game.progress < 100
+        );
+        
+        // 4. Tervezett játékok
+        const planned = sorted.filter(game => 
+            !nonCompletable.includes(game) && 
+            !completed.includes(game) &&
+            !inprogress.includes(game) &&
+            (
+                game.planned === true || 
+                game.progress === 0 || 
+                game.progress === null || 
+                game.progress === undefined
+            )
+        );
 
-    gamesContainer.innerHTML = `
-        ${createSection('Jelenleg futó végigjátszások', inprogress, 'inprogress')}
-        ${createSection('Befejezett végigjátszások', completed, 'completed')}
-        ${createSection('Tervezett játékok', planned, 'planned')}
-        ${createSection('Nem befejezhető játékok', nonCompletable, 'noncompletable')}
-    `;
+        gamesContainer.innerHTML = `
+            ${createSection('Jelenleg futó végigjátszások', inprogress, 'inprogress')}
+            ${createSection('Befejezett végigjátszások', completed, 'completed')}
+            ${createSection('Tervezett játékok', planned, 'planned')}
+            ${createSection('Nem befejezhető játékok', nonCompletable, 'noncompletable')}
+        `;
 
-    setTimeout(() => {
-        document.querySelectorAll('.progress-fill').forEach(bar => {
-            const progress = bar.parentElement.getAttribute('data-progress');
-            bar.style.width = progress ? `${progress}%` : '0%';
-        });
-    }, 100);
-}
+        setTimeout(() => {
+            document.querySelectorAll('.progress-fill').forEach(bar => {
+                const progress = bar.parentElement.getAttribute('data-progress');
+                bar.style.width = progress ? `${progress}%` : '0%';
+            });
+        }, 100);
+    }
 
     function createSection(title, games, type) {
         if (games.length === 0) return '';
