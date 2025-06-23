@@ -515,6 +515,16 @@ input::placeholder {
     color: var(--color-text-dark); 
 }
 
+/* Single Player Tag within Multiplayer */
+.multiplayer-tag.singleplayer {
+    color: var(--color-accent-purple); /* Or any color you prefer for single player */
+    border-color: var(--color-accent-purple);
+}
+
+.multiplayer-tag.singleplayer i {
+    color: var(--color-text-dark); /* Ensure icon color is consistent or adjusted */
+}
+
 .developer-tag {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);

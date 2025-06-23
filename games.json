@@ -825,7 +825,7 @@
       {
         "title"             : "Marvel Rivals",
         "category"          : ["Shooter"],
-        "cover"             : "https://i.imgur.com/Y3r8mcA.png",
+        "cover"             : "https://i.imgur.com/ABgDSGZ.png",
         "platforms"         : ["PC"],
         "developer"         : ["NetEase Games"],
         "releaseDate"       : "2024-12-06",
@@ -1429,7 +1429,7 @@
         "xboxStoreId"       : null,
         "nintendoStoreId"   : null,
         "hasDLC"            : null,
-        "multiplayer"       : ["local"],
+        "multiplayer"       : ["singleplayer","local"],
         "nonCompletable"    : true
       },
       {
@@ -1616,7 +1616,7 @@
       {
         "title"             : "Palworld",
         "category"          : ["Shooter", "Role-playing (RPG)", "Hack and slash/Beat 'em up", "Adventure", "Indie"],
-        "cover"             : "https://i.imgur.com/Js1CvTl.png",
+        "cover"             : "https://i.imgur.com/042yF9a.png",
         "platforms"         : ["PC"],
         "developer"         : ["Pocketpair"],
         "releaseDate"       : "2024-01-19",
@@ -2021,7 +2021,7 @@
       {
         "title"             : "R.E.P.O.",
         "category"          : ["Indie"],
-        "cover"             : "https://i.imgur.com/UaqiVd1.png",
+        "cover"             : "https://i.imgur.com/VcbSG2r.png",
         "platforms"         : ["PC"],
         "developer"         : ["semiwork"],
         "releaseDate"       : "2025-02-26",
@@ -2035,7 +2035,7 @@
         "dateAdded"         : "2025-03-15",
         "playTime"          : null,
         "hasDLC"            : null,
-        "multiplayer"       : ["online", "local"],
+        "multiplayer"       : ["singleplayer","online", "local"],
         "nonCompletable"    : true
       },
       {
@@ -2259,7 +2259,7 @@
         "playTime"          : null,
         "developmentStatus" : "early-access",
         "hasDLC"            : null,
-        "multiplayer"       : ["local"],
+        "multiplayer"       : ["singleplayer","local"],
         "nonCompletable"    : true
       },      
       {
@@ -2391,6 +2391,52 @@
         "hasDLC"            : null,
         "multiplayer"       : null,
         "nonCompletable"    : null
+      },
+      {
+        "title"             : "Minecraft: Java Edition",
+        "category"          : ["Simulator", "Adventure"],
+        "cover"             : "https://i.imgur.com/kJvOm2A.png",
+        "platforms"         : ["PC","PS","Xbox","Android"],
+        "developer"         : ["Mojang Studios"],
+        "releaseDates"      : [{"type": "full-release", "date": "2011-11-18"}],
+        "finishDate"        : null,
+        "progress"          : 100,
+        "planned"           : null,
+        "videoId"           : "MmB9b5njVbA",
+        "steamId"           : null,
+        "playstationStoreId": "UP4433-PPSA17221_00-MINECRAFTPS50000",
+        "playstationStoreType": "product",
+        "xboxStoreId"       : "minecraft/9MVXMVT8ZKWC",
+        "googlePlayStoreId" : "com.mojang.minecraftpe",
+        "dateAdded"         : "2025-06-23",
+        "playTime"          : "Ismeretlen",
+        "developmentStatus" : ["full-release"],
+        "hasDLC"            : null,
+        "multiplayer"       : ["singleplayer","online"],
+        "nonCompletable"    : true
+      },
+      {
+        "title"             : "Green Hell",
+        "category"          : ["Simulator", "Strategy", "Adventure", "Indie"],
+        "cover"             : "https://i.imgur.com/KuRg7q6.png",
+        "platforms"         : ["PC","PS","Xbox"],
+        "developer"         : ["Creepy Jar"],
+        "releaseDates"      : [{"type": "full-release", "platform": "pc", "date": "2019-03-22"},{"type": "full-release", "platform": "xbox", "date": "2024-08-14"},{"type": "full-release", "platform": "ps", "date": "2021-06-09"}],
+        "finishDate"        : null,
+        "progress"          : null,
+        "planned"           : null,
+        "videoId"           : "M1BN--EfGlM",
+        "steamId"           : "815370",
+        "playstationStoreId": "10002038",
+        "playstationStoreType": "concept",
+        "xboxStoreId"       : "green-hell-xbox-series-x%7Cs/9NVJ7NZX1WL2",
+        "googlePlayStoreId" : null,
+        "dateAdded"         : "2025-06-23",
+        "playTime"          : "Ismeretlen",
+        "developmentStatus" : ["full-release"],
+        "hasDLC"            : null,
+        "multiplayer"       : ["singleplayer","online"],
+        "nonCompletable"    : true
       }
     ]
   }

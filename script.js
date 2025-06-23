@@ -39,7 +39,7 @@ function init() {
     function preprocessData(data) {
         return {
             categories: [...new Set(data.flatMap(game => game.category))],
-            developers: [...new Set(data.flatMap(game => 
+            developers: [...new Set(data.flatMap(game =>
                 Array.isArray(game.developer) ? game.developer: [game.developer]
             ).filter(Boolean))],
         };
@@ -101,15 +101,15 @@ function init() {
         }
 
         if (developer !== 'all') {
-            filtered = filtered.filter(game => 
-                Array.isArray(game.developer) 
-                    ? game.developer.includes(developer) 
+            filtered = filtered.filter(game =>
+                Array.isArray(game.developer)
+                    ? game.developer.includes(developer)
                     : game.developer === developer
             );
         }
 
         if (term) {
-            filtered = filtered.filter(game => 
+            filtered = filtered.filter(game =>
                 game.title.toLowerCase().includes(term)
             );
         }
@@ -119,16 +119,16 @@ function init() {
                 if (status === 'noncompletable') return game.nonCompletable === true;
                 if (status === 'completed') return game.progress === 100;
                 if (status === 'inprogress') {
-                    return !game.nonCompletable && 
-                           typeof game.progress === 'number' && 
-                           game.progress > 0 && 
+                    return !game.nonCompletable &&
+                           typeof game.progress === 'number' &&
+                           game.progress > 0 &&
                            game.progress < 100;
                 }
                 if (status === 'planned') {
                     return (
-                        game.planned === true || 
-                        game.progress === 0 || 
-                        game.progress === null || 
+                        game.planned === true ||
+                        game.progress === 0 ||
+                        game.progress === null ||
                         game.progress === undefined
                     ) && !game.nonCompletable && game.progress !== 100;
                 }
@@ -141,32 +141,32 @@ function init() {
 
     function displayGames(games) {
         const sorted = [...games].sort((a, b) => a.title.localeCompare(b.title, 'hu'));
-        
-        const completed = sorted.filter(game => 
-            game.progress === 100 && 
+
+        const completed = sorted.filter(game =>
+            game.progress === 100 &&
             !game.nonCompletable
         );
-        
-        const nonCompletable = sorted.filter(game => 
+
+        const nonCompletable = sorted.filter(game =>
             game.nonCompletable === true
         );
-        
-        const planned = sorted.filter(game => 
+
+        const planned = sorted.filter(game =>
             game.planned === true ||
             (
-                !nonCompletable.includes(game) && 
+                !nonCompletable.includes(game) &&
                 !completed.includes(game) &&
-                (game.progress === 0 || 
-                 game.progress === null || 
+                (game.progress === 0 ||
+                 game.progress === null ||
                  game.progress === undefined)
             )
         );
-        
-        const inprogress = sorted.filter(game => 
-            !nonCompletable.includes(game) && 
+
+        const inprogress = sorted.filter(game =>
+            !nonCompletable.includes(game) &&
             !completed.includes(game) &&
             !planned.includes(game) &&
-            typeof game.progress === 'number' && 
+            typeof game.progress === 'number' &&
             game.progress > 0 &&
             game.progress < 100
         );
@@ -201,11 +201,11 @@ function init() {
 
     function createGameCard(game) {
         const isNew = checkIfNew(game.dateAdded);
-        const isPrePurchase = Array.isArray(game.developmentStatus) 
+        const isPrePurchase = Array.isArray(game.developmentStatus)
             ? game.developmentStatus.includes('pre-purchase')
             : game.developmentStatus === 'pre-purchase';
         const hasProgress = typeof game.progress === 'number';
-        
+
         let countdownHTML = '';
         if (isPrePurchase && game.releaseDates) {
             const fullRelease = game.releaseDates.find(rd => rd.type === 'full-release');
@@ -213,8 +213,8 @@ function init() {
                 const gameTitleId = game.title.replace(/[^a-z0-9]/gi, '-').toLowerCase();
                 countdownHTML = `
                     <div class="countdown-container">
-                        <div id="countdown-${gameTitleId}" 
-                             class="countdown-timer" 
+                        <div id="countdown-${gameTitleId}"
+                             class="countdown-timer"
                              data-release-date="${fullRelease.date}">
                         </div>
                     </div>
@@ -255,15 +255,15 @@ function init() {
         document.querySelectorAll('.countdown-timer').forEach(timer => {
             const releaseDate = new Date(timer.dataset.releaseDate);
             const now = new Date();
-            
+
             // Clear any existing interval
             if (timer.dataset.intervalId) {
                 clearInterval(parseInt(timer.dataset.intervalId));
             }
-            
+
             const updateCountdown = () => {
                 const diff = releaseDate - new Date();
-                
+
                 if (diff <= 0) {
                     timer.textContent = 'MEGJELENT!';
                     timer.classList.add('released');
@@ -272,28 +272,28 @@ function init() {
                     }
                     return;
                 }
-                
+
                 const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                
+
                 timer.textContent = `${days} nap ${hours} óra ${minutes} perc ${seconds} másodperc`;
             };
-            
+
             updateCountdown();
             const intervalId = setInterval(updateCountdown, 1000);
-            
+
             // Store intervalId on element for cleanup
             timer.dataset.intervalId = intervalId;
         });
     }
 
 function createActionButtons(game) {
-    const playstationUrl = game.playstationStoreId ? 
-        (game.playstationStoreType === 'product' ? 
+    const playstationUrl = game.playstationStoreId ?
+        (game.playstationStoreType === 'product' ?
             `https://store.playstation.com/en-us/product/${game.playstationStoreId}` :
-            `https://store.playstation.com/en-us/concept/${game.playstationStoreId}`) : 
+            `https://store.playstation.com/en-us/concept/${game.playstationStoreId}`) :
         null;
 
     const coverUrl = getCoverUrl(game);
@@ -377,7 +377,7 @@ function createActionButtons(game) {
                 ${game.platforms && game.platforms.length > 0 ? `
                     <div class="game-detail-row">
                         <div class="platform-tags">
-                            ${createPlatformTag(game)} 
+                            ${createPlatformTag(game)}
                         </div>
                     </div>
                 ` : ''}
@@ -386,8 +386,8 @@ function createActionButtons(game) {
                         <div class="multiplayer-tags">
                             ${game.multiplayer.map(mode => `
                                 <div class="multiplayer-tag ${mode}">
-                                    <i class="fas ${mode === 'local' ? 'fa-users' : 'fa-globe'}"></i>
-                                    ${mode === 'local' ? 'Helyi többjátékos' : 'Online többjátékos'}
+                                    <i class="fas ${mode === 'local' ? 'fa-users' : (mode === 'singleplayer' ? 'fa-user' : 'fa-globe')}"></i>
+                                    ${mode === 'local' ? 'Helyi többjátékos' : (mode === 'singleplayer' ? 'Egyjátékos mód' : 'Online többjátékos')}
                                 </div>
                             `).join('')}
                         </div>
@@ -428,7 +428,7 @@ function createActionButtons(game) {
 
     function createPlatformTag(game) {
         let platformTags = '';
-    
+
         if (game.platforms) {
             game.platforms.forEach(platform => {
                 const platformLower = platform.toLowerCase();
@@ -438,7 +438,7 @@ function createActionButtons(game) {
                 if (platformLower.includes('android') || platformLower.includes('mobile')) platformTags += '<span class="platform-tag" title="Mobile/Android"><i class="fab fa-android"></i></span>';
             });
         }
-    
+
         if (game.hasDLC) {
             platformTags += `
                 <span class="dlc-tag">
@@ -447,7 +447,7 @@ function createActionButtons(game) {
                 </span>
             `;
         }
-    
+
         return platformTags;
     }
 
@@ -462,7 +462,7 @@ function createActionButtons(game) {
         };
         return icons[status] || 'fa-info-circle';
     }
-    
+
     function getStatusText(status) {
         const texts = {
             'in-development': 'Fejlesztés alatt',
@@ -499,7 +499,7 @@ function createActionButtons(game) {
 window.showTrailer = (videoId, coverUrl) => {
     const modal = document.getElementById('trailerModal');
     const trailerFrame = document.getElementById('trailerFrame');
-    
+
     // Háttérkép beállítása
     let coverBackground = modal.querySelector('.modal-cover-background');
     if (!coverBackground) {
@@ -508,7 +508,7 @@ window.showTrailer = (videoId, coverUrl) => {
         modal.insertBefore(coverBackground, modal.firstChild);
     }
     coverBackground.style.backgroundImage = `url(${coverUrl || CONFIG.fallbackImage})`;
-    
+
     // Modal stílus beállítása
     modal.classList.add('with-cover');
     trailerFrame.src = `${CONFIG.youtubeEmbedUrl}${videoId}?autoplay=1`;
@@ -519,7 +519,7 @@ window.showTrailer = (videoId, coverUrl) => {
 function closeModal() {
     const modal = document.getElementById('trailerModal');
     const trailerFrame = document.getElementById('trailerFrame');
-    
+
     modal.style.display = 'none';
     trailerFrame.src = '';
     document.body.style.overflow = '';
