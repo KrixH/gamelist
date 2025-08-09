@@ -230,6 +230,7 @@ input::placeholder {
     padding-top: var(--spacing-xxl);
 }
 
+/* Alap stílus változatlan marad */
 .games-section {
     margin-bottom: var(--spacing-xxl);
     background-color: var(--color-background-secondary);
@@ -237,6 +238,24 @@ input::placeholder {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-medium);
     border: var(--border-width-thin) solid var(--color-border-subtle);
+}
+
+/* Speciális kezelés kevés játék esetén */
+.games-section:has(.game-card:first-child:nth-last-child(1)) .games-grid,
+.games-section:has(.game-card:first-child:nth-last-child(2)) .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, max-content));
+    justify-content: center;
+    gap: var(--spacing-lg);
+    width: 100%;
+}
+
+/* Reszponzív módosítások */
+@media (max-width: 768px) {
+    .games-section:has(.game-card:first-child:nth-last-child(1)) .games-grid,
+    .games-section:has(.game-card:first-child:nth-last-child(2)) .games-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .section-title {

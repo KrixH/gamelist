@@ -12,6 +12,16 @@ lerna-debug.log*
 "developmentStatus": lehet: "in-development", "early-access", "server-closed", "released" vagy "full-release" "pre-purchase"
 playstationStoreType: lehet: "product" vagy "concept"
 
+Lehet most már forceolni a játékokat, ha nem lehet befejezni, de szeretném, ha a progressziót is mutatná, hogy mennyit játszottam vele.
+# Force flags
+{
+  "forceNonCompletable": true,  // Nem befejezhető kategória
+  "forceCompleted": true,       // Befejezett kategória
+  "forceInProgress": true,      // Folyamatban kategória
+  "forcePlanned": true,         // Tervezett kategória
+  "progress": null,             // Progress érték (ha nincs force flag)
+}
+
 #TODO: MAJD VEDD KI :D
 *.scss
 
