@@ -7,6 +7,45 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+
+
+
+{
+  "title": "",
+  "category": [],
+  "cover": "",
+  "platforms": [],
+  "developer": [],
+  "releaseDates": [],
+  "finishDate": "",
+  "progress": null,
+  "planned": null,
+  "forceCompleted": null,
+  "forceInProgress": null,
+  "videoId": "",
+  "steamId": "",
+  "playstationStoreId": "",
+  "playstationStoreType": "",
+  "xboxStoreId": "",
+  "nintendoStoreId": "",
+  "googlePlayStoreId": "",
+  "epicGamesId": "",
+  "humbleId": "",
+  "itchId":  "",
+  "gogId": "",
+  "dateAdded": "",
+  "playTime": "",
+  "developmentStatus": "",
+  "hasDLC": null,
+  "multiplayer": null,
+  "nonCompletable": null
+}
+
+
+
+
+
+
 #Leírások 
 "multiplayer": lehet: "local", "online", null vagy "singleplayer"
 "developmentStatus": lehet: "in-development", "early-access", "server-closed", "released" vagy "full-release" "pre-purchase"

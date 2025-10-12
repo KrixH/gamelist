@@ -4,21 +4,21 @@
 
 :root {
     /* Color Palette - Black & Dark Composite Theme */
-    --color-background-primary: #121212;
-    --color-background-secondary: #1E1E1E;
-    --color-background-tertiary: #2A2A2A;
-    --color-border-subtle: #3A3A3A;
-    --color-text-light: #F0F0F0;
-    --color-text-medium: #B0B0B0;
-    --color-text-dark: #707070;
+    --color-background-primary: #14151a;
+    --color-background-secondary: #1a1b22;
+    --color-background-tertiary: #23242b;
+    --color-border-subtle: #23243a;
+    --color-text-light: #f3f6fa;
+    --color-text-medium: #b3b8c5;
+    --color-text-dark: #6a6d7b;
 
     /* Accent Colors */
-    --color-accent-blue: #00BFFF;
-    --color-accent-green: #39FF14;
-    --color-accent-yellow: #FFFF00;
-    --color-accent-red: #FF3131;
-    --color-accent-purple: #BF00FF;
-    --color-accent-orange: #FF7F00;
+    --color-accent-blue: #00bfff;
+    --color-accent-green: #39ff14;
+    --color-accent-yellow: #ffe347;
+    --color-accent-red: #ff3131;
+    --color-accent-purple: #bf00ff;
+    --color-accent-orange: #ff7f00;
 
     /* Alpha Colors */
     --color-black-alpha-10: rgba(0, 0, 0, 0.1);
@@ -172,7 +172,7 @@ input::placeholder {
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 900;
     letter-spacing: -0.04em;
-    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green), var(--color-accent-yellow));
+    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-purple), var(--color-accent-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -281,21 +281,18 @@ input::placeholder {
 
 /* Game Card */
 .game-card {
-    background-color: var(--color-background-secondary);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
+    background: rgba(26,27,34,0.92);
+    border: 2px solid var(--color-border-subtle);
+    box-shadow: 0 4px 24px 0 rgba(0, 191, 255, 0.08), 0 1.5px 8px 0 var(--color-accent-purple);
     transition: var(--transition-transform), var(--transition-color);
     display: flex;
     flex-direction: column;
     position: relative;
-    border: var(--border-width-thin) solid var(--color-border-subtle);
 }
 
 .game-card:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: var(--shadow-medium);
     border-color: var(--color-accent-blue);
+    box-shadow: 0 8px 32px 0 var(--color-accent-blue), 0 0 24px 0 var(--color-accent-purple);
 }
 
 .game-cover {
@@ -333,14 +330,12 @@ input::placeholder {
 }
 
 .new-badge {
-    right: var(--spacing-md);
     background-color: var(--color-accent-green);
     color: var(--color-background-primary);
 }
 
 .pre-purchase-badge {
-    left: var(--spacing-md);
-    background-color: var(--color-accent-orange);
+    background-color: var(--color-accent-purple);
     color: var(--color-background-primary);
 }
 
@@ -412,6 +407,32 @@ input::placeholder {
 .action-btn.xbox-btn { background-color: #107c10; color: #fff; border: var(--border-width-thin) solid #107c10;}
 .action-btn.google-btn { background-color: #db4437; color: #fff; border: var(--border-width-thin) solid #db4437;}
 .action-btn.youtube-btn { background-color: #ff0000; color: #fff; border: var(--border-width-thin) solid #ff0000;}
+.action-btn.epic-btn { background-color: #000; color: #fff; border: var(--border-width-thin) solid #000;}
+.action-btn.nintendo-btn { background-color: #e60012; color: #fff; border: var(--border-width-thin) solid #e60012;}
+.action-btn.humble-btn { background-color: #f37021; color: #fff; border: var(--border-width-thin) solid #f37021;}
+.action-btn.gog-btn { background-color: #5c2d91; color: #fff; border: var(--border-width-thin) solid #5c2d91;}
+.action-btn.itch-btn { background-color: #fa5c5c; color: #fff; border: var(--border-width-thin) solid #fa5c5c;}
+.action-btn.generic-btn { background-color: var(--color-background-primary); color: var(--color-text-light); border: var(--border-width-thin) solid var(--color-border-subtle);}
+.action-btn:hover.steam-btn { background-color: #2a475e; border-color: #2a475e; }
+.action-btn:hover.ps-btn { background-color: #005a9e; border-color: #005a9e; }
+.action-btn:hover.xbox-btn { background-color: #0e5e0e; border-color: #0e5e0e; }
+.action-btn:hover.google-btn { background-color: #c23321; border-color: #c23321; }
+.action-btn:hover.youtube-btn { background-color: #cc0000; border-color: #cc0000; }
+.action-btn:hover.epic-btn { background-color: #222; border-color: #222; }
+.action-btn:hover.nintendo-btn { background-color: #b8000e; border-color: #b8000e; }
+.action-btn:hover.humble-btn { background-color: #d35400; border-color: #d35400; }
+.action-btn:hover.gog-btn { background-color: #4b237a; border-color: #4b237a; }
+.action-btn:hover.itch-btn { background-color: #e04e4e; border-color: #e04e4e; }
+.action-btn:hover.generic-btn { background-color: var(--color-border-subtle); border-color: var(--color-accent-blue); color: var(--color-accent-blue); }
+
+/* Platform Colors */
+.platform-label.platform-pc i { color: var(--color-accent-blue); }
+.platform-label.platform-ps i { color: #2366d1; }
+.platform-label.platform-xbox i { color: #39ff14; }
+.platform-label.platform-switch i { color: #e60012; }
+.platform-label.platform-mobile i { color: var(--color-accent-green); }
+.platform-label.platform-mac i { color: #b3b8c5; }
+.platform-label.platform-linux i { color: var(--color-accent-orange); }
 
 /* Game Info */
 .game-info {
@@ -463,10 +484,10 @@ input::placeholder {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green), var(--color-accent-yellow));
+    background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green), var(--color-accent-purple));
     border-radius: var(--border-radius-md);
     transition: width 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+    box-shadow: 0 0 8px var(--color-accent-blue);
 }
 
 .game-details {
@@ -549,7 +570,7 @@ input::placeholder {
     font-size: 0.85rem;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-tertiary);
     border: var(--border-width-thin) solid var(--color-border-subtle);
     display: inline-flex;
     align-items: center;
@@ -771,7 +792,7 @@ input::placeholder {
     margin-top: var(--spacing-xxl);
     padding: var(--spacing-xl) var(--spacing-lg);
     background-color: var(--color-background-secondary);
-    border-top: var(--border-width-thin) solid var(--color-border-subtle);
+    border-top: 2px solid var(--color-accent-purple);
     text-align: center;
     color: var(--color-text-medium);
     font-size: 0.9rem;
@@ -998,3 +1019,4 @@ input::placeholder {
         font-size: 0.85rem;
     }
 }
+/* -------------------------------------------------------------------------- */
