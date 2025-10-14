@@ -2677,7 +2677,7 @@
         "developer":["Mundfish"],
         "releaseDates": [{"type": "full-release", "platform": "pc", "date": "2023-2-21"},{"type": "full-release", "platform": "xbox", "date": "2023-2-21"},{"type": "full-release", "platform": "ps", "date": "2023-2-21"}],
         "finishDate":null,
-        "progress":1,
+        "progress":30,
         "planned":null,
         "forceCompleted":null,
         "forceInProgress":null,
