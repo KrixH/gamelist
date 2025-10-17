@@ -400,7 +400,7 @@ function init() {
     }
     ${
       game.googlePlayStoreId
-        ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')" title="Google PlayStore">><i class="fab fa-google-play"></i></button>`
+        ? `<button class="action-btn google-btn" onclick="window.open('https://play.google.com/store/apps/details?id=${game.googlePlayStoreId}', '_blank')" title="Google PlayStore"><i class="fab fa-google-play"></i></button>`
         : ""
     }
     ${
@@ -443,6 +443,16 @@ function init() {
         : ""
     }
   `;
+  }
+
+  function escapeHtml(str) {
+    if (!str && str !== 0) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
   function createGameDetails(game) {
@@ -503,136 +513,149 @@ function init() {
     let developmentStatusHtml = "";
     if (game.developmentStatus && Array.isArray(game.developmentStatus)) {
       developmentStatusHtml = `
-                <div class="game-detail-row">
-                    <div class="development-status-container">
-                        ${game.developmentStatus
-                          .map(
-                            (status) => `
-                            <div class="development-status ${status}">
-                                <i class="fas ${getStatusIcon(status)}"></i>
-                                ${getStatusText(status)}
-                            </div>
-                        `
-                          )
-                          .join("")}
-                    </div>
-                </div>
-            `;
+              <div class="game-detail-row">
+                  <div class="development-status-container">
+                      ${game.developmentStatus
+                        .map(
+                          (status) => `
+                          <div class="development-status ${status}">
+                              <i class="fas ${getStatusIcon(status)}"></i>
+                              ${getStatusText(status)}
+                          </div>
+                      `
+                        )
+                        .join("")}
+                  </div>
+              </div>
+          `;
     } else if (game.developmentStatus) {
       developmentStatusHtml = `
-                <div class="game-detail-row">
-                    <div class="development-status-container">
-                        <div class="development-status ${
-                          game.developmentStatus
-                        }">
-                            <i class="fas ${getStatusIcon(
-                              game.developmentStatus
-                            )}"></i>
-                            ${getStatusText(game.developmentStatus)}
-                        </div>
-                    </div>
-                </div>
-            `;
+              <div class="game-detail-row">
+                  <div class="development-status-container">
+                      <div class="development-status ${game.developmentStatus}">
+                          <i class="fas ${getStatusIcon(game.developmentStatus)}"></i>
+                          ${getStatusText(game.developmentStatus)}
+                      </div>
+                  </div>
+              </div>
+          `;
+    }
+    
+    let commentHtml = "";
+    const commentSource = game.comment || (Array.isArray(game.comments) ? game.comments.join("; ") : game.comments);
+    if (commentSource) {
+      commentHtml = `
+      <div class="game-detail-row">
+        <div class="game-comment">
+          <div class="comment-header">
+            <i class="fas fa-sticky-note"></i>
+            <span class="comment-label">Megjegyzés:</span>
+          </div>
+          <span class="comment-text">${escapeHtml(commentSource)}</span>
+        </div>
+      </div>
+      `;
     }
 
     return `
-            <div class="game-details">
-                ${
-                  game.platforms && game.platforms.length > 0
-                    ? `
-                    <div class="game-detail-row">
-                        <div class="platform-tags">
-                            ${createPlatformTag(game)}
-                        </div>
-                    </div>
-                `
-                    : ""
-                }
-                ${
-                  game.multiplayer &&
-                  Array.isArray(game.multiplayer) &&
-                  game.multiplayer.length > 0
-                    ? `
-                    <div class="game-detail-row">
-                        <div class="multiplayer-tags">
-                            ${game.multiplayer
-                              .map(
-                                (mode) => `
-                                <div class="multiplayer-tag ${mode}">
-                                    <i class="fas ${
-                                      mode === "local"
-                                        ? "fa-users"
-                                        : mode === "singleplayer"
-                                        ? "fa-user"
-                                        : "fa-globe"
-                                    }"></i>
-                                    ${
-                                      mode === "local"
-                                        ? "Helyi többjátékos"
-                                        : mode === "singleplayer"
-                                        ? "Egyjátékos mód"
-                                        : "Online többjátékos"
-                                    }
-                                </div>
-                            `
-                              )
-                              .join("")}
-                        </div>
-                    </div>
-                `
-                    : ""
-                }
-                ${developmentStatusHtml}
-                ${releaseDatesHtml}
-                ${
-                  game.progress === 100 && game.finishDate
-                    ? `
-                    <div class="game-detail-row">
-                        <div class="finished-date">
-                            Végigjátszva: ${formatDate(game.finishDate)}
-                        </div>
-                    </div>
-                `
-                    : ""
-                }
-                ${
-                  game.playTime
-                    ? `
-                    <div class="game-detail-row">
-                        <div class="playtime">
-                            <i class="fas fa-clock"></i> Játékidő: ${game.playTime}
-                        </div>
-                    </div>
-                `
-                    : ""
-                }
-                ${
-                  game.developer
-                    ? `
-                    <div class="game-detail-row">
-                        <div class="developer-tags">
-                            ${(Array.isArray(game.developer)
-                              ? game.developer
-                              : [game.developer]
+          <div class="game-details">
+              ${
+                game.platforms && game.platforms.length > 0
+                  ? `
+                  <div class="game-detail-row">
+                      <div class="platform-tags">
+                          ${createPlatformTag(game)}
+                      </div>
+                  </div>
+              `
+                  : ""
+              }
+              ${
+                game.multiplayer &&
+                Array.isArray(game.multiplayer) &&
+                game.multiplayer.length > 0
+                  ? `
+                  <div class="game-detail-row">
+                      <div class="multiplayer-tags">
+                          ${game.multiplayer
+                            .map(
+                              (mode) => `
+                              <div class="multiplayer-tag ${mode}">
+                                  <i class="fas ${
+                                    mode === "local"
+                                      ? "fa-users"
+                                      : mode === "singleplayer"
+                                      ? "fa-user"
+                                      : "fa-globe"
+                                  }"></i>
+                                  ${
+                                    mode === "local"
+                                      ? "Helyi többjátékos"
+                                      : mode === "singleplayer"
+                                      ? "Egyjátékos mód"
+                                      : "Online többjátékos"
+                                  }
+                              </div>
+                          `
                             )
-                              .filter((dev) => dev)
-                              .map(
-                                (dev) =>
-                                  `<span class="developer-tag">${dev}</span>`
-                              )
-                              .join("")}
-                        </div>
-                    </div>
-                `
-                    : ""
-                }
-                <div class="game-detail-row">
-                    <div class="category-tags">${game.category
-                      .map((cat) => `<span class="category-tag">${cat}</span>`)
-                      .join("")}</div>
-                </div>
-            </div>
-        `;
+                            .join("")}
+                      </div>
+                  </div>
+              `
+                  : ""
+              }
+              ${developmentStatusHtml}
+              ${releaseDatesHtml}
+              ${
+                game.progress === 100 && game.finishDate
+                  ? `
+                  <div class="game-detail-row">
+                      <div class="finished-date">
+                          Végigjátszva: ${formatDate(game.finishDate)}
+                      </div>
+                  </div>
+              `
+                  : ""
+              }
+              ${
+                game.playTime
+                  ? `
+                  <div class="game-detail-row">
+                      <div class="playtime">
+                          <i class="fas fa-clock"></i> Játékidő: ${game.playTime}
+                      </div>
+                  </div>
+              `
+                  : ""
+              }
+              ${
+                game.developer
+                  ? `
+                  <div class="game-detail-row">
+                      <div class="developer-tags">
+                          ${(Array.isArray(game.developer)
+                            ? game.developer
+                            : [game.developer]
+                          )
+                            .filter((dev) => dev)
+                            .map(
+                              (dev) =>
+                                `<span class="developer-tag">${escapeHtml(dev)}</span>`
+                            )
+                            .join("")}
+                      </div>
+                  </div>
+              `
+                  : ""
+              }
+              ${commentHtml}
+              <div class="game-detail-row">
+                  <div class="category-tags">${game.category
+                    .map((cat) => `<span class="category-tag">${escapeHtml(cat)}</span>`)
+                    .join("")}</div>
+              </div>
+          </div>
+      `;
   }
 
   function createPlatformTag(game) {

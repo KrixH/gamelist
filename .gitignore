@@ -38,7 +38,8 @@ lerna-debug.log*
   "developmentStatus": "",
   "hasDLC": null,
   "multiplayer": null,
-  "nonCompletable": null
+  "nonCompletable": null,
+  "comment": ""
 }
 
 

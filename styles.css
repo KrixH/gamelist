@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 :root {
-    /* Color Palette - Black & Dark Composite Theme */
+    /* Color Palette - Black & Dark Composite Theme (harmonized accents) */
     --color-background-primary: #14151a;
     --color-background-secondary: #1a1b22;
     --color-background-tertiary: #23242b;
@@ -12,13 +12,21 @@
     --color-text-medium: #b3b8c5;
     --color-text-dark: #6a6d7b;
 
-    /* Accent Colors */
-    --color-accent-blue: #00bfff;
-    --color-accent-green: #39ff14;
-    --color-accent-yellow: #ffe347;
-    --color-accent-red: #ff3131;
-    --color-accent-purple: #bf00ff;
-    --color-accent-orange: #ff7f00;
+    /* Harmonized Accent Colors (soft / pastel) */
+    --color-accent-blue: #3fc1ff;        /* soft cyan */
+    --color-accent-green: #28c76f;       /* soft green */
+    --color-accent-yellow: #f6d365;      /* warm pale yellow */
+    --color-accent-red: #ff6b6b;         /* softened red */
+    --color-accent-purple: #9b59b6;      /* muted purple */
+    --color-accent-orange: #ff9f43;      /* soft orange */
+
+    /* Accent RGB helpers (for rgba backgrounds) */
+    --accent-blue-rgb: 63,193,255;
+    --accent-green-rgb: 40,199,111;
+    --accent-yellow-rgb: 246,211,101;
+    --accent-red-rgb: 255,107,107;
+    --accent-purple-rgb: 155,89,182;
+    --accent-orange-rgb: 255,159,67;
 
     /* Alpha Colors */
     --color-black-alpha-10: rgba(0, 0, 0, 0.1);
@@ -566,67 +574,45 @@ input::placeholder {
 }
 
 /* Status and Date Styles */
-.release-date, .finished-date, .playtime {
+.release-date,
+.finished-date,
+.playtime {
     font-size: 0.85rem;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius-sm);
-    background-color: var(--color-background-tertiary);
-    border: var(--border-width-thin) solid var(--color-border-subtle);
+    padding: var(--spacing-xs) 0.6rem;
+    padding-left: calc(0.6rem + 0.1rem); /* +0.5rem hely a 4px-es bal csíknak és az ikonnak */
+    border-left-width: 4px;
+    border-left-style: solid;
     display: inline-flex;
-    align-items: center;
+    align-items: center; /* ikon + szöveg függőleges középre */
     gap: var(--spacing-xs);
-    margin-top: var(--spacing-sm);
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: var(--border-radius-sm);
+    box-sizing: border-box;
+    background-color: var(--color-background-tertiary);
     color: var(--color-text-medium);
 }
-
-.release-date i, 
-.finished-date i, 
-.playtime i { 
-    margin-right: var(--spacing-xs); 
-    color: var(--color-text-dark); 
-}
-
-.finished-date {
-    color: var(--color-accent-green);
-    border-left: var(--border-width-medium) solid var(--color-accent-green);
-    background-color: rgba(57, 255, 20, 0.1);
-}
-
-.playtime {
-    color: var(--color-text-light);
-    border-left: var(--border-width-medium) solid var(--color-border-subtle);
-    background-color: var(--color-background-primary);
+/* ikonok margója, hogy mindig ugyanott kezdődjenek */
+.release-date i,
+.finished-date i,
+.playtime i {
+  margin-right: var(--spacing-sm);
+  flex: 0 0 auto;
 }
 
 .release-date {
     color: var(--color-accent-blue);
-    border-left: var(--border-width-medium) solid var(--color-accent-blue);
+    border-left-color: var(--color-accent-blue);
     background-color: rgba(0, 191, 255, 0.1);
 }
 .release-date.early-access {
     color: var(--color-accent-orange);
     border-left-color: var(--color-accent-orange);
-    background-color: rgba(255, 127, 0, 0.1);
+    background-color: rgba(57, 255, 20, 0.1);
 }
 .release-date.full-release {
     color: var(--color-accent-green);
     border-left-color: var(--color-accent-green);
     background-color: rgba(57, 255, 20, 0.1);
 }
-
-/* Development Status */
-.development-status { margin-bottom: var(--spacing-sm); }
-.development-status.remastered { color: var(--color-accent-purple); border-color: var(--color-accent-purple); }
-.development-status.early-access { color: var(--color-accent-orange); border-color: var(--color-accent-orange); }
-.development-status.in-development { color: var(--color-accent-yellow); border-color: var(--color-accent-yellow); }
-.development-status.full-release { color: var(--color-accent-green); border-color: var(--color-accent-green); }
-.development-status.server-closed { color: var(--color-accent-red); border-color: var(--color-accent-red); }
-.development-status.pre-purchase { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
-
-/* Multiplayer Tags */
-.multiplayer-tag.local { color: var(--color-accent-green); border-color: var(--color-accent-green); }
-.multiplayer-tag.online { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
 
 /* DLC Tag */
 .dlc-tag {
@@ -644,29 +630,174 @@ input::placeholder {
     margin-left: var(--spacing-sm);
     box-shadow: var(--shadow-light);
     transition: var(--transition-transform);
+    }
+
+/* Development Status (soften the neon green, keep subtle accent) */
+.development-status { margin-bottom: var(--spacing-sm); }
+.development-status.remastered { color: var(--color-accent-purple); border-color: var(--color-accent-purple); }
+.development-status.early-access { color: var(--color-accent-orange); border-color: var(--color-accent-orange); }
+.development-status.in-development { color: var(--color-accent-yellow); border-color: var(--color-accent-yellow); }
+
+/* soften full-release: neutral text + subtle green wash + left accent bar */
+.development-status.full-release {
+  color: var(--color-text-medium);
+  background-color: rgba(46, 204, 113, 0.06); /* soft green wash */
+  border: 1px solid rgba(46, 204, 113, 0.12);
+  border-left: 4px solid rgba(46, 204, 113, 0.28); /* small highlighted stripe */
+  padding: 0.28rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-.dlc-tag:hover {
-    background-color: var(--color-accent-blue);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: var(--shadow-medium);
+.development-status.server-closed { color: var(--color-accent-red); border-color: var(--color-accent-red); }
+.development-status.pre-purchase { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
+
+/* Multiplayer Tags: local -> softened green indicator */
+.multiplayer-tag.local {
+  color: var(--color-text-medium);
+  background-color: rgba(46, 204, 113, 0.04);
+  border: 1px solid rgba(46, 204, 113, 0.12);
+  border-left: 3px solid rgba(46, 204, 113, 0.28);
+}
+.multiplayer-tag.online { color: var(--color-accent-blue); border-color: var(--color-accent-blue); }
+
+/* Override other places that used the neon green so everything is consistent */
+.release-date.full-release,
+.finished-date {
+  color: var(--color-text-medium);
+  border-left: 4px solid rgba(46, 204, 113, 0.28);
+  background-color: rgba(46, 204, 113, 0.06);
 }
 
-.dlc-tag .dlc-icon {
-    font-size: 0.9rem;
-    color: var(--color-background-primary);
+/* platform label / xbox icon color softer */
+.platform-label.platform-xbox i,
+.action-btn.xbox-btn {
+  color: #1f8f45; /* softer xbox green */
+  background-color: rgba(31, 143, 69, 0.12);
+  border-color: rgba(31, 143, 69, 0.18);
+}
+.action-btn.xbox-btn { color: #fff; background-color: #1f8f45; border: 1px solid rgba(31,143,69,0.18); }
+.action-btn:hover.xbox-btn { background-color: #196f39; border-color: #196f39; }
+
+
+/* -------------------------------------------------------------------------- */
+/* Game Comment Styles - Clean & Modern                                      */
+/* -------------------------------------------------------------------------- */
+
+.game-comment {
+    padding: 6px 8px;
+    background-color: rgba(var(--accent-yellow-rgb), 0.05);
+    border-radius: var(--border-radius-sm);
+    border: var(--border-width-thin) solid rgba(var(--accent-yellow-rgb), 0.2);
+    margin: 4px 0;
+    position: relative;
 }
 
-/* Animations */
-@keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.game-comment::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 2px;
+    background: var(--color-accent-yellow);
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1px;
+}
+
+.game-comment i {
+    color: var(--color-accent-yellow);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.comment-label {
+    font-weight: 600;
+    color: var(--color-accent-yellow);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.comment-text {
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-left: calc(0.8rem + 6px); /* Ikonszélesség + gap */
+}
+
+/* Alternative color schemes */
+.game-comment.warning {
+    background-color: rgba(var(--accent-red-rgb), 0.05);
+    border-color: rgba(var(--accent-red-rgb), 0.2);
+}
+
+.game-comment.warning::before {
+    background: var(--color-accent-red);
+}
+
+.game-comment.warning i,
+.game-comment.warning .comment-label {
+    color: var(--color-accent-red);
+}
+
+.game-comment.info {
+    background-color: rgba(var(--accent-blue-rgb), 0.05);
+    border-color: rgba(var(--accent-blue-rgb), 0.2);
+}
+
+.game-comment.info::before {
+    background: var(--color-accent-blue);
+}
+
+.game-comment.info i,
+.game-comment.info .comment-label {
+    color: var(--color-accent-blue);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .game-comment {
+        padding: 4px 6px;
+    }
+    
+    .comment-header {
+        gap: 4px;
+        margin-bottom: 0;
+    }
+    
+    .comment-label {
+        font-size: 0.7rem;
+    }
+    
+    .comment-text {
+        font-size: 0.75rem;
+        margin-left: calc(0.7rem + 4px);
+        line-height: 1.15;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .game-comment {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .comment-label {
+        font-size: 0.8rem;
+    }
+    
+    .comment-text {
+        margin-left: 0;
+        font-size: 0.85rem;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -839,7 +970,7 @@ input::placeholder {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background-secondary);
+    background-color: rgba(var(--accent-green-rgb), 0.04);
     color: var(--color-accent-green);
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-sm);
@@ -849,11 +980,14 @@ input::placeholder {
     transition: var(--transition-transform), var(--transition-color), background-color;
     box-shadow: var(--shadow-light);
     margin-top: var(--spacing-md);
-    border: var(--border-width-thin) solid var(--color-accent-green);
+    border: 1px solid rgba(var(--accent-green-rgb), 0.14);
+    position: relative;
+    top: -10px;
+    vertical-align: middle;
 }
 
 .ko-fi-widget img {
-    height: 22px;
+    height: 15px;
     margin-right: var(--spacing-sm);
 }
 
