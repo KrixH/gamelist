@@ -420,6 +420,7 @@ input::placeholder {
 .action-btn.humble-btn { background-color: #f37021; color: #fff; border: var(--border-width-thin) solid #f37021;}
 .action-btn.gog-btn { background-color: #5c2d91; color: #fff; border: var(--border-width-thin) solid #5c2d91;}
 .action-btn.itch-btn { background-color: #fa5c5c; color: #fff; border: var(--border-width-thin) solid #fa5c5c;}
+.action-btn.origin-btn { background-color: #f05622; color: #fff; border: var(--border-width-thin) solid #ffffff;}
 .action-btn.generic-btn { background-color: var(--color-background-primary); color: var(--color-text-light); border: var(--border-width-thin) solid var(--color-border-subtle);}
 .action-btn:hover.steam-btn { background-color: #2a475e; border-color: #2a475e; }
 .action-btn:hover.ps-btn { background-color: #005a9e; border-color: #005a9e; }
@@ -431,6 +432,7 @@ input::placeholder {
 .action-btn:hover.humble-btn { background-color: #d35400; border-color: #d35400; }
 .action-btn:hover.gog-btn { background-color: #4b237a; border-color: #4b237a; }
 .action-btn:hover.itch-btn { background-color: #e04e4e; border-color: #e04e4e; }
+.action-btn:hover.origin-btn { background-color: #d64b1e; border-color: #d64b1e; }
 .action-btn:hover.generic-btn { background-color: var(--color-border-subtle); border-color: var(--color-accent-blue); color: var(--color-accent-blue); }
 
 /* Platform Colors */
