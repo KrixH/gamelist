@@ -4982,8 +4982,8 @@
       "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "forceCompleted": null,
-      "forceInProgress": true,
-      "forcePlanned": null,
+      "forceInProgress": null,
+      "forcePlanned": true,
       "forceNonCompletable": null,
       "planned": null,
       "releaseDates": [
@@ -4996,6 +4996,58 @@
           "type": "full-release",
           "platform": "ps",
           "date": "2025-10-22"
+        }
+      ],
+      "comment": null
+    },
+    {
+      "title": "Forza Horizon 6 - Campaign",
+      "category": ["Racing", "Simulator", "Sport", "Arcade"],
+      "cover": "https://i.imgur.com/8Q1iJ9n.png",
+      "platforms": ["pc", "ps", "xbox"],
+      "developer": ["Playground Games"],
+      "releaseDate": "2026-05-19",
+      "finishDate": null,
+      "progress": 67,
+      "videoId": "oYhaW-Vr4wg",
+      "stores": {
+        "steam": "2483190",
+        "epicGames": null,
+        "origin": null,
+        "gog": null,
+        "humble": null,
+        "itch": null,
+        "playstation": {"id": "10016335", "type": "concept"},
+        "xbox": "forza-horizon-6/9nr1r1xwlcnb",
+        "nintendo": null,
+        "googlePlay": null
+      },
+      "dateAdded": "2026-05-19",
+      "playTime": null,
+      "developmentStatus": "full-release",
+      "hasDLC": null,
+      "multiplayer": ["online"],
+      "nonCompletable": true,
+      "forceCompleted": null,
+      "forceInProgress": true,
+      "forcePlanned": null,
+      "forceNonCompletable": null,
+      "planned": null,
+      "releaseDates": [
+        {
+          "type": "full-release",
+          "platform": "pc",
+          "date": "2026-05-19"
+        },
+        {
+          "type": "Bejelentve",
+          "platform": "ps",
+          "date": ""
+        },
+        {
+          "type": "full-release",
+          "platform": "xbox",
+          "date": "2026-05-19"
         }
       ],
       "comment": null
