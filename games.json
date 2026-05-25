@@ -5007,8 +5007,8 @@
       "platforms": ["pc", "ps", "xbox"],
       "developer": ["Playground Games"],
       "releaseDate": "2026-05-19",
-      "finishDate": null,
-      "progress": 67,
+      "finishDate": "2026-05-24",
+      "progress": 100,
       "videoId": "oYhaW-Vr4wg",
       "stores": {
         "steam": "2483190",
@@ -5028,8 +5028,8 @@
       "hasDLC": null,
       "multiplayer": ["online"],
       "nonCompletable": true,
-      "forceCompleted": null,
-      "forceInProgress": true,
+      "forceCompleted": true,
+      "forceInProgress": null,
       "forcePlanned": null,
       "forceNonCompletable": null,
       "planned": null,
@@ -5050,7 +5050,7 @@
           "date": "2026-05-19"
         }
       ],
-      "comment": null
+      "comment": "Az összes küldetés és verseny teljesítése után a játék kampány része befejezettnek tekinthető, azonban a játék fő attrakciója a nyílt világ és a multiplayer mód, amelyek végtelen szórakozást kínálnak, így a játék teljes befejezése lehetetlen."
     }
   ]
 }
