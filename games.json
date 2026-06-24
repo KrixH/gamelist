@@ -39,16 +39,10 @@
     },
     {
       "title": "Far Cry",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/IaGjmRF.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Crytek Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Crytek Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -76,25 +70,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 2",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/r43x2a5.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -122,25 +107,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 3",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/usN7uim.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -168,25 +144,16 @@
       "playTime": "25:30:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 3: Blood Dragon",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/zWfMtBv.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -214,26 +181,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 4",
-      "category": [
-        "Shooter",
-        "Tactical",
-        "Adventure"
-      ],
+      "category": ["Shooter","Tactical","Adventure"],
       "cover": "https://i.imgur.com/S7E4VIQ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -261,25 +218,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 5",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/FomjgBm.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -307,25 +255,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry 6",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/QF8vc96.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Toronto"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Toronto"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -353,25 +292,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry New Dawn",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/AVBZ3DT.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -399,25 +329,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Far Cry: Primal",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter","Adventure"],
       "cover": "https://i.imgur.com/6Y0M6HG.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -445,25 +366,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "FlatOut",
-      "category": [
-        "Racing",
-        "Simulator"
-      ],
+      "category": ["Racing", "Simulator"],
       "cover": "https://i.imgur.com/3fkXbmu.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Bugbear Entertainment"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Bugbear Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -491,26 +403,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "FlatOut 2",
-      "category": [
-        "Racing",
-        "Sport",
-        "Arcade"
-      ],
+      "category": ["Racing", "Arcade"],
       "cover": "https://i.imgur.com/3IFSgT8.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Bugbear Entertainment"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Bugbear Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -538,24 +440,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "FlatOut 3: Chaos & Destruction",
-      "category": [
-        "Racing"
-      ],
+      "category": ["Racing"],
       "cover": "https://i.imgur.com/UJM5e1c.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Team6 Game Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Team6 Game Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -583,24 +477,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "FlatOut 4: Total Insanity",
-      "category": [
-        "Racing"
-      ],
+      "category": ["Racing"],
       "cover": "https://i.imgur.com/3xznf8r.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Kylotonn"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Kylotonn"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -628,27 +514,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Tomb Raider",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/kyXcXNa.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Crystal Dynamics"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Crystal Dynamics"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -676,25 +551,16 @@
       "playTime": "~12:30:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Elden Ring",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/vmeWwjP.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "FromSoftware"
-      ],
+      "platforms": ["PC"],
+      "developer": ["FromSoftware"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -722,25 +588,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Firewatch",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/l0m7aUg.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Campo Santo"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Campo Santo"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -768,26 +625,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "God of War (2018)",
-      "category": [
-        "Adventure",
-        "Hack and slash/Beat 'em up",
-        "Role-playing (RPG)"
-      ],
+      "category": ["Adventure", "Role-playing (RPG)"],
       "cover": "https://i.imgur.com/CPZRzNf.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Santa Monica Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Santa Monica Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -815,26 +662,16 @@
       "playTime": "19:50:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "God of War Ragnarök",
-      "category": [
-        "Adventure",
-        "Hack and slash/Beat 'em up",
-        "Role-playing (RPG)"
-      ],
+      "category": ["Adventure", "Role-playing (RPG)"],
       "cover": "https://i.imgur.com/UOEbX1F.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Santa Monica Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Santa Monica Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -862,26 +699,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "NieR:Automata™",
-      "category": [
-        "Hack and slash/Beat 'em up",
-        "Role-playing (RPG)"
-      ],
+      "category": ["Hack and slash/Beat 'em up", "Role-playing (RPG)"],
       "cover": "https://i.imgur.com/PW8hF0i.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "PlatinumGames",
-        "Square Enix"
-      ],
+      "platforms": ["PC"],
+      "developer": ["PlatinumGames", "Square Enix"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -909,26 +736,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Cyberpunk 2077",
-      "category": [
-        "Adventure",
-        "Role-playing (RPG)",
-        "Shooter"
-      ],
+      "category": ["Adventure", "Shooter"],
       "cover": "https://i.imgur.com/YEuqhUM.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "CD Projekt Red"
-      ],
+      "platforms": ["PC"],
+      "developer": ["CD Projekt Red"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -956,29 +773,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Control: Ultimate Edition",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "",
-      "platforms": [
-        "PC",
-        "ps",
-        "xbox",
-        "switch",
-        "Mac"
-      ],
-      "developer": [
-        "Remedy Entertainment"
-      ],
+      "platforms": ["PC", "Mac"],
+      "developer": ["Remedy Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1026,25 +830,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Detroit: Become Human",
-      "category": [
-        "Adventure",
-        "Puzzle"
-      ],
+      "category": ["Adventure", "Puzzle"],
       "cover": "https://i.imgur.com/N3U0G8u.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Quantic Dream"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Quantic Dream"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1072,25 +867,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Doom",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/qFOiiI4.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "id Software",
-        "Nightdive Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["id Software", "Nightdive Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1118,26 +904,19 @@
       "playTime": "01:09:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Doom Eternal",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/hQTKsVp.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "id Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["id Software"],
       "releaseDates": [
         {
+          "platform":"pc",
           "type": "full-release",
           "date": "2020-03-19"
         }
@@ -1162,24 +941,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": false,
       "comment": ""
     },
     {
       "title": "DOOM: The Dark Ages",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/qKUGEZo.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "id Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["id Software"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1207,26 +978,16 @@
       "playTime": "09:14:00",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Dying Light",
-      "category": [
-        "Adventure",
-        "Role-playing (RPG)",
-        "Shooter"
-      ],
+      "category": ["Adventure", "Shooter"],
       "cover": "https://i.imgur.com/MhiSEcS.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Techland"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Techland"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1254,27 +1015,16 @@
       "playTime": "18:10:45",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Dying Light 2: Stay Human - Reloaded Edition",
-      "category": [
-        " Shooter",
-        "Role-playing (RPG)"
-      ],
+      "category": [" Shooter", "Role-playing (RPG)"],
       "cover": "https://i.imgur.com/7E00cJl.png",
-      "platforms": [
-        "PC",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "Techland"
-      ],
+      "platforms": ["PC", "xbox"],
+      "developer": ["Techland"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1312,25 +1062,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "High on Life",
-      "category": [
-        "Adventure",
-        "Shooter"
-      ],
+      "category": ["Adventure", "Shooter"],
       "cover": "https://i.imgur.com/UP3Kqsu.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Squanch Games, Inc."
-      ],
+      "platforms": ["PC"],
+      "developer": ["Squanch Games, Inc."],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1358,25 +1099,16 @@
       "playTime": "07:50:25",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "High on Life: High on Knife",
-      "category": [
-        "Adventure",
-        "Shooter"
-      ],
+      "category": ["Adventure", "Shooter"],
       "cover": "https://i.imgur.com/F7tcc5p.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Squanch Games, Inc."
-      ],
+      "platforms": ["PC"],
+      "developer": ["Squanch Games, Inc."],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1404,27 +1136,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": true,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Grand Theft Auto V",
-      "category": [
-        "Shooter",
-        "Racing",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/aOVPELU.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rockstar North",
-        "Rockstar Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rockstar North", "Rockstar Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1452,28 +1173,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Grand Theft Auto: San Andreas",
-      "category": [
-        "Shooter",
-        "Racing",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/syT4kVh.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rockstar North",
-        "Rockstar Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rockstar North", "Rockstar Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1501,27 +1210,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Grand Theft Auto: San Andreas - The Definitive Edition",
-      "category": [
-        "Shooter",
-        "Racing",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/moBiHId.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rockstar North",
-        "Rockstar Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rockstar North", "Rockstar Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1549,27 +1247,16 @@
       "playTime": "~35:25:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Grand Theft Auto III: The Definitive Edition",
-      "category": [
-        "Shooter",
-        "Racing",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/O4ydeAA.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rockstar North",
-        "Rockstar Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rockstar North", "Rockstar Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1597,26 +1284,16 @@
       "playTime": "~3:50:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Red Dead Redemption 2",
-      "category": [
-        "Adventure",
-        "Role-playing (RPG)",
-        "Shooter"
-      ],
+      "category": ["Adventure", "Shooter"],
       "cover": "https://i.imgur.com/dUdpkBz.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rockstar Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rockstar Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1644,26 +1321,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Neighbours from Hell",
-      "category": [
-        "Strategy",
-        "Adventure"
-      ],
+      "category": ["Strategy", "Adventure"],
       "cover": "https://i.imgur.com/BBIB00l.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "JoWooD Vienna"
-      ],
+      "platforms": ["PC"],
+      "developer": ["JoWooD Vienna"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1691,26 +1358,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Neighbours from Hell 2: On Vacation",
-      "category": [
-        "Strategy",
-        "Adventure",
-        "Arcade"
-      ],
+      "category": ["Strategy", "Arcade"],
       "cover": "https://i.imgur.com/Dlq8ZQq.jpeg",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "JoWooD Vienna"
-      ],
+      "platforms": ["PC"],
+      "developer": ["JoWooD Vienna"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1738,27 +1395,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Neighbours back From Hell",
-      "category": [
-        "Point-and-click",
-        "Puzzle",
-        "Strategy",
-        "Adventure"
-      ],
+      "category": ["Point-and-click", "Adventure"],
       "cover": "https://i.imgur.com/lu3rnvZ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "JoWooD Vienna"
-      ],
+      "platforms": ["PC"],
+      "developer": ["JoWooD Vienna"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1786,27 +1432,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Sunkenland",
-      "category": [
-        "Action",
-        "Survival",
-        "Open world",
-        "Indie"
-      ],
+      "category": ["Action", "Indie"],
       "cover": "https://i.imgur.com/t527ttT.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Vector3 Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Vector3 Studio"],
       "releaseDates": [
         {
           "type": "early-access",
@@ -1834,27 +1469,16 @@
       "playTime": "",
       "developmentStatus": "early-access",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Rust",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Shooter", "Indie"],
       "cover": "https://i.imgur.com/zldCi8r.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Facepunch Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Facepunch Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1882,24 +1506,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Marvel Rivals",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/ABgDSGZ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "NetEase Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["NetEase Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1927,27 +1543,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Once Human",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Strategy",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/9d5qRxo.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Starry Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Starry Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -1975,25 +1580,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Outlast",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/MQl958P.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Red Barrels"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Red Barrels"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2021,25 +1617,16 @@
       "playTime": "07:18:26",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Outlast II",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/wRzrFUl.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Red Barrels"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Red Barrels"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2067,26 +1654,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Hellblade: Senua's Sacrifice",
-      "category": [
-        "Hack and slash/Beat 'em up",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Hack and slash/Beat 'em up", "Indie"],
       "cover": "https://i.imgur.com/0TecWcp.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ninja Theory"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ninja Theory"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2114,26 +1691,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Portal",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Puzzle"
-      ],
+      "category": ["Shooter", "Puzzle"],
       "cover": "https://i.imgur.com/OVJBOCu.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Valve"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Valve"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2161,27 +1728,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Portal 2",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/FFqAfPu.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Valve"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Valve"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2209,28 +1765,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "The Forest",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/iI8Adl1.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Endnight Games Ltd"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Endnight Games Ltd"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2258,27 +1802,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Sons of the Forest",
-      "category": [
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/6pZyNjY.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Endnight Games Ltd"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Endnight Games Ltd"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2306,26 +1839,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Icarus",
-      "category": [
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Simulator", "Adventure"],
       "cover": "https://i.imgur.com/UNNPi3w.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "RocketWerkz"
-      ],
+      "platforms": ["PC"],
+      "developer": ["RocketWerkz"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2353,28 +1876,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "No Man's Sky",
-      "category": [
-        "Role-playing (RPG)",
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Role-playing (RPG)", "Indie"],
       "cover": "https://i.imgur.com/q4qYYT2.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Hello Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Hello Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2402,26 +1913,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Raft",
-      "category": [
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/WnldPul.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Redbeet Interactive"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Redbeet Interactive"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2449,26 +1950,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Firefighting Simulator: The Squad",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/2yDSfic.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Chronos Unterhaltungssoftware"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Chronos Unterhaltungssoftware"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2496,25 +1987,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Construction Simulator",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/EfUrp6D.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Weltenbauer. Software Entwicklung GmbH"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Weltenbauer. Software Entwicklung GmbH"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2542,25 +2024,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Gas Station Simulator",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/w5ECYPQ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "DRAGO Entertainment"
-      ],
+      "platforms": ["PC"],
+      "developer": ["DRAGO Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2588,25 +2061,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Euro Truck Simulator 2",
-      "category": [
-        "Racing",
-        "Simulator"
-      ],
+      "category": ["Racing", "Simulator"],
       "cover": "https://i.imgur.com/8qTIpux.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "SCS Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["SCS Software"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2634,24 +2098,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Farming Simulator 25",
-      "category": [
-        "Simulator"
-      ],
+      "category": ["Simulator"],
       "cover": "https://i.imgur.com/QCJStOJ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "GIANTS Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["GIANTS Software"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2679,26 +2135,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Farming Simulator 17",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/WFhZl7K.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "GIANTS Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["GIANTS Software"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2726,29 +2172,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Liar's Bar",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Turn-based strategy (TBS)",
-        "Indie",
-        "Card & Board Game"
-      ],
+      "category": ["Simulator", "Card & Board Game"],
       "cover": "https://i.imgur.com/lJHg50q.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Curve Animation"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Curve Animation"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2776,25 +2209,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Black Myth: Wukong",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/xACQXgg.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Game Science"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Game Science"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2822,25 +2246,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Crime Scene Cleaner",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/wdlDR6g.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Dynamite Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Dynamite Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2868,26 +2283,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Contraband Police",
-      "category": [
-        "Shooter",
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Shooter", "Indie"],
       "cover": "https://i.imgur.com/1FWEG5m.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Crazy Rocks"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Crazy Rocks"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2915,25 +2320,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Tavern Manager Simulator",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/kx4F8z5.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "One More Time"
-      ],
+      "platforms": ["PC"],
+      "developer": ["One More Time"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -2961,27 +2357,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Life is Strange",
-      "category": [
-        "Puzzle",
-        "Role-playing (RPG)",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Puzzle", "Indie"],
       "cover": "https://i.imgur.com/6xjpIM6.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "DONTNOD Entertainment"
-      ],
+      "platforms": ["PC"],
+      "developer": ["DONTNOD Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3009,28 +2394,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Coral Island",
-      "category": [
-        "Role-playing (RPG)",
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Role-playing (RPG)", "Indie"],
       "cover": "https://i.imgur.com/y19k3Kr.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Stairway Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Stairway Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3058,26 +2431,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Marvel's Guardians of the Galaxy",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/fDrIB2v.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Eidos-Montréal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Eidos-Montréal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3105,25 +2468,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Resident Evil",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/8H87oZv.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "CAPCOM Co., Ltd "
-      ],
+      "platforms": ["PC"],
+      "developer": ["CAPCOM Co., Ltd "],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3151,25 +2505,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Days Gone",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/MFt74DC.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Bend Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Bend Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3197,26 +2542,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Horizon Zero Dawn: Complete Edition",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/MgPdpVo.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Guerrilla"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Guerrilla"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3244,35 +2579,36 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Satisfactory",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/4OIqeJS.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Coffee Stain Studios"
-      ],
+      "platforms": ["PC","xbox","PS"],
+      "developer": ["Coffee Stain Studios"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
+          "platform":"pc",
           "date": "2019-03-19"
         },
         {
-          "type": "Full Release",
+          "type": "full-release",
+          "platform":"pc",
           "date": "2024-09-10"
+        },
+        {
+          "type": "full-release",
+          "platform":"ps",
+          "date": "2025-11-04"
+        },        
+        {
+          "type": "full-release",
+          "platform":"xbox",
+          "date": "2025-11-04"
         }
       ],
       "finishDate": "",
@@ -3295,30 +2631,16 @@
       "playTime": "",
       "developmentStatus": "early-access, full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "local"
-      ],
+      "multiplayer": ["singleplayer", "local"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "South Park™: The Stick of Truth™",
-      "category": [
-        "Role-playing (RPG)",
-        "Strategy",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/Shbe0BX.png",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox",
-        "switch"
-      ],
-      "developer": [
-        "Obsidian Entertainment"
-      ],
+      "platforms": ["pc", "switch"],
+      "developer": ["Obsidian Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3361,28 +2683,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "South Park™: The Fractured But Whole™",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox",
-        "switch"
-      ],
-      "developer": [
-        "Ubisoft San Francisco"
-      ],
+      "platforms": ["pc", "switch"],
+      "developer": ["Ubisoft San Francisco"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3425,25 +2735,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "The Walking Dead (2012)",
-      "category": [
-        "Point-and-click",
-        "Adventure"
-      ],
+      "category": ["Point-and-click", "Adventure"],
       "cover": "https://i.imgur.com/MzMFc7F.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Telltale Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Telltale Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3471,25 +2772,16 @@
       "playTime": "25 óra",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "The Witcher",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/DLFTn1B.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "CD Projekt Red"
-      ],
+      "platforms": ["PC"],
+      "developer": ["CD Projekt Red"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3517,25 +2809,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Subnautica",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/WtkoTOd.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Unknown Worlds Entertainment"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Unknown Worlds Entertainment"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3563,25 +2846,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Stray",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/DEbzTgA.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "BlueTwelve Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["BlueTwelve Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3609,28 +2883,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Space Engineers",
-      "category": [
-        "Shooter",
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Shooter", "Indie"],
       "cover": "https://i.imgur.com/s8OHsZ0.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Keen Software House"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Keen Software House"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3658,26 +2920,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Sea of Thieves",
-      "category": [
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Simulator", "Adventure"],
       "cover": "https://i.imgur.com/1M2PylF.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Rare Ltd."
-      ],
+      "platforms": ["PC"],
+      "developer": ["Rare Ltd."],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3705,24 +2957,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "The Quarry",
-      "category": [
-        "Adventure"
-      ],
+      "category": ["Adventure"],
       "cover": "https://i.imgur.com/uxusNXS.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Supermassive Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Supermassive Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3750,25 +2994,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "PowerWash Simulator",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/4Y5yO4z.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "FuturLab"
-      ],
+      "platforms": ["PC"],
+      "developer": ["FuturLab"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3796,28 +3031,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Palworld",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Hack and slash/Beat 'em up",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Shooter", "Indie"],
       "cover": "https://i.imgur.com/042yF9a.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Pocketpair"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Pocketpair"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3845,28 +3068,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Limbo",
-      "category": [
-        "Platform",
-        "Puzzle",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Platform", "Indie"],
       "cover": "https://i.imgur.com/Ciqa0nT.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Playdead"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Playdead"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3894,28 +3105,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Little Nightmares",
-      "category": [
-        "Platform",
-        "Puzzle",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Platform", "Indie"],
       "cover": "https://i.imgur.com/SJQSJJK.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Tarsier Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Tarsier Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3943,26 +3142,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Just Cause",
-      "category": [
-        "Shooter",
-        "Racing",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/v57lmcP.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Avalanche Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Avalanche Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -3990,27 +3179,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Hi-Fi Rush",
-      "category": [
-        "Music",
-        "Platform",
-        "Hack and slash/Beat 'em up",
-        "Adventure"
-      ],
+      "category": ["Music", "Adventure"],
       "cover": "https://i.imgur.com/920CC19.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Tango Gameworks "
-      ],
+      "platforms": ["PC"],
+      "developer": ["Tango Gameworks "],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4038,25 +3216,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Helldivers 2",
-      "category": [
-        "Shooter",
-        "Tactical"
-      ],
+      "category": ["Shooter", "Tactical"],
       "cover": "https://i.imgur.com/wOi1ApY.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Arrowhead Game Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Arrowhead Game Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4084,26 +3253,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Unravel",
-      "category": [
-        "Platform",
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Platform", "Adventure"],
       "cover": "https://i.imgur.com/gMt9uFx.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Coldwood Interactive"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Coldwood Interactive"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4131,27 +3290,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Thief Simulator",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/3t0M3AU.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Noble Muffins"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Noble Muffins"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4179,29 +3327,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Terraria",
-      "category": [
-        "Platform",
-        "Role-playing (RPG)",
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Platform", "Indie"],
       "cover": "https://i.imgur.com/TWodQy7.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Re-Logic"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Re-Logic"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4229,26 +3364,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "multiplayer"
-      ],
+      "multiplayer": ["singleplayer", "multiplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Surviving Mars",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/WwgrUYB.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Haemimont Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Haemimont Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4276,26 +3401,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Frostpunk",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/37CBuIf.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "11 bit studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["11 bit studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4323,25 +3438,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Hogwarts Legacy",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/PSUDnLg.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Avalanche Software"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Avalanche Software"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4369,27 +3475,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "MiSide",
-      "category": [
-        "Role-playing (RPG)",
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Role-playing (RPG)", "Indie"],
       "cover": "https://i.imgur.com/5B2mkti.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "AIHASTO"
-      ],
+      "platforms": ["PC"],
+      "developer": ["AIHASTO"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4417,27 +3512,16 @@
       "playTime": "05:24:48",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "The Cabin Factory",
-      "category": [
-        "Puzzle",
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Puzzle", "Indie"],
       "cover": "https://i.imgur.com/NhKiRzP.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "International Cat Studios "
-      ],
+      "platforms": ["PC"],
+      "developer": ["International Cat Studios "],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4465,29 +3549,20 @@
       "playTime": "01:07:00",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Monument Valley",
-      "category": [
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Puzzle", "Adventure"],
       "cover": "https://i.imgur.com/nB7TOiG.png",
-      "platforms": [
-        "Android"
-      ],
-      "developer": [
-        "ustwo games"
-      ],
+      "platforms": ["Android"],
+      "developer": ["ustwo games"],
       "releaseDates": [
         {
           "type": "full-release",
-          "platform": "Android",
+          "platform": "mobile",
           "date": "2014.04.3."
         }
       ],
@@ -4511,27 +3586,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Turmoil",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/E6psxUl.png",
-      "platforms": [
-        "PC",
-        "Android"
-      ],
-      "developer": [
-        "Gamious"
-      ],
+      "platforms": ["PC", "Android"],
+      "developer": ["Gamious"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4559,30 +3623,36 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Dead Island Definitive Edition",
-      "category": [
-        "Shooter",
-        "Hack and slash/Beat 'em up"
-      ],
+      "category": ["Shooter", "Hack and slash/Beat 'em up"],
       "cover": "https://i.imgur.com/akdhBTA.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Techland"
-      ],
+      "platforms": ["PC","Linux","PS","xbox"],
+      "developer": ["Techland"],
       "releaseDates": [
         {
           "type": "full-release",
           "platform": "PC",
           "date": "2016-5-31"
+        },
+        {
+          "type":"full-release",
+          "platform":"linux",
+          "date":"2016-05-31"
+        },
+        {
+          "type":"full-release",
+          "platform":"ps",
+          "date":"2016-05-31"
+        },
+        {
+          "type":"full-release",
+          "platform":"xbox",
+          "date":"2016-05-31"
         }
       ],
       "finishDate": "",
@@ -4592,9 +3662,9 @@
       "forceInProgress": null,
       "videoId": "65mbaZqaHlM",
       "steamId": "383150",
-      "playstationStoreId": "",
-      "playstationStoreType": "",
-      "xboxStoreId": "",
+      "playstationStoreId": "228499",
+      "playstationStoreType": "concept",
+      "xboxStoreId": "dead-island-definitive-edition/BS7F51G3DP8R",
       "nintendoStoreId": "",
       "googlePlayStoreId": "",
       "epicGamesId": "",
@@ -4605,25 +3675,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "A Game About Digging A Hole",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/b6LW1w0.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Cyberwave"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Cyberwave"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4651,26 +3712,16 @@
       "playTime": "02:15:34",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Pacific Drive",
-      "category": [
-        "Simulator",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/oBHDK2U.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ironwood Studios"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ironwood Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4698,26 +3749,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Buckshot Roulette",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/EecKFKF.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Mike Klubnika"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Mike Klubnika"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4745,25 +3786,16 @@
       "playTime": "02:17:50",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "online",
-        "local"
-      ],
+      "multiplayer": ["online", "local"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "R.E.P.O.",
-      "category": [
-        "Indie"
-      ],
+      "category": ["Indie"],
       "cover": "https://i.imgur.com/VcbSG2r.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "semiwork"
-      ],
+      "platforms": ["PC"],
+      "developer": ["semiwork"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4791,27 +3823,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online",
-        "local"
-      ],
+      "multiplayer": ["singleplayer", "local"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Drug Lord Tycoon",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/E7bR55K.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Duhndal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Duhndal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4839,25 +3860,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "The Stanley Parable",
-      "category": [
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Adventure", "Indie"],
       "cover": "https://i.imgur.com/qNZ26fa.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Galactic Cafe"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Galactic Cafe"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4885,25 +3897,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Silent Hill: Homecoming",
-      "category": [
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Puzzle", "Adventure"],
       "cover": "https://i.imgur.com/oaipvM5.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Double Helix Games"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Double Helix Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4931,25 +3934,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Silent Hill 2",
-      "category": [
-        "Puzzle",
-        "Adventure"
-      ],
+      "category": ["Puzzle", "Adventure"],
       "cover": "https://i.imgur.com/fHBi4Ah.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Bloober Team"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Bloober Team"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -4977,25 +3971,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Watch Dogs",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/A51SuX6.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5023,24 +4008,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Watch Dogs 2",
-      "category": [
-        "Shooter, Adventure"
-      ],
+      "category": ["Shooter, Adventure"],
       "cover": "https://i.imgur.com/MlaRtbo.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Montreal"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Montreal"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5068,26 +4045,16 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Watch Dogs: Legion",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/A27QVZx.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Ubisoft Toronto"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Ubisoft Toronto"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5115,28 +4082,20 @@
       "playTime": "",
       "developmentStatus": "",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Inzoi",
-      "category": [
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Simulator", "Adventure"],
       "cover": "https://i.imgur.com/ljNIi1I.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Krafton"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Krafton"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
+          "platform": "pc",
           "date": "2025-03-28"
         }
       ],
@@ -5160,32 +4119,25 @@
       "playTime": "",
       "developmentStatus": "early-access",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Sengoku Dynasty",
-      "category": [
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Simulator", "Adventure"],
       "cover": "https://i.imgur.com/OVyVtXS.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Superkami"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Superkami"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
+          "platform":"pc",
           "date": "2023-08-10"
         },
         {
-          "type": "Full Release",
+          "type": "full-release",
+          "platform":"pc",
           "date": "2024-11-7"
         }
       ],
@@ -5209,26 +4161,16 @@
       "playTime": "",
       "developmentStatus": "early-access, full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Lumberjack's Dynasty",
-      "category": [
-        "Role-playing (RPG)",
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/i3TPIpU.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Toplitz Productions"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Toplitz Productions"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5256,29 +4198,20 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Schedule I",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/nMgP4xg.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "TVGS"
-      ],
+      "platforms": ["PC"],
+      "developer": ["TVGS"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
+          "platform":"pc",
           "date": "2025-03-24"
         }
       ],
@@ -5302,35 +4235,25 @@
       "playTime": "",
       "developmentStatus": "early-access",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "local"
-      ],
+      "multiplayer": ["singleplayer", "local"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Vampire Survivors",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure",
-        "Indie",
-        "Arcade"
-      ],
+      "category": ["Role-playing (RPG)", "Arcade"],
       "cover": "https://i.imgur.com/QGJBMvf.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Poncle"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Poncle"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
+          "platform":"pc",
           "date": "2021-12-17"
         },
         {
-          "type": "Full Release",
+          "type": "full-release",
+          "platform":"pc",
           "date": "2022-10-20"
         }
       ],
@@ -5354,28 +4277,20 @@
       "playTime": "",
       "developmentStatus": "early-access, full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Blacksmith Master",
-      "category": [
-        "Simulator",
-        "Strategy"
-      ],
+      "category": ["Simulator", "Strategy"],
       "cover": "https://i.imgur.com/5PSEsEb.jpeg",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Untitled Studio"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Untitled Studio"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "platform":"pc",
+          "type": "early-access",
           "date": "2025-05-15"
         }
       ],
@@ -5399,27 +4314,16 @@
       "playTime": "",
       "developmentStatus": "early-access",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "The Last of Us Part I",
-      "category": [
-        "Shooter",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/T4GqHy8.jpeg",
-      "platforms": [
-        "PC",
-        "PS"
-      ],
-      "developer": [
-        "Naughty Dog",
-        "Iron Galaxy Studios"
-      ],
+      "platforms": ["PC", "PS"],
+      "developer": ["Naughty Dog", "Iron Galaxy Studios"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5452,26 +4356,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Stellar Blade",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/U1lEhbv.png",
-      "platforms": [
-        "PC",
-        "PS"
-      ],
-      "developer": [
-        "SHIFT UP"
-      ],
+      "platforms": ["PC", "PS"],
+      "developer": ["SHIFT UP"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5504,27 +4398,16 @@
       "playTime": "~32:12:54",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "WUCHANG: Fallen Feathers",
-      "category": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Role-playing (RPG)", "Adventure"],
       "cover": "https://i.imgur.com/PpsCPmy.png",
-      "platforms": [
-        "PC",
-        "PS",
-        "Xbox"
-      ],
-      "developer": [
-        "Leenzee Games"
-      ],
+      "platforms": ["PC", "Xbox"],
+      "developer": ["Leenzee Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5562,26 +4445,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Sekiro: Shadows Die Twice",
-      "category": [
-        "Adventure"
-      ],
+      "category": ["Adventure"],
       "cover": "https://i.imgur.com/YqdrDJB.png",
-      "platforms": [
-        "PC",
-        "PS",
-        "Xbox"
-      ],
-      "developer": [
-        "FromSoftware"
-      ],
+      "platforms": ["PC", "Xbox"],
+      "developer": ["FromSoftware"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5619,30 +4492,19 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Minecraft: Java Edition",
-      "category": [
-        "Simulator",
-        "Adventure"
-      ],
+      "category": ["Simulator", "Adventure"],
       "cover": "https://i.imgur.com/kJvOm2A.png",
-      "platforms": [
-        "PC",
-        "PS",
-        "Xbox",
-        "Android"
-      ],
-      "developer": [
-        "Mojang Studios"
-      ],
+      "platforms": ["PC", "Android"],
+      "developer": ["Mojang Studios"],
       "releaseDates": [
         {
+          "platform":"pc",
           "type": "full-release",
           "date": "2011-11-18"
         }
@@ -5667,30 +4529,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Green Hell",
-      "category": [
-        "Simulator",
-        "Strategy",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/KuRg7q6.png",
-      "platforms": [
-        "PC",
-        "PS",
-        "Xbox"
-      ],
-      "developer": [
-        "Creepy Jar"
-      ],
+      "platforms": ["PC", "Xbox"],
+      "developer": ["Creepy Jar"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5728,26 +4576,16 @@
       "playTime": "Ismeretlen",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Parcel Simulator",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/LRKdLwJ.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Dansan Digital"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Dansan Digital"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5775,25 +4613,16 @@
       "playTime": "~25:30:15",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Cash Cleaner Simulator",
-      "category": [
-        "Simulator",
-        "Indie"
-      ],
+      "category": ["Simulator", "Indie"],
       "cover": "https://i.imgur.com/8TahI4a.png",
-      "platforms": [
-        "PC"
-      ],
-      "developer": [
-        "Mind Control"
-      ],
+      "platforms": ["PC"],
+      "developer": ["Mind Control"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5821,30 +4650,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Cuphead",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Adventure",
-        "Indie",
-        "Arcade"
-      ],
+      "category": ["Shooter", "Arcade"],
       "cover": "https://i.imgur.com/qUqTo1b.png",
-      "platforms": [
-        "PC",
-        "Xbox",
-        "PS"
-      ],
-      "developer": [
-        "Studio MDHR"
-      ],
+      "platforms": ["PC", "PS"],
+      "developer": ["Studio MDHR"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5882,30 +4697,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": false,
       "comment": ""
     },
     {
       "title": "Cuphead: The Delicious Last Course",
-      "category": [
-        "Shooter",
-        "Platform",
-        "Adventure",
-        "Indie",
-        "Arcade"
-      ],
+      "category": ["Shooter", "Arcade"],
       "cover": "https://i.imgur.com/LmIXFEJ.png",
-      "platforms": [
-        "PC",
-        "Xbox",
-        "PS"
-      ],
-      "developer": [
-        "Studio MDHR"
-      ],
+      "platforms": ["PC", "PS","Xbox"],
+      "developer": ["Studio MDHR"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -5943,31 +4744,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": true,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": false,
       "comment": ""
     },
     {
       "title": "Haste",
-      "category": [
-        "Racing",
-        "Adventure",
-        "Indie"
-      ],
+      "category": ["Racing", "Indie"],
       "cover": "https://i.imgur.com/VR2uogN.png",
-      "platforms": [
-        "Linux",
-        "Mac",
-        "PC",
-        "switch",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "Landfall Games"
-      ],
+      "platforms": ["PC","Mac","PS","switch","Linux", "xbox"],
+      "developer": ["Landfall Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6020,28 +4806,16 @@
       "playTime": "~09:45:14",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Atomic Heart",
-      "category": [
-        "Shooter",
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
+      "category": ["Shooter", "Adventure"],
       "cover": "https://i.imgur.com/4f18N84.png",
-      "platforms": [
-        "PC",
-        "PS",
-        "Xbox"
-      ],
-      "developer": [
-        "Mundfish"
-      ],
+      "platforms": ["PC", "Xbox"],
+      "developer": ["Mundfish"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6063,7 +4837,7 @@
       "progress": 30,
       "planned": null,
       "forceCompleted": null,
-      "forceInProgress": null,
+      "forcePlanned": true, 
       "videoId": "ZXSi4EcxnuY",
       "steamId": "668580",
       "playstationStoreId": "UP4133-PPSA10696_00-ATOMICHEARTGAME0",
@@ -6077,32 +4851,21 @@
       "gogId": "",
       "dateAdded": "2025-10-12",
       "playTime": "",
-      "developmentStatus": "",
+      "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "The Farmer Was Replaced",
-      "category": [
-        "Puzzle",
-        "Simulator",
-        "Strategy",
-        "Indie"
-      ],
+      "category": ["Puzzle", "Indie"],
       "cover": "https://i.imgur.com/oSnk1te.png",
-      "platforms": [
-        "pc"
-      ],
-      "developer": [
-        "Timon Herzog"
-      ],
+      "platforms": ["pc"],
+      "developer": ["Timon Herzog"],
       "releaseDates": [
         {
-          "type": "Early Access",
+          "type": "early-access",
           "platform": "pc",
           "date": "2023-2-10"
         },
@@ -6132,26 +4895,16 @@
       "playTime": "~14:20:35",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": true,
       "comment": ""
     },
     {
       "title": "Battlefield 6 - Campaign",
-      "category": [
-        "Shooter"
-      ],
+      "category": ["Shooter"],
       "cover": "https://i.imgur.com/JH5IVna.png",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "EA Digital Illusions CE"
-      ],
+      "platforms": ["pc", "xbox"],
+      "developer": ["EA Digital Illusions CE"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6189,27 +4942,16 @@
       "playTime": "05:17:35",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Dirt 3: Complete Edition",
-      "category": [
-        "Racing"
-      ],
+      "category": ["Racing"],
       "cover": "https://i.imgur.com/80xacaN.png",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "Codemasters"
-      ],
+      "platforms": ["pc", "xbox"],
+      "developer": ["Codemasters"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6247,30 +4989,16 @@
       "playTime": "03:30:35",
       "developmentStatus": "server-closed",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer",
-        "online"
-      ],
+      "multiplayer": ["singleplayer", "online"],
       "nonCompletable": null,
       "comment": "A multiplayer része már nem elérhető, így a játék online befejezése lehetetlen."
     },
     {
       "title": "Dispatch",
-      "category": [
-        "Strategy",
-        "Adventure",
-        "Indie",
-        "Visual Novel"
-      ],
+      "category": ["Strategy", "Visual Novel","Point-and-click","Adventure"],
       "cover": "https://i.imgur.com/SqWJa1C.png",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "AdHoc Studio"
-      ],
+      "platforms": ["pc", "xbox","PS","switch"],
+      "developer": ["AdHoc Studio"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6281,6 +5009,16 @@
           "type": "full-release",
           "platform": "ps",
           "date": "2025-10-22"
+        },
+        {
+          "type": "announced",
+          "platform": "xbox",
+          "date": "2026-Q2"
+        },
+        {
+          "type": "full-release",
+          "platform": "switch",
+          "date": "2026-1-28"
         }
       ],
       "finishDate": "",
@@ -6288,12 +5026,13 @@
       "planned": null,
       "forceCompleted": null,
       "forceInProgress": null,
+      "forcePlanned": true, 
       "videoId": "rrWos4NShT8",
       "steamId": "2592160",
       "playstationStoreId": "10013259",
       "playstationStoreType": "concept",
-      "xboxStoreId": "",
-      "nintendoStoreId": "",
+      "xboxStoreId": "/dispatch/9ndjsv855t3p",
+      "nintendoStoreId": "dispatch-nintendo-switch-2-edition-switch-2/",
       "googlePlayStoreId": "",
       "epicGamesId": "",
       "humbleId": "",
@@ -6303,29 +5042,16 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "singleplayer"
-      ],
+      "multiplayer": ["singleplayer"],
       "nonCompletable": null,
       "comment": ""
     },
     {
       "title": "Forza Horizon 6 - Campaign",
-      "category": [
-        "Racing",
-        "Simulator",
-        "Sport",
-        "Arcade"
-      ],
+      "category": ["Racing", "Arcade"],
       "cover": "https://i.imgur.com/8Q1iJ9n.png",
-      "platforms": [
-        "pc",
-        "ps",
-        "xbox"
-      ],
-      "developer": [
-        "Playground Games"
-      ],
+      "platforms": ["pc", "xbox","PS"],
+      "developer": ["Playground Games"],
       "releaseDates": [
         {
           "type": "full-release",
@@ -6333,7 +5059,7 @@
           "date": "2026-05-19"
         },
         {
-          "type": "Bejelentve",
+          "type": "announced",
           "platform": "ps",
           "date": ""
         },
@@ -6363,9 +5089,7 @@
       "playTime": "",
       "developmentStatus": "full-release",
       "hasDLC": null,
-      "multiplayer": [
-        "online"
-      ],
+      "multiplayer": ["online"],
       "nonCompletable": true,
       "comment": "Az összes küldetés és verseny teljesítése után a játék kampány része befejezettnek tekinthető, azonban a játék fő attrakciója a nyílt világ és a multiplayer mód, amelyek végtelen szórakozást kínálnak, így a játék teljes befejezése lehetetlen."
     }

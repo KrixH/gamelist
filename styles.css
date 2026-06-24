@@ -492,71 +492,44 @@ input:focus, select:focus, textarea:focus {
 .multiplayer-tag.singleplayer { color: var(--color-text-medium); }
 
 .dlc-tag {
-    padding: 3px 8px;
-    background: linear-gradient(135deg, var(--color-accent-purple), #7c3a9e);
-    color: white;
-    border-radius: 6px;
-    font-size: 0.68rem;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px; /* Vagy 8px, ha a többi platform tag inkább lekerekített négyzet */
+    background: rgba(187, 138, 240, 0.1); /* Nagyon halvány lila üveghatás háttér */
+    border: 1px solid var(--color-accent-purple); /* Neon lila vékony keret */
+    color: var(--color-accent-purple); /* Az ikon színe is neon lila lesz */
+    font-size: 0.85rem; /* Hogy a puzzle ikon szép látható legyen */
+    cursor: default;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(187, 138, 240, 0.2); /* Finom neon ragyogás */
+}
+
+/* Ha ráviszed az egeret, elegánsan felerősödik a ragyogás */
+.dlc-tag:hover {
+    background: rgba(187, 138, 240, 0.2);
+    box-shadow: 0 0 12px rgba(187, 138, 240, 0.5);
+    transform: translateY(-1px);
 }
 
 /* -------------------------------------------------------------------------- */
 /* Dynamic Release Dates - Compact Neon Grid Layout                          */
 /* -------------------------------------------------------------------------- */
-.release-dates-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-    margin: 2px 0;
-}
+.release-dates-grid {display: flex;flex-direction: column;gap: 5px;width: 100%;margin: 2px 0;}
 
 .release-date { width: 100%; justify-content: flex-start; }
 
-.release-date.platform-pc { 
-    color: var(--color-brand-pc); 
-    background: rgba(0, 168, 255, 0.06); 
-    border-color: rgba(0, 168, 255, 0.3); 
-    box-shadow: 0 0 10px rgba(0, 168, 255, 0.15);
-}
-.release-date.platform-mac {
-    color: #95a5a6;
-    background: rgba(149, 165, 166, 0.07);
-    border-color: rgba(149, 165, 166, 0.35);
-    box-shadow: 0 0 10px rgba(149, 165, 166, 0.15);
-}
-.release-date.platform-ps { 
-    color: #54a0ff; 
-    background: rgba(46, 109, 180, 0.09); 
-    border-color: rgba(46, 109, 180, 0.35); 
-    box-shadow: 0 0 10px rgba(46, 109, 180, 0.15);
-}
-.release-date.platform-xbox { 
-    color: #2ecc71; 
-    background: rgba(16, 124, 16, 0.07); 
-    border-color: rgba(16, 124, 16, 0.35); 
-    box-shadow: 0 0 10px rgba(16, 124, 16, 0.15);
-}
-.release-date.platform-linux {
-    color: #ff9f43;
-    background: rgba(255, 159, 67, 0.07);
-    border-color: rgba(255, 159, 67, 0.35);
-    box-shadow: 0 0 10px rgba(255, 159, 67, 0.15);
-}
-.release-date.platform-switch { 
-    color: var(--color-brand-nintendo); 
-    background: rgba(230, 0, 18, 0.06); 
-    border-color: rgba(230, 0, 18, 0.3); 
-    box-shadow: 0 0 10px rgba(230, 0, 18, 0.15);
-}
-.release-date.platform-mobile { 
-    color: #a29bfe; 
-    background: rgba(162, 155, 254, 0.08); 
-    border-color: rgba(162, 155, 254, 0.35); 
-    box-shadow: 0 0 10px rgba(162, 155, 254, 0.15);
-}
+.release-date.platform-pc { color: var(--color-brand-pc); background: rgba(0, 168, 255, 0.06); border-color: rgba(0, 168, 255, 0.3); box-shadow: 0 0 10px rgba(0, 168, 255, 0.15);}
+.release-date.platform-mac {color: #95a5a6;background: rgba(149, 165, 166, 0.07);border-color: rgba(149, 165, 166, 0.35);box-shadow: 0 0 10px rgba(149, 165, 166, 0.15);}
+.release-date.platform-ps { color: #54a0ff; background: rgba(46, 109, 180, 0.09); border-color: rgba(46, 109, 180, 0.35); box-shadow: 0 0 10px rgba(46, 109, 180, 0.15);}
+.release-date.platform-xbox { color: #2ecc71; background: rgba(16, 124, 16, 0.07); border-color: rgba(16, 124, 16, 0.35); box-shadow: 0 0 10px rgba(16, 124, 16, 0.15);}
+.release-date.platform-linux {color: #ff9f43;background: rgba(255, 159, 67, 0.07);border-color: rgba(255, 159, 67, 0.35);box-shadow: 0 0 10px rgba(255, 159, 67, 0.15);}
+.release-date.platform-switch { color: var(--color-brand-nintendo); background: rgba(230, 0, 18, 0.06); border-color: rgba(230, 0, 18, 0.3); box-shadow: 0 0 10px rgba(230, 0, 18, 0.15);}
+.release-date.platform-mobile { color: #a29bfe; background: rgba(162, 155, 254, 0.08); border-color: rgba(162, 155, 254, 0.35); box-shadow: 0 0 10px rgba(162, 155, 254, 0.15);}
 
-.finished-date { color: var(--color-accent-green); background: rgba(46, 204, 113, 0.05); border-color: rgba(46, 204, 113, 0.15); }
+.finished-date { color: var(--color-accent-pink); background: rgba(46, 204, 113, 0.05); border-color: rgba(46, 204, 113, 0.15); }
 .playtime { font-family: var(--font-family-mono); color: var(--color-text-medium); }
 
 /* Development Status */
@@ -629,19 +602,121 @@ input:focus, select:focus, textarea:focus {
 @keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
 
-/* Responsive Design */
-@media (max-width: 1400px) { .games-grid { grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); } }
-@media (max-width: 768px) {
-    body { padding: var(--spacing-md); }
-    .title { font-size: clamp(2.5rem, 7vw, 3.8rem); }
-    .search-container { flex-direction: column; padding: var(--spacing-md); }
-    .search-input, .category-select, .developer-select, .status-select { width: 100%; }
-    .games-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
-    .game-actions { position: static; opacity: 1; transform: translateY(0); justify-content: center; margin-top: var(--spacing-md); }
-    .footer-content { flex-direction: column; gap: var(--spacing-lg); }
-    .modal-content { margin: 2rem auto; width: 95%; }
-    .close { top: 10px; right: 10px; }
+
+
+/* -------------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN - MOBIL ELSŐ                                            */
+/* -------------------------------------------------------------------------- */
+
+/* Kis telefonok (max 480px) */
+@media (max-width: 480px) {
+    body { padding: var(--spacing-sm); }
+    
+    .title { font-size: 2rem; }
+    .title::after { width: 30px; }
+    .title:hover::after { width: 60px; }
+    
+    .search-container { padding: var(--spacing-sm); }
+    .search-input, .category-select, .developer-select, .status-select { 
+        font-size: 0.9rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .games-section { padding: var(--spacing-sm); }
+    .section-title { font-size: 1.1rem; }
+    
+    .game-title { font-size: 0.95rem; }
+    .game-info { padding: var(--spacing-sm); }
+    
+    .platform-tag, .category-tag, .multiplayer-tag, .release-date, 
+    .finished-date, .playtime, .developer-tag {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+    
+    .action-btn {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        min-height: 34px;
+        font-size: 0.8rem;
+    }
+    
+    .modal-content { margin: 1rem auto; padding: var(--spacing-xs); }
+    .close { 
+        top: -12px; 
+        right: -12px; 
+        width: 30px; 
+        height: 30px; 
+        font-size: 1rem; 
+    }
+    
+    .footer { font-size: 0.65rem; padding: var(--spacing-md); }
+    .social-icon { font-size: 1.3rem; }
+    .back-to-top { width: 38px; height: 38px; font-size: 0.9rem; }
 }
+
+/* Nagyobb telefonok (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body { padding: var(--spacing-md); }
+    
+    .title { font-size: 2.8rem; }
+    
+    .games-grid { grid-template-columns: 1fr 1fr; gap: var(--spacing-md); }
+    
+    .game-title { font-size: 1rem; }
+    
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Táblagépek (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .search-container { 
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: var(--spacing-md);
+    }
+    .search-input { flex: 2 1 200px; }
+    .category-select, .developer-select, .status-select { flex: 1 1 150px; }
+    
+    .games-grid { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg); }
+    
+    .game-actions { opacity: 1; transform: translateY(0); }
+}
+
+/* Asztali (1025px+) */
+@media (min-width: 1025px) {
+    body { padding: var(--spacing-xl); }
+    
+    .search-container {
+        flex-direction: row;
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+    .search-input { flex: 2 1 300px; }
+    .category-select, .developer-select, .status-select { flex: 1 1 180px; }
+    
+    .games-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+        gap: var(--spacing-xl);
+    }
+    
+    .games-section { padding: var(--spacing-xl); }
+}
+
+/* Nagy asztali (1400px+) */
+@media (min-width: 1400px) {
+    .games-grid { grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Loading Skeleton (régi, de megtartjuk kompatibilitás miatt)               */
+/* -------------------------------------------------------------------------- */
 
 .loading-skeleton {
     background: linear-gradient(90deg, var(--color-background-tertiary) 25%, var(--color-border-medium) 50%, var(--color-background-tertiary) 75%);
@@ -652,4 +727,26 @@ input:focus, select:focus, textarea:focus {
 @keyframes loading {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mozgáskorlátozott felhasználók számára                                    */
+/* -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Sötét téma preferencia (már alapból sötét)                                */
+/* -------------------------------------------------------------------------- */
+
+@media (prefers-color-scheme: light) {
+    /* Ha valaki világos témát preferál, de mi sötétet adunk */
+    /* Itt lehetne világos téma, de a design sötét marad */
 }
