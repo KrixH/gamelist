@@ -7,88 +7,81 @@
     <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/minecraft-server-icon/minecraft-server-icon-4.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Open Graph Meta Tags -->
- <meta property="og:title" content="gameHUB | @krixh99" />
-    <meta
-      property="og:description"
-      content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"/>
+    <meta property="og:title" content="gameHUB | @krixh99" />
+    <meta property="og:description" content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"/>
     <meta property="og:image" content="https://i.imgur.com/jhOhOF6.png" />
     <meta property="og:url" content="https://krixh.github.io/gamelist/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="gameHUB" />
     <meta property="og:locale" content="hu_HU" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="gameHUB | @krixh99" />
-    <meta
-      name="twitter:description"
-      content="Fedezd fel a legújabb végigjátszási listát és frissítéseket. Nézd meg, mely játékokat játszom most, és melyeket tervezek a jövőben!"/>
-    <meta name="twitter:image" content="https://i.imgur.com/jhOhOF6.png" />
-    <meta name="twitter:creator" content="@_KrixH_" />
 </head>
 <body>
+
     <header class="header">
-        <h1 class="title"> gameHUB </h1>
+        <h1 class="title">gameHUB</h1>
+        
         <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Keresés...">
-            <select id="categorySelect" class="category-select">
+            <input type="text" id="searchInput" class="search-input" placeholder="Játék keresése..." aria-label="Játék keresése">
+            
+            <select id="categorySelect" class="category-select" aria-label="Szűrés kategória szerint">
                 <option value="all">Összes kategória</option>
             </select>
-            <select id="developerSelect" class="developer-select">
+            
+            <select id="developerSelect" class="developer-select" aria-label="Szűrés fejlesztő szerint">
                 <option value="all">Összes fejlesztő</option>
             </select>
-            <select id="statusSelect" class="status-select">
+            
+            <select id="statusSelect" class="status-select" aria-label="Szűrés állapot szerint">
                 <option value="all">Összes állapot</option>
-                <option value="inprogress">Jelenleg futó végigjátszások</option>
-                <option value="completed">Befejezett végigjátszások</option>
-                <option value="noncompletable">Nem befejezhető</option>
             </select>
         </div>
     </header>
 
-    <main class="main-content" id="gamesContainer"></main>
+    <main class="main-content" id="gamesContainer">
+        <div class="loading-skeleton" style="height: 300px; border-radius: var(--border-radius-xl);"></div>
+    </main>
 
-    <div class="modal" id="trailerModal">
+    <button id="backToTop" class="back-to-top" aria-label="Vissza a tetejére" title="Vissza a tetejére">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div id="trailerModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <span class="close" tabindex="0">&times;</span>
-            <iframe id="trailerFrame" allowfullscreen title="Játék Trailer"></iframe>
+            <button class="close" aria-label="Bezárás" title="Bezárás">&times;</button>
+            <h2 id="modalTitle" class="visually-hidden">Video Trailer</h2>
+            <iframe id="trailerFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
 
-    <button id="backToTop" class="back-to-top" title="Vissza a tetejére">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <p>&copy; <span id="currentYear"></span> gameHUB. Minden jog fenntartva.</p>
-                <p>Frissítve: 2025.10.17. - 03:04 - Ver. 2.0.9a</p>
-                <div class="footer-links">
-                </div>
-            </div>
-            
+        <div class="footer-section">
+            <p>&copy; <span id="currentYear"></span> <strong>gameHUB</strong> &bull; Minden jog fenntartva.</p>
+            <p>
+                <span><i class="fas fa-code-branch"></i> v2.1.0</span> &bull; 
+                <span><i class="fas fa-clock"></i> Frissítve: 2026.06.24. 16:00</span> &bull; 
+                <span><i class="fab fa-github"></i> <a href="https://github.com/KrixH" target="_blank" rel="noopener">@krixh99</a></span>
+            </p>
+        </div>
             <div class="footer-section">
                 <div class="social-icons">
-                    <a href="https://github.com/KrixH" target="_blank" class="social-icon" aria-label="GitHub">
+                    <a href="https://github.com/KrixH" target="_blank" class="social-icon" aria-label="GitHub" rel="noopener">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://steamcommunity.com/id/KrixH99/" target="_blank" class="social-icon" aria-label="Steam">
+                    <a href="https://steamcommunity.com/id/KrixH99/" target="_blank" class="social-icon" aria-label="Steam" rel="noopener">
                         <i class="fab fa-steam"></i>
                     </a>
-                    <a href="https://www.youtube.com/@KrixH99" target="_blank" class="social-icon" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@KrixH99" target="_blank" class="social-icon" aria-label="YouTube" rel="noopener">
                         <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="https://x.com/_KrixH_" target="_blank" class="social-icon" aria-label="X">
-                        <i class="fab fa-x"></i>
+                    <a href="https://x.com/_KrixH_" target="_blank" class="social-icon" aria-label="X" rel="noopener">
+                        <i class="fab fa-x-twitter"></i>
                     </a>
-                    <a class="ko-fi-widget dark" href="https://ko-fi.com/U7U61EGAW4"  target="_blank" aria-label="Ko-fi">
-                        <img class="kofi" src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png?_gl=1*1h9gmwn*_gcl_au*NTc3MTgyNjE0LjE3NDYzMDExNTg.*_ga*NjU0MTIyNTEzLjE3NDYzMDExNTQ.*_ga_M13FZ7VQ2C*czE3NDc1NTI0NzckbzIkZzEkdDE3NDc1NTMzNTIkajI3JGwwJGgwJGRsSklBYk9nTTRtVXJDUDh1ZFFlclFsNHQ4U0V0VUVlQThR" alt="Támogass egy kávéval!" />
-                       <span>Donation</span>
+                    <a class="ko-fi-widget dark" href="https://ko-fi.com/U7U61EGAW4" target="_blank" aria-label="Ko-fi" rel="noopener">
+                        <img class="kofi" src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png" alt="Ko-fi"> Buy me a Ko-fi
                     </a>
                 </div>
-            </div>        
-        <div class="back-to-top" id="backToTop" aria-label="Vissza a tetejére" tabindex="0">
-            <i class="fas fa-arrow-up"></i>
+            </div>
         </div>
     </footer>
 
